@@ -1,0 +1,32 @@
+Create a project Folder
+Create Environment  python -m venv (env_name)
+Activate environment ./(env_name)/Scripts/Activate  (in PowerShell Terminal)
+Install Jupter pip install ipykernel
+Install FastAPI, Gradio, pydantic, uvicorn, openai
+Create Folder and Files
+    main.py
+    api/routes.py
+    db/database.py
+    frontend/ui.py
+    services/chatbot.py, logger.py, memory.py
+    .env (for storing APIs)
+
+
+
+we have a basic template here. and I want to create a RAG agent. use faiss and local ollama embedding.
+and use multiple agents like smolagents, langchain agent, llamaindex agent, and crewai agent.
+the user shall select which agent they want to use from dropdown on user interface. help me in this project
+consider an organization that use this app to upload (2nd tab) and store documents. and to search(main tab) through documets/vectors.
+the agnts have 2 tools for the agents, researcher and writer.
+researcher tool: a new document has arrived and we want to search a query related to that new document and expect answer from the vector databse on both query and new document. this new document is uploaded temporarily for the session only. this new document is optional. the agent should answer to the query only if document is not given.
+writer tool: write the data collected by researcher in a specfic format given by the user as prompt.
+write simplest code possible. do not add If/else and Try/except to validate entries. 
+use ollama embeddin nomic-embed-text:v1.5 and use gpt-oss 120b model from hugging face in all agents.
+HF_TOKEN=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
+install each package compatible to every other package
+
+change the huggingface code to the format i provided in other files too.
+make the search document UI in chatting format. output format optional. 
+add another window to the UI. in this window the list of all files are availble and by clicking on the file a window shall show the content of the file.
+during upload, extract some metadata from file and add with file for better retrieval.
+make verbase true for agents so i can know waht the agent is thinking.

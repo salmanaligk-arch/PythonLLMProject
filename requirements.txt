@@ -1,0 +1,38 @@
+# Core Framework
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+gradio>=4.26.0
+pydantic>=2.5.0
+
+# RAG and Vector Storage
+faiss-cpu>=1.7.4
+numpy>=1.24.3
+
+# Embeddings and LLM
+ollama>=0.1.32
+huggingface-hub>=0.19.4
+openai>=1.0.0
+
+# Agent Frameworks
+langchain>=0.1.7
+langchain-core>=0.1.14
+langchain-community>=0.0.9
+langchain-openai>=0.0.5
+crewai>=0.28.0
+crewai-tools>=0.1.6
+litellm>=1.30.0
+
+# Document Processing
+python-multipart>=0.0.6
+python-dotenv>=1.0.0
+PyPDF2>=3.0.1
+aiofiles>=23.2.1
+pdfplumber>=0.10.3
+PyMuPDF>=1.23.26
+pytesseract>=0.3.10
+Pillow>=10.1.0
+
+# Utilities
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+ipython>=8.18.1
