@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 import faiss
 import numpy as np
 import pickle
@@ -10,13 +11,16 @@ from services.file_handlers.txt_handler import TXTHandler
 from services.file_handlers.excel_handler import ExcelHandler
 from services.file_handlers.docx_handler import DocxHandler
 from services.logger import logger
-from services.settings_manager import settings_manager
+
+# Load environment variables
+load_dotenv()
+load_dotenv("config.env")
 
 class FAISSVectorStore:
     def __init__(self, dimension: int = None, index_path: str = None):
-        # Use settings manager for configuration
-        self.dimension = dimension or settings_manager.file_config.vector_dimension
-        self.index_path = index_path or settings_manager.file_config.vector_index_path
+        # Use environment variables for configuration
+        self.dimension = dimension or int(os.getenv("VECTOR_DIMENSION", 768))
+        self.index_path = index_path or os.getenv("VECTOR_INDEX_PATH", "faiss_indexes")
         os.makedirs(self.index_path, exist_ok=True)
         self.index = faiss.IndexFlatIP(self.dimension)
         self.documents = []
@@ -29,7 +33,7 @@ class FAISSVectorStore:
         }
         
     def get_embedding(self, text: str) -> np.ndarray:
-        embedding_model = settings_manager.file_config.embedding_model
+        embedding_model = os.getenv("EMBEDDING_MODEL", "nomic-embed-text:v1.5")
         response = ollama.embeddings(
             model=embedding_model,
             prompt=text
@@ -72,8 +76,8 @@ class FAISSVectorStore:
         if self.index.ntotal == 0 or len(self.documents) == 0:
             return []
         
-        # Use settings for search parameter if not provided
-        k = k or settings_manager.agent_config.faiss_search_k
+        # Use environment variable for search parameter if not provided
+        k = k or int(os.getenv("FAISS_SEARCH_K", 5))
         
         query_embedding = self.get_embedding(query)
         query_embedding = query_embedding.reshape(1, -1)

@@ -2197,3 +2197,11 @@ LiteLLM completion() model= Qwen/Qwen2.5-72B-Instruct; provider = openai
 2026-01-15 12:58:02,054 - INFO - \u2713 LangChain agent loaded
 2026-01-15 12:58:14,307 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
 2026-01-15 12:58:15,200 - INFO - \u2713 CrewAI agent loaded
+2026-01-16 15:41:06,724 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-16 15:41:06,768 - INFO - AIEngine initialized - Online: \u2705
+2026-01-16 15:41:07,337 - INFO - Loading faiss with AVX2 support.
+2026-01-16 15:41:07,450 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-16 15:41:10,111 - INFO - \u2713 Simple agent loaded
+2026-01-16 15:41:11,530 - INFO - \u2713 LangChain agent loaded
+2026-01-16 15:41:23,986 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-16 15:41:24,896 - INFO - \u2713 CrewAI agent loaded

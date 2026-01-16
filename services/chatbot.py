@@ -8,24 +8,28 @@ from typing import Optional, List, Any, Mapping
 from openai import OpenAI
 from services.logger import logger
 from dotenv import load_dotenv
+import os
 
-# Load environment variables
+# Load environment variables from .env and config.env
 load_dotenv()
-
-# Import settings manager
-from services.settings_manager import settings_manager
+load_dotenv("config.env")
 
 class AIEngine:
     """Central AI engine for all AI interactions with online/offline fallback"""
     
     def __init__(self):
-        # Get configuration from settings manager
-        self.hf_token = settings_manager.llm_config.hf_token
-        self.ollama_base_url = settings_manager.llm_config.ollama_base_url
-        
+        # Read configuration from environment variables (config.env / .env)
+        self.hf_token = os.getenv("HF_TOKEN", "your_huggingface_token_here")
+        self.ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+
         # Model configurations
-        self.online_model = settings_manager.llm_config.hf_model
-        self.offline_model = settings_manager.llm_config.ollama_model
+        self.online_model = os.getenv("HF_MODEL", "Qwen/Qwen2.5-72B-Instruct")
+        self.offline_model = os.getenv("OLLAMA_MODEL", "deepseek-r1:8b")
+
+        # LLM tuning
+        self.llm_timeout = int(os.getenv("LLM_TIMEOUT", 30))
+        self.llm_max_retries = int(os.getenv("LLM_MAX_RETRIES", 2))
+        self.llm_temperature = float(os.getenv("LLM_TEMPERATURE", 0.1))
         
         # Initialize LLM clients
         self._init_clients()
@@ -48,8 +52,8 @@ class AIEngine:
             self.online_client = OpenAI(
                 base_url="https://router.huggingface.co/v1",
                 api_key=self.hf_token,
-                timeout=30,
-                max_retries=2  # Reduce retries for faster fallback
+                timeout=self.llm_timeout,
+                max_retries=self.llm_max_retries
             )
         else:
             self.online_client = None
@@ -62,7 +66,7 @@ class AIEngine:
         self.offline_client = OpenAI(
             base_url=f"{self.ollama_base_url}/v1",
             api_key="ollama",  # Ollama doesn't need real API key
-            timeout=1800,
+            timeout=max(1800, self.llm_timeout),
             max_retries=1  # Reduce retries for local client
         )
     
@@ -182,18 +186,18 @@ class AIEngine:
                 "model": f"openai/{self.online_model}",
                 "base_url": "https://router.huggingface.co/v1",
                 "api_key": self.hf_token,
-                "temperature": settings_manager.llm_config.llm_temperature,
+                "temperature": self.llm_temperature,
             }
         else:
             logger.info("⚠️ Providing offline LLM config for CrewAI (via LiteLLM)")
             # Use model name directly - Ollama's OpenAI-compatible endpoint
             # Increased timeout for larger models
             return {
-                "model": self.offline_model,
+                "model": f"openai/{self.offline_model}",
                 "base_url": f"{self.ollama_base_url}/v1",
                 "api_key": "sk-no-key-required",
-                "temperature": settings_manager.llm_config.llm_temperature,
-                "timeout": settings_manager.llm_config.llm_timeout,
+                "temperature": self.llm_temperature,
+                "timeout": self.llm_timeout,
             }
 
 

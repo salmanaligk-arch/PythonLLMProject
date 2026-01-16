@@ -2,7 +2,7 @@ import os
 from typing import Dict, Any, List, Optional
 from services.vector_store import vector_store
 from services.logger import logger
-from services.settings_manager import settings_manager
+import os
 
 class ResearcherTool:
     def __init__(self):
@@ -22,7 +22,7 @@ class ResearcherTool:
             search_query = f"{query} {temp_excerpt}"
         
         # Search existing vector database with enhanced query
-        max_results = settings_manager.agent_config.max_search_results
+        max_results = int(os.getenv("MAX_SEARCH_RESULTS", 5))
         search_results = vector_store.search(search_query, k=max_results)
         
         context = ""
