@@ -8,6 +8,7 @@ from typing import Optional, List, Any, Mapping
 from openai import OpenAI
 from services.logger import logger
 from dotenv import load_dotenv
+from services.llm_manager import llm_manager
 import os
 
 # Load environment variables from .env and config.env
@@ -18,26 +19,18 @@ class AIEngine:
     """Central AI engine for all AI interactions with online/offline fallback"""
     
     def __init__(self):
-        # Read configuration from environment variables (config.env / .env)
-        self.hf_token = os.getenv("HF_TOKEN", "your_huggingface_token_here")
-        self.ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+        # Use the external llm_manager to manage available LLMs
+        self.llm_manager = llm_manager
 
-        # Model configurations
-        self.online_model = os.getenv("HF_MODEL", "Qwen/Qwen2.5-72B-Instruct")
-        self.offline_model = os.getenv("OLLAMA_MODEL", "deepseek-r1:8b")
-
-        # LLM tuning
+        # LLM tuning from environment
         self.llm_timeout = int(os.getenv("LLM_TIMEOUT", 30))
         self.llm_max_retries = int(os.getenv("LLM_MAX_RETRIES", 2))
         self.llm_temperature = float(os.getenv("LLM_TEMPERATURE", 0.1))
-        
-        # Initialize LLM clients
-        self._init_clients()
-        
-        # Test online availability
-        self.online_available = self._test_online_connection()
-        
-        logger.info(f"AIEngine initialized - Online: {'✅' if self.online_available else '❌'}")
+
+        # Initialize active client based on llm_manager selection
+        self._init_active_client()
+
+        logger.info(f"AIEngine initialized - Active LLM: {self.llm_manager.get_selected()}")
     
     def reload_config(self):
         """Reload configuration from settings manager and reinitialize"""
@@ -45,46 +38,35 @@ class AIEngine:
         self.__init__()
         logger.info("✅ AI Engine configuration reloaded")
     
-    def _init_clients(self):
-        """Initialize online and offline LLM clients"""
-        # Online LLM (HuggingFace)
-        if self.hf_token and self.hf_token != "your_huggingface_token_here":
-            self.online_client = OpenAI(
-                base_url="https://router.huggingface.co/v1",
-                api_key=self.hf_token,
-                timeout=self.llm_timeout,
-                max_retries=self.llm_max_retries
-            )
-        else:
-            self.online_client = None
-            if not self.hf_token or self.hf_token == "your_huggingface_token_here":
-                logger.warning("No valid HF_TOKEN found - online LLM disabled")
-            else:
-                logger.warning("HF_TOKEN is default placeholder - online LLM disabled")
-        
-        # Offline LLM (Ollama)
-        self.offline_client = OpenAI(
-            base_url=f"{self.ollama_base_url}/v1",
-            api_key="ollama",  # Ollama doesn't need real API key
-            timeout=max(1800, self.llm_timeout),
-            max_retries=1  # Reduce retries for local client
-        )
+    def _init_active_client(self):
+        """Create the OpenAI-compatible client for the currently selected LLM."""
+        selected = self.llm_manager.get_selected()
+        if not selected:
+            logger.warning("No LLM selected in LLMManager")
+            self.active_client = None
+            self.active_name = None
+            self.active_model = None
+            return
+
+        cfg = self.llm_manager.get_config(selected)
+        self.active_name = selected
+        self.active_model = cfg.get("model") if cfg else None
+        self.active_client = self.llm_manager.create_client(selected)
     
-    def _test_online_connection(self) -> bool:
-        """Test if online LLM is available"""
-        if not self.online_client or not self.hf_token:
+    def _test_active_llm(self) -> bool:
+        """Quick smoke test for the currently active LLM client."""
+        if not self.active_client or not self.active_model:
             return False
-            
         try:
-            response = self.online_client.chat.completions.create(
-                model=self.online_model,
+            _ = self.active_client.chat.completions.create(
+                model=self.active_model,
                 messages=[{"role": "user", "content": "test"}],
                 max_tokens=5,
-                timeout=10
+                timeout=10,
             )
             return True
         except Exception as e:
-            logger.warning(f"Online LLM test failed: {str(e)[:100]}...")
+            logger.warning(f"Active LLM test failed: {str(e)[:100]}...")
             return False
     
     def call_ai(self, prompt: str, max_tokens: Optional[int] = None, temperature: float = 0.1) -> str:
@@ -99,22 +81,16 @@ class AIEngine:
         Returns:
             AI-generated response text
         """
-        # Try online LLM first if available
-        if self.online_available and self.online_client:
-            try:
-                logger.debug("Attempting to use online LLM.")
-                return self._call_llm(self.online_client, self.online_model, prompt, max_tokens, temperature)
-            except Exception as e:
-                logger.warning(f"Online LLM failed: {str(e)[:100]}... - Falling back to offline")
-        
-        # Fallback to offline LLM
+        # Use the active LLM only. Do not fallback automatically.
+        if not self.active_client or not self.active_model:
+            return f"AI Error: Selected LLM '{self.llm_manager.get_selected()}' is not configured or unavailable."
+
         try:
-            logger.debug("Using offline LLM.")
-            return self._call_llm(self.offline_client, self.offline_model, prompt, max_tokens, temperature)
+            logger.debug(f"Calling active LLM: {self.active_name}")
+            return self._call_llm(self.active_client, self.active_model, prompt, max_tokens, temperature)
         except Exception as e:
-            error_msg = f"Both online and offline LLMs failed: {str(e)}"
-            logger.error(error_msg)
-            return f"AI Error: {error_msg}"
+            logger.error(f"Active LLM '{self.active_name}' failed: {e}")
+            return f"AI Error: Selected LLM '{self.active_name}' is not working: {str(e)}"
     
     def _call_llm(self, client: OpenAI, model: str, prompt: str, max_tokens: Optional[int], temperature: float) -> str:
         """Generic method to call an LLM."""
@@ -135,70 +111,51 @@ class AIEngine:
     def get_status(self) -> dict:
         """Get current status of AI engine"""
         return {
-            "online_available": self.online_available,
-            "online_model": self.online_model,
-            "offline_model": self.offline_model,
-            "hf_token_configured": bool(self.hf_token),
-            "ollama_url": self.ollama_base_url
+            "active_llm": self.llm_manager.get_selected(),
+            "active_model": self.active_model,
+            "available_llms": self.llm_manager.get_names(),
         }
     
     def refresh_online_status(self) -> bool:
-        """Refresh online LLM availability status"""
-        self.online_available = self._test_online_connection()
-        logger.info(f"Online LLM status refreshed: {'✅' if self.online_available else '❌'}")
-        return self.online_available
+        """Refresh active LLM availability status"""
+        ok = self._test_active_llm()
+        logger.info(f"Active LLM status refreshed: {'✅' if ok else '❌'}")
+        return ok
 
-    def set_online_mode(self, enabled: bool) -> str:
-        """Manually enable or disable online mode"""
-        if enabled:
-            if not self.hf_token:
-                logger.warning("Cannot enable online mode: No HF_TOKEN configured")
-                return "❌ Cannot enable online mode: No HF_TOKEN configured"
-            # Test connection before enabling
-            if self._test_online_connection():
-                self.online_available = True
-                logger.info("✅ Online mode enabled")
-                return f"✅ Online mode enabled (using {self.online_model})"
-            else:
-                logger.warning("Cannot enable online mode: Connection test failed")
-                return "❌ Cannot enable online mode: Connection test failed"
+    def set_active_llm(self, name: str) -> str:
+        """Select a different LLM by name (must be registered in LLMManager)."""
+        if not self.llm_manager.set_selected(name):
+            return f"❌ Unknown LLM: {name}"
+        # Reinitialize active client
+        self._init_active_client()
+        ok = self._test_active_llm()
+        if ok:
+            return f"✅ Active LLM set to {name}"
         else:
-            self.online_available = False
-            logger.info("⚠️ Online mode disabled - using Ollama")
-            return f"⚠️ Online mode disabled (using Ollama: {self.offline_model})"
+            return f"⚠️ Active LLM set to {name}, but connection test failed"
 
     def get_mode_status(self) -> str:
         """Get current mode status as a string"""
-        if self.online_available:
-            return f"🌐 Online Mode: {self.online_model}"
-        else:
-            return f"💻 Offline Mode: {self.offline_model} (Ollama)"
+        sel = self.llm_manager.get_selected()
+        return f"Active LLM: {sel}"
 
     def get_llm_config(self) -> dict:
         """
         Provides LLM configuration for CrewAI based on availability.
         Note: LiteLLM is used internally by CrewAI and is working correctly.
         """
-        if self.online_available and self.online_client:
-            logger.info("✅ Providing online LLM config for CrewAI (via LiteLLM)")
-            # Use openai/ prefix with custom base_url for HuggingFace
-            return {
-                "model": f"openai/{self.online_model}",
-                "base_url": "https://router.huggingface.co/v1",
-                "api_key": self.hf_token,
-                "temperature": self.llm_temperature,
-            }
-        else:
-            logger.info("⚠️ Providing offline LLM config for CrewAI (via LiteLLM)")
-            # Use model name directly - Ollama's OpenAI-compatible endpoint
-            # Increased timeout for larger models
-            return {
-                "model": f"openai/{self.offline_model}",
-                "base_url": f"{self.ollama_base_url}/v1",
-                "api_key": "sk-no-key-required",
-                "temperature": self.llm_temperature,
-                "timeout": self.llm_timeout,
-            }
+        # Provide the selected LLM config (for external libraries like CrewAI)
+        sel = self.llm_manager.get_selected()
+        cfg = self.llm_manager.get_config(sel) or {}
+        logger.info(f"Providing LLM config for CrewAI: {sel}")
+        # Return a sanitized config suitable for LLM wrappers
+        return {
+            "model": cfg.get("model"),
+            "base_url": cfg.get("base_url"),
+            "api_key": cfg.get("api_key"),
+            "temperature": self.llm_temperature,
+            "timeout": cfg.get("timeout", self.llm_timeout),
+        }
 
 
 # Global AI engine instance
@@ -213,9 +170,9 @@ def get_ai_status() -> dict:
     """Get AI engine status"""
     return ai_engine.get_status()
 
-def set_online_mode(enabled: bool) -> str:
-    """Set online mode on/off"""
-    return ai_engine.set_online_mode(enabled)
+def set_active_llm(name: str) -> str:
+    """Set the active LLM by name (registered in LLMManager)."""
+    return ai_engine.set_active_llm(name)
 
 def get_mode_status() -> str:
     """Get current mode status"""

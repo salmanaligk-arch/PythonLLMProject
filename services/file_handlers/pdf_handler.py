@@ -16,9 +16,9 @@ if os.name == 'nt':
     pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 class PDFHandler(FileHandler):
-    def process(self, content: bytes, filename: str) -> List[Dict[str, Any]]:
+    def process(self, content: bytes, filename: str, chunk_size: int = 1000, overlap: int = 200) -> List[Dict[str, Any]]:
         full_text = self._extract_text_from_pdf(content)
-        chunks = chunk_text(full_text)
+        chunks = chunk_text(full_text, chunk_size=chunk_size, overlap=overlap)
         pdf_metadata = self.get_metadata(content, filename)
         
         processed_chunks = []

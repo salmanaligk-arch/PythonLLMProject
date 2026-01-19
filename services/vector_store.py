@@ -11,6 +11,7 @@ from services.file_handlers.txt_handler import TXTHandler
 from services.file_handlers.excel_handler import ExcelHandler
 from services.file_handlers.docx_handler import DocxHandler
 from services.logger import logger
+from services.embed_manager import embed_manager
 
 # Load environment variables
 load_dotenv()
@@ -33,12 +34,11 @@ class FAISSVectorStore:
         }
         
     def get_embedding(self, text: str) -> np.ndarray:
-        embedding_model = os.getenv("EMBEDDING_MODEL", "nomic-embed-text:v1.5")
-        response = ollama.embeddings(
-            model=embedding_model,
-            prompt=text
-        )
-        return np.array(response['embedding'], dtype=np.float32)
+        # Use embed_manager to obtain embedding for the selected model
+        emb = embed_manager.get_embedding(text)
+        if emb is None:
+            raise RuntimeError("Embedding generation failed")
+        return emb
     
     def add_document(self, content: str, metadata: Optional[Dict[str, Any]] = None):
         embedding = self.get_embedding(content)
@@ -59,7 +59,7 @@ class FAISSVectorStore:
         
         self.metadata.append(enhanced_metadata)
 
-    def add_file(self, file_content: bytes, filename: str):
+    def add_file(self, file_content: bytes, filename: str, chunk_size: int = 1000, overlap: int = 200, embed_model: Optional[str] = None):
         file_ext = os.path.splitext(filename)[1].lower()
         handler = self.file_handlers.get(file_ext)
         
@@ -67,7 +67,14 @@ class FAISSVectorStore:
             logger.error(f"Unsupported file type: {file_ext}")
             return
 
-        processed_chunks = handler.process(file_content, filename)
+        # If requested, switch embedding model for this upload
+        if embed_model:
+            try:
+                embed_manager.set_selected(embed_model)
+            except Exception:
+                logger.warning(f"Could not set embed model to {embed_model}")
+
+        processed_chunks = handler.process(file_content, filename, chunk_size=chunk_size, overlap=overlap)
         for chunk in processed_chunks:
             self.add_document(chunk['content'], chunk['metadata'])
     

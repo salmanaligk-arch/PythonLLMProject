@@ -4,10 +4,10 @@ from typing import List, Dict, Any
 from .base_handler import FileHandler, chunk_text
 
 class ExcelHandler(FileHandler):
-    def process(self, content: bytes, filename: str) -> List[Dict[str, Any]]:
+    def process(self, content: bytes, filename: str, chunk_size: int = 1000, overlap: int = 200) -> List[Dict[str, Any]]:
         df = pd.read_excel(content)
         text_content = df.to_string()
-        chunks = chunk_text(text_content)
+        chunks = chunk_text(text_content, chunk_size=chunk_size, overlap=overlap)
         excel_metadata = self.get_metadata(content, filename)
 
         processed_chunks = []

@@ -5,10 +5,10 @@ from .base_handler import FileHandler, chunk_text
 from io import BytesIO
 
 class DocxHandler(FileHandler):
-    def process(self, content: bytes, filename: str) -> List[Dict[str, Any]]:
+    def process(self, content: bytes, filename: str, chunk_size: int = 1000, overlap: int = 200) -> List[Dict[str, Any]]:
         document = Document(BytesIO(content))
         text_content = "\n".join([para.text for para in document.paragraphs])
-        chunks = chunk_text(text_content)
+        chunks = chunk_text(text_content, chunk_size=chunk_size, overlap=overlap)
         docx_metadata = self.get_metadata(content, filename)
 
         processed_chunks = []

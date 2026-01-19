@@ -13,7 +13,7 @@ def chunk_text(text: str, chunk_size: int = 1000, overlap: int = 200) -> List[st
 
 class FileHandler(ABC):
     @abstractmethod
-    def process(self, content: bytes, filename: str) -> List[Dict[str, Any]]:
+    def process(self, content: bytes, filename: str, chunk_size: int = 1000, overlap: int = 200) -> List[Dict[str, Any]]:
         """Process the file content and return a list of chunks with metadata."""
         pass
 

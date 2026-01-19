@@ -7,7 +7,7 @@ import gradio as gr
 from services.vector_store import vector_store
 from services.logger import logger
 import os
-def upload_documents(files):
+def upload_documents(files, embed_model=None, chunk_size: int = 1000, overlap: int = 200):
     """Upload and index multiple documents"""
     if not files:
         return "No files uploaded"
@@ -17,17 +17,64 @@ def upload_documents(files):
     for file in files:
         try:
             # Basic file validation
-            filename = os.path.basename(file.name)
+            # Robustly read uploaded file: support objects with .path, .name, .file,
+            # Gradio NamedString/dicts, bytes, and file-like objects.
+            def _read_uploaded(fobj):
+                # fobj may have .path (a filesystem path)
+                if hasattr(fobj, 'path') and getattr(fobj, 'path'):
+                    p = getattr(fobj, 'path')
+                    if os.path.exists(p):
+                        with open(p, 'rb') as fh:
+                            return fh.read(), os.path.basename(getattr(fobj, 'name', p))
+                # fobj may have .name that is a real path
+                if hasattr(fobj, 'name') and os.path.exists(getattr(fobj, 'name')):
+                    p = getattr(fobj, 'name')
+                    with open(p, 'rb') as fh:
+                        return fh.read(), os.path.basename(p)
+                # fobj may expose a file-like attribute
+                if hasattr(fobj, 'file'):
+                    fh = getattr(fobj, 'file')
+                    try:
+                        fh.seek(0)
+                    except Exception:
+                        pass
+                    data = fh.read()
+                    if isinstance(data, str):
+                        data = data.encode('utf-8')
+                    return data, os.path.basename(getattr(fobj, 'name', 'uploaded'))
+                # fobj may be a dict from some uploaders
+                if isinstance(fobj, dict):
+                    data = fobj.get('data') or fobj.get('content')
+                    name = fobj.get('name', 'uploaded')
+                    if isinstance(data, str):
+                        data = data.encode('utf-8')
+                    return data, name
+                # raw bytes
+                if isinstance(fobj, (bytes, bytearray)):
+                    return bytes(fobj), 'uploaded'
+                # file-like object
+                if hasattr(fobj, 'read'):
+                    try:
+                        data = fobj.read()
+                        if isinstance(data, str):
+                            data = data.encode('utf-8')
+                        return data, os.path.basename(getattr(fobj, 'name', 'uploaded'))
+                    except Exception:
+                        pass
+                raise ValueError('Unsupported uploaded file object')
+
+            try:
+                content, filename = _read_uploaded(file)
+            except Exception as e:
+                results.append(f"✗ Error uploading {getattr(file, 'name', str(file))}: {e}")
+                continue
+
             if not filename.endswith(('.pdf', '.txt', '.docx', '.xlsx')):
                 results.append(f"✗ Unsupported file type: {filename}")
                 continue
-                
-            # Read file content from the temporary path
-            with open(file.path, 'rb') as f:
-                content = f.read()
             
-            # Add to vector store
-            vector_store.add_file(content, filename)
+            # Add to vector store with chunking and embedding selection
+            vector_store.add_file(content, filename, chunk_size=chunk_size, overlap=overlap, embed_model=embed_model)
             
             results.append(f"✓ Successfully uploaded and indexed: {filename}")
         

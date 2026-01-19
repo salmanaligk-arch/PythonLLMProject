@@ -1,8 +1,10 @@
 import gradio as gr
 import os
 from services.vector_store import vector_store
-from services.chatbot import ai_engine, set_online_mode, get_mode_status
+from services.chatbot import ai_engine, set_active_llm, get_mode_status
+from services.llm_manager import llm_manager
 from services.file_handlers.temp_doc_handler import process_temp_document
+from services.embed_manager import embed_manager
 from services.rag_agents import agent_manager
 # Import operations from separate modules
 from frontend.file_operations import upload_documents, get_files_list, refresh_files, select_file, delete_selected_file
@@ -68,30 +70,22 @@ with gr.Blocks(title="Smart Assistant") as gui:
                         label="📝 Output Format (Optional)"
                     )
                     
-                    # Online/Offline Mode Toggle
-                    def get_toggle_label():
-                        if ai_engine.online_available:
-                            return "🌐 Online Mode (HuggingFace)"
-                        else:
-                            return "💻 Offline Mode (Ollama)"
-                    
-                    online_toggle = gr.Checkbox(
-                        label=get_toggle_label(),
-                        value=ai_engine.online_available,
+                    # LLM Selection Dropdown (replaces checkbox toggle)
+                    llm_dropdown = gr.Dropdown(
+                        choices=llm_manager.get_names(),
+                        value=llm_manager.get_selected(),
+                        label="🔧 Select LLM",
                         elem_classes=["mode-toggle"]
                     )
-                    
-                    def toggle_online_mode(enabled):
-                        set_online_mode(enabled)
-                        if enabled:
-                            return gr.update(label="🌐 Online Mode (HuggingFace)")
-                        else:
-                            return gr.update(label="💻 Offline Mode (Ollama)")
-                    
-                    online_toggle.change(
-                        fn=toggle_online_mode,
-                        inputs=online_toggle,
-                        outputs=online_toggle
+
+                    def change_llm(name: str):
+                        # Set active LLM and return status message
+                        return set_active_llm(name)
+
+                    llm_dropdown.change(
+                        fn=change_llm,
+                        inputs=llm_dropdown,
+                        outputs=[],
                     )
                 
                 with gr.Column(scale=3):
@@ -144,6 +138,13 @@ with gr.Blocks(title="Smart Assistant") as gui:
                         file_count="multiple",
                         label="📄 Select Documents (PDF, TXT, DOCX, XLSX)"
                     )
+                    embed_dropdown = gr.Dropdown(
+                        choices=embed_manager.get_names(),
+                        value=embed_manager.get_selected(),
+                        label="🧩 Select Embedding Model"
+                    )
+                    chunk_size_slider = gr.Slider(minimum=200, maximum=5000, step=50, value=int(os.getenv("CHUNK_SIZE", 1000)), label="🔪 Chunk Size")
+                    chunk_overlap_slider = gr.Slider(minimum=0, maximum=2000, step=10, value=int(os.getenv("CHUNK_OVERLAP", 200)), label="🔁 Chunk Overlap")
                     upload_btn = gr.Button("⬆️ Upload & Index", variant="primary", size="lg")
                 
                 with gr.Column():
@@ -157,7 +158,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
             
             upload_btn.click(
                 fn=upload_documents,
-                inputs=file_upload,
+                inputs=[file_upload, embed_dropdown, chunk_size_slider, chunk_overlap_slider],
                 outputs=upload_output
             )
         
