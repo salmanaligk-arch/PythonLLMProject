@@ -4,6 +4,7 @@ import json
 from typing import Dict, Any, Optional, List
 import numpy as np
 import ollama
+import requests
 from services.logger import logger
 
 
@@ -62,7 +63,6 @@ class EmbedManager:
         if not cfg:
             logger.warning(f"No embedding config for: {name}")
             return None
-
         provider = cfg.get("provider", "ollama")
         model = cfg.get("model")
 
@@ -71,12 +71,35 @@ class EmbedManager:
                 resp = ollama.embeddings(model=model, prompt=text)
                 emb = np.array(resp.get('embedding', []), dtype=np.float32)
                 return emb
-            else:
-                # Default to ollama if unknown provider for now
-                logger.warning(f"Unknown embedding provider '{provider}', defaulting to ollama")
-                resp = ollama.embeddings(model=model, prompt=text)
-                emb = np.array(resp.get('embedding', []), dtype=np.float32)
-                return emb
+
+            if provider == "huggingface":
+                # Try HuggingFace Inference API
+                hf_token = cfg.get("api_key")
+                headers = {}
+                if hf_token:
+                    headers["Authorization"] = f"Bearer {hf_token}"
+
+                # Preferred HF embeddings endpoint
+                url = "https://api-inference.huggingface.co/embeddings"
+                payload = {"model": model, "inputs": text}
+                r = requests.post(url, headers=headers, json=payload, timeout=30)
+                if r.status_code == 200:
+                    data = r.json()
+                    # HF may return {'embedding': [...]} or list of floats
+                    if isinstance(data, dict) and "embedding" in data:
+                        emb = np.array(data.get("embedding", []), dtype=np.float32)
+                        return emb
+                    # Some HF models return a list (or list of lists)
+                    if isinstance(data, list):
+                        first = data[0]
+                        emb = np.array(first, dtype=np.float32)
+                        return emb
+                logger.error(f"HuggingFace embeddings request failed: {r.status_code} {r.text}")
+                return None
+
+            # Unknown provider: log and return None (no fallback)
+            logger.warning(f"Unknown embedding provider '{provider}' for model '{name}'")
+            return None
         except Exception as e:
             logger.error(f"Embedding generation failed for model {name}: {e}")
             return None
@@ -109,6 +132,24 @@ class EmbedManager:
             logger.info(f"Removed embed model: {name}")
             return True
         return False
+
+    def test_model(self, name: Optional[str] = None, text: str = "test") -> (bool, str):
+        """Perform a quick smoke-test of the named embedding model.
+
+        Returns (True, dims) on success (dims as string) or (False, error_message) on failure.
+        """
+        cfg = self.get_config(name)
+        if not cfg:
+            return False, f"No embedding config found for: {name}"
+
+        try:
+            emb = self.get_embedding(text, name)
+            if emb is None:
+                return False, "Embedding call returned no vector"
+            # Return vector dimension as a success message
+            return True, str(emb.shape)
+        except Exception as e:
+            return False, str(e)
 
 
 # Create module-level embed manager and register defaults from env

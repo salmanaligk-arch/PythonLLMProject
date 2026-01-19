@@ -5,6 +5,13 @@
       "model": "nomic-embed-text:v1.5",
       "timeout": 30
     }
+    ,
+    "huggingface": {
+      "provider": "huggingface",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "api_key": "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",
+      "timeout": 30
+    }
   },
   "selected": "default"
 }
