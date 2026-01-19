@@ -153,7 +153,7 @@ class AIEngine:
             "model": cfg.get("model"),
             "base_url": cfg.get("base_url"),
             "api_key": cfg.get("api_key"),
-            "temperature": self.llm_temperature,
+            "temperature": float(cfg.get("temperature", self.llm_temperature)),
             "timeout": cfg.get("timeout", self.llm_timeout),
         }
 
