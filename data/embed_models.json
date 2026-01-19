@@ -1,0 +1,10 @@
+{
+  "configs": {
+    "default": {
+      "provider": "ollama",
+      "model": "nomic-embed-text:v1.5",
+      "timeout": 30
+    }
+  },
+  "selected": "default"
+}
