@@ -6,12 +6,19 @@ Handles document upload, file management, and file browser functionality
 import gradio as gr
 from services.vector_store import vector_store
 from services.logger import logger
+from services.embed_manager import embed_manager
 import os
 def upload_documents(files, embed_model=None, chunk_size: int = 1000, overlap: int = 200):
     """Upload and index multiple documents"""
     if not files:
         return "No files uploaded"
     
+    if embed_model:
+        try:
+            embed_manager.set_selected(embed_model)
+        except Exception:
+            pass
+
     results = []
     
     for file in files:
@@ -74,7 +81,7 @@ def upload_documents(files, embed_model=None, chunk_size: int = 1000, overlap: i
                 continue
             
             # Add to vector store with chunking and embedding selection
-            vector_store.add_file(content, filename, chunk_size=chunk_size, overlap=overlap, embed_model=embed_model)
+            vector_store.add_file(content, filename, chunk_size=chunk_size, overlap=overlap)
             
             results.append(f"✓ Successfully uploaded and indexed: {filename}")
         

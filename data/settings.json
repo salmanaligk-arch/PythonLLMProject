@@ -1,0 +1,7 @@
+{
+  "default_llm": "huggingface",
+  "default_embedding": "huggingface",
+  "default_agent": "crewai",
+  "chunk_size": 1000,
+  "chunk_overlap": 100
+}

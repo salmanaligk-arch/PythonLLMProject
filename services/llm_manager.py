@@ -26,7 +26,7 @@ class LLMManager:
                 with open(self._storage_file, 'w', encoding='utf-8') as f:
                     json.dump({"configs": {}, "selected": None}, f, indent=2)
             except Exception:
-                logger.debug(f"Could not create storage file: {self._storage_file}")
+                logger.info(f"Could not create storage file: {self._storage_file}")
         # Try to load persisted configs (do NOT bootstrap from environment)
         self.load()
 
@@ -43,7 +43,7 @@ class LLMManager:
         try:
             self.save()
         except Exception:
-            logger.debug("Could not persist LLM configs")
+            logger.info("Could not persist LLM configs")
 
     def get_names(self) -> List[str]:
         return list(self._configs.keys())
@@ -55,7 +55,7 @@ class LLMManager:
             try:
                 self.save()
             except Exception:
-                logger.debug("Could not persist selected LLM")
+                logger.info("Could not persist selected LLM")
             return True
         logger.warning(f"Attempted to select unknown LLM: {name}")
         return False
@@ -67,28 +67,6 @@ class LLMManager:
         if name is None:
             name = self._selected
         return self._configs.get(name)
-
-    def create_client(self, name: Optional[str] = None) -> Optional[OpenAI]:
-        """Create and return an OpenAI-compatible client for the named LLM.
-
-        Returns None if configuration is missing.
-        """
-        cfg = self.get_config(name)
-        if not cfg:
-            logger.warning(f"No LLM config found for: {name}")
-            return None
-
-        base_url = cfg.get("base_url")
-        api_key = cfg.get("api_key")
-        timeout = int(cfg.get("timeout", 30))
-        max_retries = int(cfg.get("max_retries", 2))
-
-        try:
-            client = OpenAI(base_url=base_url, api_key=api_key, timeout=timeout, max_retries=max_retries)
-            return client
-        except Exception as e:
-            logger.error(f"Error creating client for {name}: {e}")
-            return None
 
     def save(self):
         payload = {
@@ -119,10 +97,73 @@ class LLMManager:
             try:
                 self.save()
             except Exception:
-                logger.debug("Could not persist LLM configs after remove")
+                logger.info("Could not persist LLM configs after remove")
             logger.info(f"Removed LLM: {name}")
             return True
         return False
+
+    def edit(self, name: str, updates: Dict[str, Any]) -> bool:
+        """Edit an existing LLM configuration by merging `updates` into it and persisting."""
+        if name not in self._configs:
+            logger.warning(f"Attempted to edit unknown LLM: {name}")
+            return False
+        # Merge updates into existing config
+        self._configs[name].update(dict(updates))
+        try:
+            self.save()
+        except Exception:
+            logger.info("Could not persist LLM configs after edit")
+        logger.info(f"Edited LLM config: {name}")
+        return True
+
+    def test_model(self, cfg: Dict[str, Any], prompt: str = "hello") -> (bool, str):
+        """Test an LLM configuration directly without registering it.
+
+        cfg should contain keys: model, base_url, api_key, timeout, max_retries
+        Returns (True, msg) on success or (False, error) on failure.
+        """
+        if not cfg:
+            return False, "No config provided"
+        model = cfg.get("model")
+        base_url = cfg.get("base_url")
+
+        if not base_url or not model:
+            return False, "Missing base_url or model in config"
+        # Use the AIEngine to create a client from the provided cfg and call the LLM
+        # Import locally to avoid circular imports at module import time
+        from services.chatbot import ai_engine
+
+        client = ai_engine.create_client(cfg)
+        if not client:
+            return False, "Could not create client"
+
+        try:
+            # Reuse AIEngine's generic LLM call implementation
+            resp_text = ai_engine.call_llm(client, model, prompt, max_tokens=8, temperature=float(cfg.get("temperature", 0.1)))
+            from services.logger import logger
+            logger.warning(f"LLM provider raw response: {resp_text}")
+            if resp_text:
+                return True, "Model responded"
+            return False, f"No response from model. Raw response: {resp_text}"
+        except Exception as e:
+            from services.logger import logger
+            logger.error(f"LLM test_model exception: {e}")
+            return False, str(e)
+
+    def get_llm_config(self, name: Optional[str] = None) -> Dict[str, Any]:
+        """Return a sanitized LLM configuration suitable for external LLM wrappers.
+
+        If `name` is None the currently selected LLM is used.
+        Returns a dict with keys: model, base_url, api_key, temperature, timeout.
+        """
+        cfg = self.get_config(name) or {}
+        return {
+            "model": cfg.get("model"),
+            "base_url": cfg.get("base_url"),
+            "api_key": cfg.get("api_key"),
+            "temperature": cfg.get("temperature"),
+            "timeout": cfg.get("timeout"),
+        }
 
 
 # Module-level manager: load persisted LLMs (or create defaults from env)

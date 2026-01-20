@@ -2444,3 +2444,1223 @@ LiteLLM completion() model= Qwen/Qwen2.5-72B-Instruct; provider = openai
 2026-01-19 12:13:26,695 - INFO - \u2713 LangChain agent loaded
 2026-01-19 12:13:39,525 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
 2026-01-19 12:13:40,438 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 12:14:43,047 - INFO - Research tool called with query: how many candidates are accommodated
+2026-01-19 12:14:52,939 - INFO - Research completed using AI engine
+2026-01-19 12:20:20,738 - INFO - Selected row index: 0
+2026-01-19 12:20:20,738 - INFO - Selected file: GCC No.1.pdf
+2026-01-19 12:20:21,521 - INFO - Selected row index: 0
+2026-01-19 12:20:21,521 - INFO - Selected file: GCC No.1.pdf
+2026-01-19 12:20:24,507 - INFO - Selected row index: 1
+2026-01-19 12:20:24,508 - INFO - Selected file: GPGC Mardan.pdf
+2026-01-19 12:20:26,371 - INFO - Selected row index: 3
+2026-01-19 12:20:26,371 - INFO - Selected file: Attendance Report.pdf
+2026-01-19 12:49:32,797 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 12:49:32,977 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 12:49:33,137 - INFO - Loading faiss with AVX2 support.
+2026-01-19 12:49:33,148 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 12:49:34,282 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 12:49:34,339 - INFO - \u2713 Simple agent loaded
+2026-01-19 12:49:35,388 - INFO - \u2713 LangChain agent loaded
+2026-01-19 12:49:48,517 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 12:49:49,412 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 12:52:07,199 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 12:52:07,378 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 12:52:07,536 - INFO - Loading faiss with AVX2 support.
+2026-01-19 12:52:07,546 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 12:52:08,666 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 12:52:08,726 - INFO - \u2713 Simple agent loaded
+2026-01-19 12:52:09,790 - INFO - \u2713 LangChain agent loaded
+2026-01-19 12:52:22,252 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 12:52:23,141 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 13:55:34,835 - WARNING - Failed to load LLM configs: Expecting value: line 1 column 1 (char 0)
+2026-01-19 13:55:34,838 - WARNING - No LLM selected in LLMManager
+2026-01-19 13:55:34,838 - INFO - AIEngine initialized - Active LLM: None
+2026-01-19 13:55:34,997 - INFO - Loading faiss with AVX2 support.
+2026-01-19 13:55:35,009 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 13:55:36,294 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 13:55:36,366 - INFO - \u2713 Simple agent loaded
+2026-01-19 13:55:37,545 - INFO - \u2713 LangChain agent loaded
+2026-01-19 13:55:51,859 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 13:55:52,750 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 14:08:47,484 - WARNING - Failed to load LLM configs: Expecting value: line 1 column 1 (char 0)
+2026-01-19 14:08:47,487 - WARNING - No LLM selected in LLMManager
+2026-01-19 14:08:47,487 - INFO - AIEngine initialized - Active LLM: None
+2026-01-19 14:08:47,647 - INFO - Loading faiss with AVX2 support.
+2026-01-19 14:08:47,658 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 14:08:48,821 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 14:08:48,879 - INFO - \u2713 Simple agent loaded
+2026-01-19 14:08:49,942 - INFO - \u2713 LangChain agent loaded
+2026-01-19 14:09:06,503 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 14:09:07,414 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 14:19:26,780 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 14:19:26,968 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 14:19:27,131 - INFO - Loading faiss with AVX2 support.
+2026-01-19 14:19:27,143 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 14:19:28,288 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 14:19:28,349 - INFO - \u2713 Simple agent loaded
+2026-01-19 14:19:29,457 - INFO - \u2713 LangChain agent loaded
+2026-01-19 14:19:45,385 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 14:19:45,574 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 14:19:45,736 - INFO - Loading faiss with AVX2 support.
+2026-01-19 14:19:45,749 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 14:19:46,891 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 14:19:46,949 - INFO - \u2713 Simple agent loaded
+2026-01-19 14:19:48,034 - INFO - \u2713 LangChain agent loaded
+2026-01-19 14:20:03,651 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 14:20:04,581 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 14:20:43,600 - INFO - Selected row index: 0
+2026-01-19 14:20:43,601 - INFO - Selected file: GCC No.1.pdf
+2026-01-19 14:20:53,390 - INFO - Selected active LLM: huggingface
+2026-01-19 14:20:53,391 - INFO - Selected embedding model: ollama
+2026-01-19 14:21:36,428 - INFO - Processing page 1 with pdfplumber
+2026-01-19 14:21:36,819 - INFO - Extracting text and tables from text-based page.
+2026-01-19 14:21:37,153 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 14:23:10,775 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 14:23:10,960 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 14:23:11,123 - INFO - Loading faiss with AVX2 support.
+2026-01-19 14:23:11,134 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 14:23:12,261 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 14:23:12,321 - INFO - \u2713 Simple agent loaded
+2026-01-19 14:23:13,392 - INFO - \u2713 LangChain agent loaded
+2026-01-19 14:23:25,962 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 14:23:26,870 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 14:26:16,638 - INFO - Registered embedding model: ollama
+2026-01-19 14:26:46,373 - INFO - Registered embedding model: ollama
+2026-01-19 14:27:46,207 - INFO - Removed embed model: huggingface
+2026-01-19 14:31:10,072 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 14:31:10,262 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 14:31:10,430 - INFO - Loading faiss with AVX2 support.
+2026-01-19 14:31:10,442 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 14:31:11,599 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 14:31:11,661 - INFO - \u2713 Simple agent loaded
+2026-01-19 14:31:12,766 - INFO - \u2713 LangChain agent loaded
+2026-01-19 14:31:25,369 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 14:31:26,296 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 14:32:50,091 - INFO - Removed embed model: huggingface
+2026-01-19 14:33:54,313 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 14:33:54,503 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 14:33:54,662 - INFO - Loading faiss with AVX2 support.
+2026-01-19 14:33:54,674 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 14:33:55,808 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 14:33:55,865 - INFO - \u2713 Simple agent loaded
+2026-01-19 14:33:56,924 - INFO - \u2713 LangChain agent loaded
+2026-01-19 14:34:09,721 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 14:34:10,642 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 14:35:01,190 - INFO - Registered LLM: __tmp_test_llm__
+2026-01-19 14:35:05,250 - INFO - Removed LLM: __tmp_test_llm__
+2026-01-19 14:35:21,454 - INFO - Registered LLM: __tmp_test_llm__
+2026-01-19 14:35:26,259 - INFO - Removed LLM: __tmp_test_llm__
+2026-01-19 14:37:37,621 - INFO - Registered LLM: __tmp_test_llm__
+2026-01-19 14:37:41,301 - INFO - Removed LLM: __tmp_test_llm__
+2026-01-19 14:38:00,354 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 14:38:02,459 - ERROR - Embedding request failed for __tmp_test_embed__: 404 404 page not found
+2026-01-19 14:38:02,460 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 14:38:12,637 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 14:38:13,545 - ERROR - Embedding request failed for __tmp_test_embed__: 410 {"error":"https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead."}
+2026-01-19 14:38:13,546 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 14:40:35,994 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 14:40:36,173 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 14:40:36,337 - INFO - Loading faiss with AVX2 support.
+2026-01-19 14:40:36,349 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 14:40:37,457 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 14:40:37,512 - INFO - \u2713 Simple agent loaded
+2026-01-19 14:40:38,565 - INFO - \u2713 LangChain agent loaded
+2026-01-19 14:40:53,262 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 14:40:54,154 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 14:41:16,454 - INFO - Registered LLM: __tmp_test_llm__
+2026-01-19 14:41:21,432 - INFO - Removed LLM: __tmp_test_llm__
+2026-01-19 14:41:39,137 - INFO - Selected active LLM: ollama
+2026-01-19 14:41:46,759 - INFO - Research tool called with query: how many candidates are accommodated
+2026-01-19 14:41:48,816 - ERROR - Embedding request failed for None: 404 404 page not found
+2026-01-19 14:42:22,321 - INFO - Selected active LLM: huggingface
+2026-01-19 14:42:28,754 - INFO - Research tool called with query: how many candidates are accommodated
+2026-01-19 14:42:30,805 - ERROR - Embedding request failed for None: 404 404 page not found
+2026-01-19 14:50:45,406 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 14:50:47,122 - ERROR - Embedding request failed for __tmp_test_embed__: 410 {"error":"https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead."}
+2026-01-19 14:50:47,123 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 14:50:51,752 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 14:50:53,787 - ERROR - Embedding request failed for __tmp_test_embed__: 404 404 page not found
+2026-01-19 14:50:53,789 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 14:55:41,347 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 14:55:41,535 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 14:55:41,699 - INFO - Loading faiss with AVX2 support.
+2026-01-19 14:55:41,711 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 14:55:42,996 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 14:55:43,071 - INFO - \u2713 Simple agent loaded
+2026-01-19 14:55:44,230 - INFO - \u2713 LangChain agent loaded
+2026-01-19 14:55:57,335 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 14:55:58,278 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 14:56:18,268 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 14:56:19,120 - ERROR - Embedding request failed for __tmp_test_embed__: 410 {"error":"https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead."}
+2026-01-19 14:56:19,121 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 14:56:23,700 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 14:56:25,735 - ERROR - Embedding request failed for __tmp_test_embed__: 404 404 page not found
+2026-01-19 14:56:25,738 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 14:56:38,032 - INFO - Registered LLM: __tmp_test_llm__
+2026-01-19 14:56:44,087 - INFO - Removed LLM: __tmp_test_llm__
+2026-01-19 14:56:51,218 - INFO - Registered LLM: __tmp_test_llm__
+2026-01-19 14:56:53,511 - INFO - Removed LLM: __tmp_test_llm__
+2026-01-19 14:59:58,958 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 14:59:59,146 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 14:59:59,308 - INFO - Loading faiss with AVX2 support.
+2026-01-19 14:59:59,320 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 15:00:00,457 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 15:00:00,513 - INFO - \u2713 Simple agent loaded
+2026-01-19 15:00:01,570 - INFO - \u2713 LangChain agent loaded
+2026-01-19 15:00:14,398 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 15:00:15,282 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 15:00:32,299 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 15:00:33,128 - ERROR - Embedding request failed for __tmp_test_embed__: 410 {"error":"https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead."}
+2026-01-19 15:00:33,130 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 15:00:36,082 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 15:00:38,148 - ERROR - Embedding request failed for __tmp_test_embed__: 404 404 page not found
+2026-01-19 15:00:38,150 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 15:00:47,532 - INFO - Registered LLM: __tmp_test_llm__
+2026-01-19 15:00:52,673 - INFO - Removed LLM: __tmp_test_llm__
+2026-01-19 15:06:15,763 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 15:06:15,941 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 15:06:16,101 - INFO - Loading faiss with AVX2 support.
+2026-01-19 15:06:16,112 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 15:06:17,222 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 15:06:17,278 - INFO - \u2713 Simple agent loaded
+2026-01-19 15:06:18,361 - INFO - \u2713 LangChain agent loaded
+2026-01-19 15:06:39,422 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 15:06:40,451 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 15:07:59,829 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 15:08:00,988 - ERROR - Embedding request failed for __tmp_test_embed__: 404 Not Found
+2026-01-19 15:08:00,989 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 15:10:28,549 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 15:10:28,551 - DEBUG - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-19 15:10:28,551 - DEBUG - Creating OpenAI client for LLM 'huggingface': base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-19 15:10:28,729 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 15:10:28,887 - DEBUG - Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2026-01-19 15:10:28,887 - INFO - Loading faiss with AVX2 support.
+2026-01-19 15:10:28,898 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 15:10:30,024 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 15:10:30,084 - INFO - \u2713 Simple agent loaded
+2026-01-19 15:10:31,135 - INFO - \u2713 LangChain agent loaded
+2026-01-19 15:10:31,309 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:10:33,276 - DEBUG - connect_tcp.started host='raw.githubusercontent.com' port=443 local_address=None timeout=5 socket_options=None
+2026-01-19 15:10:33,344 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028C4EEA7770>
+2026-01-19 15:10:33,344 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000028C4EFD83B0> server_hostname='raw.githubusercontent.com' timeout=5
+2026-01-19 15:10:33,509 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028C4EE8FB10>
+2026-01-19 15:10:33,510 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2026-01-19 15:10:33,511 - DEBUG - send_request_headers.complete
+2026-01-19 15:10:33,511 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2026-01-19 15:10:33,511 - DEBUG - send_request_body.complete
+2026-01-19 15:10:33,511 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2026-01-19 15:10:33,780 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Connection', b'keep-alive'), (b'Content-Length', b'61322'), (b'Cache-Control', b'max-age=300'), (b'Content-Security-Policy', b"default-src 'none'; style-src 'unsafe-inline'; sandbox"), (b'Content-Type', b'text/plain; charset=utf-8'), (b'ETag', b'W/"b17095a2c7913bd9c5427be07ae89e32989ca544ae2eba011917fd1cea8516a7"'), (b'Strict-Transport-Security', b'max-age=31536000'), (b'X-Content-Type-Options', b'nosniff'), (b'X-Frame-Options', b'deny'), (b'X-XSS-Protection', b'1; mode=block'), (b'X-GitHub-Request-Id', b'278D:6A272:3E4328:50BD32:696AB015'), (b'Content-Encoding', b'gzip'), (b'Accept-Ranges', b'bytes'), (b'Date', b'Mon, 19 Jan 2026 10:10:35 GMT'), (b'Via', b'1.1 varnish'), (b'X-Served-By', b'cache-fjr990020-FJR'), (b'X-Cache', b'HIT'), (b'X-Cache-Hits', b'8'), (b'X-Timer', b'S1768817436.900710,VS0,VE0'), (b'Vary', b'Authorization,Accept-Encoding'), (b'Access-Control-Allow-Origin', b'*'), (b'Cross-Origin-Resource-Policy', b'cross-origin'), (b'X-Fastly-Request-ID', b'f35b50af77f8e68884f1ccedc29c9c934700d1d7'), (b'Expires', b'Mon, 19 Jan 2026 10:15:35 GMT'), (b'Source-Age', b'61')])
+2026-01-19 15:10:33,785 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2026-01-19 15:10:34,445 - DEBUG - receive_response_body.complete
+2026-01-19 15:10:34,445 - DEBUG - response_closed.started
+2026-01-19 15:10:34,445 - DEBUG - response_closed.complete
+2026-01-19 15:10:34,446 - DEBUG - close.started
+2026-01-19 15:10:34,447 - DEBUG - close.complete
+2026-01-19 15:10:42,078 - DEBUG - [Non-Blocking] Unable to import GenericAPILogger - LiteLLM Enterprise Feature - No module named 'litellm_enterprise'
+2026-01-19 15:10:44,160 - DEBUG - Using AiohttpTransport...
+2026-01-19 15:10:44,160 - DEBUG - Creating AiohttpTransport...
+2026-01-19 15:10:44,160 - DEBUG - NEW SESSION: Creating new ClientSession (no shared session provided)
+2026-01-19 15:10:44,170 - DEBUG - Using AiohttpTransport...
+2026-01-19 15:10:44,170 - DEBUG - Creating AiohttpTransport...
+2026-01-19 15:10:44,171 - DEBUG - NEW SESSION: Creating new ClientSession (no shared session provided)
+2026-01-19 15:10:44,172 - DEBUG - Using AiohttpTransport...
+2026-01-19 15:10:44,172 - DEBUG - Creating AiohttpTransport...
+2026-01-19 15:10:44,172 - DEBUG - NEW SESSION: Creating new ClientSession (no shared session provided)
+2026-01-19 15:10:44,174 - DEBUG - Using AiohttpTransport...
+2026-01-19 15:10:44,174 - DEBUG - Creating AiohttpTransport...
+2026-01-19 15:10:44,174 - DEBUG - NEW SESSION: Creating new ClientSession (no shared session provided)
+2026-01-19 15:10:44,268 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 15:10:45,176 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 15:10:46,105 - DEBUG - Importing AvifImagePlugin
+2026-01-19 15:10:46,106 - DEBUG - Importing BlpImagePlugin
+2026-01-19 15:10:46,107 - DEBUG - Importing BmpImagePlugin
+2026-01-19 15:10:46,108 - DEBUG - Importing BufrStubImagePlugin
+2026-01-19 15:10:46,108 - DEBUG - Importing CurImagePlugin
+2026-01-19 15:10:46,108 - DEBUG - Importing DcxImagePlugin
+2026-01-19 15:10:46,109 - DEBUG - Importing DdsImagePlugin
+2026-01-19 15:10:46,110 - DEBUG - Importing EpsImagePlugin
+2026-01-19 15:10:46,112 - DEBUG - Importing FitsImagePlugin
+2026-01-19 15:10:46,112 - DEBUG - Importing FliImagePlugin
+2026-01-19 15:10:46,112 - DEBUG - Importing FpxImagePlugin
+2026-01-19 15:10:46,113 - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2026-01-19 15:10:46,113 - DEBUG - Importing FtexImagePlugin
+2026-01-19 15:10:46,113 - DEBUG - Importing GbrImagePlugin
+2026-01-19 15:10:46,113 - DEBUG - Importing GifImagePlugin
+2026-01-19 15:10:46,115 - DEBUG - Importing GribStubImagePlugin
+2026-01-19 15:10:46,115 - DEBUG - Importing Hdf5StubImagePlugin
+2026-01-19 15:10:46,115 - DEBUG - Importing IcnsImagePlugin
+2026-01-19 15:10:46,117 - DEBUG - Importing IcoImagePlugin
+2026-01-19 15:10:46,117 - DEBUG - Importing ImImagePlugin
+2026-01-19 15:10:46,118 - DEBUG - Importing ImtImagePlugin
+2026-01-19 15:10:46,119 - DEBUG - Importing IptcImagePlugin
+2026-01-19 15:10:46,119 - DEBUG - Importing JpegImagePlugin
+2026-01-19 15:10:46,120 - DEBUG - Importing Jpeg2KImagePlugin
+2026-01-19 15:10:46,120 - DEBUG - Importing McIdasImagePlugin
+2026-01-19 15:10:46,121 - DEBUG - Importing MicImagePlugin
+2026-01-19 15:10:46,121 - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2026-01-19 15:10:46,121 - DEBUG - Importing MpegImagePlugin
+2026-01-19 15:10:46,122 - DEBUG - Importing MpoImagePlugin
+2026-01-19 15:10:46,124 - DEBUG - Importing MspImagePlugin
+2026-01-19 15:10:46,124 - DEBUG - Importing PalmImagePlugin
+2026-01-19 15:10:46,126 - DEBUG - Importing PcdImagePlugin
+2026-01-19 15:10:46,126 - DEBUG - Importing PcxImagePlugin
+2026-01-19 15:10:46,126 - DEBUG - Importing PdfImagePlugin
+2026-01-19 15:10:46,143 - DEBUG - Importing PixarImagePlugin
+2026-01-19 15:10:46,144 - DEBUG - Importing PngImagePlugin
+2026-01-19 15:10:46,144 - DEBUG - Importing PpmImagePlugin
+2026-01-19 15:10:46,144 - DEBUG - Importing PsdImagePlugin
+2026-01-19 15:10:46,145 - DEBUG - Importing QoiImagePlugin
+2026-01-19 15:10:46,145 - DEBUG - Importing SgiImagePlugin
+2026-01-19 15:10:46,146 - DEBUG - Importing SpiderImagePlugin
+2026-01-19 15:10:46,146 - DEBUG - Importing SunImagePlugin
+2026-01-19 15:10:46,146 - DEBUG - Importing TgaImagePlugin
+2026-01-19 15:10:46,147 - DEBUG - Importing TiffImagePlugin
+2026-01-19 15:10:46,147 - DEBUG - Importing WebPImagePlugin
+2026-01-19 15:10:46,148 - DEBUG - Importing WmfImagePlugin
+2026-01-19 15:10:46,148 - DEBUG - Importing XbmImagePlugin
+2026-01-19 15:10:46,151 - DEBUG - Importing XpmImagePlugin
+2026-01-19 15:10:46,152 - DEBUG - Importing XVThumbImagePlugin
+2026-01-19 15:10:47,907 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:10:47,909 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2026-01-19 15:10:47,909 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:10:47,923 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:10:47,939 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:10:48,050 - DEBUG - connect_tcp.started host='api.gradio.app' port=443 local_address=None timeout=3 socket_options=None
+2026-01-19 15:10:48,175 - DEBUG - matplotlib data path: e:\PythonLLMProject\env\Lib\site-packages\matplotlib\mpl-data
+2026-01-19 15:10:48,184 - DEBUG - CONFIGDIR=C:\Users\Hp\.matplotlib
+2026-01-19 15:10:48,185 - DEBUG - interactive is False
+2026-01-19 15:10:48,185 - DEBUG - platform is win32
+2026-01-19 15:10:48,212 - DEBUG - CACHEDIR=C:\Users\Hp\.matplotlib
+2026-01-19 15:10:48,214 - DEBUG - Using fontManager instance from C:\Users\Hp\.matplotlib\fontlist-v390.json
+2026-01-19 15:10:48,475 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:10:48,476 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:10:48,602 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:10:48,603 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:10:48,603 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:10:48,622 - DEBUG - https://huggingface.co:443 "HEAD /api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics HTTP/1.1" 200 0
+2026-01-19 15:10:48,714 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:10:48,889 - DEBUG - connect_tcp.started host='localhost' port=7860 local_address=None timeout=None socket_options=None
+2026-01-19 15:10:50,044 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028C58E14410>
+2026-01-19 15:10:50,044 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000028C56AB9BE0> server_hostname='api.gradio.app' timeout=3
+2026-01-19 15:10:50,911 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028C58DF4B00>
+2026-01-19 15:10:50,911 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2026-01-19 15:10:50,913 - DEBUG - send_request_headers.complete
+2026-01-19 15:10:50,913 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2026-01-19 15:10:50,913 - DEBUG - send_request_body.complete
+2026-01-19 15:10:50,913 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2026-01-19 15:10:50,918 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Mon, 19 Jan 2026 10:10:50 GMT'), (b'server', b'uvicorn'), (b'content-length', b'4'), (b'content-type', b'application/json')])
+2026-01-19 15:10:50,919 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2026-01-19 15:10:50,919 - DEBUG - receive_response_body.complete
+2026-01-19 15:10:50,919 - DEBUG - response_closed.started
+2026-01-19 15:10:50,919 - DEBUG - response_closed.complete
+2026-01-19 15:10:50,919 - DEBUG - close.started
+2026-01-19 15:10:50,919 - DEBUG - close.complete
+2026-01-19 15:10:50,919 - DEBUG - connect_tcp.started host='localhost' port=7860 local_address=None timeout=3 socket_options=None
+2026-01-19 15:10:51,295 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028C58DF5CD0>
+2026-01-19 15:10:51,295 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2026-01-19 15:10:51,295 - DEBUG - send_request_headers.complete
+2026-01-19 15:10:51,295 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2026-01-19 15:10:51,295 - DEBUG - send_request_body.complete
+2026-01-19 15:10:51,295 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2026-01-19 15:10:51,646 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 19 Jan 2026 10:10:53 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'21'), (b'Connection', b'keep-alive'), (b'Server', b'nginx/1.18.0'), (b'Access-Control-Allow-Origin', b'*')])
+2026-01-19 15:10:51,646 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2026-01-19 15:10:51,647 - DEBUG - receive_response_body.complete
+2026-01-19 15:10:51,647 - DEBUG - response_closed.started
+2026-01-19 15:10:51,647 - DEBUG - response_closed.complete
+2026-01-19 15:10:51,647 - DEBUG - close.started
+2026-01-19 15:10:51,648 - DEBUG - close.complete
+2026-01-19 15:10:52,961 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028C58E08DD0>
+2026-01-19 15:10:52,961 - DEBUG - send_request_headers.started request=<Request [b'HEAD']>
+2026-01-19 15:10:52,962 - DEBUG - send_request_headers.complete
+2026-01-19 15:10:52,962 - DEBUG - send_request_body.started request=<Request [b'HEAD']>
+2026-01-19 15:10:52,965 - DEBUG - send_request_body.complete
+2026-01-19 15:10:52,965 - DEBUG - receive_response_headers.started request=<Request [b'HEAD']>
+2026-01-19 15:10:52,985 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Mon, 19 Jan 2026 10:10:52 GMT'), (b'server', b'uvicorn'), (b'content-length', b'159083'), (b'content-type', b'text/html; charset=utf-8')])
+2026-01-19 15:10:52,985 - DEBUG - receive_response_body.started request=<Request [b'HEAD']>
+2026-01-19 15:10:52,985 - DEBUG - receive_response_body.complete
+2026-01-19 15:10:52,985 - DEBUG - response_closed.started
+2026-01-19 15:10:52,985 - DEBUG - response_closed.complete
+2026-01-19 15:10:52,985 - DEBUG - close.started
+2026-01-19 15:10:52,985 - DEBUG - close.complete
+2026-01-19 15:10:52,988 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2026-01-19 15:10:54,276 - DEBUG - https://huggingface.co:443 "HEAD /api/telemetry/https%3A/api.gradio.app/gradio-launched-telemetry HTTP/1.1" 200 0
+2026-01-19 15:11:49,060 - DEBUG - Loaded backend tkagg version 8.6.
+2026-01-19 15:11:49,060 - DEBUG - Loaded backend agg version v2.2.
+2026-01-19 15:11:49,062 - DEBUG - Loaded backend tkagg version 8.6.
+2026-01-19 15:11:49,912 - DEBUG - Loaded backend agg version v2.2.
+2026-01-19 15:11:49,913 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 15:11:49,915 - DEBUG - Embedding request -> name=__tmp_test_embed__ url=https://router.huggingface.co headers=['Authorization'] payload_keys=['model', 'inputs']
+2026-01-19 15:11:49,920 - DEBUG - Starting new HTTPS connection (1): router.huggingface.co:443
+2026-01-19 15:11:51,110 - DEBUG - https://router.huggingface.co:443 "POST / HTTP/1.1" 404 9
+2026-01-19 15:11:51,112 - DEBUG - Embedding response status for __tmp_test_embed__: 404
+2026-01-19 15:11:51,112 - ERROR - Embedding request failed for __tmp_test_embed__: 404 Not Found
+2026-01-19 15:11:51,113 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 15:11:51,115 - DEBUG - Loaded backend tkagg version 8.6.
+2026-01-19 15:11:52,612 - DEBUG - Loaded backend agg version v2.2.
+2026-01-19 15:11:52,613 - DEBUG - Loaded backend tkagg version 8.6.
+2026-01-19 15:11:53,647 - DEBUG - Loaded backend agg version v2.2.
+2026-01-19 15:11:53,648 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 15:11:53,649 - DEBUG - Embedding request -> name=__tmp_test_embed__ url=http://localhost:11434/embeddings headers=['Authorization'] payload_keys=['model', 'inputs']
+2026-01-19 15:11:53,652 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2026-01-19 15:11:55,695 - DEBUG - http://localhost:11434 "POST /embeddings HTTP/1.1" 404 18
+2026-01-19 15:11:55,695 - DEBUG - Embedding response status for __tmp_test_embed__: 404
+2026-01-19 15:11:55,695 - ERROR - Embedding request failed for __tmp_test_embed__: 404 404 page not found
+2026-01-19 15:11:55,696 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 15:11:55,697 - DEBUG - Loaded backend tkagg version 8.6.
+2026-01-19 15:19:14,919 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 15:19:14,922 - DEBUG - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-19 15:19:14,922 - DEBUG - Creating OpenAI client for LLM 'huggingface': base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-19 15:19:15,099 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 15:19:15,256 - DEBUG - Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2026-01-19 15:19:15,256 - INFO - Loading faiss with AVX2 support.
+2026-01-19 15:19:15,267 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 15:19:16,384 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 15:19:16,441 - INFO - \u2713 Simple agent loaded
+2026-01-19 15:19:17,494 - INFO - \u2713 LangChain agent loaded
+2026-01-19 15:19:17,662 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:19:19,648 - DEBUG - connect_tcp.started host='raw.githubusercontent.com' port=443 local_address=None timeout=5 socket_options=None
+2026-01-19 15:19:19,778 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001AB56247770>
+2026-01-19 15:19:19,778 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001AB563783B0> server_hostname='raw.githubusercontent.com' timeout=5
+2026-01-19 15:19:20,623 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001AB5622FB10>
+2026-01-19 15:19:20,624 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2026-01-19 15:19:20,625 - DEBUG - send_request_headers.complete
+2026-01-19 15:19:20,625 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2026-01-19 15:19:20,626 - DEBUG - send_request_body.complete
+2026-01-19 15:19:20,626 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2026-01-19 15:19:20,695 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Connection', b'keep-alive'), (b'Content-Length', b'61322'), (b'Cache-Control', b'max-age=300'), (b'Content-Security-Policy', b"default-src 'none'; style-src 'unsafe-inline'; sandbox"), (b'Content-Type', b'text/plain; charset=utf-8'), (b'ETag', b'W/"b17095a2c7913bd9c5427be07ae89e32989ca544ae2eba011917fd1cea8516a7"'), (b'Strict-Transport-Security', b'max-age=31536000'), (b'X-Content-Type-Options', b'nosniff'), (b'X-Frame-Options', b'deny'), (b'X-XSS-Protection', b'1; mode=block'), (b'X-GitHub-Request-Id', b'278D:6A272:3E4328:50BD32:696AB015'), (b'Content-Encoding', b'gzip'), (b'Accept-Ranges', b'bytes'), (b'Date', b'Mon, 19 Jan 2026 10:19:22 GMT'), (b'Via', b'1.1 varnish'), (b'X-Served-By', b'cache-fjr990026-FJR'), (b'X-Cache', b'HIT'), (b'X-Cache-Hits', b'25'), (b'X-Timer', b'S1768817963.856952,VS0,VE0'), (b'Vary', b'Authorization,Accept-Encoding'), (b'Access-Control-Allow-Origin', b'*'), (b'Cross-Origin-Resource-Policy', b'cross-origin'), (b'X-Fastly-Request-ID', b'f721c90f5cbc292ffe1f15195abb396d062b33fb'), (b'Expires', b'Mon, 19 Jan 2026 10:24:22 GMT'), (b'Source-Age', b'287')])
+2026-01-19 15:19:20,698 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2026-01-19 15:19:21,187 - DEBUG - receive_response_body.complete
+2026-01-19 15:19:21,188 - DEBUG - response_closed.started
+2026-01-19 15:19:21,188 - DEBUG - response_closed.complete
+2026-01-19 15:19:21,188 - DEBUG - close.started
+2026-01-19 15:19:21,188 - DEBUG - close.complete
+2026-01-19 15:19:29,256 - DEBUG - [Non-Blocking] Unable to import GenericAPILogger - LiteLLM Enterprise Feature - No module named 'litellm_enterprise'
+2026-01-19 15:19:31,402 - DEBUG - Using AiohttpTransport...
+2026-01-19 15:19:31,403 - DEBUG - Creating AiohttpTransport...
+2026-01-19 15:19:31,403 - DEBUG - NEW SESSION: Creating new ClientSession (no shared session provided)
+2026-01-19 15:19:31,414 - DEBUG - Using AiohttpTransport...
+2026-01-19 15:19:31,414 - DEBUG - Creating AiohttpTransport...
+2026-01-19 15:19:31,414 - DEBUG - NEW SESSION: Creating new ClientSession (no shared session provided)
+2026-01-19 15:19:31,416 - DEBUG - Using AiohttpTransport...
+2026-01-19 15:19:31,416 - DEBUG - Creating AiohttpTransport...
+2026-01-19 15:19:31,416 - DEBUG - NEW SESSION: Creating new ClientSession (no shared session provided)
+2026-01-19 15:19:31,417 - DEBUG - Using AiohttpTransport...
+2026-01-19 15:19:31,418 - DEBUG - Creating AiohttpTransport...
+2026-01-19 15:19:31,418 - DEBUG - NEW SESSION: Creating new ClientSession (no shared session provided)
+2026-01-19 15:19:31,513 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 15:19:32,475 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 15:19:33,475 - DEBUG - Importing AvifImagePlugin
+2026-01-19 15:19:33,476 - DEBUG - Importing BlpImagePlugin
+2026-01-19 15:19:33,477 - DEBUG - Importing BmpImagePlugin
+2026-01-19 15:19:33,477 - DEBUG - Importing BufrStubImagePlugin
+2026-01-19 15:19:33,478 - DEBUG - Importing CurImagePlugin
+2026-01-19 15:19:33,478 - DEBUG - Importing DcxImagePlugin
+2026-01-19 15:19:33,479 - DEBUG - Importing DdsImagePlugin
+2026-01-19 15:19:33,481 - DEBUG - Importing EpsImagePlugin
+2026-01-19 15:19:33,482 - DEBUG - Importing FitsImagePlugin
+2026-01-19 15:19:33,482 - DEBUG - Importing FliImagePlugin
+2026-01-19 15:19:33,483 - DEBUG - Importing FpxImagePlugin
+2026-01-19 15:19:33,483 - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2026-01-19 15:19:33,483 - DEBUG - Importing FtexImagePlugin
+2026-01-19 15:19:33,484 - DEBUG - Importing GbrImagePlugin
+2026-01-19 15:19:33,484 - DEBUG - Importing GifImagePlugin
+2026-01-19 15:19:33,485 - DEBUG - Importing GribStubImagePlugin
+2026-01-19 15:19:33,486 - DEBUG - Importing Hdf5StubImagePlugin
+2026-01-19 15:19:33,486 - DEBUG - Importing IcnsImagePlugin
+2026-01-19 15:19:33,488 - DEBUG - Importing IcoImagePlugin
+2026-01-19 15:19:33,488 - DEBUG - Importing ImImagePlugin
+2026-01-19 15:19:33,489 - DEBUG - Importing ImtImagePlugin
+2026-01-19 15:19:33,490 - DEBUG - Importing IptcImagePlugin
+2026-01-19 15:19:33,490 - DEBUG - Importing JpegImagePlugin
+2026-01-19 15:19:33,491 - DEBUG - Importing Jpeg2KImagePlugin
+2026-01-19 15:19:33,491 - DEBUG - Importing McIdasImagePlugin
+2026-01-19 15:19:33,492 - DEBUG - Importing MicImagePlugin
+2026-01-19 15:19:33,492 - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2026-01-19 15:19:33,493 - DEBUG - Importing MpegImagePlugin
+2026-01-19 15:19:33,494 - DEBUG - Importing MpoImagePlugin
+2026-01-19 15:19:33,495 - DEBUG - Importing MspImagePlugin
+2026-01-19 15:19:33,495 - DEBUG - Importing PalmImagePlugin
+2026-01-19 15:19:33,497 - DEBUG - Importing PcdImagePlugin
+2026-01-19 15:19:33,497 - DEBUG - Importing PcxImagePlugin
+2026-01-19 15:19:33,497 - DEBUG - Importing PdfImagePlugin
+2026-01-19 15:19:33,515 - DEBUG - Importing PixarImagePlugin
+2026-01-19 15:19:33,516 - DEBUG - Importing PngImagePlugin
+2026-01-19 15:19:33,516 - DEBUG - Importing PpmImagePlugin
+2026-01-19 15:19:33,516 - DEBUG - Importing PsdImagePlugin
+2026-01-19 15:19:33,517 - DEBUG - Importing QoiImagePlugin
+2026-01-19 15:19:33,517 - DEBUG - Importing SgiImagePlugin
+2026-01-19 15:19:33,518 - DEBUG - Importing SpiderImagePlugin
+2026-01-19 15:19:33,519 - DEBUG - Importing SunImagePlugin
+2026-01-19 15:19:33,519 - DEBUG - Importing TgaImagePlugin
+2026-01-19 15:19:33,520 - DEBUG - Importing TiffImagePlugin
+2026-01-19 15:19:33,520 - DEBUG - Importing WebPImagePlugin
+2026-01-19 15:19:33,521 - DEBUG - Importing WmfImagePlugin
+2026-01-19 15:19:33,521 - DEBUG - Importing XbmImagePlugin
+2026-01-19 15:19:33,524 - DEBUG - Importing XpmImagePlugin
+2026-01-19 15:19:33,525 - DEBUG - Importing XVThumbImagePlugin
+2026-01-19 15:19:35,387 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:19:35,388 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:19:35,389 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2026-01-19 15:19:35,389 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:19:35,402 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:19:35,541 - DEBUG - connect_tcp.started host='api.gradio.app' port=443 local_address=None timeout=3 socket_options=None
+2026-01-19 15:19:35,662 - DEBUG - matplotlib data path: e:\PythonLLMProject\env\Lib\site-packages\matplotlib\mpl-data
+2026-01-19 15:19:35,671 - DEBUG - CONFIGDIR=C:\Users\Hp\.matplotlib
+2026-01-19 15:19:35,672 - DEBUG - interactive is False
+2026-01-19 15:19:35,672 - DEBUG - platform is win32
+2026-01-19 15:19:35,701 - DEBUG - CACHEDIR=C:\Users\Hp\.matplotlib
+2026-01-19 15:19:35,702 - DEBUG - Using fontManager instance from C:\Users\Hp\.matplotlib\fontlist-v390.json
+2026-01-19 15:19:35,967 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:19:35,973 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:19:36,021 - DEBUG - https://huggingface.co:443 "HEAD /api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics HTTP/1.1" 200 0
+2026-01-19 15:19:36,098 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:19:36,098 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:19:36,099 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:19:36,210 - DEBUG - Using proactor: IocpProactor
+2026-01-19 15:19:36,262 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001AB60136E90>
+2026-01-19 15:19:36,262 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001AB5DE55BE0> server_hostname='api.gradio.app' timeout=3
+2026-01-19 15:19:36,387 - DEBUG - connect_tcp.started host='localhost' port=7860 local_address=None timeout=None socket_options=None
+2026-01-19 15:19:37,052 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001AB60194D60>
+2026-01-19 15:19:37,053 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2026-01-19 15:19:37,053 - DEBUG - send_request_headers.complete
+2026-01-19 15:19:37,054 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2026-01-19 15:19:37,054 - DEBUG - send_request_body.complete
+2026-01-19 15:19:37,054 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2026-01-19 15:19:37,377 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 19 Jan 2026 10:19:39 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'21'), (b'Connection', b'keep-alive'), (b'Server', b'nginx/1.18.0'), (b'Access-Control-Allow-Origin', b'*')])
+2026-01-19 15:19:37,378 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2026-01-19 15:19:37,378 - DEBUG - receive_response_body.complete
+2026-01-19 15:19:37,379 - DEBUG - response_closed.started
+2026-01-19 15:19:37,379 - DEBUG - response_closed.complete
+2026-01-19 15:19:37,379 - DEBUG - close.started
+2026-01-19 15:19:37,379 - DEBUG - close.complete
+2026-01-19 15:19:38,408 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001AB5DE35220>
+2026-01-19 15:19:38,408 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2026-01-19 15:19:38,408 - DEBUG - send_request_headers.complete
+2026-01-19 15:19:38,408 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2026-01-19 15:19:38,409 - DEBUG - send_request_body.complete
+2026-01-19 15:19:38,409 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2026-01-19 15:19:38,410 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Mon, 19 Jan 2026 10:19:38 GMT'), (b'server', b'uvicorn'), (b'content-length', b'4'), (b'content-type', b'application/json')])
+2026-01-19 15:19:38,410 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2026-01-19 15:19:38,410 - DEBUG - receive_response_body.complete
+2026-01-19 15:19:38,410 - DEBUG - response_closed.started
+2026-01-19 15:19:38,410 - DEBUG - response_closed.complete
+2026-01-19 15:19:38,411 - DEBUG - close.started
+2026-01-19 15:19:38,411 - DEBUG - close.complete
+2026-01-19 15:19:38,411 - DEBUG - connect_tcp.started host='localhost' port=7860 local_address=None timeout=3 socket_options=None
+2026-01-19 15:19:40,432 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001AB601A4170>
+2026-01-19 15:19:40,432 - DEBUG - send_request_headers.started request=<Request [b'HEAD']>
+2026-01-19 15:19:40,433 - DEBUG - send_request_headers.complete
+2026-01-19 15:19:40,433 - DEBUG - send_request_body.started request=<Request [b'HEAD']>
+2026-01-19 15:19:40,433 - DEBUG - send_request_body.complete
+2026-01-19 15:19:40,433 - DEBUG - receive_response_headers.started request=<Request [b'HEAD']>
+2026-01-19 15:19:40,456 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Mon, 19 Jan 2026 10:19:39 GMT'), (b'server', b'uvicorn'), (b'content-length', b'159085'), (b'content-type', b'text/html; charset=utf-8')])
+2026-01-19 15:19:40,456 - DEBUG - receive_response_body.started request=<Request [b'HEAD']>
+2026-01-19 15:19:40,456 - DEBUG - receive_response_body.complete
+2026-01-19 15:19:40,456 - DEBUG - response_closed.started
+2026-01-19 15:19:40,456 - DEBUG - response_closed.complete
+2026-01-19 15:19:40,456 - DEBUG - close.started
+2026-01-19 15:19:40,457 - DEBUG - close.complete
+2026-01-19 15:19:40,460 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2026-01-19 15:19:42,043 - DEBUG - https://huggingface.co:443 "HEAD /api/telemetry/https%3A/api.gradio.app/gradio-launched-telemetry HTTP/1.1" 200 0
+2026-01-19 15:19:49,484 - DEBUG - Loaded backend tkagg version 8.6.
+2026-01-19 15:19:49,484 - DEBUG - Loaded backend agg version v2.2.
+2026-01-19 15:19:49,485 - DEBUG - Loaded backend tkagg version 8.6.
+2026-01-19 15:19:50,428 - DEBUG - Loaded backend agg version v2.2.
+2026-01-19 15:19:50,430 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 15:19:50,432 - DEBUG - Embedding request -> name=__tmp_test_embed__ url=https://router.huggingface.co/v1/embeddings headers=['Authorization'] payload_keys=['model', 'inputs', 'input']
+2026-01-19 15:19:50,437 - DEBUG - Starting new HTTPS connection (1): router.huggingface.co:443
+2026-01-19 15:19:51,305 - DEBUG - https://router.huggingface.co:443 "POST /v1/embeddings HTTP/1.1" 404 9
+2026-01-19 15:19:51,306 - DEBUG - Embedding response status for __tmp_test_embed__: 404
+2026-01-19 15:19:51,306 - ERROR - Embedding request failed for __tmp_test_embed__: 404 Not Found
+2026-01-19 15:19:51,307 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 15:19:51,309 - DEBUG - Loaded backend tkagg version 8.6.
+2026-01-19 15:19:53,276 - DEBUG - Loaded backend agg version v2.2.
+2026-01-19 15:19:53,278 - DEBUG - Loaded backend tkagg version 8.6.
+2026-01-19 15:19:54,326 - DEBUG - Loaded backend agg version v2.2.
+2026-01-19 15:19:54,326 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 15:19:54,327 - DEBUG - Embedding request -> name=__tmp_test_embed__ url=http://localhost:11434/embeddings headers=['Authorization'] payload_keys=['model', 'inputs', 'input']
+2026-01-19 15:19:54,328 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2026-01-19 15:19:56,377 - DEBUG - http://localhost:11434 "POST /embeddings HTTP/1.1" 404 18
+2026-01-19 15:19:56,378 - DEBUG - Embedding response status for __tmp_test_embed__: 404
+2026-01-19 15:19:56,378 - ERROR - Embedding request failed for __tmp_test_embed__: 404 404 page not found
+2026-01-19 15:19:56,380 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 15:19:56,381 - DEBUG - Loaded backend tkagg version 8.6.
+2026-01-19 15:23:32,129 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 15:23:32,131 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-19 15:23:32,131 - INFO - Creating OpenAI client for LLM 'huggingface': base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-19 15:23:32,314 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 15:23:32,474 - INFO - Loading faiss with AVX2 support.
+2026-01-19 15:23:32,485 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 15:23:33,692 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 15:23:33,760 - INFO - \u2713 Simple agent loaded
+2026-01-19 15:23:34,895 - INFO - \u2713 LangChain agent loaded
+2026-01-19 15:23:47,545 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 15:23:48,464 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 15:24:19,627 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 15:24:19,630 - INFO - Embedding request -> name=__tmp_test_embed__ url=https://router.huggingface.co/v1/embeddings headers=['Authorization'] payload_keys=['model', 'inputs', 'input']
+2026-01-19 15:24:20,411 - INFO - Embedding response status for __tmp_test_embed__: 404
+2026-01-19 15:24:20,411 - ERROR - Embedding request failed for __tmp_test_embed__: 404 Not Found
+2026-01-19 15:24:20,412 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 15:24:23,278 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 15:24:23,279 - INFO - Embedding request -> name=__tmp_test_embed__ url=http://localhost:11434/embeddings headers=['Authorization'] payload_keys=['model', 'inputs', 'input']
+2026-01-19 15:24:25,315 - INFO - Embedding response status for __tmp_test_embed__: 404
+2026-01-19 15:24:25,315 - ERROR - Embedding request failed for __tmp_test_embed__: 404 404 page not found
+2026-01-19 15:24:25,318 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 15:28:28,007 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 15:28:28,009 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-19 15:28:28,009 - INFO - Creating OpenAI client for LLM 'huggingface': base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-19 15:28:28,187 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 15:28:28,341 - INFO - Loading faiss with AVX2 support.
+2026-01-19 15:28:28,353 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 15:28:29,491 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 15:28:29,549 - INFO - \u2713 Simple agent loaded
+2026-01-19 15:28:30,601 - INFO - \u2713 LangChain agent loaded
+2026-01-19 15:28:43,465 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 15:28:44,361 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 15:29:00,725 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 15:29:00,726 - INFO - Embedding request -> name=__tmp_test_embed__ url=https://router.huggingface.co/v1/embeddings headers=['Authorization'] payload_keys=['model', 'input']
+2026-01-19 15:29:01,772 - INFO - Embedding response status for __tmp_test_embed__: 404
+2026-01-19 15:29:01,772 - ERROR - Embedding request failed for __tmp_test_embed__: 404 Not Found
+2026-01-19 15:29:01,774 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 15:29:04,226 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 15:29:04,227 - INFO - Embedding request -> name=__tmp_test_embed__ url=http://localhost:11434/api/embeddings headers=['Authorization'] payload_keys=['model', 'input']
+2026-01-19 15:29:06,638 - INFO - Embedding response status for __tmp_test_embed__: 200
+2026-01-19 15:29:06,639 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-19 15:29:19,026 - INFO - Registered LLM: __tmp_test_llm__
+2026-01-19 15:29:19,027 - INFO - Initializing active client for LLM '__tmp_test_llm__': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-19 15:29:19,027 - INFO - Creating OpenAI client for LLM '__tmp_test_llm__': base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-19 15:29:19,287 - INFO - Calling active LLM: __tmp_test_llm__
+2026-01-19 15:29:24,857 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-19 15:29:24,857 - INFO - Creating OpenAI client for LLM 'huggingface': base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-19 15:29:25,129 - INFO - Removed LLM: __tmp_test_llm__
+2026-01-19 15:35:15,177 - INFO - Registered LLM: __tmp_test_llm__
+2026-01-19 15:35:15,179 - INFO - Initializing active client for LLM '__tmp_test_llm__': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-19 15:35:15,180 - INFO - Creating OpenAI client for LLM '__tmp_test_llm__': base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-19 15:35:15,433 - INFO - Calling active LLM: __tmp_test_llm__
+2026-01-19 15:35:18,929 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-19 15:35:18,929 - INFO - Creating OpenAI client for LLM 'huggingface': base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-19 15:35:19,180 - INFO - Removed LLM: __tmp_test_llm__
+2026-01-19 15:52:10,574 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-19 15:52:10,576 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-19 15:52:10,576 - INFO - Creating OpenAI client for LLM 'huggingface': base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-19 15:52:10,766 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-19 15:52:10,941 - INFO - Loading faiss with AVX2 support.
+2026-01-19 15:52:10,953 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-19 15:52:12,160 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-19 15:52:12,220 - INFO - \u2713 Simple agent loaded
+2026-01-19 15:52:13,321 - INFO - \u2713 LangChain agent loaded
+2026-01-19 15:52:27,073 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-19 15:52:27,959 - INFO - \u2713 CrewAI agent loaded
+2026-01-19 15:54:06,171 - INFO - Registered embedding model: __tmp_test_embed__
+2026-01-19 15:54:06,173 - INFO - Embedding request -> name=__tmp_test_embed__ url=https://router.huggingface.co/v1/embeddings headers=['Authorization'] payload_keys=['model', 'input']
+2026-01-19 15:54:07,116 - INFO - Embedding response status for __tmp_test_embed__: 404
+2026-01-19 15:54:07,117 - ERROR - Embedding request failed for __tmp_test_embed__: 404 Not Found
+2026-01-19 15:54:07,118 - INFO - Removed embed model: __tmp_test_embed__
+2026-01-20 10:08:23,609 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 10:08:23,624 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 10:08:23,624 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 10:08:23,988 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 10:08:25,350 - INFO - Loading faiss with AVX2 support.
+2026-01-20 10:08:25,778 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 10:08:33,598 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 10:08:33,773 - INFO - \u2713 Simple agent loaded
+2026-01-20 10:08:37,052 - INFO - \u2713 LangChain agent loaded
+2026-01-20 10:08:53,483 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 10:08:54,740 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 10:09:41,612 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 10:16:48,552 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 10:16:48,554 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 10:16:48,554 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 10:16:48,731 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 10:16:48,891 - INFO - Loading faiss with AVX2 support.
+2026-01-20 10:16:48,903 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 10:16:50,051 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 10:16:50,113 - INFO - \u2713 Simple agent loaded
+2026-01-20 10:16:51,179 - INFO - \u2713 LangChain agent loaded
+2026-01-20 10:17:03,421 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 10:17:04,308 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 10:22:02,292 - INFO - Selected active LLM: huggingface
+2026-01-20 10:22:02,295 - INFO - Selected embedding model: ollama
+2026-01-20 10:26:33,004 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 10:26:33,007 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 10:26:33,007 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 10:26:33,183 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 10:26:33,341 - INFO - Loading faiss with AVX2 support.
+2026-01-20 10:26:33,353 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 10:26:34,497 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 10:26:34,557 - INFO - \u2713 Simple agent loaded
+2026-01-20 10:26:35,627 - INFO - \u2713 LangChain agent loaded
+2026-01-20 10:26:48,025 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 10:26:48,924 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 10:29:50,142 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 10:29:50,145 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 10:29:50,145 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 10:29:50,323 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 10:29:50,482 - INFO - Loading faiss with AVX2 support.
+2026-01-20 10:29:50,493 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 10:29:51,628 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 10:29:51,688 - INFO - \u2713 Simple agent loaded
+2026-01-20 10:29:52,761 - INFO - \u2713 LangChain agent loaded
+2026-01-20 10:30:06,396 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 10:30:07,288 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 10:30:21,012 - WARNING - Exception during embedding call to https://router.huggingface.co/v1/embeddings: Timeout value connect was , but it must be an int, float or None.
+2026-01-20 10:30:23,728 - WARNING - Exception during embedding call to http://localhost:11434/api/embeddings: Timeout value connect was , but it must be an int, float or None.
+2026-01-20 10:33:35,888 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 10:33:35,891 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 10:33:35,891 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 10:33:36,069 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 10:33:36,229 - INFO - Loading faiss with AVX2 support.
+2026-01-20 10:33:36,241 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 10:33:37,369 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 10:33:37,428 - INFO - \u2713 Simple agent loaded
+2026-01-20 10:33:38,491 - INFO - \u2713 LangChain agent loaded
+2026-01-20 10:33:51,176 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 10:33:52,069 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 10:34:22,464 - INFO - Embedding call to https://router.huggingface.co/v1/embeddings returned status 404
+2026-01-20 10:34:28,728 - INFO - Embedding call to http://localhost:11434/api/embeddings returned status 200
+2026-01-20 10:34:41,505 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 10:35:15,969 - INFO - Embedding call to https://router.huggingface.co/v1/embeddings returned status 404
+2026-01-20 10:38:18,177 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 10:38:18,179 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 10:38:18,179 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 10:38:18,359 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 10:38:18,524 - INFO - Loading faiss with AVX2 support.
+2026-01-20 10:38:18,535 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 10:38:19,677 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 10:38:19,739 - INFO - \u2713 Simple agent loaded
+2026-01-20 10:38:20,819 - INFO - \u2713 LangChain agent loaded
+2026-01-20 10:38:33,228 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 10:38:34,125 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 10:39:49,450 - INFO - Embedding call to https://api-inference.huggingface.co/pipeline/feature-extraction/intfloat/e5-large-v2 returned status 410
+2026-01-20 10:42:38,725 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 10:42:38,727 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 10:42:38,727 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 10:42:38,905 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 10:42:39,065 - INFO - Loading faiss with AVX2 support.
+2026-01-20 10:42:39,076 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 10:42:40,217 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 10:42:40,276 - INFO - \u2713 Simple agent loaded
+2026-01-20 10:42:41,345 - INFO - \u2713 LangChain agent loaded
+2026-01-20 10:42:53,879 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 10:42:54,776 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 10:43:35,889 - INFO - Embedding call to https://api-inference.huggingface.co/pipeline/feature-extraction/intfloat/e5-large-v2 returned status 410
+2026-01-20 10:44:28,069 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 10:44:28,072 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 10:44:28,072 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 10:44:28,249 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 10:44:28,408 - INFO - Loading faiss with AVX2 support.
+2026-01-20 10:44:28,420 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 10:44:29,556 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 10:44:29,617 - INFO - \u2713 Simple agent loaded
+2026-01-20 10:44:30,681 - INFO - \u2713 LangChain agent loaded
+2026-01-20 10:44:43,016 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 10:44:43,900 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 10:45:10,549 - INFO - Embedding call to https://api-inference.huggingface.co/models/intfloat/e5-large-v2 returned status 410
+2026-01-20 10:45:15,636 - INFO - Embedding call to http://localhost:11434/api/embeddings returned status 200
+2026-01-20 10:47:44,861 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 10:47:44,864 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 10:47:44,864 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 10:47:45,041 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 10:47:45,201 - INFO - Loading faiss with AVX2 support.
+2026-01-20 10:47:45,216 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 10:47:46,437 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 10:47:46,500 - INFO - \u2713 Simple agent loaded
+2026-01-20 10:47:47,607 - INFO - \u2713 LangChain agent loaded
+2026-01-20 10:48:00,613 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 10:48:01,518 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 10:48:29,209 - INFO - Embedding call to http://localhost:11434/api/embeddings returned status 200
+2026-01-20 10:48:29,210 - WARNING - Embedding provider raw response: {'embedding': []}
+2026-01-20 10:53:51,665 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 10:53:51,667 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 10:53:51,667 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 10:53:51,846 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 10:53:52,006 - INFO - Loading faiss with AVX2 support.
+2026-01-20 10:53:52,017 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 10:53:53,319 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 10:53:53,390 - INFO - \u2713 Simple agent loaded
+2026-01-20 10:53:54,532 - INFO - \u2713 LangChain agent loaded
+2026-01-20 10:54:08,009 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 10:54:08,909 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 10:54:32,197 - INFO - Embedding call to http://localhost:11434/api/embeddings returned status <Response [200]>
+2026-01-20 10:54:32,198 - WARNING - Embedding provider raw response: {'embedding': []}
+2026-01-20 10:59:10,965 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 10:59:10,967 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 10:59:10,967 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 10:59:11,148 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 10:59:11,306 - INFO - Loading faiss with AVX2 support.
+2026-01-20 10:59:11,318 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 10:59:12,456 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 10:59:12,516 - INFO - \u2713 Simple agent loaded
+2026-01-20 10:59:13,587 - INFO - \u2713 LangChain agent loaded
+2026-01-20 10:59:25,781 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 10:59:26,669 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 10:59:48,709 - INFO - Embedding call to http://localhost:11434/api/embeddings returned status {'embedding': []}
+2026-01-20 10:59:48,710 - WARNING - Embedding provider raw response: {'embedding': []}
+2026-01-20 11:03:47,293 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 11:03:47,295 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 11:03:47,295 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 11:03:47,470 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 11:03:47,634 - INFO - Loading faiss with AVX2 support.
+2026-01-20 11:03:47,645 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 11:03:48,781 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 11:03:48,841 - INFO - \u2713 Simple agent loaded
+2026-01-20 11:03:49,914 - INFO - \u2713 LangChain agent loaded
+2026-01-20 11:04:02,406 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 11:04:03,300 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 11:04:25,685 - INFO - Embedding call to http://localhost:11434/api/embeddings returned status {'embedding': [0.6654353737831116, 0.26959168910980225, -4.426604747772217, -0.2071288824081421, 1.4543362855911255, 0.14220531284809113, 1.1025323867797852, -0.09244317561388016, 0.8587440848350525, -0.6403843760490417, 0.11632581800222397, 1.5755141973495483, 0.7942031025886536, 0.13895876705646515, -1.048216462135315, -1.2553850412368774, 1.23716402053833, -2.0929133892059326, -0.1400546133518219, -0.13269050419330597, 0.06496139615774155, -0.2707989811897278, -1.3447462320327759, 0.16987192630767822, 3.1232731342315674, -0.37652072310447693, -1.4531599283218384, 1.3729883432388306, -0.6345987319946289, -0.44032442569732666, 0.8746821880340576, -0.6551589369773865, 1.1637598276138306, -1.7906838655471802, -0.7309665679931641, -0.6586562991142273, 0.5707995295524597, 1.1560373306274414, 0.26986148953437805, -0.18944211304187775, -0.2045775204896927, 0.646207869052887, -0.13175936043262482, -0.8164077401161194, 1.6508840322494507, 0.5055063962936401, 0.5377590656280518, 1.7884135246276855, 0.6337370276451111, -0.867487907409668, -1.3910716772079468, -0.9218925833702087, 0.8538361191749573, 0.21365861594676971, 1.5524250268936157, 0.444858580827713, -0.640760064125061, 0.16992320120334625, 1.1970850229263306, -0.5428315997123718, 0.4972442090511322, 0.7944591045379639, -1.6922146081924438, 1.0549277067184448, 0.8941759467124939, -2.0388271808624268, -0.4251929223537445, 0.29095467925071716, 0.015448312275111675, 0.5707277655601501, 0.8554760813713074, -0.38560691475868225, 1.3455305099487305, -0.41732826828956604, -0.7152394652366638, -1.2985211610794067, -0.4692617356777191, -0.5669851303100586, -0.8209680914878845, 0.054731208831071854, 1.5595630407333374, -0.5954754948616028, 1.213981032371521, 1.238169550895691, 1.7181254625320435, -0.9298166632652283, -0.29569900035858154, -0.8736712336540222, -0.40131792426109314, 1.6699986457824707, 1.0188175439834595, 0.7366633415222168, 0.508844256401062, 1.1498198509216309, -0.7635443210601807, 0.7998371720314026, 0.15716040134429932, 1.3813133239746094, -0.7210569381713867, -0.3697955906391144, -0.04082841798663139, 0.04500115290284157, -0.09289753437042236, -1.0848619937896729, 0.4121323525905609, 0.7585324645042419, -0.12475902587175369, -0.0162981990724802, -0.57201087474823, -0.3586473762989044, -1.5509510040283203, 1.1426540613174438, -1.608473300933838, -0.7254630923271179, -0.6214272975921631, 0.2372286170721054, 0.555473268032074, -0.8690807223320007, 0.014728900976479053, -0.18114347755908966, 0.44369515776634216, 0.9686506390571594, -0.25255367159843445, 0.8133136630058289, -0.9228548407554626, 1.054634690284729, -1.754438042640686, 0.6005305647850037, 0.8321765065193176, 0.6408541798591614, 0.18319468200206757, -0.10040420293807983, -1.0850615501403809, -0.8276646137237549, 0.020168600603938103, 0.5628337860107422, -0.11054325103759766, -0.05849925056099892, -0.517730176448822, -0.5593196749687195, -0.3642312288284302, 0.22940953075885773, -0.06635551899671555, 0.3211118280887604, 0.9922778010368347, -0.4613390266895294, 1.4594597816467285, 0.013619561679661274, -0.572789192199707, 0.4141734540462494, 0.7365171313285828, -0.7437200546264648, 1.768065094947815, 0.04199068248271942, 0.7580525279045105, -0.8867540955543518, 0.14917005598545074, 0.4414184093475342, 1.2018765211105347, 0.7433059811592102, 0.17498309910297394, -0.12401313334703445, -0.6939926147460938, -0.06890373677015305, -0.6935747265815735, -1.3569679260253906, 0.4459224045276642, 1.6635385751724243, 1.6185866594314575, -0.26659056544303894, -1.454928994178772, -1.3760992288589478, 0.4544435441493988, -0.4215066730976105, -0.8249174952507019, 0.03258046880364418, -0.3296153247356415, -0.9249542355537415, 0.6839430928230286, -0.32739636301994324, 0.8518679738044739, -0.40800854563713074, 0.5508743524551392, 1.2300329208374023, -0.12234296649694443, -0.7405738830566406, 0.931486189365387, -0.4518812894821167, -0.6658756136894226, -0.9181230068206787, 0.05110738053917885, -0.5089022517204285, -2.038567543029785, -1.169180154800415, -0.08827608078718185, -1.3784629106521606, 0.8157103657722473, 0.08480905741453171, 1.0555284023284912, -0.7822864651679993, -0.9645302891731262, 0.29931050539016724, 0.13439710438251495, -0.11631514877080917, -0.539929211139679, -0.4649401009082794, -0.6420839428901672, -1.2867988348007202, 0.23449461162090302, -0.18419308960437775, 1.3930869102478027, 0.37697282433509827, -0.17091165482997894, 0.3541167676448822, 0.5985091328620911, -0.3457297086715698, 0.12549759447574615, -1.0845118761062622, -0.23957885801792145, 0.5964264273643494, 1.0041093826293945, -0.2584874927997589, -0.1372562199831009, -0.8130354881286621, 0.44653788208961487, 0.3400726616382599, -1.1395350694656372, -0.3905073404312134, -0.7962229251861572, -0.702477216720581, 0.9005172848701477, -1.1031559705734253, 1.6250419616699219, 0.43800243735313416, 0.277431845664978, 0.5010817646980286, -0.48167791962623596, 0.3909584581851959, -0.4142366647720337, 0.21105416119098663, -0.5377182960510254, 0.7370244860649109, 0.03142865374684334, -0.18994151055812836, -0.6870169043540955, -0.4777778685092926, 0.2714914381504059, -0.8068611025810242, 0.7489964365959167, 1.467442512512207, -0.4634486436843872, 1.3008910417556763, 0.26421985030174255, 1.620815634727478, -0.021168462932109833, 0.027170700952410698, 0.21687977015972137, -0.22714592516422272, 0.18081067502498627, -1.454270362854004, -0.18261511623859406, -0.914545476436615, 0.4519958794116974, -0.3603224456310272, -0.682368278503418, -0.7169660925865173, -1.0241713523864746, -0.6407880187034607, -0.46308884024620056, -0.43229448795318604, 0.08528858423233032, 0.6842196583747864, 0.9617443084716797, 1.1267606019973755, 0.5994450449943542, -0.8976500630378723, 0.21490134298801422, -0.4797076880931854, 0.30719491839408875, 0.2859508693218231, -0.761207640171051, 0.019248127937316895, -0.5266812443733215, 0.8323107361793518, 0.5845890641212463, 0.37588703632354736, 0.7959132790565491, -0.796405017375946, -0.32472243905067444, 0.8407731056213379, 0.5737428665161133, 0.20643524825572968, 0.10610523074865341, 1.228969931602478, -0.6471198201179504, 0.3374039828777313, 1.7855669260025024, -0.9840130805969238, -0.24172042310237885, -0.47526073455810547, 0.14179693162441254, -0.05937753617763519, 1.0609418153762817, 0.9859986305236816, 0.06532352417707443, -0.12900632619857788, 0.6938923001289368, -1.1012084484100342, 1.37130606174469, 0.6323163509368896, -1.0918112993240356, 0.4574366807937622, -0.46045076847076416, -0.10097157955169678, -1.0604299306869507, 0.09614180773496628, 0.9915922284126282, 0.9531118273735046, 1.5179529190063477, -0.3226360082626343, 0.3480164706707001, -0.6941437125205994, 0.08185190707445145, -0.15588901937007904, -0.24277979135513306, 0.11441343277692795, 1.3616026639938354, 0.2530500888824463, -1.6656149625778198, -0.31517457962036133, 0.9292283058166504, 2.1547534465789795, -0.49327290058135986, -0.14083318412303925, 0.008632421493530273, 0.5949949026107788, -0.28316760063171387, 0.09299527853727341, -0.9246949553489685, 0.540675699710846, 0.702793538570404, -1.0744285583496094, 0.8695153594017029, -1.2439736127853394, 0.07547726482152939, -0.43995538353919983, 0.7320354580879211, 0.5537689924240112, 0.1070544421672821, 0.5190052390098572, -1.3915098905563354, 0.34366849064826965, -0.4454602897167206, -0.7460803985595703, 1.127414345741272, -0.2905883193016052, 0.7710030674934387, 0.25628140568733215, 0.7800147533416748, -0.0555138923227787, 0.42038145661354065, 0.5952877402305603, 0.14669963717460632, -0.8368784785270691, 0.2913111448287964, 0.8657400608062744, 0.02992885373532772, 0.8781747221946716, 1.1840380430221558, 0.18305836617946625, -0.9349750876426697, 0.0004695852694567293, 0.41549599170684814, 1.874353289604187, 1.0835175514221191, 0.4725813865661621, -1.3620563745498657, 0.03314505144953728, -1.1328808069229126, -0.14497612416744232, 0.6584212183952332, -0.24949002265930176, -0.06833360344171524, -0.5662376880645752, 0.2155066579580307, -1.1912659406661987, 0.3846226930618286, -0.7982891201972961, 0.6658008694648743, 0.003323926357552409, 0.4322805106639862, -0.36223873496055603, -2.0624730587005615, 0.47288498282432556, 0.24631379544734955, -0.8148528933525085, 1.1369969844818115, -0.06252921372652054, -1.5201616287231445, 0.6160871386528015, -0.6769542694091797, -0.7716444134712219, -0.16216015815734863, -0.6282021403312683, -0.7391349673271179, -0.05804113671183586, -1.304237961769104, -0.4230372905731201, 0.26550182700157166, 0.36152729392051697, 0.557008683681488, -0.11020896583795547, -0.2781265377998352, -1.6052457094192505, -0.662356436252594, 0.30313053727149963, 1.13510000705719, 0.36691054701805115, -0.8505652546882629, 0.6931187510490417, 0.1823769062757492, 1.3623241186141968, 0.18246187269687653, -0.2836875021457672, -0.7421268820762634, -0.4030849039554596, 0.6687006950378418, 1.6752036809921265, 1.031969428062439, -1.3144378662109375, -0.7983624935150146, 0.11583054810762405, -0.4266856908798218, 0.44903072714805603, -0.4798521101474762, 1.0289386510849, -0.7755754590034485, 0.27563729882240295, 0.35337135195732117, 0.9064119458198547, 0.18976692855358124, -0.8666766285896301, -1.1989350318908691, 0.028337419033050537, 0.41257861256599426, 3.837646722793579, 1.0743154287338257, -1.1273728609085083, -0.8376778960227966, -0.6064537167549133, -1.1007360219955444, 0.5091863870620728, 0.3782569468021393, 0.824135959148407, 0.6325348019599915, -0.565610945224762, 0.961143970489502, -0.09892213344573975, 0.3217301666736603, 1.6062299013137817, -0.1355413943529129, 0.053242187947034836, 0.1339205950498581, 0.2554332911968231, 0.5790868401527405, -0.0631590411067009, 0.49781903624534607, -0.28987249732017517, 0.21543844044208527, 0.7361580729484558, -1.2348688840866089, -1.051617980003357, 2.2944955825805664, -0.5211024880409241, -0.613053560256958, 0.11095175892114639, -0.35177209973335266, 0.2658906877040863, -0.4637322723865509, 0.45837029814720154, 0.4356788694858551, -0.1671491116285324, -1.0671628713607788, -1.4400687217712402, 0.7732008099555969, -0.09685894846916199, 0.06473056226968765, -0.07702039927244186, 1.5745981931686401, -0.6584265828132629, 1.1880422830581665, 0.12549985945224762, 0.5615839958190918, -0.9042994379997253, 0.1570628583431244, -0.5414557456970215, 0.07384573668241501, -0.09078332036733627, -0.46758803725242615, -0.8593419194221497, 0.008572478778660297, 0.3916156589984894, 0.24749350547790527, -0.3235381245613098, -0.8981239199638367, -1.1104551553726196, 0.020922303199768066, -2.2657835483551025, -1.2019760608673096, 0.03072621487081051, -2.0355560779571533, -0.0561838299036026, 0.9320291876792908, 1.0510162115097046, 0.7496886849403381, -0.1208048090338707, 0.02911188267171383, -0.1946534365415573, -1.6864677667617798, 0.26441776752471924, 0.8639757037162781, -0.14653192460536957, 0.5025743842124939, -0.09809201955795288, -0.9494413733482361, 0.11666085571050644, -0.7845843434333801, -0.1554461568593979, 0.9878855347633362, 0.06528878211975098, 0.7149387001991272, 0.36914166808128357, -0.1423286348581314, -0.2856675088405609, -0.6209347248077393, -1.2054044008255005, 0.023073047399520874, -0.3153397738933563, 0.2789279818534851, 0.6526901125907898, -0.678226888179779, 0.8134093284606934, -0.7135280966758728, -0.27883923053741455, 0.8825913071632385, 0.21560977399349213, -1.6064518690109253, 0.16762788593769073, -0.5197539925575256, -1.362022042274475, 0.35528039932250977, -0.48335886001586914, -0.8479316830635071, -0.39472031593322754, 0.3068559467792511, -0.9034233689308167, -0.1679093986749649, -0.6893412470817566, -0.12928809225559235, -0.9889978766441345, 1.1785755157470703, -0.3039781451225281, 0.3042968511581421, 0.5476330518722534, -0.038627490401268005, -1.1060012578964233, -0.8008747100830078, 0.19615046679973602, 0.5432203412055969, -0.09159481525421143, 0.35721197724342346, -1.1039003133773804, -0.04762654006481171, -1.0514858961105347, -1.0686092376708984, 0.059481024742126465, 0.7859721779823303, 0.9232799410820007, 0.06401064246892929, -0.25432077050209045, 1.6289492845535278, -0.8516345024108887, 0.1458398550748825, 0.9897127151489258, 0.4441617727279663, -0.006070899311453104, 0.8532425761222839, -0.4762883484363556, 0.5901333689689636, -0.471320241689682, -1.7675600051879883, -0.45450258255004883, 0.6394950747489929, -0.5471785664558411, 0.42333778738975525, 0.1320280283689499, -0.510768473148346, -0.3039538562297821, -0.33286044001579285, 0.05199909210205078, -0.20030374825000763, -0.3463335335254669, 0.4364004135131836, -1.2267552614212036, -0.5132302641868591, 0.9065483212471008, 0.8119997382164001, 0.6211937665939331, -0.3455291986465454, -0.3536062240600586, 0.5158871412277222, 0.04233456030488014, -0.5333291888237, 0.12438120692968369, 0.3939238488674164, -0.5667194724082947, 1.9440146684646606, -1.1803563833236694, -0.5824782252311707, -1.052381992340088, 0.10174397379159927, -0.6911017298698425, 0.7574188709259033, -0.7147114872932434, 0.74312424659729, 0.14668883383274078, -0.4885564148426056, -0.46438243985176086, 0.3614938259124756, 0.7378899455070496, -1.0162590742111206, 0.4340551793575287, -1.7443917989730835, -1.2460764646530151, -1.484389305114746, 0.8995278477668762, -0.15699879825115204, 0.4412098228931427, 0.9738852381706238, 1.1794825792312622, 0.8559544682502747, 0.1627613753080368, -0.9054808616638184, -0.20556212961673737, 0.4947122037410736, 0.18156461417675018, 0.8453994393348694, 1.310397982597351, 0.9646715521812439, -0.7514435648918152, 1.9148720502853394, 1.3444005250930786, -0.2608741223812103, -0.6519656777381897, 0.8667900562286377, 0.8863933086395264, 1.2344071865081787, 0.4490255117416382, -0.3618561923503876, -1.014356017112732, -0.6679372787475586, 0.6161633133888245, -0.5327046513557434, 0.3230888545513153, 0.7530083060264587, 0.18344344198703766, -0.4025646150112152, -1.4650120735168457, 0.022666295990347862, -1.2961543798446655, 1.23908531665802, 0.8578212857246399, -0.18018068373203278, 0.08631979674100876, 0.5851784348487854, 0.6181495189666748, 0.5864629149436951, 0.6768549084663391, 0.04638375714421272, -0.3254585564136505, -1.3806406259536743, -1.3606518507003784, 1.6537727117538452, 0.33863565325737, 0.2907201647758484, -1.1052227020263672, -0.22429978847503662, -0.6799437403678894, 0.693627655506134, -0.18900750577449799, -0.6870314478874207, -0.03172764182090759, 0.10529962927103043, -0.7197265028953552, 0.41449829936027527, -0.4097766578197479, 1.2906303405761719, -0.618186891078949, 0.16929243505001068, 1.1289020776748657, -0.7204294204711914, 0.955909252166748, 0.6195316910743713, 0.9079866409301758, -1.1041072607040405, -0.3757752478122711, -0.49613282084465027, -0.4621966779232025, -0.8923242092132568, -0.015448334626853466, 1.2432719469070435, 1.3870960474014282, 0.607570469379425, 1.9181674718856812, 0.8767927289009094, 0.612399697303772, -0.8104316592216492, -1.4713486433029175, -0.4902702867984772, 0.17430977523326874, 1.3467575311660767, -0.39511656761169434, -0.28106334805488586, -0.5605154633522034, -0.468043714761734, -1.350143551826477, 0.7728398442268372, 0.24772651493549347, 0.7783708572387695, -0.8629123568534851, 0.37981224060058594, 0.15136216580867767, -1.1612242460250854, 0.11485450714826584, -0.75954270362854, -0.392920583486557, -0.058201730251312256, -0.24652040004730225, -1.0496435165405273, -0.03509901091456413, -0.10899249464273453, 0.6836015582084656, -0.17418235540390015, 0.23295842111110687, 0.317417174577713, -0.712604820728302, -0.41715148091316223, 1.1628093719482422, 0.4113304316997528, -0.09377623349428177, 0.15403012931346893, -1.09500253200531, -0.41679850220680237, 1.0896848440170288, -0.4132012128829956, 0.05150502920150757, -0.6195529103279114, 0.4048902094364166, 2.883021116256714, -0.3206806480884552, 0.10914101451635361, -0.0690029188990593, 0.8162114024162292, 0.3353491723537445, -0.6140785813331604, -1.8408528566360474, -0.29239749908447266, -0.5817834138870239]}
+2026-01-20 11:04:25,690 - WARNING - Embedding provider raw response: {'embedding': [0.6654353737831116, 0.26959168910980225, -4.426604747772217, -0.2071288824081421, 1.4543362855911255, 0.14220531284809113, 1.1025323867797852, -0.09244317561388016, 0.8587440848350525, -0.6403843760490417, 0.11632581800222397, 1.5755141973495483, 0.7942031025886536, 0.13895876705646515, -1.048216462135315, -1.2553850412368774, 1.23716402053833, -2.0929133892059326, -0.1400546133518219, -0.13269050419330597, 0.06496139615774155, -0.2707989811897278, -1.3447462320327759, 0.16987192630767822, 3.1232731342315674, -0.37652072310447693, -1.4531599283218384, 1.3729883432388306, -0.6345987319946289, -0.44032442569732666, 0.8746821880340576, -0.6551589369773865, 1.1637598276138306, -1.7906838655471802, -0.7309665679931641, -0.6586562991142273, 0.5707995295524597, 1.1560373306274414, 0.26986148953437805, -0.18944211304187775, -0.2045775204896927, 0.646207869052887, -0.13175936043262482, -0.8164077401161194, 1.6508840322494507, 0.5055063962936401, 0.5377590656280518, 1.7884135246276855, 0.6337370276451111, -0.867487907409668, -1.3910716772079468, -0.9218925833702087, 0.8538361191749573, 0.21365861594676971, 1.5524250268936157, 0.444858580827713, -0.640760064125061, 0.16992320120334625, 1.1970850229263306, -0.5428315997123718, 0.4972442090511322, 0.7944591045379639, -1.6922146081924438, 1.0549277067184448, 0.8941759467124939, -2.0388271808624268, -0.4251929223537445, 0.29095467925071716, 0.015448312275111675, 0.5707277655601501, 0.8554760813713074, -0.38560691475868225, 1.3455305099487305, -0.41732826828956604, -0.7152394652366638, -1.2985211610794067, -0.4692617356777191, -0.5669851303100586, -0.8209680914878845, 0.054731208831071854, 1.5595630407333374, -0.5954754948616028, 1.213981032371521, 1.238169550895691, 1.7181254625320435, -0.9298166632652283, -0.29569900035858154, -0.8736712336540222, -0.40131792426109314, 1.6699986457824707, 1.0188175439834595, 0.7366633415222168, 0.508844256401062, 1.1498198509216309, -0.7635443210601807, 0.7998371720314026, 0.15716040134429932, 1.3813133239746094, -0.7210569381713867, -0.3697955906391144, -0.04082841798663139, 0.04500115290284157, -0.09289753437042236, -1.0848619937896729, 0.4121323525905609, 0.7585324645042419, -0.12475902587175369, -0.0162981990724802, -0.57201087474823, -0.3586473762989044, -1.5509510040283203, 1.1426540613174438, -1.608473300933838, -0.7254630923271179, -0.6214272975921631, 0.2372286170721054, 0.555473268032074, -0.8690807223320007, 0.014728900976479053, -0.18114347755908966, 0.44369515776634216, 0.9686506390571594, -0.25255367159843445, 0.8133136630058289, -0.9228548407554626, 1.054634690284729, -1.754438042640686, 0.6005305647850037, 0.8321765065193176, 0.6408541798591614, 0.18319468200206757, -0.10040420293807983, -1.0850615501403809, -0.8276646137237549, 0.020168600603938103, 0.5628337860107422, -0.11054325103759766, -0.05849925056099892, -0.517730176448822, -0.5593196749687195, -0.3642312288284302, 0.22940953075885773, -0.06635551899671555, 0.3211118280887604, 0.9922778010368347, -0.4613390266895294, 1.4594597816467285, 0.013619561679661274, -0.572789192199707, 0.4141734540462494, 0.7365171313285828, -0.7437200546264648, 1.768065094947815, 0.04199068248271942, 0.7580525279045105, -0.8867540955543518, 0.14917005598545074, 0.4414184093475342, 1.2018765211105347, 0.7433059811592102, 0.17498309910297394, -0.12401313334703445, -0.6939926147460938, -0.06890373677015305, -0.6935747265815735, -1.3569679260253906, 0.4459224045276642, 1.6635385751724243, 1.6185866594314575, -0.26659056544303894, -1.454928994178772, -1.3760992288589478, 0.4544435441493988, -0.4215066730976105, -0.8249174952507019, 0.03258046880364418, -0.3296153247356415, -0.9249542355537415, 0.6839430928230286, -0.32739636301994324, 0.8518679738044739, -0.40800854563713074, 0.5508743524551392, 1.2300329208374023, -0.12234296649694443, -0.7405738830566406, 0.931486189365387, -0.4518812894821167, -0.6658756136894226, -0.9181230068206787, 0.05110738053917885, -0.5089022517204285, -2.038567543029785, -1.169180154800415, -0.08827608078718185, -1.3784629106521606, 0.8157103657722473, 0.08480905741453171, 1.0555284023284912, -0.7822864651679993, -0.9645302891731262, 0.29931050539016724, 0.13439710438251495, -0.11631514877080917, -0.539929211139679, -0.4649401009082794, -0.6420839428901672, -1.2867988348007202, 0.23449461162090302, -0.18419308960437775, 1.3930869102478027, 0.37697282433509827, -0.17091165482997894, 0.3541167676448822, 0.5985091328620911, -0.3457297086715698, 0.12549759447574615, -1.0845118761062622, -0.23957885801792145, 0.5964264273643494, 1.0041093826293945, -0.2584874927997589, -0.1372562199831009, -0.8130354881286621, 0.44653788208961487, 0.3400726616382599, -1.1395350694656372, -0.3905073404312134, -0.7962229251861572, -0.702477216720581, 0.9005172848701477, -1.1031559705734253, 1.6250419616699219, 0.43800243735313416, 0.277431845664978, 0.5010817646980286, -0.48167791962623596, 0.3909584581851959, -0.4142366647720337, 0.21105416119098663, -0.5377182960510254, 0.7370244860649109, 0.03142865374684334, -0.18994151055812836, -0.6870169043540955, -0.4777778685092926, 0.2714914381504059, -0.8068611025810242, 0.7489964365959167, 1.467442512512207, -0.4634486436843872, 1.3008910417556763, 0.26421985030174255, 1.620815634727478, -0.021168462932109833, 0.027170700952410698, 0.21687977015972137, -0.22714592516422272, 0.18081067502498627, -1.454270362854004, -0.18261511623859406, -0.914545476436615, 0.4519958794116974, -0.3603224456310272, -0.682368278503418, -0.7169660925865173, -1.0241713523864746, -0.6407880187034607, -0.46308884024620056, -0.43229448795318604, 0.08528858423233032, 0.6842196583747864, 0.9617443084716797, 1.1267606019973755, 0.5994450449943542, -0.8976500630378723, 0.21490134298801422, -0.4797076880931854, 0.30719491839408875, 0.2859508693218231, -0.761207640171051, 0.019248127937316895, -0.5266812443733215, 0.8323107361793518, 0.5845890641212463, 0.37588703632354736, 0.7959132790565491, -0.796405017375946, -0.32472243905067444, 0.8407731056213379, 0.5737428665161133, 0.20643524825572968, 0.10610523074865341, 1.228969931602478, -0.6471198201179504, 0.3374039828777313, 1.7855669260025024, -0.9840130805969238, -0.24172042310237885, -0.47526073455810547, 0.14179693162441254, -0.05937753617763519, 1.0609418153762817, 0.9859986305236816, 0.06532352417707443, -0.12900632619857788, 0.6938923001289368, -1.1012084484100342, 1.37130606174469, 0.6323163509368896, -1.0918112993240356, 0.4574366807937622, -0.46045076847076416, -0.10097157955169678, -1.0604299306869507, 0.09614180773496628, 0.9915922284126282, 0.9531118273735046, 1.5179529190063477, -0.3226360082626343, 0.3480164706707001, -0.6941437125205994, 0.08185190707445145, -0.15588901937007904, -0.24277979135513306, 0.11441343277692795, 1.3616026639938354, 0.2530500888824463, -1.6656149625778198, -0.31517457962036133, 0.9292283058166504, 2.1547534465789795, -0.49327290058135986, -0.14083318412303925, 0.008632421493530273, 0.5949949026107788, -0.28316760063171387, 0.09299527853727341, -0.9246949553489685, 0.540675699710846, 0.702793538570404, -1.0744285583496094, 0.8695153594017029, -1.2439736127853394, 0.07547726482152939, -0.43995538353919983, 0.7320354580879211, 0.5537689924240112, 0.1070544421672821, 0.5190052390098572, -1.3915098905563354, 0.34366849064826965, -0.4454602897167206, -0.7460803985595703, 1.127414345741272, -0.2905883193016052, 0.7710030674934387, 0.25628140568733215, 0.7800147533416748, -0.0555138923227787, 0.42038145661354065, 0.5952877402305603, 0.14669963717460632, -0.8368784785270691, 0.2913111448287964, 0.8657400608062744, 0.02992885373532772, 0.8781747221946716, 1.1840380430221558, 0.18305836617946625, -0.9349750876426697, 0.0004695852694567293, 0.41549599170684814, 1.874353289604187, 1.0835175514221191, 0.4725813865661621, -1.3620563745498657, 0.03314505144953728, -1.1328808069229126, -0.14497612416744232, 0.6584212183952332, -0.24949002265930176, -0.06833360344171524, -0.5662376880645752, 0.2155066579580307, -1.1912659406661987, 0.3846226930618286, -0.7982891201972961, 0.6658008694648743, 0.003323926357552409, 0.4322805106639862, -0.36223873496055603, -2.0624730587005615, 0.47288498282432556, 0.24631379544734955, -0.8148528933525085, 1.1369969844818115, -0.06252921372652054, -1.5201616287231445, 0.6160871386528015, -0.6769542694091797, -0.7716444134712219, -0.16216015815734863, -0.6282021403312683, -0.7391349673271179, -0.05804113671183586, -1.304237961769104, -0.4230372905731201, 0.26550182700157166, 0.36152729392051697, 0.557008683681488, -0.11020896583795547, -0.2781265377998352, -1.6052457094192505, -0.662356436252594, 0.30313053727149963, 1.13510000705719, 0.36691054701805115, -0.8505652546882629, 0.6931187510490417, 0.1823769062757492, 1.3623241186141968, 0.18246187269687653, -0.2836875021457672, -0.7421268820762634, -0.4030849039554596, 0.6687006950378418, 1.6752036809921265, 1.031969428062439, -1.3144378662109375, -0.7983624935150146, 0.11583054810762405, -0.4266856908798218, 0.44903072714805603, -0.4798521101474762, 1.0289386510849, -0.7755754590034485, 0.27563729882240295, 0.35337135195732117, 0.9064119458198547, 0.18976692855358124, -0.8666766285896301, -1.1989350318908691, 0.028337419033050537, 0.41257861256599426, 3.837646722793579, 1.0743154287338257, -1.1273728609085083, -0.8376778960227966, -0.6064537167549133, -1.1007360219955444, 0.5091863870620728, 0.3782569468021393, 0.824135959148407, 0.6325348019599915, -0.565610945224762, 0.961143970489502, -0.09892213344573975, 0.3217301666736603, 1.6062299013137817, -0.1355413943529129, 0.053242187947034836, 0.1339205950498581, 0.2554332911968231, 0.5790868401527405, -0.0631590411067009, 0.49781903624534607, -0.28987249732017517, 0.21543844044208527, 0.7361580729484558, -1.2348688840866089, -1.051617980003357, 2.2944955825805664, -0.5211024880409241, -0.613053560256958, 0.11095175892114639, -0.35177209973335266, 0.2658906877040863, -0.4637322723865509, 0.45837029814720154, 0.4356788694858551, -0.1671491116285324, -1.0671628713607788, -1.4400687217712402, 0.7732008099555969, -0.09685894846916199, 0.06473056226968765, -0.07702039927244186, 1.5745981931686401, -0.6584265828132629, 1.1880422830581665, 0.12549985945224762, 0.5615839958190918, -0.9042994379997253, 0.1570628583431244, -0.5414557456970215, 0.07384573668241501, -0.09078332036733627, -0.46758803725242615, -0.8593419194221497, 0.008572478778660297, 0.3916156589984894, 0.24749350547790527, -0.3235381245613098, -0.8981239199638367, -1.1104551553726196, 0.020922303199768066, -2.2657835483551025, -1.2019760608673096, 0.03072621487081051, -2.0355560779571533, -0.0561838299036026, 0.9320291876792908, 1.0510162115097046, 0.7496886849403381, -0.1208048090338707, 0.02911188267171383, -0.1946534365415573, -1.6864677667617798, 0.26441776752471924, 0.8639757037162781, -0.14653192460536957, 0.5025743842124939, -0.09809201955795288, -0.9494413733482361, 0.11666085571050644, -0.7845843434333801, -0.1554461568593979, 0.9878855347633362, 0.06528878211975098, 0.7149387001991272, 0.36914166808128357, -0.1423286348581314, -0.2856675088405609, -0.6209347248077393, -1.2054044008255005, 0.023073047399520874, -0.3153397738933563, 0.2789279818534851, 0.6526901125907898, -0.678226888179779, 0.8134093284606934, -0.7135280966758728, -0.27883923053741455, 0.8825913071632385, 0.21560977399349213, -1.6064518690109253, 0.16762788593769073, -0.5197539925575256, -1.362022042274475, 0.35528039932250977, -0.48335886001586914, -0.8479316830635071, -0.39472031593322754, 0.3068559467792511, -0.9034233689308167, -0.1679093986749649, -0.6893412470817566, -0.12928809225559235, -0.9889978766441345, 1.1785755157470703, -0.3039781451225281, 0.3042968511581421, 0.5476330518722534, -0.038627490401268005, -1.1060012578964233, -0.8008747100830078, 0.19615046679973602, 0.5432203412055969, -0.09159481525421143, 0.35721197724342346, -1.1039003133773804, -0.04762654006481171, -1.0514858961105347, -1.0686092376708984, 0.059481024742126465, 0.7859721779823303, 0.9232799410820007, 0.06401064246892929, -0.25432077050209045, 1.6289492845535278, -0.8516345024108887, 0.1458398550748825, 0.9897127151489258, 0.4441617727279663, -0.006070899311453104, 0.8532425761222839, -0.4762883484363556, 0.5901333689689636, -0.471320241689682, -1.7675600051879883, -0.45450258255004883, 0.6394950747489929, -0.5471785664558411, 0.42333778738975525, 0.1320280283689499, -0.510768473148346, -0.3039538562297821, -0.33286044001579285, 0.05199909210205078, -0.20030374825000763, -0.3463335335254669, 0.4364004135131836, -1.2267552614212036, -0.5132302641868591, 0.9065483212471008, 0.8119997382164001, 0.6211937665939331, -0.3455291986465454, -0.3536062240600586, 0.5158871412277222, 0.04233456030488014, -0.5333291888237, 0.12438120692968369, 0.3939238488674164, -0.5667194724082947, 1.9440146684646606, -1.1803563833236694, -0.5824782252311707, -1.052381992340088, 0.10174397379159927, -0.6911017298698425, 0.7574188709259033, -0.7147114872932434, 0.74312424659729, 0.14668883383274078, -0.4885564148426056, -0.46438243985176086, 0.3614938259124756, 0.7378899455070496, -1.0162590742111206, 0.4340551793575287, -1.7443917989730835, -1.2460764646530151, -1.484389305114746, 0.8995278477668762, -0.15699879825115204, 0.4412098228931427, 0.9738852381706238, 1.1794825792312622, 0.8559544682502747, 0.1627613753080368, -0.9054808616638184, -0.20556212961673737, 0.4947122037410736, 0.18156461417675018, 0.8453994393348694, 1.310397982597351, 0.9646715521812439, -0.7514435648918152, 1.9148720502853394, 1.3444005250930786, -0.2608741223812103, -0.6519656777381897, 0.8667900562286377, 0.8863933086395264, 1.2344071865081787, 0.4490255117416382, -0.3618561923503876, -1.014356017112732, -0.6679372787475586, 0.6161633133888245, -0.5327046513557434, 0.3230888545513153, 0.7530083060264587, 0.18344344198703766, -0.4025646150112152, -1.4650120735168457, 0.022666295990347862, -1.2961543798446655, 1.23908531665802, 0.8578212857246399, -0.18018068373203278, 0.08631979674100876, 0.5851784348487854, 0.6181495189666748, 0.5864629149436951, 0.6768549084663391, 0.04638375714421272, -0.3254585564136505, -1.3806406259536743, -1.3606518507003784, 1.6537727117538452, 0.33863565325737, 0.2907201647758484, -1.1052227020263672, -0.22429978847503662, -0.6799437403678894, 0.693627655506134, -0.18900750577449799, -0.6870314478874207, -0.03172764182090759, 0.10529962927103043, -0.7197265028953552, 0.41449829936027527, -0.4097766578197479, 1.2906303405761719, -0.618186891078949, 0.16929243505001068, 1.1289020776748657, -0.7204294204711914, 0.955909252166748, 0.6195316910743713, 0.9079866409301758, -1.1041072607040405, -0.3757752478122711, -0.49613282084465027, -0.4621966779232025, -0.8923242092132568, -0.015448334626853466, 1.2432719469070435, 1.3870960474014282, 0.607570469379425, 1.9181674718856812, 0.8767927289009094, 0.612399697303772, -0.8104316592216492, -1.4713486433029175, -0.4902702867984772, 0.17430977523326874, 1.3467575311660767, -0.39511656761169434, -0.28106334805488586, -0.5605154633522034, -0.468043714761734, -1.350143551826477, 0.7728398442268372, 0.24772651493549347, 0.7783708572387695, -0.8629123568534851, 0.37981224060058594, 0.15136216580867767, -1.1612242460250854, 0.11485450714826584, -0.75954270362854, -0.392920583486557, -0.058201730251312256, -0.24652040004730225, -1.0496435165405273, -0.03509901091456413, -0.10899249464273453, 0.6836015582084656, -0.17418235540390015, 0.23295842111110687, 0.317417174577713, -0.712604820728302, -0.41715148091316223, 1.1628093719482422, 0.4113304316997528, -0.09377623349428177, 0.15403012931346893, -1.09500253200531, -0.41679850220680237, 1.0896848440170288, -0.4132012128829956, 0.05150502920150757, -0.6195529103279114, 0.4048902094364166, 2.883021116256714, -0.3206806480884552, 0.10914101451635361, -0.0690029188990593, 0.8162114024162292, 0.3353491723537445, -0.6140785813331604, -1.8408528566360474, -0.29239749908447266, -0.5817834138870239]}
+2026-01-20 11:04:34,446 - INFO - Embedding call to https://api-inference.huggingface.co/models/intfloat/e5-large-v2 returned status {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2026-01-20 11:06:16,315 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 11:06:36,666 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 11:06:43,115 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 11:17:03,446 - INFO - Selected active LLM: ollama
+2026-01-20 11:17:03,448 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 11:17:03,449 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 11:17:04,163 - INFO - Research tool called with query: how many candidates are accommodated
+2026-01-20 11:17:04,592 - INFO - Embedding call to http://localhost:11434/api/embeddings returned status {'embedding': []}
+2026-01-20 11:33:52,725 - INFO - Selected active LLM: huggingface
+2026-01-20 11:33:52,726 - INFO - Selected embedding model: huggingface
+2026-01-20 11:33:52,851 - INFO - Selected active LLM: huggingface
+2026-01-20 11:33:52,852 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 11:33:52,852 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 11:34:14,874 - INFO - Selected active LLM: huggingface
+2026-01-20 11:34:14,876 - INFO - Selected embedding model: ollama
+2026-01-20 12:18:09,869 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 12:18:09,871 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 12:18:09,871 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 12:18:10,052 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 12:18:10,222 - INFO - Loading faiss with AVX2 support.
+2026-01-20 12:18:10,233 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 12:18:11,553 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 12:18:11,633 - INFO - \u2713 Simple agent loaded
+2026-01-20 12:18:12,999 - INFO - \u2713 LangChain agent loaded
+2026-01-20 12:18:25,843 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 12:18:26,740 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 12:18:35,533 - INFO - Selected active LLM: ollama
+2026-01-20 12:18:35,534 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 12:18:35,534 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 12:18:38,340 - INFO - Selected embedding model: ollama
+2026-01-20 12:18:38,341 - INFO - Research tool called with query: how many candidates are accommodated
+2026-01-20 12:18:38,774 - INFO - Embedding call to http://localhost:11434/api/embeddings returned status {'embedding': [-1.554653525352478, 1.3534795045852661, -3.3912370204925537, -0.9634415507316589, 0.8409897685050964, 0.4716583788394928, -0.41076093912124634, 1.2269866466522217, 0.04969575256109238, 0.6316788792610168, -1.1705195903778076, -1.2746680974960327, 0.16080693900585175, 0.33053213357925415, -0.5968615412712097, -2.003608465194702, 0.22322218120098114, -1.3703200817108154, 0.037664949893951416, -0.33353349566459656, -0.3795478045940399, -0.01706494390964508, -1.5596219301223755, -0.21555209159851074, 1.7918930053710938, 2.1398074626922607, 0.22987757623195648, -0.03713039308786392, -0.4340161383152008, -0.15034213662147522, 0.03287780284881592, 1.2939201593399048, 0.26926878094673157, -0.5197951197624207, -0.03947523981332779, -1.9509836435317993, 1.0383650064468384, 0.3795228600502014, -0.3788456320762634, -0.6696025133132935, 0.3294285237789154, 0.03840455412864685, 0.05475016310811043, -1.3822543621063232, -0.33013343811035156, 0.5136002898216248, 0.9989489316940308, 1.2607860565185547, 1.0405237674713135, -0.4845425486564636, -0.9883068203926086, -0.17841747403144836, 0.08924932777881622, 0.8836656808853149, -0.041522253304719925, 0.05194810777902603, -1.1509989500045776, 1.2458983659744263, 0.13370731472969055, 0.947044849395752, 2.616673231124878, -0.7571874856948853, -1.670995831489563, 1.847735047340393, 1.0374411344528198, -0.021395986899733543, 0.18265247344970703, 1.3912533521652222, 1.4518975019454956, -1.9507147073745728, 0.14272664487361908, -0.5253036618232727, 0.6620131731033325, -0.6225001215934753, -0.19802090525627136, -0.389555960893631, -0.8820245862007141, 0.04146784171462059, -0.8020424842834473, 0.7389014959335327, 0.920861542224884, -0.3146103024482727, 2.147221803665161, 0.0878838524222374, 0.559375524520874, 0.4172494411468506, 0.11975604295730591, 0.4096761643886566, -0.16726091504096985, 0.7989674806594849, -0.14748862385749817, 0.5449898838996887, 0.7785581946372986, 1.8569047451019287, -0.40498679876327515, 1.3107856512069702, -0.40043506026268005, 0.1419285535812378, -1.1750901937484741, -0.9121075868606567, -0.06741243600845337, 0.012110062874853611, -0.5559298396110535, -0.15004387497901917, 0.481795072555542, -0.19340790808200836, -0.38383999466896057, 1.0841615200042725, 0.6572135090827942, 0.3228779733181, -0.9467111229896545, 0.24430690705776215, -1.1252907514572144, -0.9670882225036621, -0.8738113045692444, -0.6337834000587463, 0.36246228218078613, -1.3719635009765625, 1.0634909868240356, 0.9045467376708984, -0.5135120153427124, -0.15789462625980377, 0.25401467084884644, 0.5724449753761292, 0.8476041555404663, 0.48402243852615356, -1.6113473176956177, -0.1529376208782196, 0.15567395091056824, -0.8590989708900452, -0.21039237082004547, -1.0745424032211304, 0.23787821829319, -0.30070656538009644, -0.10006240755319595, 0.2644478380680084, -1.1922985315322876, -0.3553064167499542, -0.5417649149894714, 0.5783823728561401, 0.5832189321517944, 0.10461517423391342, 0.26298847794532776, -0.319611519575119, 0.3857572674751282, -1.2260349988937378, 0.752662718296051, -0.22844430804252625, -0.9945540428161621, 0.7590710520744324, 0.11073505878448486, 1.0615662336349487, -0.49864792823791504, 0.26177850365638733, 0.07227284461259842, -0.8866804242134094, -0.15211717784404755, -0.11163953691720963, 0.9546429514884949, 1.1168608665466309, 1.1222267150878906, -0.5350741147994995, -0.48966512084007263, 0.7687662243843079, -1.5766173601150513, -0.4984179437160492, 0.3323800265789032, 0.18402253091335297, 0.3830106854438782, 0.8994401097297668, -0.4108130931854248, -1.166878581047058, -0.31862571835517883, 0.10958654433488846, 0.9598994851112366, -0.9870562553405762, 0.5609520077705383, -1.0258113145828247, 0.6469956040382385, 0.609734058380127, 1.0066440105438232, -0.12669946253299713, -0.2533956468105316, 0.2530352771282196, -0.08121087402105331, -1.4378715753555298, -0.4546761214733124, -1.1458654403686523, 0.058278147131204605, -0.7826583981513977, 0.1429554671049118, 0.21148447692394257, -0.9105457663536072, -0.782612681388855, -0.39735379815101624, -0.33516302704811096, 1.5724462270736694, -0.4013844132423401, 0.6583991050720215, -1.2427960634231567, 0.587321937084198, 0.00937609188258648, -0.9365630745887756, 0.2553471028804779, -0.060434017330408096, 1.1364384889602661, 0.41595420241355896, 0.6578605771064758, -0.3431934714317322, -0.3127259612083435, 0.8499404191970825, 0.07714710384607315, -0.33118942379951477, 0.33779987692832947, 0.6988843083381653, -0.2868635654449463, 0.2611446976661682, -0.39011165499687195, 0.45404067635536194, 1.2159446477890015, 0.8098445534706116, 0.1493518352508545, -1.1218039989471436, 0.257009357213974, 0.8798927664756775, 0.024712862446904182, -1.9533650875091553, -0.03695344924926758, -0.5262746214866638, 0.7854788899421692, 0.043576594442129135, -1.3666365146636963, 0.5745790600776672, 0.04274857044219971, 0.08893657475709915, 0.000549436139408499, -0.11416754871606827, 1.2230640649795532, 0.5703257322311401, -0.8070505261421204, 0.1292598694562912, 0.59809410572052, -0.5790730118751526, 0.9029112458229065, -0.5236902832984924, -0.42580586671829224, -0.3122711181640625, -0.2691047489643097, 0.4177559018135071, 2.3544390201568604, -1.072224736213684, -0.6433092951774597, 0.7424489855766296, 1.1123015880584717, 0.11717982590198517, 0.4043176770210266, -0.6433975100517273, 1.0687119960784912, 0.0020640790462493896, -1.0048668384552002, 0.9943121075630188, -1.4973208904266357, 1.608538269996643, -0.6709015965461731, -0.34543395042419434, -0.512758195400238, -0.0015184165677055717, -0.47829076647758484, 0.5334331393241882, -0.44419506192207336, 0.9053926467895508, 0.7741974592208862, 0.0020603963639587164, 1.1092249155044556, 1.1014655828475952, -0.6562453508377075, -0.7832011580467224, -0.831285297870636, 0.2515588402748108, -0.10549396276473999, 0.9015050530433655, -1.1459181308746338, -1.365172266960144, 0.0020390835124999285, 0.07852675765752792, 0.704987108707428, 1.109397053718567, 0.38025256991386414, -0.49743255972862244, 0.6846880912780762, 0.09991016238927841, -0.7316422462463379, 0.5999178290367126, 1.1909679174423218, 0.04871755093336105, -0.017150962725281715, 0.7739229202270508, -0.48360222578048706, 0.5967945456504822, -0.3135435879230499, -0.031115220859646797, 1.0154112577438354, 0.9435279965400696, -0.37284716963768005, 0.14720463752746582, -0.2309662252664566, 0.04745309427380562, -0.5244205594062805, 0.20199526846408844, -0.6591634750366211, -0.7937965393066406, 1.1364597082138062, -0.5985262989997864, -0.4997688829898834, -1.4207652807235718, -0.3898199200630188, 0.9983536005020142, 0.4833371639251709, 0.8690809607505798, -0.916102409362793, 0.7550276517868042, -0.16958509385585785, 0.3449862599372864, -1.2795244455337524, 0.3398565649986267, 1.188050627708435, 0.25991496443748474, -0.191428080201149, -0.2678702771663666, -0.21027739346027374, 0.9111959338188171, 0.09811242669820786, -0.002228104043751955, -0.41948944330215454, 0.733840823173523, -0.3752051293849945, 0.6622101068496704, -1.1121331453323364, 0.5608021020889282, 0.6683778762817383, 1.6358215808868408, 0.9904486536979675, 0.5203875303268433, -1.0597480535507202, 1.14334237575531, 0.4934941828250885, -0.3528450131416321, 0.4909582734107971, 0.41224193572998047, -0.5609163045883179, -0.04552298039197922, -1.12741219997406, -1.1115548610687256, 0.11756134778261185, 0.24017880856990814, -1.0002095699310303, -0.67963045835495, 0.43272656202316284, -0.3952297568321228, 0.5537182092666626, 0.6975975632667542, 0.39699649810791016, 0.42413559556007385, -0.7055459022521973, 0.4301150143146515, 0.0390615276992321, 1.0711820125579834, 0.06957562267780304, 1.6564687490463257, 0.0877484455704689, -1.2409709692001343, -2.0763604640960693, -0.4982045292854309, -0.1957635134458542, 0.8673585057258606, -0.20225444436073303, -1.79560124874115, -0.37600427865982056, -0.38741999864578247, -0.6404721140861511, -0.4595576822757721, -0.30089786648750305, -0.4881151020526886, -0.09332466125488281, -0.4753154218196869, 0.19813306629657745, 0.6858498454093933, -0.6736470460891724, -0.6676120758056641, 0.03892921656370163, -1.0675841569900513, -1.2167893648147583, -0.846464991569519, -0.15727822482585907, -0.6827765107154846, -0.41224393248558044, 0.7066936492919922, -1.1785295009613037, 1.030310034751892, 0.8663129806518555, -0.9470948576927185, -1.8781204223632812, -0.23018746078014374, -0.22881558537483215, 0.02641933597624302, 2.3415420055389404, -1.3688535690307617, -0.5155779719352722, -0.040778014808893204, 0.5196046829223633, -0.0011932541383430362, 1.3632738590240479, -1.2983440160751343, -0.7571486234664917, -0.6423768997192383, 0.40096041560173035, 0.79911869764328, -0.23110322654247284, -0.932840883731842, 0.8239101767539978, 0.8431749939918518, 0.6318813562393188, -1.0805009603500366, 0.30610278248786926, 0.06885229051113129, -0.28152164816856384, -0.2793511152267456, 1.1298452615737915, 0.6561265587806702, -0.977241039276123, 0.7318918108940125, 0.6454170346260071, 0.7610514760017395, -0.15906593203544617, -0.21872998774051666, -0.39485931396484375, 0.5155213475227356, -0.4727685749530792, 0.01221818383783102, 1.23391592502594, -0.7547958493232727, -1.4534729719161987, -0.4324946999549866, -0.971948504447937, 0.6561282873153687, 0.7956094145774841, 0.6085985898971558, -0.6500086784362793, -1.2216854095458984, 0.8712019324302673, 1.3959163427352905, 0.10425079613924026, 0.3358369767665863, 0.45724907517433167, 1.51163649559021, -0.5335842370986938, -0.14379072189331055, 0.10085833072662354, -0.006806276738643646, 0.9156096577644348, 0.15600724518299103, -0.19027946889400482, -1.1921710968017578, 0.5452186465263367, 0.561050295829773, -0.19343522191047668, 0.7543650269508362, -0.6631411910057068, 0.15517248213291168, 0.4787251055240631, 0.07645684480667114, 0.578618049621582, 1.0155166387557983, -1.3522781133651733, -1.3574506044387817, -1.083892822265625, 0.44637951254844666, -0.039146989583969116, 0.2501509487628937, 0.884341299533844, 0.17013385891914368, -0.061179302632808685, -0.8682030439376831, -0.30843880772590637, -0.23595857620239258, -0.028731390833854675, 1.5345648527145386, -0.5830581784248352, -0.044773854315280914, -0.474355548620224, 0.503507137298584, -0.6292563676834106, -0.2942669689655304, 0.1389472633600235, 0.30144357681274414, -0.33641961216926575, -0.9659116864204407, -0.2386876493692398, 1.1079765558242798, 0.8553376197814941, 2.0052220821380615, -0.3172575831413269, 0.9133393168449402, -1.5224593877792358, -0.40303653478622437, 0.008464201353490353, 0.054981399327516556, -1.0647658109664917, 0.13112305104732513, 0.40054598450660706, 0.020778166130185127, -0.3370160460472107, 0.28014135360717773, -0.9904497861862183, 0.6360406279563904, -0.7710733413696289, 0.001294120098464191, 0.05758355185389519, -0.8370075225830078, 0.6081450581550598, 0.5527471899986267, -0.28389307856559753, 0.23473528027534485, -0.3237821161746979, -1.4693034887313843, 0.6407181024551392, -0.7524445652961731, -0.5002866387367249, 0.6878415942192078, -0.19771675765514374, 0.20789603888988495, 0.5310930013656616, -1.0959709882736206, -0.02687588334083557, 0.2934153974056244, -0.1548307240009308, -0.16288578510284424, -0.6848735213279724, 1.2553170919418335, -0.23276062309741974, -0.5511490702629089, 0.013507098890841007, 0.3730334937572479, 1.0912021398544312, 0.6691617965698242, 0.6429505348205566, -1.0408762693405151, -0.4564858078956604, -0.24471105635166168, -0.9153890609741211, 0.6768452525138855, -1.8795799016952515, 0.7349161505699158, -0.7710887789726257, 0.09386720508337021, -0.25355905294418335, 0.5428706407546997, -0.2456045150756836, -0.1609855741262436, 0.3710506558418274, -0.25501126050949097, 0.9246929287910461, 0.0422058179974556, -0.3960935175418854, -0.13572904467582703, 0.3163110911846161, -0.5577200055122375, -0.5733686685562134, -0.6765692830085754, 0.21099606156349182, 0.33169952034950256, -1.6557971239089966, 1.00888991355896, -0.7806379199028015, 0.014138802886009216, 0.5485647916793823, -0.028689684346318245, 0.19229933619499207, -1.4673397541046143, -1.0354357957839966, 1.2923095226287842, -0.751139760017395, -0.826323390007019, 0.3623709976673126, -0.03408895060420036, 1.2520866394042969, -1.2447662353515625, -1.0431655645370483, -0.07073589414358139, -0.6113768219947815, 0.6206990480422974, -0.10017227381467819, 0.7746215462684631, -0.029031801968812943, -0.6333476305007935, 1.4800336360931396, 0.05984481796622276, -0.4532082676887512, -1.6646758317947388, 0.16724666953086853, 0.9245728850364685, 0.8166450262069702, 1.3846040964126587, -0.34085720777511597, -0.2927576005458832, 0.8203357458114624, -1.037231683731079, -0.6157546639442444, -0.24775466322898865, -1.5683168172836304, 1.2660669088363647, -0.5484713315963745, 0.5621110796928406, -0.6177563071250916, 0.32133039832115173, -0.3784809410572052, 1.244606375694275, 0.5188199281692505, 0.43878433108329773, -0.028596295043826103, -0.23094430565834045, -1.3049535751342773, 0.03672388941049576, -0.4512392580509186, 0.8563626408576965, 0.14068570733070374, -0.41812261939048767, -1.2021986246109009, 0.8562751412391663, 0.4184572994709015, 1.325243353843689, -0.3647831380367279, -0.755699098110199, -1.276641607284546, -0.44097593426704407, 0.3838624656200409, -0.7052002549171448, -1.096127986907959, -1.1844112873077393, 1.3175709247589111, 1.3555926084518433, -1.7832387685775757, -0.6877242922782898, 1.257970929145813, 2.461613416671753, 0.05039959400892258, 0.023331275209784508, 0.7818506360054016, 0.4732106626033783, -1.2326933145523071, 1.05113685131073, 1.0317749977111816, -0.9243046641349792, 0.7318249940872192, 0.8703101873397827, 0.04586733132600784, 0.6686543226242065, -0.8253580331802368, -0.43529000878334045, -0.8716710805892944, 0.2644703686237335, 0.20126114785671234, -1.3811407089233398, -0.06743596494197845, 0.012008109129965305, -0.01682761125266552, 0.9585281014442444, 0.4157097637653351, -1.3006776571273804, -0.2058263123035431, 0.6335750222206116, 0.8125720620155334, -0.2629091143608093, -0.6683138608932495, -0.578242838382721, -0.6808857321739197, 0.6931109428405762, 1.081996202468872, 0.7815340757369995, -0.44193553924560547, -0.011007853783667088, 0.4190598130226135, 0.9993178248405457, 0.3631187081336975, 0.3580912947654724, -0.3922937512397766, 1.124261736869812, -2.0347063541412354, 1.2301404476165771, -0.37965211272239685, 0.6910300850868225, -1.8387638330459595, -0.10505737364292145, -1.4313890933990479, -0.25671038031578064, 0.095675989985466, -0.13332845270633698, 0.6669076085090637, 0.5329362750053406, 0.5491066575050354, -0.5636665225028992, 1.3331152200698853, 0.7112371325492859, 0.580208420753479, 0.4932882785797119, -0.3787716031074524, -0.7303574681282043, 0.07026530057191849, 0.14423243701457977, -0.25079062581062317, 1.0377092361450195, 1.1019058227539062, -0.7590044736862183, 2.2777609825134277, 0.8124135136604309, 0.2815175950527191, -2.051391363143921, -0.8336467146873474, 0.8688632249832153, -1.060085654258728, 1.3774341344833374, -0.08974727243185043, -1.1971808671951294, 0.5846800208091736, 0.24418480694293976, 0.141184002161026, 1.1339362859725952, -0.5073586702346802, -0.23695850372314453, 0.2919035255908966, -0.7617053985595703, -1.1452443599700928, -1.770969033241272, 1.0721619129180908, 1.07554292678833, -1.2725553512573242, -0.3569730222225189, -0.2518330514431, -0.37629005312919617, -0.3056252598762512, -0.7687902450561523, -0.37436914443969727, 0.5013079047203064, 1.247768521308899, -0.3348746597766876, 1.2330551147460938, -1.4199533462524414, -0.3325582444667816, 1.6273537874221802, 0.9572375416755676, -0.11602441966533661, 0.1507844626903534, -0.4183290898799896, 0.7609209418296814, -0.18530307710170746, -0.4032239615917206, 1.8573428392410278, -0.3012180030345917, 1.5531255006790161, 1.0461243391036987, 0.3125024735927582, 0.31514883041381836, 1.2626639604568481, -0.2906032204627991, -0.15291857719421387, 0.18504975736141205, -0.30121827125549316, -0.585419237613678]}
+2026-01-20 12:18:38,775 - INFO - Calling active LLM: ollama
+2026-01-20 12:20:29,259 - INFO - Research completed using AI engine
+2026-01-20 12:22:09,656 - INFO - Selected embedding model: huggingface
+2026-01-20 12:22:09,657 - INFO - Research tool called with query: how many candidates are accommodated
+2026-01-20 12:22:10,774 - INFO - Embedding call to https://api-inference.huggingface.co/models/intfloat/e5-large-v2 returned status {'error': 'https://api-inference.huggingface.co is no longer supported. Please use https://router.huggingface.co instead.'}
+2026-01-20 12:22:39,171 - INFO - Selected embedding model: ollama
+2026-01-20 12:22:39,172 - INFO - Research tool called with query: how many candidates are accommodated
+2026-01-20 12:22:39,243 - INFO - Embedding call to http://localhost:11434/api/embeddings returned status {'embedding': [-1.554653525352478, 1.3534795045852661, -3.3912370204925537, -0.9634415507316589, 0.8409897685050964, 0.4716583788394928, -0.41076093912124634, 1.2269866466522217, 0.04969575256109238, 0.6316788792610168, -1.1705195903778076, -1.2746680974960327, 0.16080693900585175, 0.33053213357925415, -0.5968615412712097, -2.003608465194702, 0.22322218120098114, -1.3703200817108154, 0.037664949893951416, -0.33353349566459656, -0.3795478045940399, -0.01706494390964508, -1.5596219301223755, -0.21555209159851074, 1.7918930053710938, 2.1398074626922607, 0.22987757623195648, -0.03713039308786392, -0.4340161383152008, -0.15034213662147522, 0.03287780284881592, 1.2939201593399048, 0.26926878094673157, -0.5197951197624207, -0.03947523981332779, -1.9509836435317993, 1.0383650064468384, 0.3795228600502014, -0.3788456320762634, -0.6696025133132935, 0.3294285237789154, 0.03840455412864685, 0.05475016310811043, -1.3822543621063232, -0.33013343811035156, 0.5136002898216248, 0.9989489316940308, 1.2607860565185547, 1.0405237674713135, -0.4845425486564636, -0.9883068203926086, -0.17841747403144836, 0.08924932777881622, 0.8836656808853149, -0.041522253304719925, 0.05194810777902603, -1.1509989500045776, 1.2458983659744263, 0.13370731472969055, 0.947044849395752, 2.616673231124878, -0.7571874856948853, -1.670995831489563, 1.847735047340393, 1.0374411344528198, -0.021395986899733543, 0.18265247344970703, 1.3912533521652222, 1.4518975019454956, -1.9507147073745728, 0.14272664487361908, -0.5253036618232727, 0.6620131731033325, -0.6225001215934753, -0.19802090525627136, -0.389555960893631, -0.8820245862007141, 0.04146784171462059, -0.8020424842834473, 0.7389014959335327, 0.920861542224884, -0.3146103024482727, 2.147221803665161, 0.0878838524222374, 0.559375524520874, 0.4172494411468506, 0.11975604295730591, 0.4096761643886566, -0.16726091504096985, 0.7989674806594849, -0.14748862385749817, 0.5449898838996887, 0.7785581946372986, 1.8569047451019287, -0.40498679876327515, 1.3107856512069702, -0.40043506026268005, 0.1419285535812378, -1.1750901937484741, -0.9121075868606567, -0.06741243600845337, 0.012110062874853611, -0.5559298396110535, -0.15004387497901917, 0.481795072555542, -0.19340790808200836, -0.38383999466896057, 1.0841615200042725, 0.6572135090827942, 0.3228779733181, -0.9467111229896545, 0.24430690705776215, -1.1252907514572144, -0.9670882225036621, -0.8738113045692444, -0.6337834000587463, 0.36246228218078613, -1.3719635009765625, 1.0634909868240356, 0.9045467376708984, -0.5135120153427124, -0.15789462625980377, 0.25401467084884644, 0.5724449753761292, 0.8476041555404663, 0.48402243852615356, -1.6113473176956177, -0.1529376208782196, 0.15567395091056824, -0.8590989708900452, -0.21039237082004547, -1.0745424032211304, 0.23787821829319, -0.30070656538009644, -0.10006240755319595, 0.2644478380680084, -1.1922985315322876, -0.3553064167499542, -0.5417649149894714, 0.5783823728561401, 0.5832189321517944, 0.10461517423391342, 0.26298847794532776, -0.319611519575119, 0.3857572674751282, -1.2260349988937378, 0.752662718296051, -0.22844430804252625, -0.9945540428161621, 0.7590710520744324, 0.11073505878448486, 1.0615662336349487, -0.49864792823791504, 0.26177850365638733, 0.07227284461259842, -0.8866804242134094, -0.15211717784404755, -0.11163953691720963, 0.9546429514884949, 1.1168608665466309, 1.1222267150878906, -0.5350741147994995, -0.48966512084007263, 0.7687662243843079, -1.5766173601150513, -0.4984179437160492, 0.3323800265789032, 0.18402253091335297, 0.3830106854438782, 0.8994401097297668, -0.4108130931854248, -1.166878581047058, -0.31862571835517883, 0.10958654433488846, 0.9598994851112366, -0.9870562553405762, 0.5609520077705383, -1.0258113145828247, 0.6469956040382385, 0.609734058380127, 1.0066440105438232, -0.12669946253299713, -0.2533956468105316, 0.2530352771282196, -0.08121087402105331, -1.4378715753555298, -0.4546761214733124, -1.1458654403686523, 0.058278147131204605, -0.7826583981513977, 0.1429554671049118, 0.21148447692394257, -0.9105457663536072, -0.782612681388855, -0.39735379815101624, -0.33516302704811096, 1.5724462270736694, -0.4013844132423401, 0.6583991050720215, -1.2427960634231567, 0.587321937084198, 0.00937609188258648, -0.9365630745887756, 0.2553471028804779, -0.060434017330408096, 1.1364384889602661, 0.41595420241355896, 0.6578605771064758, -0.3431934714317322, -0.3127259612083435, 0.8499404191970825, 0.07714710384607315, -0.33118942379951477, 0.33779987692832947, 0.6988843083381653, -0.2868635654449463, 0.2611446976661682, -0.39011165499687195, 0.45404067635536194, 1.2159446477890015, 0.8098445534706116, 0.1493518352508545, -1.1218039989471436, 0.257009357213974, 0.8798927664756775, 0.024712862446904182, -1.9533650875091553, -0.03695344924926758, -0.5262746214866638, 0.7854788899421692, 0.043576594442129135, -1.3666365146636963, 0.5745790600776672, 0.04274857044219971, 0.08893657475709915, 0.000549436139408499, -0.11416754871606827, 1.2230640649795532, 0.5703257322311401, -0.8070505261421204, 0.1292598694562912, 0.59809410572052, -0.5790730118751526, 0.9029112458229065, -0.5236902832984924, -0.42580586671829224, -0.3122711181640625, -0.2691047489643097, 0.4177559018135071, 2.3544390201568604, -1.072224736213684, -0.6433092951774597, 0.7424489855766296, 1.1123015880584717, 0.11717982590198517, 0.4043176770210266, -0.6433975100517273, 1.0687119960784912, 0.0020640790462493896, -1.0048668384552002, 0.9943121075630188, -1.4973208904266357, 1.608538269996643, -0.6709015965461731, -0.34543395042419434, -0.512758195400238, -0.0015184165677055717, -0.47829076647758484, 0.5334331393241882, -0.44419506192207336, 0.9053926467895508, 0.7741974592208862, 0.0020603963639587164, 1.1092249155044556, 1.1014655828475952, -0.6562453508377075, -0.7832011580467224, -0.831285297870636, 0.2515588402748108, -0.10549396276473999, 0.9015050530433655, -1.1459181308746338, -1.365172266960144, 0.0020390835124999285, 0.07852675765752792, 0.704987108707428, 1.109397053718567, 0.38025256991386414, -0.49743255972862244, 0.6846880912780762, 0.09991016238927841, -0.7316422462463379, 0.5999178290367126, 1.1909679174423218, 0.04871755093336105, -0.017150962725281715, 0.7739229202270508, -0.48360222578048706, 0.5967945456504822, -0.3135435879230499, -0.031115220859646797, 1.0154112577438354, 0.9435279965400696, -0.37284716963768005, 0.14720463752746582, -0.2309662252664566, 0.04745309427380562, -0.5244205594062805, 0.20199526846408844, -0.6591634750366211, -0.7937965393066406, 1.1364597082138062, -0.5985262989997864, -0.4997688829898834, -1.4207652807235718, -0.3898199200630188, 0.9983536005020142, 0.4833371639251709, 0.8690809607505798, -0.916102409362793, 0.7550276517868042, -0.16958509385585785, 0.3449862599372864, -1.2795244455337524, 0.3398565649986267, 1.188050627708435, 0.25991496443748474, -0.191428080201149, -0.2678702771663666, -0.21027739346027374, 0.9111959338188171, 0.09811242669820786, -0.002228104043751955, -0.41948944330215454, 0.733840823173523, -0.3752051293849945, 0.6622101068496704, -1.1121331453323364, 0.5608021020889282, 0.6683778762817383, 1.6358215808868408, 0.9904486536979675, 0.5203875303268433, -1.0597480535507202, 1.14334237575531, 0.4934941828250885, -0.3528450131416321, 0.4909582734107971, 0.41224193572998047, -0.5609163045883179, -0.04552298039197922, -1.12741219997406, -1.1115548610687256, 0.11756134778261185, 0.24017880856990814, -1.0002095699310303, -0.67963045835495, 0.43272656202316284, -0.3952297568321228, 0.5537182092666626, 0.6975975632667542, 0.39699649810791016, 0.42413559556007385, -0.7055459022521973, 0.4301150143146515, 0.0390615276992321, 1.0711820125579834, 0.06957562267780304, 1.6564687490463257, 0.0877484455704689, -1.2409709692001343, -2.0763604640960693, -0.4982045292854309, -0.1957635134458542, 0.8673585057258606, -0.20225444436073303, -1.79560124874115, -0.37600427865982056, -0.38741999864578247, -0.6404721140861511, -0.4595576822757721, -0.30089786648750305, -0.4881151020526886, -0.09332466125488281, -0.4753154218196869, 0.19813306629657745, 0.6858498454093933, -0.6736470460891724, -0.6676120758056641, 0.03892921656370163, -1.0675841569900513, -1.2167893648147583, -0.846464991569519, -0.15727822482585907, -0.6827765107154846, -0.41224393248558044, 0.7066936492919922, -1.1785295009613037, 1.030310034751892, 0.8663129806518555, -0.9470948576927185, -1.8781204223632812, -0.23018746078014374, -0.22881558537483215, 0.02641933597624302, 2.3415420055389404, -1.3688535690307617, -0.5155779719352722, -0.040778014808893204, 0.5196046829223633, -0.0011932541383430362, 1.3632738590240479, -1.2983440160751343, -0.7571486234664917, -0.6423768997192383, 0.40096041560173035, 0.79911869764328, -0.23110322654247284, -0.932840883731842, 0.8239101767539978, 0.8431749939918518, 0.6318813562393188, -1.0805009603500366, 0.30610278248786926, 0.06885229051113129, -0.28152164816856384, -0.2793511152267456, 1.1298452615737915, 0.6561265587806702, -0.977241039276123, 0.7318918108940125, 0.6454170346260071, 0.7610514760017395, -0.15906593203544617, -0.21872998774051666, -0.39485931396484375, 0.5155213475227356, -0.4727685749530792, 0.01221818383783102, 1.23391592502594, -0.7547958493232727, -1.4534729719161987, -0.4324946999549866, -0.971948504447937, 0.6561282873153687, 0.7956094145774841, 0.6085985898971558, -0.6500086784362793, -1.2216854095458984, 0.8712019324302673, 1.3959163427352905, 0.10425079613924026, 0.3358369767665863, 0.45724907517433167, 1.51163649559021, -0.5335842370986938, -0.14379072189331055, 0.10085833072662354, -0.006806276738643646, 0.9156096577644348, 0.15600724518299103, -0.19027946889400482, -1.1921710968017578, 0.5452186465263367, 0.561050295829773, -0.19343522191047668, 0.7543650269508362, -0.6631411910057068, 0.15517248213291168, 0.4787251055240631, 0.07645684480667114, 0.578618049621582, 1.0155166387557983, -1.3522781133651733, -1.3574506044387817, -1.083892822265625, 0.44637951254844666, -0.039146989583969116, 0.2501509487628937, 0.884341299533844, 0.17013385891914368, -0.061179302632808685, -0.8682030439376831, -0.30843880772590637, -0.23595857620239258, -0.028731390833854675, 1.5345648527145386, -0.5830581784248352, -0.044773854315280914, -0.474355548620224, 0.503507137298584, -0.6292563676834106, -0.2942669689655304, 0.1389472633600235, 0.30144357681274414, -0.33641961216926575, -0.9659116864204407, -0.2386876493692398, 1.1079765558242798, 0.8553376197814941, 2.0052220821380615, -0.3172575831413269, 0.9133393168449402, -1.5224593877792358, -0.40303653478622437, 0.008464201353490353, 0.054981399327516556, -1.0647658109664917, 0.13112305104732513, 0.40054598450660706, 0.020778166130185127, -0.3370160460472107, 0.28014135360717773, -0.9904497861862183, 0.6360406279563904, -0.7710733413696289, 0.001294120098464191, 0.05758355185389519, -0.8370075225830078, 0.6081450581550598, 0.5527471899986267, -0.28389307856559753, 0.23473528027534485, -0.3237821161746979, -1.4693034887313843, 0.6407181024551392, -0.7524445652961731, -0.5002866387367249, 0.6878415942192078, -0.19771675765514374, 0.20789603888988495, 0.5310930013656616, -1.0959709882736206, -0.02687588334083557, 0.2934153974056244, -0.1548307240009308, -0.16288578510284424, -0.6848735213279724, 1.2553170919418335, -0.23276062309741974, -0.5511490702629089, 0.013507098890841007, 0.3730334937572479, 1.0912021398544312, 0.6691617965698242, 0.6429505348205566, -1.0408762693405151, -0.4564858078956604, -0.24471105635166168, -0.9153890609741211, 0.6768452525138855, -1.8795799016952515, 0.7349161505699158, -0.7710887789726257, 0.09386720508337021, -0.25355905294418335, 0.5428706407546997, -0.2456045150756836, -0.1609855741262436, 0.3710506558418274, -0.25501126050949097, 0.9246929287910461, 0.0422058179974556, -0.3960935175418854, -0.13572904467582703, 0.3163110911846161, -0.5577200055122375, -0.5733686685562134, -0.6765692830085754, 0.21099606156349182, 0.33169952034950256, -1.6557971239089966, 1.00888991355896, -0.7806379199028015, 0.014138802886009216, 0.5485647916793823, -0.028689684346318245, 0.19229933619499207, -1.4673397541046143, -1.0354357957839966, 1.2923095226287842, -0.751139760017395, -0.826323390007019, 0.3623709976673126, -0.03408895060420036, 1.2520866394042969, -1.2447662353515625, -1.0431655645370483, -0.07073589414358139, -0.6113768219947815, 0.6206990480422974, -0.10017227381467819, 0.7746215462684631, -0.029031801968812943, -0.6333476305007935, 1.4800336360931396, 0.05984481796622276, -0.4532082676887512, -1.6646758317947388, 0.16724666953086853, 0.9245728850364685, 0.8166450262069702, 1.3846040964126587, -0.34085720777511597, -0.2927576005458832, 0.8203357458114624, -1.037231683731079, -0.6157546639442444, -0.24775466322898865, -1.5683168172836304, 1.2660669088363647, -0.5484713315963745, 0.5621110796928406, -0.6177563071250916, 0.32133039832115173, -0.3784809410572052, 1.244606375694275, 0.5188199281692505, 0.43878433108329773, -0.028596295043826103, -0.23094430565834045, -1.3049535751342773, 0.03672388941049576, -0.4512392580509186, 0.8563626408576965, 0.14068570733070374, -0.41812261939048767, -1.2021986246109009, 0.8562751412391663, 0.4184572994709015, 1.325243353843689, -0.3647831380367279, -0.755699098110199, -1.276641607284546, -0.44097593426704407, 0.3838624656200409, -0.7052002549171448, -1.096127986907959, -1.1844112873077393, 1.3175709247589111, 1.3555926084518433, -1.7832387685775757, -0.6877242922782898, 1.257970929145813, 2.461613416671753, 0.05039959400892258, 0.023331275209784508, 0.7818506360054016, 0.4732106626033783, -1.2326933145523071, 1.05113685131073, 1.0317749977111816, -0.9243046641349792, 0.7318249940872192, 0.8703101873397827, 0.04586733132600784, 0.6686543226242065, -0.8253580331802368, -0.43529000878334045, -0.8716710805892944, 0.2644703686237335, 0.20126114785671234, -1.3811407089233398, -0.06743596494197845, 0.012008109129965305, -0.01682761125266552, 0.9585281014442444, 0.4157097637653351, -1.3006776571273804, -0.2058263123035431, 0.6335750222206116, 0.8125720620155334, -0.2629091143608093, -0.6683138608932495, -0.578242838382721, -0.6808857321739197, 0.6931109428405762, 1.081996202468872, 0.7815340757369995, -0.44193553924560547, -0.011007853783667088, 0.4190598130226135, 0.9993178248405457, 0.3631187081336975, 0.3580912947654724, -0.3922937512397766, 1.124261736869812, -2.0347063541412354, 1.2301404476165771, -0.37965211272239685, 0.6910300850868225, -1.8387638330459595, -0.10505737364292145, -1.4313890933990479, -0.25671038031578064, 0.095675989985466, -0.13332845270633698, 0.6669076085090637, 0.5329362750053406, 0.5491066575050354, -0.5636665225028992, 1.3331152200698853, 0.7112371325492859, 0.580208420753479, 0.4932882785797119, -0.3787716031074524, -0.7303574681282043, 0.07026530057191849, 0.14423243701457977, -0.25079062581062317, 1.0377092361450195, 1.1019058227539062, -0.7590044736862183, 2.2777609825134277, 0.8124135136604309, 0.2815175950527191, -2.051391363143921, -0.8336467146873474, 0.8688632249832153, -1.060085654258728, 1.3774341344833374, -0.08974727243185043, -1.1971808671951294, 0.5846800208091736, 0.24418480694293976, 0.141184002161026, 1.1339362859725952, -0.5073586702346802, -0.23695850372314453, 0.2919035255908966, -0.7617053985595703, -1.1452443599700928, -1.770969033241272, 1.0721619129180908, 1.07554292678833, -1.2725553512573242, -0.3569730222225189, -0.2518330514431, -0.37629005312919617, -0.3056252598762512, -0.7687902450561523, -0.37436914443969727, 0.5013079047203064, 1.247768521308899, -0.3348746597766876, 1.2330551147460938, -1.4199533462524414, -0.3325582444667816, 1.6273537874221802, 0.9572375416755676, -0.11602441966533661, 0.1507844626903534, -0.4183290898799896, 0.7609209418296814, -0.18530307710170746, -0.4032239615917206, 1.8573428392410278, -0.3012180030345917, 1.5531255006790161, 1.0461243391036987, 0.3125024735927582, 0.31514883041381836, 1.2626639604568481, -0.2906032204627991, -0.15291857719421387, 0.18504975736141205, -0.30121827125549316, -0.585419237613678]}
+2026-01-20 12:22:39,245 - INFO - Calling active LLM: ollama
+2026-01-20 12:23:49,216 - INFO - Research completed using AI engine
+2026-01-20 12:44:19,249 - INFO - Selected active LLM: ollama
+2026-01-20 12:44:19,250 - INFO - Selected embedding model: ollama
+2026-01-20 12:44:27,634 - INFO - Selected active LLM: ollama
+2026-01-20 12:44:27,636 - INFO - Selected embedding model: ollama
+2026-01-20 12:45:34,675 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 12:45:34,678 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 12:45:34,678 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 12:45:34,856 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 12:45:35,033 - INFO - Loading faiss with AVX2 support.
+2026-01-20 12:45:35,044 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 12:45:36,186 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 12:45:36,247 - INFO - \u2713 Simple agent loaded
+2026-01-20 12:45:37,309 - INFO - \u2713 LangChain agent loaded
+2026-01-20 12:45:49,525 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 12:45:50,415 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 12:46:10,261 - INFO - Selected active LLM: ollama
+2026-01-20 12:46:10,263 - INFO - Selected embedding model: ollama
+2026-01-20 12:48:34,730 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 12:48:34,733 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 12:48:34,733 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 12:48:34,914 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 12:48:35,075 - INFO - Loading faiss with AVX2 support.
+2026-01-20 12:48:35,086 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 12:48:36,197 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 12:48:36,257 - INFO - \u2713 Simple agent loaded
+2026-01-20 12:48:37,303 - INFO - \u2713 LangChain agent loaded
+2026-01-20 12:48:49,509 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 12:48:50,402 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 12:49:27,790 - INFO - Selected active LLM: ollama
+2026-01-20 12:49:27,791 - INFO - Selected embedding model: ollama
+2026-01-20 12:50:12,883 - INFO - Selected active LLM: huggingface
+2026-01-20 12:50:12,884 - INFO - Selected embedding model: ollama
+2026-01-20 12:50:12,999 - INFO - Selected active LLM: huggingface
+2026-01-20 12:50:13,000 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 12:50:13,001 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 13:07:46,419 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 13:07:46,422 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:07:46,422 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 13:07:46,606 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 13:07:47,175 - INFO - Loading faiss with AVX2 support.
+2026-01-20 13:07:47,354 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 13:07:49,950 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 13:07:50,007 - INFO - \u2713 Simple agent loaded
+2026-01-20 13:07:51,217 - INFO - \u2713 LangChain agent loaded
+2026-01-20 13:08:03,983 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 13:08:04,892 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 13:08:34,023 - INFO - Selected active LLM: ollama
+2026-01-20 13:08:34,023 - INFO - Selected embedding model: ollama
+2026-01-20 13:08:34,129 - INFO - Selected active LLM: ollama
+2026-01-20 13:08:34,129 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:08:34,130 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:17:48,827 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 13:17:48,829 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:17:48,829 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:17:49,006 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 13:17:49,152 - INFO - Loading faiss with AVX2 support.
+2026-01-20 13:17:49,163 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 13:17:50,247 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 13:17:50,306 - INFO - \u2713 Simple agent loaded
+2026-01-20 13:17:51,362 - INFO - \u2713 LangChain agent loaded
+2026-01-20 13:18:03,558 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 13:18:04,450 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 13:18:22,723 - INFO - Selected active LLM: ollama
+2026-01-20 13:18:22,725 - INFO - Selected embedding model: ollama
+2026-01-20 13:19:23,482 - INFO - Selected active LLM: ollama
+2026-01-20 13:19:23,483 - INFO - Selected embedding model: ollama
+2026-01-20 13:19:28,029 - INFO - Selected active LLM: ollama
+2026-01-20 13:19:28,031 - INFO - Selected embedding model: ollama
+2026-01-20 13:20:22,811 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 13:20:22,814 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:20:22,814 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:20:22,993 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 13:20:23,144 - INFO - Loading faiss with AVX2 support.
+2026-01-20 13:20:23,156 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 13:20:24,333 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 13:20:24,404 - INFO - \u2713 Simple agent loaded
+2026-01-20 13:20:25,633 - INFO - \u2713 LangChain agent loaded
+2026-01-20 13:20:37,887 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 13:20:38,792 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 13:20:53,106 - INFO - Selected active LLM: ollama
+2026-01-20 13:20:53,107 - INFO - Selected embedding model: ollama
+2026-01-20 13:22:14,673 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 13:22:14,675 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:22:14,675 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:22:14,854 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 13:22:15,000 - INFO - Loading faiss with AVX2 support.
+2026-01-20 13:22:15,012 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 13:22:16,088 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 13:22:16,145 - INFO - \u2713 Simple agent loaded
+2026-01-20 13:22:17,203 - INFO - \u2713 LangChain agent loaded
+2026-01-20 13:22:29,531 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 13:22:30,422 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 13:23:01,125 - INFO - Selected active LLM: ollama
+2026-01-20 13:23:01,127 - INFO - Selected embedding model: ollama
+2026-01-20 13:27:51,556 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 13:27:51,558 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:27:51,558 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:27:51,737 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 13:27:51,890 - INFO - Loading faiss with AVX2 support.
+2026-01-20 13:27:51,903 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 13:27:52,983 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 13:27:53,042 - INFO - \u2713 Simple agent loaded
+2026-01-20 13:27:54,098 - INFO - \u2713 LangChain agent loaded
+2026-01-20 13:28:07,950 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 13:28:08,886 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 13:29:29,384 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 13:29:29,387 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:29:29,387 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:29:29,566 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 13:29:29,714 - INFO - Loading faiss with AVX2 support.
+2026-01-20 13:29:29,726 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 13:29:30,823 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 13:29:30,881 - INFO - \u2713 Simple agent loaded
+2026-01-20 13:29:31,945 - INFO - \u2713 LangChain agent loaded
+2026-01-20 13:29:44,170 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 13:29:45,064 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 13:30:00,147 - INFO - Selected active LLM: ollama
+2026-01-20 13:30:00,149 - INFO - Selected embedding model: ollama
+2026-01-20 13:33:32,321 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 13:33:32,324 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:33:32,324 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:33:32,512 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 13:33:32,669 - INFO - Loading faiss with AVX2 support.
+2026-01-20 13:33:32,682 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 13:33:33,821 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 13:33:33,888 - INFO - \u2713 Simple agent loaded
+2026-01-20 13:33:35,040 - INFO - \u2713 LangChain agent loaded
+2026-01-20 13:33:47,871 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 13:33:48,776 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 13:34:27,865 - INFO - Selected active LLM: huggingface
+2026-01-20 13:34:27,866 - INFO - Selected embedding model: ollama
+2026-01-20 13:34:27,976 - INFO - Selected active LLM: huggingface
+2026-01-20 13:34:27,977 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:34:27,977 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 13:36:01,454 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 13:36:01,457 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:36:01,457 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 13:36:01,634 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 13:36:01,783 - INFO - Loading faiss with AVX2 support.
+2026-01-20 13:36:01,795 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 13:36:02,877 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 13:36:02,933 - INFO - \u2713 Simple agent loaded
+2026-01-20 13:36:03,983 - INFO - \u2713 LangChain agent loaded
+2026-01-20 13:36:16,323 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 13:36:17,272 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 13:36:32,267 - INFO - Selected active LLM: ollama
+2026-01-20 13:36:32,268 - INFO - Selected embedding model: ollama
+2026-01-20 13:36:32,388 - INFO - Selected active LLM: ollama
+2026-01-20 13:36:32,389 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:36:32,389 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:36:44,820 - INFO - Selected active LLM: ollama
+2026-01-20 13:36:44,821 - INFO - Selected embedding model: ollama
+2026-01-20 13:41:40,222 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 13:41:40,225 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:41:40,225 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:41:40,405 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 13:41:40,554 - INFO - Loading faiss with AVX2 support.
+2026-01-20 13:41:40,566 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 13:41:41,675 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 13:41:41,734 - INFO - \u2713 Simple agent loaded
+2026-01-20 13:41:42,875 - INFO - \u2713 LangChain agent loaded
+2026-01-20 13:41:55,624 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 13:41:56,566 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 13:42:25,920 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 13:42:25,922 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:42:25,922 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:42:26,097 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 13:42:26,248 - INFO - Loading faiss with AVX2 support.
+2026-01-20 13:42:26,260 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 13:42:27,354 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 13:42:27,410 - INFO - \u2713 Simple agent loaded
+2026-01-20 13:42:28,458 - INFO - \u2713 LangChain agent loaded
+2026-01-20 13:42:41,747 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 13:42:42,643 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 13:43:04,098 - INFO - Selected active LLM: huggingface
+2026-01-20 13:43:04,100 - INFO - Selected embedding model: ollama
+2026-01-20 13:43:04,206 - INFO - Selected active LLM: huggingface
+2026-01-20 13:43:04,208 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:43:04,208 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 13:51:32,464 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 13:51:32,466 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:51:32,466 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 13:51:32,643 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 13:51:32,793 - INFO - Loading faiss with AVX2 support.
+2026-01-20 13:51:32,804 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 13:51:33,897 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 13:51:33,954 - INFO - \u2713 Simple agent loaded
+2026-01-20 13:51:34,999 - INFO - \u2713 LangChain agent loaded
+2026-01-20 13:51:47,245 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 13:51:48,140 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 13:52:02,019 - INFO - Selected active LLM: ollama
+2026-01-20 13:52:02,020 - INFO - Selected embedding model: ollama
+2026-01-20 13:52:30,356 - INFO - Selected active LLM: huggingface
+2026-01-20 13:52:30,360 - INFO - Selected embedding model: huggingface
+2026-01-20 13:52:50,027 - INFO - Selected active LLM: ollama
+2026-01-20 13:52:50,029 - INFO - Selected embedding model: ollama
+2026-01-20 13:53:16,818 - INFO - Selected active LLM: huggingface
+2026-01-20 13:53:16,819 - INFO - Selected embedding model: huggingface
+2026-01-20 13:53:29,545 - INFO - Selected active LLM: ollama
+2026-01-20 13:53:29,546 - INFO - Selected embedding model: ollama
+2026-01-20 13:54:09,367 - INFO - Selected active LLM: huggingface
+2026-01-20 13:54:09,367 - INFO - Selected embedding model: ollama
+2026-01-20 13:54:17,744 - INFO - Selected active LLM: ollama
+2026-01-20 13:54:17,744 - INFO - Selected embedding model: ollama
+2026-01-20 13:54:17,855 - INFO - Selected active LLM: ollama
+2026-01-20 13:54:17,855 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:54:17,856 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:54:26,266 - INFO - Selected active LLM: ollama
+2026-01-20 13:54:26,267 - INFO - Selected embedding model: ollama
+2026-01-20 13:54:26,384 - INFO - Selected active LLM: ollama
+2026-01-20 13:54:26,386 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:54:26,386 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:54:32,887 - INFO - Selected active LLM: ollama
+2026-01-20 13:54:32,887 - INFO - Selected embedding model: ollama
+2026-01-20 13:55:01,685 - INFO - Selected active LLM: ollama
+2026-01-20 13:55:01,686 - INFO - Selected embedding model: ollama
+2026-01-20 13:55:01,751 - INFO - Selected active LLM: ollama
+2026-01-20 13:55:01,753 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:55:01,753 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 13:56:13,566 - INFO - Selected active LLM: huggingface
+2026-01-20 13:56:13,567 - INFO - Selected embedding model: ollama
+2026-01-20 13:56:32,751 - INFO - Selected active LLM: ollama
+2026-01-20 13:56:32,754 - INFO - Selected embedding model: ollama
+2026-01-20 13:56:32,868 - INFO - Selected active LLM: ollama
+2026-01-20 13:56:32,868 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 13:56:32,868 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 14:02:41,907 - INFO - Selected active LLM: ollama
+2026-01-20 14:02:41,909 - INFO - Selected embedding model: ollama
+2026-01-20 14:02:42,015 - INFO - Selected active LLM: ollama
+2026-01-20 14:02:42,016 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 14:02:42,016 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 14:05:53,632 - INFO - Selected active LLM: huggingface
+2026-01-20 14:05:53,633 - INFO - Selected embedding model: huggingface
+2026-01-20 14:06:12,182 - INFO - Selected active LLM: huggingface
+2026-01-20 14:06:12,183 - INFO - Selected embedding model: huggingface
+2026-01-20 14:08:31,814 - INFO - Selected active LLM: ollama
+2026-01-20 14:08:31,814 - INFO - Selected embedding model: ollama
+2026-01-20 14:08:53,815 - INFO - Selected active LLM: huggingface
+2026-01-20 14:08:53,816 - INFO - Selected embedding model: huggingface
+2026-01-20 14:09:49,861 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 14:09:49,863 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 14:09:49,863 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 14:09:50,050 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 14:09:50,204 - INFO - Loading faiss with AVX2 support.
+2026-01-20 14:09:50,216 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 14:09:51,329 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 14:09:51,385 - INFO - \u2713 Simple agent loaded
+2026-01-20 14:09:52,461 - INFO - \u2713 LangChain agent loaded
+2026-01-20 14:10:04,824 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 14:10:05,716 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 14:10:25,997 - INFO - Selected active LLM: ollama
+2026-01-20 14:10:25,998 - INFO - Selected embedding model: ollama
+2026-01-20 14:14:31,736 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 14:14:31,736 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 14:14:31,742 - INFO - Loading faiss with AVX2 support.
+2026-01-20 14:14:32,009 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 14:14:32,584 - ERROR - \u2717 Failed to load Simple agent: No module named 'fitz'
+2026-01-20 14:14:32,584 - ERROR - \u2717 Failed to load LangChain agent: No module named 'langchain'
+2026-01-20 14:14:32,585 - ERROR - \u2717 Failed to load CrewAI agent: No module named 'fitz'
+2026-01-20 14:14:32,586 - INFO - Selected active LLM: ollama
+2026-01-20 14:14:32,586 - INFO - Selected embedding model: ollama
+2026-01-20 14:15:10,752 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 14:15:10,754 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 14:15:10,754 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 14:15:10,933 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 14:15:11,079 - INFO - Loading faiss with AVX2 support.
+2026-01-20 14:15:11,090 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 14:15:12,171 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 14:15:12,227 - INFO - \u2713 Simple agent loaded
+2026-01-20 14:15:13,277 - INFO - \u2713 LangChain agent loaded
+2026-01-20 14:15:27,157 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 14:15:28,113 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 14:15:31,028 - INFO - Selected active LLM: ollama
+2026-01-20 14:15:31,028 - INFO - Selected embedding model: ollama
+2026-01-20 14:16:09,515 - INFO - Selected active LLM: huggingface
+2026-01-20 14:16:09,517 - INFO - Selected embedding model: huggingface
+2026-01-20 14:16:09,648 - INFO - Selected active LLM: huggingface
+2026-01-20 14:16:09,650 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 14:16:09,650 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 14:16:57,069 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 14:16:57,069 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 14:16:57,073 - INFO - Loading faiss with AVX2 support.
+2026-01-20 14:16:57,087 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 14:16:57,294 - ERROR - \u2717 Failed to load Simple agent: No module named 'fitz'
+2026-01-20 14:16:57,295 - ERROR - \u2717 Failed to load LangChain agent: No module named 'langchain'
+2026-01-20 14:16:57,295 - ERROR - \u2717 Failed to load CrewAI agent: No module named 'fitz'
+2026-01-20 14:16:57,296 - INFO - Selected active LLM: huggingface
+2026-01-20 14:16:57,296 - INFO - Selected embedding model: huggingface
+2026-01-20 14:30:03,819 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 14:30:03,819 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 14:30:03,824 - INFO - Loading faiss with AVX2 support.
+2026-01-20 14:30:03,838 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 14:30:04,050 - ERROR - \u2717 Failed to load Simple agent: No module named 'fitz'
+2026-01-20 14:30:04,050 - ERROR - \u2717 Failed to load LangChain agent: No module named 'langchain'
+2026-01-20 14:30:04,051 - ERROR - \u2717 Failed to load CrewAI agent: No module named 'fitz'
+2026-01-20 14:30:04,052 - INFO - Selected active LLM: huggingface
+2026-01-20 14:30:04,052 - INFO - Selected embedding model: huggingface
+2026-01-20 14:30:50,449 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 14:30:50,451 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 14:30:50,451 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 14:30:50,630 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-20 14:30:50,780 - INFO - Loading faiss with AVX2 support.
+2026-01-20 14:30:50,791 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 14:30:51,894 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 14:30:51,952 - INFO - \u2713 Simple agent loaded
+2026-01-20 14:30:53,012 - INFO - \u2713 LangChain agent loaded
+2026-01-20 14:31:05,209 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 14:31:06,100 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 14:31:08,900 - INFO - Selected active LLM: huggingface
+2026-01-20 14:31:08,900 - INFO - Selected embedding model: huggingface
+2026-01-20 14:31:29,300 - INFO - Selected active LLM: ollama
+2026-01-20 14:31:29,302 - INFO - Selected embedding model: huggingface
+2026-01-20 14:31:29,417 - INFO - Selected active LLM: ollama
+2026-01-20 14:31:29,418 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 14:31:29,418 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 14:32:40,401 - INFO - Selected active LLM: ollama
+2026-01-20 14:32:40,404 - INFO - Selected embedding model: ollama
+2026-01-20 14:32:40,506 - INFO - Selected active LLM: ollama
+2026-01-20 14:32:40,507 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 14:32:40,507 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 14:42:39,730 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 14:42:39,731 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 14:42:39,732 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 14:42:39,879 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 14:42:39,880 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 14:42:39,882 - INFO - Loading faiss with AVX2 support.
+2026-01-20 14:42:39,897 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 14:42:40,106 - ERROR - \u2717 Failed to load Simple agent: No module named 'fitz'
+2026-01-20 14:42:40,106 - ERROR - \u2717 Failed to load LangChain agent: No module named 'langchain'
+2026-01-20 14:42:40,107 - ERROR - \u2717 Failed to load CrewAI agent: No module named 'fitz'
+2026-01-20 14:44:42,694 - INFO - Selected active LLM: huggingface
+2026-01-20 14:44:42,696 - INFO - Selected embedding model: huggingface
+2026-01-20 14:51:45,055 - INFO - Selected active LLM: ollama
+2026-01-20 14:51:45,056 - INFO - Selected embedding model: huggingface
+2026-01-20 14:51:45,160 - INFO - Selected active LLM: ollama
+2026-01-20 14:51:45,161 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 14:51:45,161 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 14:51:54,440 - INFO - Selected active LLM: ollama
+2026-01-20 14:51:54,441 - INFO - Selected embedding model: ollama
+2026-01-20 15:04:15,369 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 15:04:15,383 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 15:04:15,383 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 15:04:15,566 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 15:04:16,254 - INFO - Loading faiss with AVX2 support.
+2026-01-20 15:04:16,542 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 15:04:19,422 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 15:04:19,495 - INFO - \u2713 Simple agent loaded
+2026-01-20 15:04:20,823 - INFO - \u2713 LangChain agent loaded
+2026-01-20 15:04:33,792 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 15:04:34,701 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 15:04:48,376 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 15:04:48,378 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 15:04:48,378 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 15:04:48,564 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 15:04:48,729 - INFO - Loading faiss with AVX2 support.
+2026-01-20 15:04:48,740 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 15:04:49,887 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 15:04:49,950 - INFO - \u2713 Simple agent loaded
+2026-01-20 15:04:51,035 - INFO - \u2713 LangChain agent loaded
+2026-01-20 15:05:04,295 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 15:05:05,179 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 15:05:50,578 - INFO - Selected active LLM: huggingface
+2026-01-20 15:05:50,579 - INFO - Selected embedding model: huggingface
+2026-01-20 15:05:50,685 - INFO - Selected active LLM: huggingface
+2026-01-20 15:05:50,685 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 15:05:50,685 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 15:06:11,618 - INFO - Selected active LLM: ollama
+2026-01-20 15:06:11,619 - INFO - Selected embedding model: ollama
+2026-01-20 15:08:51,924 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 15:08:51,926 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 15:08:51,926 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 15:08:52,105 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 15:08:52,269 - INFO - Loading faiss with AVX2 support.
+2026-01-20 15:08:52,281 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 15:08:53,489 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 15:08:53,555 - INFO - \u2713 Simple agent loaded
+2026-01-20 15:08:54,680 - INFO - \u2713 LangChain agent loaded
+2026-01-20 15:09:07,983 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 15:09:08,912 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 15:09:33,881 - INFO - Selected active LLM: huggingface
+2026-01-20 15:09:33,882 - INFO - Selected embedding model: huggingface
+2026-01-20 15:09:34,002 - INFO - Selected active LLM: huggingface
+2026-01-20 15:09:34,004 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 15:09:34,005 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 15:12:42,935 - INFO - Selected active LLM: huggingface
+2026-01-20 15:12:42,937 - INFO - Selected embedding model: ollama
+2026-01-20 15:12:43,051 - INFO - Selected active LLM: huggingface
+2026-01-20 15:12:43,052 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 15:12:43,052 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 15:14:51,568 - INFO - Selected active LLM: huggingface
+2026-01-20 15:14:51,569 - INFO - Selected embedding model: ollama
+2026-01-20 15:14:51,625 - INFO - Selected active LLM: huggingface
+2026-01-20 15:14:51,627 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 15:14:51,627 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-20 15:21:05,183 - INFO - Selected active LLM: ollama
+2026-01-20 15:21:05,184 - INFO - Selected embedding model: ollama
+2026-01-20 15:21:23,517 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-20 15:21:23,519 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 15:21:23,519 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-20 15:21:23,695 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-20 15:21:23,852 - INFO - Loading faiss with AVX2 support.
+2026-01-20 15:21:23,863 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-20 15:21:25,052 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-20 15:21:25,117 - INFO - \u2713 Simple agent loaded
+2026-01-20 15:21:26,267 - INFO - \u2713 LangChain agent loaded
+2026-01-20 15:21:39,507 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-20 15:21:40,399 - INFO - \u2713 CrewAI agent loaded
+2026-01-20 15:22:00,195 - INFO - Selected active LLM: huggingface
+2026-01-20 15:22:00,197 - INFO - Selected embedding model: huggingface
+2026-01-20 15:22:00,315 - INFO - Selected active LLM: huggingface
+2026-01-20 15:22:00,316 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-20 15:22:00,316 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct

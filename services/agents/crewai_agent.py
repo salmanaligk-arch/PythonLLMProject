@@ -5,7 +5,7 @@ CrewAI RAG Agent Implementation with AI Engine Wrapper
 import os
 from typing import Optional
 from services.agent_tools import get_researcher_tool, get_writer_tool
-from services.chatbot import ai_engine  # Import the global instance
+from services.llm_manager import llm_manager
 from services.logger import logger
 from crewai import Agent, Task, Crew, LLM
 from crewai.tools import tool
@@ -19,7 +19,7 @@ class CrewAIRAGAgent:
         if llm:
             self.llm = llm
         else:
-            llm_config = ai_engine.get_llm_config()
+            llm_config = llm_manager.get_llm_config()
             self.llm = LLM(**llm_config)
         
         # Define tools

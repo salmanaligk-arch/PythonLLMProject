@@ -1,9 +1,8 @@
 """Embedding Manager: register and provide embedding models and functions"""
 import os
 import json
-from typing import Dict, Any, Optional, List
+from typing import Dict, Any, Optional, List, Tuple
 import numpy as np
-import ollama
 import requests
 from services.logger import logger
 
@@ -21,7 +20,7 @@ class EmbedManager:
                 with open(self._storage_file, 'w', encoding='utf-8') as f:
                     json.dump({"configs": {}, "selected": None}, f, indent=2)
             except Exception:
-                logger.debug(f"Could not create embed storage file: {self._storage_file}")
+                logger.info(f"Could not create embed storage file: {self._storage_file}")
         self.load()
 
     def register(self, name: str, config: Dict[str, Any]):
@@ -32,7 +31,7 @@ class EmbedManager:
         try:
             self.save()
         except Exception:
-            logger.debug("Could not persist embed configs")
+            logger.info("Could not persist embed configs")
 
     def get_names(self) -> List[str]:
         return list(self._configs.keys())
@@ -44,7 +43,7 @@ class EmbedManager:
             try:
                 self.save()
             except Exception:
-                logger.debug("Could not persist selected embed model")
+                logger.info("Could not persist selected embed model")
             return True
         logger.warning(f"Attempted to select unknown embedding model: {name}")
         return False
@@ -57,52 +56,83 @@ class EmbedManager:
             name = self._selected
         return self._configs.get(name)
 
+    def call_embedding(self, url: str, headers: Dict[str, str], payload: Dict[str, Any], timeout: int = 30):
+        """Perform the HTTP POST to the embedding provider and return parsed JSON or None."""
+        try:
+            r = requests.post(url, headers=headers, json=payload, timeout=timeout)
+            logger.info(f"Embedding call to {url} returned status {r.json()}")
+            if r.status_code != 200:
+                return None
+            return r.json()
+        except Exception as e:
+            logger.warning(f"Exception during embedding call to {url}: {e}")
+            return None
+
+    def _parse_embedding_response(self, data: Any) -> Optional[List[float]]:
+        """Parse common embedding response shapes into a plain list of floats.
+
+        Supported shapes (non-exhaustive):
+        - {'embedding': [...]}
+        - {'embeddings': [[...], ...]}
+        - {'data': [{'embedding': [...]}, ...]}
+        - [[...], ...] or [{'embedding': [...]}, ...]
+        Returns the first embedding found as a list or None.
+        """
+        if not data:
+            return None
+
+        if isinstance(data, dict):
+            emb = data.get("embedding") or data.get("embeddings")
+            if emb and isinstance(emb, list):
+                # embeddings may be nested lists ([ [..] ])
+                if emb and isinstance(emb[0], list):
+                    return emb[0]
+                return emb
+            if isinstance(data.get("data"), list) and data["data"]:
+                first = data["data"][0]
+                if isinstance(first, dict):
+                    return first.get("embedding")
+
+        if isinstance(data, list) and data:
+            first = data[0]
+            if isinstance(first, list):
+                return first
+            if isinstance(first, dict):
+                return first.get("embedding")
+
+        return None
+
     def get_embedding(self, text: str, name: Optional[str] = None) -> Optional[np.ndarray]:
-        """Return embedding vector (numpy array) for the given text using selected model."""
+        """Return embedding vector (numpy array) for the given text using selected model.
+
+        This is a compact, minimal implementation: one request and a few common
+        response-shape checks. On any error or unknown shape it returns None.
+        """
         cfg = self.get_config(name)
         if not cfg:
-            logger.warning(f"No embedding config for: {name}")
             return None
-        provider = cfg.get("provider", "ollama")
-        model = cfg.get("model")
 
-        try:
-            if provider == "ollama":
-                resp = ollama.embeddings(model=model, prompt=text)
-                emb = np.array(resp.get('embedding', []), dtype=np.float32)
-                return emb
+        url = cfg.get("url")
+        if not url:
+            return None
 
-            if provider == "huggingface":
-                # Try HuggingFace Inference API
-                hf_token = cfg.get("api_key")
-                headers = {}
-                if hf_token:
-                    headers["Authorization"] = f"Bearer {hf_token}"
+        headers = {}
+        if cfg.get("api_key"):
+            headers["Authorization"] = f"Bearer {cfg.get('api_key')}"
 
-                # Preferred HF embeddings endpoint
-                url = "https://api-inference.huggingface.co/embeddings"
-                payload = {"model": model, "inputs": text}
-                r = requests.post(url, headers=headers, json=payload, timeout=30)
-                if r.status_code == 200:
-                    data = r.json()
-                    # HF may return {'embedding': [...]} or list of floats
-                    if isinstance(data, dict) and "embedding" in data:
-                        emb = np.array(data.get("embedding", []), dtype=np.float32)
-                        return emb
-                    # Some HF models return a list (or list of lists)
-                    if isinstance(data, list):
-                        first = data[0]
-                        emb = np.array(first, dtype=np.float32)
-                        return emb
-                logger.error(f"HuggingFace embeddings request failed: {r.status_code} {r.text}")
+        payload = {"model": cfg.get("model"), "prompt": text, "input": text}
+
+        data = self.call_embedding(url, headers, payload, timeout=cfg.get("timeout", 30))
+        if data is None:
+            return None
+
+        emb = self._parse_embedding_response(data)
+        if emb and isinstance(emb, list):
+            try:
+                return np.array(emb, dtype=np.float32)
+            except Exception:
                 return None
-
-            # Unknown provider: log and return None (no fallback)
-            logger.warning(f"Unknown embedding provider '{provider}' for model '{name}'")
-            return None
-        except Exception as e:
-            logger.error(f"Embedding generation failed for model {name}: {e}")
-            return None
+        return None
 
     def save(self):
         payload = {"configs": self._configs, "selected": self._selected}
@@ -128,40 +158,62 @@ class EmbedManager:
             try:
                 self.save()
             except Exception:
-                logger.debug("Could not persist embed configs after remove")
+                logger.info("Could not persist embed configs after remove")
             logger.info(f"Removed embed model: {name}")
             return True
         return False
 
-    def test_model(self, name: Optional[str] = None, text: str = "test") -> (bool, str):
+    def edit(self, name: str, updates: Dict[str, Any]) -> bool:
+        """Edit an existing embedding model configuration and persist changes."""
+        if name not in self._configs:
+            logger.warning(f"Attempted to edit unknown embed model: {name}")
+            return False
+        self._configs[name].update(dict(updates))
+        try:
+            self.save()
+        except Exception:
+            logger.info("Could not persist embed configs after edit")
+        logger.info(f"Edited embed model config: {name}")
+        return True
+
+    def test_model(self, name: Optional[str] = None, text: str = "test", params: Optional[Dict[str, Any]] = None) -> (bool, str):
         """Perform a quick smoke-test of the named embedding model.
 
         Returns (True, dims) on success (dims as string) or (False, error_message) on failure.
         """
-        cfg = self.get_config(name)
-        if not cfg:
-            return False, f"No embedding config found for: {name}"
+        # Require params from UI; do not read request params from stored config
+        if not params or not isinstance(params, dict):
+            return False, "No parameters provided for test"
 
-        try:
-            emb = self.get_embedding(text, name)
-            if emb is None:
-                return False, "Embedding call returned no vector"
-            # Return vector dimension as a success message
-            return True, str(emb.shape)
-        except Exception as e:
-            return False, str(e)
+        # Build headers from params (e.g. api_key)
+        headers: Dict[str, str] = {}
+        if params.get("api_key"):
+            headers["Authorization"] = f"Bearer {params.get('api_key')}"
+        headers["Content-Type"]= "application/json"
+        # Build payload from params (UI controls). Exclude control-only keys.
+        # payload = {k: v for k, v in params.items() if k not in ("url", "api_key", "timeout")}
+        # payload["input"] = text
+        payload = {"model": params.get("model"), "prompt": text, "input": text}
+        url = params.get("url")
+        timeout = params.get("timeout", 30)
+        if not url:
+            return False, "No URL provided in parameters"
+
+        data = self.call_embedding(url, headers, payload, timeout=timeout)
+        if not data:
+            return False, "No response from embedding provider"
+
+        # Log the raw response for debugging
+        logger.warning(f"Embedding provider raw response: {data}")
+        emb = self._parse_embedding_response(data)
+        if emb and isinstance(emb, list):
+            try:
+                arr = np.array(emb, dtype=np.float32)
+                return True, str(arr.shape)
+            except Exception:
+                return False, "Failed to coerce embedding to numeric array"
+        return False, f"Unrecognized embedding response shape: {type(data)} {data}"
 
 
 # Create module-level embed manager and register defaults from env
 embed_manager = EmbedManager()
-"""
-default_embed = os.getenv("EMBEDDING_MODEL", "nomic-embed-text:v1.5")
-embed_manager.register(
-    "default",
-    {
-        "provider": "ollama",
-        "model": default_embed,
-        "timeout": int(os.getenv("EMBEDDING_TIMEOUT", 30)),
-    },
-)
-"""

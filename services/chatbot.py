@@ -21,7 +21,6 @@ class AIEngine:
     def __init__(self):
         # Use the external llm_manager to manage available LLMs
         self.llm_manager = llm_manager
-
         # LLM tuning from environment
         self.llm_timeout = int(os.getenv("LLM_TIMEOUT", 30))
         self.llm_max_retries = int(os.getenv("LLM_MAX_RETRIES", 2))
@@ -49,9 +48,34 @@ class AIEngine:
             return
 
         cfg = self.llm_manager.get_config(selected)
+        logger.info(f"Initializing active client for LLM '{selected}': cfg_keys={list(cfg.keys()) if cfg else None}")
         self.active_name = selected
         self.active_model = cfg.get("model") if cfg else None
-        self.active_client = self.llm_manager.create_client(selected)
+        # Use AIEngine's own client creation logic (create client from the loaded cfg)
+        self.active_client = self.create_client(cfg)
+
+    def create_client(self, cfg: Optional[dict]) -> Optional[OpenAI]:
+        """Create and return an OpenAI-compatible client using `cfg`.
+
+        Expects `cfg` to be a dict containing at least `model` and `base_url`.
+        Parse `timeout` and `max_retries` simply using `or` defaults (no try/except).
+        """
+        if not cfg:
+            logger.warning("No LLM config provided to create_client")
+            return None
+
+        base_url = cfg.get("base_url")
+        api_key = cfg.get("api_key")
+        timeout = int(cfg.get("timeout") or 30)
+        max_retries = int(cfg.get("max_retries") or 2)
+
+        logger.info(f"AIEngine creating OpenAI client: base_url={base_url}, model={cfg.get('model')}")
+        try:
+            client = OpenAI(base_url=base_url, api_key=api_key, timeout=timeout, max_retries=max_retries)
+            return client
+        except Exception as e:
+            logger.error(f"AIEngine error creating client: {e}")
+            return None
     
     def _test_active_llm(self) -> bool:
         """Quick smoke test for the currently active LLM client."""
@@ -86,13 +110,13 @@ class AIEngine:
             return f"AI Error: Selected LLM '{self.llm_manager.get_selected()}' is not configured or unavailable."
 
         try:
-            logger.debug(f"Calling active LLM: {self.active_name}")
-            return self._call_llm(self.active_client, self.active_model, prompt, max_tokens, temperature)
+            logger.info(f"Calling active LLM: {self.active_name}")
+            return self.call_llm(self.active_client, self.active_model, prompt, max_tokens, temperature)
         except Exception as e:
             logger.error(f"Active LLM '{self.active_name}' failed: {e}")
             return f"AI Error: Selected LLM '{self.active_name}' is not working: {str(e)}"
     
-    def _call_llm(self, client: OpenAI, model: str, prompt: str, max_tokens: Optional[int], temperature: float) -> str:
+    def call_llm(self, client: OpenAI, model: str, prompt: str, max_tokens: Optional[int], temperature: float) -> str:
         """Generic method to call an LLM."""
         messages = [{"role": "user", "content": prompt}]
         
@@ -134,28 +158,9 @@ class AIEngine:
         else:
             return f"⚠️ Active LLM set to {name}, but connection test failed"
 
-    def get_mode_status(self) -> str:
-        """Get current mode status as a string"""
-        sel = self.llm_manager.get_selected()
-        return f"Active LLM: {sel}"
+    # `get_mode_status` removed from AIEngine; use module-level helper instead.
 
-    def get_llm_config(self) -> dict:
-        """
-        Provides LLM configuration for CrewAI based on availability.
-        Note: LiteLLM is used internally by CrewAI and is working correctly.
-        """
-        # Provide the selected LLM config (for external libraries like CrewAI)
-        sel = self.llm_manager.get_selected()
-        cfg = self.llm_manager.get_config(sel) or {}
-        logger.info(f"Providing LLM config for CrewAI: {sel}")
-        # Return a sanitized config suitable for LLM wrappers
-        return {
-            "model": cfg.get("model"),
-            "base_url": cfg.get("base_url"),
-            "api_key": cfg.get("api_key"),
-            "temperature": float(cfg.get("temperature", self.llm_temperature)),
-            "timeout": cfg.get("timeout", self.llm_timeout),
-        }
+    # `get_llm_config` moved to `LLMManager.get_llm_config()`
 
 
 # Global AI engine instance
@@ -173,9 +178,8 @@ def get_ai_status() -> dict:
 def set_active_llm(name: str) -> str:
     """Set the active LLM by name (registered in LLMManager)."""
     return ai_engine.set_active_llm(name)
-
+"""
 def get_mode_status() -> str:
-    """Get current mode status"""
-    return ai_engine.get_mode_status()
-
-
+    # Removed: module-level wrapper for AIEngine.get_mode_status (unused)
+    return f"Active LLM: {ai_engine.llm_manager.get_selected()}"
+"""

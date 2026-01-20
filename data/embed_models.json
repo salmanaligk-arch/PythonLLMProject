@@ -1,17 +1,18 @@
 {
   "configs": {
-    "default": {
+    "ollama": {
       "provider": "ollama",
       "model": "nomic-embed-text:v1.5",
-      "timeout": 30
-    }
-    ,
+      "api_key": "ollama",
+      "url": "http://localhost:11434/api/embeddings"
+    },
     "huggingface": {
       "provider": "huggingface",
-      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "model": "intfloat/e5-large-v2",
       "api_key": "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",
+      "url": "https://api-inference.huggingface.co/models/intfloat/e5-large-v2",
       "timeout": 30
     }
   },
-  "selected": "default"
+  "selected": "huggingface"
 }
