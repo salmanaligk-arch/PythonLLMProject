@@ -155,7 +155,7 @@ def test_llm_with_values(name, provider, model, base_url, api_key, timeout, max_
     }
     try:
         ok, msg = llm_manager.test_model(cfg, "test")
-        return ("Success: " + msg) if ok else ("Failed: " + msg)
+        return ("Success") if ok else ("Failed: " + msg)
     except Exception as e:
         return f"Error testing LLM: {e}"
 
@@ -211,7 +211,7 @@ def run_test_embed(name, text="testing embedding model", provider=None, model=No
     params["timeout"] = timeout_val
 
     ok, msg = embed_manager.test_model(name, text, params=params)
-    return ("Success: " + msg) if ok else ("Failed: " + msg)
+    return ("Success") if ok else ("Failed: " + msg)
 
 
 def get_embed_for_form(name):

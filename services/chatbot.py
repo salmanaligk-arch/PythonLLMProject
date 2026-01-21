@@ -128,9 +128,11 @@ class AIEngine:
         
         if max_tokens:
             kwargs["max_tokens"] = max_tokens
-            
-        response = client.chat.completions.create(**kwargs)
-        return response.choices[0].message.content.strip()
+        try:
+            response = client.chat.completions.create(**kwargs)
+            return response.choices[0].message.content.strip()
+        except:
+            return "No response from LLM."
     
     def get_status(self) -> dict:
         """Get current status of AI engine"""

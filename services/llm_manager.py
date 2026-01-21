@@ -142,7 +142,7 @@ class LLMManager:
             resp_text = ai_engine.call_llm(client, model, prompt, max_tokens=8, temperature=float(cfg.get("temperature", 0.1)))
             from services.logger import logger
             logger.warning(f"LLM provider raw response: {resp_text}")
-            if resp_text:
+            if resp_text != "No response from LLM.":
                 return True, "Model responded"
             return False, f"No response from model. Raw response: {resp_text}"
         except Exception as e:

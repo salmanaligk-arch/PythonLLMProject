@@ -27,6 +27,24 @@ from frontend.settings_helpers import (
 # Returns: llm, embed, agent, chunk_size, chunk_overlap, status_msg
 llm_default, embed_default, agent_default, chunk_size_default_val, chunk_overlap_default_val, settings_status_msg = load_settings()
 
+def update_fields_on_load():
+    llm, embed, agent, chunk_size, chunk_overlap, status = load_settings()
+    
+    return (
+        gr.update(value=llm or llm_manager.get_selected()),  # llm_dropdown
+        gr.update(value=embed or embed_manager.get_selected()),  # chat_embed_dropdown
+        gr.update(value=agent or os.getenv("DEFAULT_AGENT", "simple")),  # agent_dropdown
+        gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),  # chunk_size_slider
+        gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),  # chunk_overlap_slider
+        gr.update(value=embed or embed_manager.get_selected()),  # embed_dropdown
+        gr.update(value=llm),  # general_llm_dropdown
+        gr.update(value=embed),  # general_embed_dropdown
+        gr.update(value=agent),  # general_agent_dropdown
+        gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),  # chunk_size_default
+        gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),  # chunk_overlap_default
+        status or ""  # settings_status
+    )
+
 def search_documents_chat(message, history, agent_type, embed_model, temp_document_file, format_prompt):
     # Handle temporary document file
     try:
@@ -374,7 +392,24 @@ with gr.Blocks(title="Smart Assistant") as gui:
         - Try different agents to compare responses
         - Use output format to structure responses (e.g., "bullet points", "table", "summary")
         """)
-
+    gui.load(
+        fn=update_fields_on_load,
+        inputs=[],
+        outputs=[
+            llm_dropdown,
+            chat_embed_dropdown,
+            agent_dropdown,
+            chunk_size_slider,
+            chunk_overlap_slider,
+            embed_dropdown,
+            general_llm_dropdown,
+            general_embed_dropdown,
+            general_agent_dropdown,
+            chunk_size_default,
+            chunk_overlap_default,
+            settings_status
+        ]
+    )
 # Launch with custom CSS for better appearance
 css = """
 #chat_tab, #upload_tab, #browser_tab, #settings_tab {

@@ -78,27 +78,41 @@ class EmbedManager:
         - [[...], ...] or [{'embedding': [...]}, ...]
         Returns the first embedding found as a list or None.
         """
-        if not data:
+        # Handle None / empty responses explicitly
+        if data is None:
             return None
 
-        if isinstance(data, dict):
-            emb = data.get("embedding") or data.get("embeddings")
-            if emb and isinstance(emb, list):
-                # embeddings may be nested lists ([ [..] ])
-                if emb and isinstance(emb[0], list):
-                    return emb[0]
-                return emb
-            if isinstance(data.get("data"), list) and data["data"]:
-                first = data["data"][0]
-                if isinstance(first, dict):
-                    return first.get("embedding")
-
-        if isinstance(data, list) and data:
+        # If provider returns a top-level flat numeric list, accept it
+        if isinstance(data, list):
+            if len(data) == 0:
+                logger.warning("Embedding provider returned empty top-level list")
+                return None
             first = data[0]
+            if isinstance(first, (int, float)):
+                return data  # top-level numeric list
             if isinstance(first, list):
                 return first
             if isinstance(first, dict):
                 return first.get("embedding")
+
+        if isinstance(data, dict):
+            emb = data.get("embedding") if "embedding" in data else data.get("embeddings")
+            if emb is not None:
+                if isinstance(emb, list) and len(emb) == 0:
+                    logger.warning("Embedding provider returned empty 'embedding' field")
+                    return None
+                if isinstance(emb, list):
+                    if emb and isinstance(emb[0], list):
+                        return emb[0]
+                    return emb
+            if isinstance(data.get("data"), list) and data["data"]:
+                first = data["data"][0]
+                if isinstance(first, dict):
+                    inner = first.get("embedding")
+                    if inner is not None and isinstance(inner, list) and len(inner) == 0:
+                        logger.warning("Embedding provider returned empty data[0].embedding")
+                        return None
+                    return inner
 
         return None
 
@@ -120,7 +134,7 @@ class EmbedManager:
         if cfg.get("api_key"):
             headers["Authorization"] = f"Bearer {cfg.get('api_key')}"
 
-        payload = {"model": cfg.get("model"), "prompt": text, "input": text}
+        payload = {"model": cfg.get("model"), "prompt": text, "inputs": text}
 
         data = self.call_embedding(url, headers, payload, timeout=cfg.get("timeout", 30))
         if data is None:
@@ -193,14 +207,15 @@ class EmbedManager:
         # Build payload from params (UI controls). Exclude control-only keys.
         # payload = {k: v for k, v in params.items() if k not in ("url", "api_key", "timeout")}
         # payload["input"] = text
-        payload = {"model": params.get("model"), "prompt": text, "input": text}
+
+        payload = {"model": params.get("model"), "prompt": text, "inputs": text}
         url = params.get("url")
         timeout = params.get("timeout", 30)
         if not url:
             return False, "No URL provided in parameters"
 
         data = self.call_embedding(url, headers, payload, timeout=timeout)
-        if not data:
+        if data is None:
             return False, "No response from embedding provider"
 
         # Log the raw response for debugging
@@ -212,7 +227,7 @@ class EmbedManager:
                 return True, str(arr.shape)
             except Exception:
                 return False, "Failed to coerce embedding to numeric array"
-        return False, f"Unrecognized embedding response shape: {type(data)} {data}"
+        return False, f"Unrecognized embedding response shape"
 
 
 # Create module-level embed manager and register defaults from env
