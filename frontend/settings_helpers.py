@@ -170,25 +170,11 @@ def get_embeds_table():
     return rows
 
 
-def add_embedding(name, provider, model, api_key, url=None):
-    if not name:
-        return get_embeds_table(), None, "Name is required"
-    if not url:
-        return get_embeds_table(), None, "URL is required"
-    cfg = {
-        "provider": provider,
-        "model": model,
-        "api_key": api_key,
-        "url": url
-    }
-    try:
-        embed_manager.register(name, cfg)
-        return get_embeds_table(), gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected()), "Embedding added"
-    except Exception as e:
-        return get_embeds_table(), None, f"Error adding embedding: {e}"
-
-
 def run_test_embed(name, text="testing embedding model", provider=None, model=None, api_key=None, url=None, timeout=None):
+    ok, msg = test_embed(name, text=text, provider=provider, model=model, api_key=api_key, url=url)
+    return ("Success") if ok else ("Failed: " + msg)
+
+def test_embed(name, text="testing embedding model", provider=None, model=None, api_key=None, url=None, timeout=None):
     """Run an embedding test using parameters provided by the UI.
 
     The UI must pass the connection parameters (provider, model, api_key, url,
@@ -210,8 +196,30 @@ def run_test_embed(name, text="testing embedding model", provider=None, model=No
         timeout_val = 30
     params["timeout"] = timeout_val
 
-    ok, msg = embed_manager.test_model(name, text, params=params)
-    return ("Success") if ok else ("Failed: " + msg)
+    return embed_manager.test_model(name, text, params=params)
+
+def add_embedding(name, provider, model, api_key, url=None):
+    if not name:
+        return get_embeds_table(), None, "Name is required"
+    if not url:
+        return get_embeds_table(), None, "URL is required"
+    cfg = {
+        "provider": provider,
+        "model": model,
+        "api_key": api_key,
+        "url": url
+    }
+
+    _, dim = test_embed(name, text="testing embedding model", provider=provider, model=model, api_key=api_key, url=url)
+    dimensions = dim.strip().lstrip("(").rstrip(")").split(",")[0]
+    if  int(dimensions) != 768:
+        return get_embeds_table(), None, f"Failed: Embedding dimension must be 768. Model {model} has {dimensions} Dimensions."
+    
+    try:
+        embed_manager.register(name, cfg)
+        return get_embeds_table(), gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected()), "Embedding added"
+    except Exception as e:
+        return get_embeds_table(), None, f"Error adding embedding: {e}"
 
 
 def get_embed_for_form(name):

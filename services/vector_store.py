@@ -44,11 +44,13 @@ class FAISSVectorStore:
     
     def add_document(self, content: str, metadata: Optional[Dict[str, Any]] = None):
         embedding = self.get_embedding(content)
-        embedding = embedding.reshape(1, -1)
+        logger.info(f"Generated embedding of shape {embedding.shape} for new document")
+        embedding = embedding.reshape(1, -1).astype('float32')
         faiss.normalize_L2(embedding)
-        
+        logger.info(f"Adding document to FAISS index")
         self.index.add(embedding)
         self.documents.append(content)
+        logger.info(f"Document added. Total documents in index: {len(self.documents)}")
         
         # Add enhanced metadata with content analysis
         enhanced_metadata = metadata or {}
@@ -58,7 +60,7 @@ class FAISSVectorStore:
             'sentence_count': len([s for s in content.split('.') if s.strip()]),
             'added_timestamp': datetime.now().isoformat()
         })
-        
+        logger.info(f"Enhanced metadata: {enhanced_metadata}")
         self.metadata.append(enhanced_metadata)
 
     def add_file(self, file_content: bytes, filename: str, chunk_size: int = 1000, overlap: int = 200):

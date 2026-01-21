@@ -60,7 +60,7 @@ class EmbedManager:
         """Perform the HTTP POST to the embedding provider and return parsed JSON or None."""
         try:
             r = requests.post(url, headers=headers, json=payload, timeout=timeout)
-            logger.info(f"Embedding call to {url} returned status {r.json()}")
+            logger.info(f"Embedding call to {url}")
             if r.status_code != 200:
                 return None
             return r.json()
@@ -133,18 +133,20 @@ class EmbedManager:
         headers = {}
         if cfg.get("api_key"):
             headers["Authorization"] = f"Bearer {cfg.get('api_key')}"
-
+        headers["Content-Type"]= "application/json"
         payload = {"model": cfg.get("model"), "prompt": text, "inputs": text}
 
         data = self.call_embedding(url, headers, payload, timeout=cfg.get("timeout", 30))
         if data is None:
             return None
-
+        logger.info(f"Embedding provider response data")
         emb = self._parse_embedding_response(data)
+        logger.info(f"Parsed embedding")
         if emb and isinstance(emb, list):
             try:
                 return np.array(emb, dtype=np.float32)
             except Exception:
+                logger.info("Exception coerce embedding to numeric array")
                 return None
         return None
 

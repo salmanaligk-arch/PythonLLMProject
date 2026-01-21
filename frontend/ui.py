@@ -374,24 +374,29 @@ with gr.Blocks(title="Smart Assistant") as gui:
     
     # Instructions
     with gr.Accordion("📚 How to Use", open=False):
-        gr.Markdown("""
-        ### 🚀 Getting Started:
-        
-        1. **📁 Upload Documents**: Go to "Upload Documents" tab and add your PDF/TXT files
-        2. **💬 Chat Search**: Use natural language to search and ask questions about your documents
-        3. **🗂️ File Browser**: View all uploaded files and their content
-        
-        ### 🤖 AI Agents:
-        - **Simple**: Custom lightweight agent using direct tool calls
-        - **LangChain**: Real LangChain agent with ReAct framework and conversation memory
-        - **CrewAI**: Real CrewAI multi-agent crew with specialized roles
-        
-        ### 💡 Tips:
-        - Use specific questions for better results
-        - Upload related documents for comprehensive answers
-        - Try different agents to compare responses
-        - Use output format to structure responses (e.g., "bullet points", "table", "summary")
-        """)
+           gr.Markdown("""
+           ### Quick Start
+
+           1. **Upload & Index**: Open "Upload Documents", select files, choose an embedding model and chunk settings, then click **Upload & Index**.
+           2. **Chat with Documents**: Go to "Chat Search", pick an agent and LLM, optionally attach a temporary document, then ask a question.
+           3. **Browse Files**: Use "File Browser" to view uploaded documents and inspect their content.
+
+           ### Configuration
+           - **Defaults**: Set app-wide defaults under Settings → General.
+           - **Add Models**: Add or update LLMs and Embedding models under Settings → LLM / Embedding.
+           - **Test Models**: Use the ▶️ Test buttons to validate LLM and embedding endpoints before saving.
+
+           ### Examples
+           - Ask: "Summarize the uploaded PDF in 5 bullet points."
+           - Ask with format: "List the key findings as a table" (use the Output Format field).
+
+           ### Troubleshooting
+           - If embedding tests fail, verify the embedding **URL**, **model**, and **API key** in Settings → Embedding.
+           - If LLM requests time out, increase the timeout in Settings → LLM or check the base URL and API key.
+           - Check the Upload Status box for indexing errors.
+
+           If you'd like this section shortened or expanded, tell me what to include.
+           """)
     gui.load(
         fn=update_fields_on_load,
         inputs=[],

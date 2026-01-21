@@ -8,9 +8,9 @@
     },
     "huggingface": {
       "provider": "huggingface",
-      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "model": "sentence-transformers/all-mpnet-base-v2",
       "api_key": "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",
-      "url": "https://router.huggingface.co/hf-inference/models/sentence-transformers/all-MiniLM-L6-v2/pipeline/feature-extraction",
+      "url": "https://router.huggingface.co/hf-inference/models/sentence-transformers/all-mpnet-base-v2/pipeline/feature-extraction",
       "timeout": 30
     }
   },
