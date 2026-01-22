@@ -4000,3 +4000,435 @@ LiteLLM completion() model= Qwen/Qwen2.5-72B-Instruct; provider = openai
 2026-01-21 13:11:00,833 - INFO - \u2713 LangChain agent loaded
 2026-01-21 13:11:13,057 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
 2026-01-21 13:11:13,946 - INFO - \u2713 CrewAI agent loaded
+2026-01-21 13:12:03,744 - INFO - Embedding call to https://router.huggingface.co/hf-inference/models/sentence-transformers/all-MiniLM-L6-v2/pipeline/feature-extraction
+2026-01-21 13:12:03,746 - WARNING - Embedding provider raw response: [0.024668721482157707, -0.0808187872171402, 0.03173922747373581, 0.008036995306611061, 0.06497837603092194, 0.05701737105846405, -0.05638929456472397, -0.017389463260769844, -0.028257669880986214, -0.030368290841579437, 0.04427805915474892, -0.06047208607196808, 0.06844554096460342, 0.04968249797821045, -0.07479099184274673, -0.019765697419643402, 0.10699953138828278, 0.05691061541438103, -0.05005677416920662, -0.014632618986070156, -0.049604374915361404, -0.005455128848552704, 0.024590959772467613, -0.052738748490810394, -0.02602643147110939, -0.035496074706315994, 0.002006538910791278, 0.03882059082388878, 0.04237128049135208, -0.06519223004579544, 0.13737812638282776, -0.04807255044579506, -0.07551447302103043, 0.08502950519323349, 0.07482216507196426, -0.00959061924368143, 0.026301367208361626, -0.04394052177667618, -0.0409650020301342, 0.02824568934738636, 0.011012476868927479, -0.027045268565416336, 0.026655111461877823, 0.018000392243266106, 0.08263497054576874, -0.06798678636550903, 0.0133030004799366, -0.012299535796046257, -0.07528655230998993, 0.012073339894413948, -0.01993771269917488, -0.04467345401644707, -0.027966901659965515, -0.05292646959424019, -0.07332317531108856, -0.08703790605068207, 0.021486112847924232, -0.07794410735368729, 0.0224717166274786, 0.03794888034462929, 0.02648817002773285, -0.06419651210308075, 0.04216087609529495, 0.02804429829120636, -0.007542390841990709, 0.03142480179667473, -0.05601128935813904, 0.04913805425167084, 0.0009426114265806973, 0.0019701162818819284, -0.032973069697618484, 0.006304147187620401, -0.08078569918870926, -0.01524753775447607, -0.017843814566731453, 0.034956056624650955, 0.02534738928079605, -0.07784900814294815, 0.1288912445306778, -0.08418727666139603, -0.018240708857774734, -0.06586125493049622, -0.01295272633433342, -0.04297220706939697, 0.08504128456115723, 0.0859789326786995, 0.10023544728755951, -0.0016202469123527408, -0.0865277573466301, -0.023403819650411606, 0.07001242786645889, 0.00639626570045948, -0.06825265288352966, 0.06230762228369713, 0.035608209669589996, 0.02697719633579254, 0.03753466531634331, 0.0006834535743109882, 0.0174648966640234, 0.1118406429886818, -0.028441047295928, 0.03562670946121216, 0.10445684939622879, 0.01859406940639019, -0.016926435753703117, -0.03414284810423851, 0.03144841641187668, -0.01982439123094082, -0.025502417236566544, -0.07983653992414474, -0.05775605887174606, 0.004102756734937429, -0.04895947128534317, 0.06644706428050995, 0.026197820901870728, -0.11276666820049286, 0.024384548887610435, 0.004637019708752632, -0.03442638739943504, -0.00024677993496879935, 0.03645511716604233, 0.07331356406211853, 0.046987783163785934, 0.02357514202594757, 0.011507576331496239, -0.012996322475373745, -0.0017910798778757453, 1.119153916777833e-33, 0.020019959658384323, -0.02119407057762146, 0.00417600991204381, 0.1140776127576828, 0.039188068360090256, 0.04418770596385002, -0.010422526858747005, 0.17418146133422852, -0.03155693784356117, 0.016886452212929726, -0.03440294414758682, 0.004305616021156311, 0.003793203504756093, 0.06969579309225082, 0.02579541876912117, 0.07851098477840424, -0.07664795219898224, -0.017520513385534286, -0.04741857945919037, 0.032581981271505356, 0.02497774176299572, -0.04889184236526489, -0.04149344190955162, -0.07698021829128265, -0.0947418287396431, -0.024930456653237343, -0.003582932287827134, -0.031476762145757675, -0.0900290459394455, 0.01834387518465519, -0.12238392978906631, -0.029492350295186043, -0.023490097373723984, 0.04263933002948761, 0.0005474086501635611, -0.028458548709750175, 0.06619323045015335, 0.02783016674220562, -0.08811616152524948, -0.05741531774401665, -0.001029668957926333, -0.04153609275817871, -0.00613048579543829, -0.00503015099093318, -0.033555593341588974, -0.010557093657553196, 0.029610276222229004, -0.0408126600086689, -0.010978101752698421, -0.025421302765607834, 0.057920727878808975, 0.04413469508290291, -0.025329571217298508, -0.09856975823640823, -0.007170218043029308, -0.012313642539083958, 0.01017806213349104, 0.012619591318070889, 0.06853363662958145, -0.01871405728161335, -0.06731922179460526, -0.01773092895746231, 0.025659946724772453, 0.006359177175909281, -0.02533937618136406, -0.006358020007610321, -0.030213678255677223, -0.10764852911233902, 0.08698774874210358, 0.04830807074904442, 0.02504170686006546, 0.017172612249851227, -0.09222137928009033, 0.006119604222476482, -0.03598456829786301, -0.05543056130409241, -0.028651036322116852, 0.006036160979419947, -0.006214658264070749, 0.015872009098529816, 0.035148609429597855, -0.0596076101064682, 0.008278613910079002, -0.021360648795962334, -0.03511425852775574, -0.15719498693943024, -0.004211539402604103, -0.08702420443296432, 0.04014347866177559, -0.0465921089053154, 0.007706001866608858, 0.03411474451422691, -0.047083206474781036, -0.008927762508392334, 0.15464544296264648, -1.101233321728555e-33, 0.009405561722815037, 0.0683927834033966, 0.02176346443593502, 0.06464331597089767, -0.002336639678105712, -0.0645737498998642, 0.04434231296181679, 0.07745053619146347, -0.07575205713510513, 0.03043881244957447, 0.04352091997861862, -0.07620863616466522, 0.044841814786195755, -0.013603592291474342, -0.011263315565884113, 0.02156170643866062, -0.05416512116789818, -0.08093586564064026, 0.06288422644138336, 0.04561779648065567, -0.049170006066560745, 0.05511792376637459, 0.006921984255313873, 0.000665266124997288, 0.0017342806095257401, 0.09681478142738342, 0.024474557489156723, -0.01864686980843544, -0.026216840371489525, -0.02282167784869671, 0.018155010417103767, 0.023065000772476196, -0.004644753411412239, 0.054229989647865295, -0.025946861132979393, 0.048145465552806854, 0.09632007032632828, 0.02686486579477787, 0.02801264263689518, 0.022516094148159027, 0.0621148906648159, 0.1069507822394371, -0.11173588782548904, 0.03279184177517891, 0.04536787047982216, 0.005718243774026632, 0.01686323620378971, -0.027159979566931725, 0.10180790722370148, -0.04244498535990715, -0.011208069510757923, 0.0030789226293563843, 0.012040499597787857, 0.02929251454770565, 0.02059575356543064, -0.011725952848792076, -0.058507904410362244, -0.06475166976451874, -0.009478368796408176, 0.03493380919098854, -0.007637851405888796, -0.016976656392216682, 0.009307270869612694, -0.017470235005021095, -0.027073701843619347, -0.06996937841176987, -0.007477238774299622, 0.057707156985998154, -0.008527573198080063, 0.017211874946951866, -0.01804254576563835, 0.0120426369830966, 0.018045596778392792, 0.03633345291018486, 0.11634312570095062, -0.05542270839214325, -0.0027769110165536404, 0.021973704919219017, 0.06421688944101334, -0.06536019593477249, -0.026959488168358803, -0.08851103484630585, 0.013855094090104103, -0.005956931505352259, 0.01929367706179619, 0.0533035583794117, 0.07227320969104767, 0.025525428354740143, -0.0420992448925972, -0.012113206088542938, 0.030421365052461624, 0.04210086539387703, -0.053512055426836014, 0.07274121791124344, 0.08175192773342133, -1.3754021033207664e-08, -0.05735465884208679, -0.04178324341773987, 0.07144337892532349, -0.035981807857751846, -0.10408880561590195, -0.02528754062950611, 0.015237933956086636, -0.045140523463487625, 0.00525676179677248, -0.026377325877547264, -0.023846305906772614, -0.019759105518460274, -0.06139582768082619, 0.04277511313557625, 0.012725051492452621, -0.015603816136717796, 0.003330042352899909, 0.03724370151758194, 0.022833960130810738, 0.06766556203365326, 0.006171384826302528, 0.10500775277614594, 0.11696786433458328, 0.014894215390086174, -0.0313151516020298, 0.010895204730331898, -0.01639936864376068, 0.036853525787591934, 0.05770473554730415, 0.044092483818531036, 0.06274241954088211, 0.06512860208749771, -0.03992537409067154, -0.07081050425767899, -0.05748961120843887, 0.10641524940729141, 0.03804910555481911, -0.055785078555345535, -0.025311069563031197, 0.0006876571569591761, 0.004624474793672562, -0.005305446684360504, -0.04346342757344246, -0.10551280528306961, 0.10642630606889725, -0.006984039209783077, 0.023659598082304, -0.07488992065191269, 0.019722595810890198, -0.0010681981220841408, -0.014400230720639229, -0.04920152202248573, -0.08415593206882477, 0.03636779636144638, -0.0740220844745636, 0.008625541813671589, 0.014433976262807846, 0.017855634912848473, -0.0258611012250185, -0.03221480920910835, -0.0055007291957736015, -0.01872274838387966, 0.017835916951298714, -0.015396403148770332]
+2026-01-21 13:20:42,549 - INFO - Selected active LLM: ollama
+2026-01-21 13:20:42,551 - INFO - Selected embedding model: ollama
+2026-01-21 13:21:50,197 - INFO - Selected row index: 4
+2026-01-21 13:21:50,197 - INFO - Selected file: AWKUM letter.pdf
+2026-01-21 13:21:50,247 - INFO - Selected row index: 4
+2026-01-21 13:21:50,247 - INFO - Selected file: AWKUM letter.pdf
+2026-01-21 13:21:52,269 - INFO - Delete requested for filename: 'AWKUM letter.pdf'
+2026-01-21 13:21:52,784 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:52,785 - INFO - Embedding provider response data
+2026-01-21 13:21:52,786 - INFO - Parsed embedding
+2026-01-21 13:21:52,879 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:52,880 - INFO - Embedding provider response data
+2026-01-21 13:21:52,880 - INFO - Parsed embedding
+2026-01-21 13:21:53,050 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:53,050 - INFO - Embedding provider response data
+2026-01-21 13:21:53,050 - INFO - Parsed embedding
+2026-01-21 13:21:53,141 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:53,141 - INFO - Embedding provider response data
+2026-01-21 13:21:53,141 - INFO - Parsed embedding
+2026-01-21 13:21:53,377 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:53,378 - INFO - Embedding provider response data
+2026-01-21 13:21:53,378 - INFO - Parsed embedding
+2026-01-21 13:21:53,613 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:53,614 - INFO - Embedding provider response data
+2026-01-21 13:21:53,614 - INFO - Parsed embedding
+2026-01-21 13:21:53,831 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:53,832 - INFO - Embedding provider response data
+2026-01-21 13:21:53,832 - INFO - Parsed embedding
+2026-01-21 13:21:54,039 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:54,040 - INFO - Embedding provider response data
+2026-01-21 13:21:54,040 - INFO - Parsed embedding
+2026-01-21 13:21:54,238 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:54,239 - INFO - Embedding provider response data
+2026-01-21 13:21:54,239 - INFO - Parsed embedding
+2026-01-21 13:21:54,470 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:54,471 - INFO - Embedding provider response data
+2026-01-21 13:21:54,471 - INFO - Parsed embedding
+2026-01-21 13:21:54,675 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:54,675 - INFO - Embedding provider response data
+2026-01-21 13:21:54,675 - INFO - Parsed embedding
+2026-01-21 13:21:54,766 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:54,767 - INFO - Embedding provider response data
+2026-01-21 13:21:54,767 - INFO - Parsed embedding
+2026-01-21 13:21:55,033 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:55,033 - INFO - Embedding provider response data
+2026-01-21 13:21:55,033 - INFO - Parsed embedding
+2026-01-21 13:21:55,330 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:55,331 - INFO - Embedding provider response data
+2026-01-21 13:21:55,331 - INFO - Parsed embedding
+2026-01-21 13:21:55,632 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:55,632 - INFO - Embedding provider response data
+2026-01-21 13:21:55,632 - INFO - Parsed embedding
+2026-01-21 13:21:55,900 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:55,900 - INFO - Embedding provider response data
+2026-01-21 13:21:55,900 - INFO - Parsed embedding
+2026-01-21 13:21:56,188 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:56,188 - INFO - Embedding provider response data
+2026-01-21 13:21:56,188 - INFO - Parsed embedding
+2026-01-21 13:21:56,473 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:56,473 - INFO - Embedding provider response data
+2026-01-21 13:21:56,473 - INFO - Parsed embedding
+2026-01-21 13:21:56,770 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:56,770 - INFO - Embedding provider response data
+2026-01-21 13:21:56,771 - INFO - Parsed embedding
+2026-01-21 13:21:57,071 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:57,071 - INFO - Embedding provider response data
+2026-01-21 13:21:57,071 - INFO - Parsed embedding
+2026-01-21 13:21:57,336 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:57,337 - INFO - Embedding provider response data
+2026-01-21 13:21:57,337 - INFO - Parsed embedding
+2026-01-21 13:21:57,636 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:57,636 - INFO - Embedding provider response data
+2026-01-21 13:21:57,636 - INFO - Parsed embedding
+2026-01-21 13:21:57,954 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:57,954 - INFO - Embedding provider response data
+2026-01-21 13:21:57,954 - INFO - Parsed embedding
+2026-01-21 13:21:58,263 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:58,263 - INFO - Embedding provider response data
+2026-01-21 13:21:58,263 - INFO - Parsed embedding
+2026-01-21 13:21:58,543 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:58,544 - INFO - Embedding provider response data
+2026-01-21 13:21:58,544 - INFO - Parsed embedding
+2026-01-21 13:21:58,846 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:58,847 - INFO - Embedding provider response data
+2026-01-21 13:21:58,847 - INFO - Parsed embedding
+2026-01-21 13:21:59,121 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:59,121 - INFO - Embedding provider response data
+2026-01-21 13:21:59,121 - INFO - Parsed embedding
+2026-01-21 13:21:59,388 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:59,389 - INFO - Embedding provider response data
+2026-01-21 13:21:59,389 - INFO - Parsed embedding
+2026-01-21 13:21:59,680 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:59,680 - INFO - Embedding provider response data
+2026-01-21 13:21:59,680 - INFO - Parsed embedding
+2026-01-21 13:21:59,929 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:21:59,930 - INFO - Embedding provider response data
+2026-01-21 13:21:59,930 - INFO - Parsed embedding
+2026-01-21 13:22:00,240 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:22:00,241 - INFO - Embedding provider response data
+2026-01-21 13:22:00,241 - INFO - Parsed embedding
+2026-01-21 13:22:00,544 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:22:00,545 - INFO - Embedding provider response data
+2026-01-21 13:22:00,545 - INFO - Parsed embedding
+2026-01-21 13:22:00,869 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:22:00,870 - INFO - Embedding provider response data
+2026-01-21 13:22:00,870 - INFO - Parsed embedding
+2026-01-21 13:22:01,121 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:22:01,122 - INFO - Embedding provider response data
+2026-01-21 13:22:01,123 - INFO - Parsed embedding
+2026-01-21 13:22:01,393 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:22:01,394 - INFO - Embedding provider response data
+2026-01-21 13:22:01,394 - INFO - Parsed embedding
+2026-01-21 13:22:01,684 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:22:01,684 - INFO - Embedding provider response data
+2026-01-21 13:22:01,684 - INFO - Parsed embedding
+2026-01-21 13:22:01,850 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:22:01,850 - INFO - Embedding provider response data
+2026-01-21 13:22:01,851 - INFO - Parsed embedding
+2026-01-21 13:22:01,988 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:22:01,989 - INFO - Embedding provider response data
+2026-01-21 13:22:01,989 - INFO - Parsed embedding
+2026-01-21 13:22:02,067 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:22:02,067 - INFO - Embedding provider response data
+2026-01-21 13:22:02,067 - INFO - Parsed embedding
+2026-01-21 13:22:02,182 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:22:02,182 - INFO - Embedding provider response data
+2026-01-21 13:22:02,182 - INFO - Parsed embedding
+2026-01-21 13:22:02,185 - INFO - Successfully deleted file: AWKUM letter.pdf
+2026-01-21 13:22:17,484 - INFO - Processing page 1 with pdfplumber
+2026-01-21 13:22:17,814 - INFO - Extracting text and tables from text-based page.
+2026-01-21 13:22:17,822 - INFO - Selected embedding model: ollama
+2026-01-21 13:22:17,823 - INFO - Research tool called with query: how many candidates are accommodated. 
+2026-01-21 13:22:17,931 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:22:17,932 - INFO - Embedding provider response data
+2026-01-21 13:22:17,932 - INFO - Parsed embedding
+2026-01-21 13:22:17,933 - INFO - Calling active LLM: ollama
+2026-01-21 13:24:31,654 - INFO - Research completed using AI engine
+2026-01-21 13:24:31,654 - INFO - Writer tool called with format: given me in table format
+2026-01-21 13:24:31,654 - INFO - Calling active LLM: ollama
+2026-01-21 13:25:28,269 - INFO - Writing completed using AI engine
+2026-01-21 13:26:01,045 - INFO - Selected active LLM: huggingface
+2026-01-21 13:26:01,046 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 13:26:01,046 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-21 13:26:15,682 - INFO - Processing page 1 with pdfplumber
+2026-01-21 13:26:15,803 - INFO - Extracting text and tables from text-based page.
+2026-01-21 13:26:15,816 - INFO - Selected embedding model: huggingface
+2026-01-21 13:26:15,822 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated.
+2026-01-21 13:26:21,273 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 13:27:20,045 - INFO - Selected active LLM: ollama
+2026-01-21 13:27:20,046 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 13:27:20,046 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-21 13:27:21,685 - INFO - Processing page 1 with pdfplumber
+2026-01-21 13:27:21,819 - INFO - Extracting text and tables from text-based page.
+2026-01-21 13:27:21,825 - INFO - Selected embedding model: huggingface
+2026-01-21 13:27:22,385 - INFO - \U0001f6a2 CrewAI Agent: Processing query: 
+2026-01-21 13:30:52,995 - INFO - OpenAI API usage: {'prompt_tokens': 780, 'completion_tokens': 1365, 'total_tokens': 2145}
+2026-01-21 13:30:52,998 - INFO - Research tool called with query: Provide the complete content of the letter from the Office of the Regional Election Commissioner, Mardan, dated August 27th, 2025, addressed to the Vice Chancellor, Abdul Wali Khan University, Mardan, regarding the identification of center-wise invigilation plans for the advertised posts of Assistant Election Commissioner (BS-17) including all details, enclosures, and the seating plan.
+2026-01-21 13:30:57,134 - INFO - Embedding call to https://router.huggingface.co/hf-inference/models/sentence-transformers/all-mpnet-base-v2/pipeline/feature-extraction
+2026-01-21 13:30:57,135 - INFO - Embedding provider response data
+2026-01-21 13:30:57,135 - INFO - Parsed embedding
+2026-01-21 13:30:57,135 - INFO - Calling active LLM: ollama
+2026-01-21 13:33:55,101 - INFO - Research completed using AI engine
+2026-01-21 13:36:27,733 - INFO - OpenAI API usage: {'prompt_tokens': 1395, 'completion_tokens': 766, 'total_tokens': 2161}
+2026-01-21 13:36:34,550 - INFO - OpenAI API usage: {'prompt_tokens': 1561, 'completion_tokens': 1, 'total_tokens': 1562}
+2026-01-21 13:40:41,894 - INFO - OpenAI API usage: {'prompt_tokens': 2344, 'completion_tokens': 1147, 'total_tokens': 3491}
+2026-01-21 13:42:00,004 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-21 13:42:00,007 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 13:42:00,007 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-21 13:42:00,186 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-21 13:42:00,347 - INFO - Loading faiss with AVX2 support.
+2026-01-21 13:42:00,359 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-21 13:42:01,628 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-21 13:42:01,714 - INFO - \u2713 Simple agent loaded
+2026-01-21 13:42:02,937 - INFO - \u2713 LangChain agent loaded
+2026-01-21 13:42:16,783 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 13:42:17,685 - INFO - \u2713 CrewAI agent loaded
+2026-01-21 13:42:34,578 - INFO - Selected active LLM: huggingface
+2026-01-21 13:42:34,580 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 13:42:34,580 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-21 13:43:00,967 - INFO - Processing page 1 with pdfplumber
+2026-01-21 13:43:01,080 - INFO - Extracting text and tables from text-based page.
+2026-01-21 13:43:01,088 - INFO - Selected embedding model: ollama
+2026-01-21 13:43:01,093 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated
+2026-01-21 13:43:05,858 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 13:46:26,911 - INFO - Processing page 1 with pdfplumber
+2026-01-21 13:46:27,040 - INFO - Extracting text and tables from text-based page.
+2026-01-21 13:46:27,048 - INFO - Selected embedding model: ollama
+2026-01-21 13:46:27,050 - INFO - Research tool called with query: 
+2026-01-21 13:46:27,503 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 13:46:27,504 - INFO - Embedding provider response data
+2026-01-21 13:46:27,504 - INFO - Parsed embedding
+2026-01-21 13:46:27,504 - INFO - Calling active LLM: huggingface
+2026-01-21 13:46:49,179 - INFO - Research completed using AI engine
+2026-01-21 13:46:49,180 - INFO - Writer tool called with format: given me in table format
+2026-01-21 13:46:49,181 - INFO - Calling active LLM: huggingface
+2026-01-21 13:47:09,081 - INFO - Writing completed using AI engine
+2026-01-21 13:51:12,086 - INFO - Processing page 1 with pdfplumber
+2026-01-21 13:51:12,204 - INFO - Extracting text and tables from text-based page.
+2026-01-21 13:51:12,210 - INFO - Selected embedding model: ollama
+2026-01-21 13:51:12,259 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 13:51:12,259 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-21 13:51:12,505 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-21 13:51:13,405 - INFO - Calling active LLM: huggingface
+2026-01-21 13:56:49,282 - INFO - Selected active LLM: ollama
+2026-01-21 13:56:49,286 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 13:56:49,286 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-21 13:56:57,950 - INFO - Processing page 1 with pdfplumber
+2026-01-21 13:56:58,070 - INFO - Extracting text and tables from text-based page.
+2026-01-21 13:56:58,077 - INFO - Selected embedding model: ollama
+2026-01-21 13:56:58,082 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated
+2026-01-21 13:57:07,600 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 13:57:27,498 - INFO - Processing page 1 with pdfplumber
+2026-01-21 13:57:27,639 - INFO - Extracting text and tables from text-based page.
+2026-01-21 13:57:27,645 - INFO - Selected embedding model: ollama
+2026-01-21 13:57:27,650 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated
+2026-01-21 13:57:34,257 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 14:18:57,111 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-21 14:18:57,113 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 14:18:57,113 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-21 14:18:57,292 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-21 14:18:57,452 - INFO - Loading faiss with AVX2 support.
+2026-01-21 14:18:57,464 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-21 14:18:58,635 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-21 14:18:58,702 - INFO - \u2713 Simple agent loaded
+2026-01-21 14:18:59,906 - INFO - \u2713 LangChain agent loaded
+2026-01-21 14:19:13,286 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 14:19:14,176 - INFO - \u2713 CrewAI agent loaded
+2026-01-21 14:19:26,063 - INFO - Selected active LLM: huggingface
+2026-01-21 14:19:26,065 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 14:19:26,065 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-21 14:19:44,115 - INFO - Selected embedding model: ollama
+2026-01-21 14:19:44,116 - INFO - \U0001f6a2 CrewAI Agent: Initializing with LLM config: {'provider': 'huggingface', 'model': 'Qwen/Qwen2.5-72B-Instruct', 'base_url': 'https://router.huggingface.co/v1', 'api_key': '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', 'temperature': 0.1, 'timeout': 30}
+2026-01-21 14:19:44,125 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated
+2026-01-21 14:19:51,204 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 14:28:04,031 - INFO - Selected active LLM: ollama
+2026-01-21 14:28:04,033 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 14:28:04,034 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-21 14:28:11,182 - INFO - Selected embedding model: ollama
+2026-01-21 14:28:11,184 - INFO - \U0001f6a2 CrewAI Agent: Initializing with LLM config: {'provider': 'ollama', 'model': 'deepseek-r1:8b', 'base_url': 'http://localhost:11434/v1', 'api_key': 'ollama', 'temperature': 0.1, 'timeout': 1800}
+2026-01-21 14:28:11,188 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated
+2026-01-21 14:28:15,434 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 14:37:44,414 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-21 14:37:44,416 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 14:37:44,416 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-21 14:37:44,595 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-21 14:37:44,753 - INFO - Loading faiss with AVX2 support.
+2026-01-21 14:37:44,764 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-21 14:37:45,871 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-21 14:37:45,927 - INFO - \u2713 Simple agent loaded
+2026-01-21 14:37:47,000 - INFO - \u2713 LangChain agent loaded
+2026-01-21 14:37:59,544 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 14:38:00,488 - INFO - \u2713 CrewAI agent loaded
+2026-01-21 14:38:11,714 - INFO - Selected active LLM: huggingface
+2026-01-21 14:38:11,716 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 14:38:11,717 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-21 14:38:19,151 - INFO - Selected embedding model: ollama
+2026-01-21 14:38:19,153 - INFO - \U0001f6a2 CrewAI Agent: Initializing with LLM config: {'provider': 'huggingface', 'model': 'Qwen/Qwen2.5-72B-Instruct', 'base_url': 'https://router.huggingface.co/v1', 'api_key': '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', 'temperature': 0.1, 'timeout': 30}
+2026-01-21 14:38:19,167 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated
+2026-01-21 14:38:23,773 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 14:41:18,130 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-21 14:41:18,133 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 14:41:18,133 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-21 14:41:18,310 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-21 14:41:18,469 - INFO - Loading faiss with AVX2 support.
+2026-01-21 14:41:18,481 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-21 14:41:19,599 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-21 14:41:19,657 - INFO - \u2713 Simple agent loaded
+2026-01-21 14:41:20,703 - INFO - \u2713 LangChain agent loaded
+2026-01-21 14:41:33,262 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 14:41:34,159 - INFO - \u2713 CrewAI agent loaded
+2026-01-21 14:41:45,481 - INFO - Selected active LLM: huggingface
+2026-01-21 14:41:45,483 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 14:41:45,483 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-21 14:41:50,480 - INFO - Selected embedding model: ollama
+2026-01-21 14:41:50,481 - INFO - \U0001f6a2 CrewAI Agent: Initializing with LLM config: {'provider': 'huggingface', 'model': 'Qwen/Qwen2.5-72B-Instruct', 'base_url': 'https://router.huggingface.co/v1', 'api_key': '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', 'temperature': 0.1, 'timeout': 30}
+2026-01-21 14:41:50,491 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated
+2026-01-21 14:41:56,294 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 14:45:26,596 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-21 14:45:26,599 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 14:45:26,599 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-21 14:45:26,777 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-21 14:45:26,938 - INFO - Loading faiss with AVX2 support.
+2026-01-21 14:45:26,949 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-21 14:45:28,171 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-21 14:45:28,239 - INFO - \u2713 Simple agent loaded
+2026-01-21 14:45:30,375 - INFO - \u2713 LangChain agent loaded
+2026-01-21 14:45:42,857 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 14:45:43,753 - INFO - \u2713 CrewAI agent loaded
+2026-01-21 14:46:21,596 - INFO - Selected active LLM: huggingface
+2026-01-21 14:46:21,598 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 14:46:21,598 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-21 14:46:25,465 - INFO - Selected embedding model: ollama
+2026-01-21 14:46:25,465 - INFO - \U0001f6a2 CrewAI Agent: Initializing with LLM config: {'provider': 'huggingface', 'model': 'Qwen/Qwen2.5-72B-Instruct', 'base_url': 'https://router.huggingface.co/v1', 'api_key': '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', 'temperature': 0.1, 'timeout': 30}
+2026-01-21 14:46:25,474 - INFO - \U0001f6a2 CrewAI Agent: Processing query: abcx
+2026-01-21 14:46:30,803 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 15:09:28,298 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-21 15:09:28,300 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 15:09:28,300 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-21 15:09:28,479 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-21 15:09:28,640 - INFO - Loading faiss with AVX2 support.
+2026-01-21 15:09:28,651 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-21 15:09:29,779 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-21 15:09:29,836 - INFO - \u2713 Simple agent loaded
+2026-01-21 15:09:30,880 - INFO - \u2713 LangChain agent loaded
+2026-01-21 15:09:43,081 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 15:09:43,977 - INFO - \u2713 CrewAI agent loaded
+2026-01-21 15:09:56,895 - INFO - Selected active LLM: huggingface
+2026-01-21 15:09:56,896 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 15:09:56,897 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-21 15:10:07,814 - INFO - Selected embedding model: ollama
+2026-01-21 15:10:07,816 - INFO - \U0001f6a2 CrewAI Agent: Initializing with LLM config: {'provider': 'huggingface', 'model': 'Qwen/Qwen2.5-72B-Instruct', 'base_url': 'https://router.huggingface.co/v1', 'api_key': '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', 'temperature': 0.1, 'timeout': 30}
+2026-01-21 15:10:07,828 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated
+2026-01-21 15:10:10,049 - INFO - 
+LiteLLM completion() model= Qwen/Qwen2.5-72B-Instruct; provider = huggingface
+2026-01-21 15:10:24,665 - INFO - Wrapper: Completed Call, calling success_handler
+2026-01-21 15:10:26,825 - INFO - Research tool called with query: how many candidates are accommodated
+2026-01-21 15:10:27,201 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 15:10:27,201 - INFO - Embedding provider response data
+2026-01-21 15:10:27,201 - INFO - Parsed embedding
+2026-01-21 15:10:27,201 - INFO - Calling active LLM: huggingface
+2026-01-21 15:10:32,457 - INFO - Research completed using AI engine
+2026-01-21 15:10:32,467 - INFO - 
+LiteLLM completion() model= Qwen/Qwen2.5-72B-Instruct; provider = huggingface
+2026-01-21 15:10:43,765 - INFO - Wrapper: Completed Call, calling success_handler
+2026-01-21 15:10:45,359 - INFO - \U0001f6a2 CrewAI Agent: Completed
+2026-01-21 15:10:51,567 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 15:11:20,294 - INFO - Selected active LLM: ollama
+2026-01-21 15:11:20,295 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 15:11:20,295 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-21 15:11:25,379 - INFO - Processing page 1 with pdfplumber
+2026-01-21 15:11:25,501 - INFO - Extracting text and tables from text-based page.
+2026-01-21 15:11:25,514 - INFO - Selected embedding model: ollama
+2026-01-21 15:11:25,516 - INFO - \U0001f6a2 CrewAI Agent: Initializing with LLM config: {'provider': 'ollama', 'model': 'deepseek-r1:8b', 'base_url': 'http://localhost:11434/v1', 'api_key': 'ollama', 'temperature': 0.1, 'timeout': 1800}
+2026-01-21 15:11:25,521 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated
+2026-01-21 15:11:27,448 - INFO - 
+LiteLLM completion() model= deepseek-r1:8b; provider = ollama
+2026-01-21 15:11:31,496 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 15:14:11,550 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-21 15:14:11,552 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 15:14:11,552 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434, model=deepseek-r1:8b
+2026-01-21 15:14:11,730 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-21 15:14:11,890 - INFO - Loading faiss with AVX2 support.
+2026-01-21 15:14:11,902 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-21 15:14:13,020 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-21 15:14:13,077 - INFO - \u2713 Simple agent loaded
+2026-01-21 15:14:14,114 - INFO - \u2713 LangChain agent loaded
+2026-01-21 15:14:26,830 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 15:14:27,730 - INFO - \u2713 CrewAI agent loaded
+2026-01-21 15:15:12,963 - INFO - Processing page 1 with pdfplumber
+2026-01-21 15:15:13,240 - INFO - Extracting text and tables from text-based page.
+2026-01-21 15:15:13,249 - INFO - Selected embedding model: ollama
+2026-01-21 15:15:13,250 - INFO - \U0001f6a2 CrewAI Agent: Initializing with LLM config: {'provider': 'ollama', 'model': 'deepseek-r1:8b', 'base_url': 'http://localhost:11434', 'api_key': 'ollama', 'temperature': 0.1, 'timeout': 1800}
+2026-01-21 15:15:13,254 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated
+2026-01-21 15:15:14,712 - INFO - 
+LiteLLM completion() model= deepseek-r1:8b; provider = ollama
+2026-01-21 15:16:35,777 - INFO - Wrapper: Completed Call, calling success_handler
+2026-01-21 15:16:35,970 - INFO - Research tool called with query: What is the total number of candidates that need to be accommodated according to the provided context?
+2026-01-21 15:16:36,332 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 15:16:36,332 - INFO - Embedding provider response data
+2026-01-21 15:16:36,332 - INFO - Parsed embedding
+2026-01-21 15:16:36,332 - INFO - Calling active LLM: ollama
+2026-01-21 15:16:37,226 - INFO - Research completed using AI engine
+2026-01-21 15:16:37,231 - INFO - 
+LiteLLM completion() model= deepseek-r1:8b; provider = ollama
+2026-01-21 15:17:39,638 - INFO - Wrapper: Completed Call, calling success_handler
+2026-01-21 15:17:39,840 - INFO - 
+LiteLLM completion() model= deepseek-r1:8b; provider = ollama
+2026-01-21 15:19:04,472 - INFO - Wrapper: Completed Call, calling success_handler
+2026-01-21 15:19:04,678 - INFO - 
+LiteLLM completion() model= deepseek-r1:8b; provider = ollama
+2026-01-21 15:20:21,833 - INFO - Wrapper: Completed Call, calling success_handler
+2026-01-21 15:20:22,040 - INFO - 
+LiteLLM completion() model= deepseek-r1:8b; provider = ollama
+2026-01-21 15:22:53,970 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-21 15:22:53,972 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-21 15:22:53,972 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-21 15:22:54,151 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-21 15:22:54,310 - INFO - Loading faiss with AVX2 support.
+2026-01-21 15:22:54,321 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-21 15:22:55,576 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-21 15:22:55,647 - INFO - \u2713 Simple agent loaded
+2026-01-21 15:22:56,820 - INFO - \u2713 LangChain agent loaded
+2026-01-21 15:23:09,039 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 15:23:09,933 - INFO - \u2713 CrewAI agent loaded
+2026-01-21 15:24:08,377 - INFO - Selected embedding model: ollama
+2026-01-21 15:24:08,378 - INFO - \U0001f6a2 CrewAI Agent: Initializing with LLM config: {'provider': 'ollama', 'model': 'deepseek-r1:8b', 'base_url': 'http://localhost:11434/v1', 'api_key': 'ollama', 'temperature': 0.1, 'timeout': 1800}
+2026-01-21 15:24:08,382 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated
+2026-01-21 15:24:10,002 - INFO - 
+LiteLLM completion() model= deepseek-r1:8b; provider = ollama
+2026-01-21 15:25:04,224 - INFO - Wrapper: Completed Call, calling success_handler
+2026-01-21 15:25:04,446 - INFO - \U0001f6a2 CrewAI Agent: Completed
+2026-01-21 15:25:07,030 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-21 15:26:05,961 - INFO - Selected embedding model: ollama
+2026-01-21 15:26:05,962 - INFO - \U0001f6a2 CrewAI Agent: Initializing with LLM config: {'provider': 'ollama', 'model': 'deepseek-r1:8b', 'base_url': 'http://localhost:11434/v1', 'api_key': 'ollama', 'temperature': 0.1, 'timeout': 1800}
+2026-01-21 15:26:05,970 - INFO - \U0001f6a2 CrewAI Agent: Processing query: how many candidates are accommodated
+2026-01-21 15:26:08,562 - INFO - 
+LiteLLM completion() model= deepseek-r1:8b; provider = ollama
+2026-01-21 15:27:04,594 - INFO - Wrapper: Completed Call, calling success_handler
+2026-01-21 15:27:04,792 - INFO - Research tool called with query: how many candidates are accommodated
+2026-01-21 15:27:05,181 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-21 15:27:05,182 - INFO - Embedding provider response data
+2026-01-21 15:27:05,182 - INFO - Parsed embedding
+2026-01-21 15:27:05,182 - INFO - Calling active LLM: ollama
+2026-01-21 15:28:46,148 - INFO - Research completed using AI engine
+2026-01-21 15:28:46,160 - INFO - 
+LiteLLM completion() model= deepseek-r1:8b; provider = ollama
+2026-01-21 15:29:52,543 - INFO - Wrapper: Completed Call, calling success_handler
+2026-01-21 15:29:52,762 - INFO - 
+LiteLLM completion() model= deepseek-r1:8b; provider = ollama
+2026-01-21 15:30:48,685 - INFO - Wrapper: Completed Call, calling success_handler
+2026-01-21 15:30:48,880 - INFO - 
+LiteLLM completion() model= deepseek-r1:8b; provider = ollama
+2026-01-21 15:32:21,739 - INFO - Wrapper: Completed Call, calling success_handler
+2026-01-21 15:32:21,953 - INFO - \U0001f6a2 CrewAI Agent: Completed
+2026-01-21 15:32:30,205 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-22 09:09:12,643 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-22 09:09:12,693 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-22 09:09:12,693 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-22 09:09:13,103 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-22 09:09:14,086 - INFO - Loading faiss with AVX2 support.
+2026-01-22 09:09:14,827 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-22 09:09:23,615 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-22 09:09:23,812 - INFO - \u2713 Simple agent loaded
+2026-01-22 09:09:27,393 - INFO - \u2713 LangChain agent loaded
+2026-01-22 09:09:46,408 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-22 09:09:47,691 - INFO - \u2713 CrewAI agent loaded
+2026-01-22 09:11:19,893 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434, model=deepseek-r1:8b
+2026-01-22 09:11:22,393 - WARNING - LLM provider raw response: No response from LLM.
+2026-01-22 09:11:24,811 - INFO - Registered LLM: ollama
+2026-01-22 09:11:40,808 - INFO - Registered LLM: ollama

@@ -158,6 +158,7 @@ class LLMManager:
         """
         cfg = self.get_config(name) or {}
         return {
+            "provider": cfg.get("provider"),
             "model": cfg.get("model"),
             "base_url": cfg.get("base_url"),
             "api_key": cfg.get("api_key"),

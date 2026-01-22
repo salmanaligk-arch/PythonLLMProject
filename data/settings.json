@@ -1,7 +1,7 @@
 {
   "default_llm": "ollama",
-  "default_embedding": "huggingface",
-  "default_agent": "langchain",
+  "default_embedding": "ollama",
+  "default_agent": "simple",
   "chunk_size": 1000,
   "chunk_overlap": 100
 }

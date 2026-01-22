@@ -1,0 +1,58 @@
+{
+  "default_llm": "ollama",
+  "default_embedding": "ollama",
+  "default_agent": "simple",
+  "chunk_size": 1000,
+  "chunk_overlap": 100
+}
+
+{
+  "default_llm": "ollama",
+  "default_embedding": "ollama",
+  "default_agent": "simple",
+  "chunk_size": 1000,
+  "chunk_overlap": 100
+}
+
+{
+  "configs": {
+    "ollama": {
+      "provider": "ollama",
+      "model": "nomic-embed-text:v1.5",
+      "api_key": "ollama",
+      "url": "http://localhost:11434/api/embeddings"
+    },
+    "huggingface": {
+      "provider": "huggingface",
+      "model": "sentence-transformers/all-mpnet-base-v2",
+      "api_key": "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",
+      "url": "https://router.huggingface.co/hf-inference/models/sentence-transformers/all-mpnet-base-v2/pipeline/feature-extraction",
+      "timeout": 30
+    }
+  },
+  "selected": "ollama"
+}
+
+{
+  "configs": {
+    "huggingface": {
+      "provider": "huggingface",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "base_url": "https://router.huggingface.co/v1",
+      "api_key": "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",
+      "timeout": 30,
+      "max_retries": 2,
+      "temperature": 0.1
+    },
+    "ollama": {
+      "provider": "ollama",
+      "model": "deepseek-r1:8b",
+      "base_url": "http://localhost:11434/v1",
+      "api_key": "ollama",
+      "timeout": 1800,
+      "max_retries": 1,
+      "temperature": 0.1
+    }
+  },
+  "selected": "ollama"
+}

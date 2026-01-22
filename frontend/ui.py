@@ -375,7 +375,8 @@ with gr.Blocks(title="Smart Assistant") as gui:
     # Instructions
     with gr.Accordion("📚 How to Use", open=False):
            gr.Markdown("""
-           ### Quick Start
+           ### About Smart Assistant
+            This app is a Retrieval-Augmented Generation (RAG) application that enables users to upload, manage, and interact with documents through an AI-powered interface. Users can upload files (PDF, TXT, DOCX, XLSX), which are processed, chunked, and embedded into a vector store for semantic search and retrieval. The app allows browsing, selecting, and deleting documents, and leverages language models to answer questions or generate responses based on the uploaded content. By combining document retrieval with generative AI, the app provides intelligent, context-aware responses, making it ideal for knowledge management, document Q&A, and interactive information discovery.
 
            1. **Upload & Index**: Open "Upload Documents", select files, choose an embedding model and chunk settings, then click **Upload & Index**.
            2. **Chat with Documents**: Go to "Chat Search", pick an agent and LLM, optionally attach a temporary document, then ask a question.

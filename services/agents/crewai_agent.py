@@ -10,7 +10,6 @@ from services.logger import logger
 from crewai import Agent, Task, Crew, LLM
 from crewai.tools import tool
 
-
 class CrewAIRAGAgent:
     def __init__(self, llm=None, verbose=True):
         self.verbose = verbose
@@ -20,7 +19,17 @@ class CrewAIRAGAgent:
             self.llm = llm
         else:
             llm_config = llm_manager.get_llm_config()
-            self.llm = LLM(**llm_config)
+            logger.info(f"🚢 CrewAI Agent: Initializing with LLM config: {llm_config}")
+            if llm_config["provider"] == "ollama":
+                llm_config["base_url"] = llm_config["base_url"].replace("/v1", "")
+            self.llm = LLM(
+                provider=llm_config["provider"],
+                model=f"{llm_config["provider"]+"/"+llm_config["model"]}",
+                base_url=llm_config["base_url"],
+                api_key=llm_config["api_key"],
+                temperature=llm_config["temperature"],
+                timeout=llm_config["timeout"]
+            )
         
         # Define tools
         @tool

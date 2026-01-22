@@ -210,7 +210,9 @@ def add_embedding(name, provider, model, api_key, url=None):
         "url": url
     }
 
-    _, dim = test_embed(name, text="testing embedding model", provider=provider, model=model, api_key=api_key, url=url)
+    test, dim = test_embed(name, text="testing embedding model", provider=provider, model=model, api_key=api_key, url=url)
+    if test == False:
+        return get_embeds_table(), None, f"Test Failed for adding new embedding model: {dim}"
     dimensions = dim.strip().lstrip("(").rstrip(")").split(",")[0]
     if  int(dimensions) != 768:
         return get_embeds_table(), None, f"Failed: Embedding dimension must be 768. Model {model} has {dimensions} Dimensions."

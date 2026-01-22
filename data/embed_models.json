@@ -14,5 +14,5 @@
       "timeout": 30
     }
   },
-  "selected": "huggingface"
+  "selected": "ollama"
 }
