@@ -2,14 +2,78 @@
 LangChain RAG Agent Implementation
 """
 from typing import Optional, List, Any, Mapping
-from langchain.agents import initialize_agent, Tool, AgentType
-from langchain.memory import ConversationBufferMemory
+from langchain_classic.agents import initialize_agent, Tool, AgentType
+from langchain_classic.memory import ConversationBufferMemory
 from langchain_classic.chat_models import init_chat_model
 from services.agent_tools import get_researcher_tool, get_writer_tool
 from services.chatbot import AIEngine
 from services.llm_manager import llm_manager
 # LangChain LLM Wrapper
-from langchain.llms.base import LLM
+from langchain_classic.llms.base import LLM
+
+from typing import Dict, Any
+
+class MultiProviderChatWrapper:
+    """Factory wrapper to select any provider-supported chat LLM."""
+    
+    def __init__(self, llm_config: Dict[str, Any]):
+        provider = llm_config["provider"].lower()
+        model = llm_config["model"]
+        common_kwargs = {
+            "model": model,
+            "temperature": llm_config.get("temperature", 0),
+            "timeout": llm_config.get("timeout"),
+        }
+
+        if provider in {"openai", "ollama", "lmstudio", "vllm"}:
+            from langchain_openai import ChatOpenAI
+
+            self.llm = ChatOpenAI(
+                **common_kwargs,
+                base_url=llm_config.get("base_url"),
+                api_key=llm_config.get("api_key", "EMPTY"),
+            )
+
+        elif provider == "anthropic":
+            from langchain_anthropic import ChatAnthropic
+
+            self.llm = ChatAnthropic(
+                **common_kwargs,
+                api_key=llm_config["api_key"],
+            )
+
+        elif provider in {"google", "gemini"}:
+            from langchain_google_genai import ChatGoogleGenerativeAI
+
+            self.llm = ChatGoogleGenerativeAI(
+                **common_kwargs,
+                google_api_key=llm_config["api_key"],
+            )
+
+        elif provider == "deepseek":
+            # Example DeepSeek integration
+            # Replace this with your actual DeepSeek SDK usage
+            from langchain_deepseek import ChatDeepSeek
+
+            self.llm = ChatDeepSeek(
+                model=model,
+                api_key=llm_config.get("api_key"),
+                timeout=common_kwargs["timeout"]
+            )
+            
+        elif provider in {"huggingface", "hf"}:
+            from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
+
+            hf_llm = HuggingFaceEndpoint(
+                model=model,
+                task="text-generation",
+                huggingfacehub_api_token=llm_config.get("api_key"),
+            )
+
+            self.llm = ChatHuggingFace(llm=hf_llm)
+
+        else:
+            raise ValueError(f"Unsupported provider: {provider}")
 
 class LangchainLLM(LLM):
     """LangChain-compatible LLM wrapper using our AI engine"""
@@ -45,15 +109,20 @@ class LangChainRAGAgent:
         # Get LLM from chatbot (AI engine)
         #self.llm = LangchainLLM()
         llm_config = llm_manager.get_llm_config()
+        wrapper = MultiProviderChatWrapper(llm_config)
+        self.llm = wrapper.llm
+        """
+        if llm_config["provider"]== "ollama":
+            llm_config["base_url"] = llm_config["base_url"].replace("/v1", "")
         self.llm = init_chat_model(
             model_provider=llm_config["provider"],
             model=llm_config["model"],
             temperature=llm_config.get("temperature", 0),
             timeout=llm_config.get("timeout"),
             model_kwargs={
-                "base_url": llm_config["base_url"].replace("/v1", "")
+                "base_url": llm_config["base_url"]
             }
-        )
+        )"""
         
         # Create tools for the agent
         tools = [

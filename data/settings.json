@@ -1,5 +1,5 @@
 {
-  "default_llm": "ollama-llama3.2:1b",
+  "default_llm": "ollama-deepseek-r1:8b",
   "default_embedding": "ollama",
   "default_agent": "simple",
   "chunk_size": 1000,
