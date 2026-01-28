@@ -78,7 +78,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
                     # Agent selection
                     agent_dropdown = gr.Dropdown(
                         choices=agent_manager.get_available_agents(),
-                        value=lambda: load_settings()[2] or os.getenv("DEFAULT_AGENT", "simple"),
+                        value=agent_default or os.getenv("DEFAULT_AGENT", "simple"),
                         label="🤖 Select AI Agent"
                     )
                     
@@ -99,7 +99,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
                     # LLM Selection Dropdown (replaces checkbox toggle)
                     llm_dropdown = gr.Dropdown(
                         choices=llm_manager.get_names(),
-                        value=lambda: load_settings()[0] or llm_manager.get_selected(),
+                        value=llm_default or llm_manager.get_selected(),
                         label="🔧 Select LLM",
                         elem_classes=["mode-toggle"]
                     )
@@ -107,7 +107,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
                     # Embedding model selection for chat searches
                     chat_embed_dropdown = gr.Dropdown(
                         choices=embed_manager.get_names(),
-                        value=lambda: load_settings()[1] or embed_manager.get_selected(),
+                        value=embed_default or embed_manager.get_selected(),
                         label="🧩 Select Embedding Model"
                     )
 
@@ -176,8 +176,8 @@ with gr.Blocks(title="Smart Assistant") as gui:
                         value=embed_default or embed_manager.get_selected(),
                         label="🧩 Select Embedding Model"
                     )
-                    chunk_size_slider = gr.Slider(minimum=200, maximum=5000, step=50, value=lambda: int(load_settings()[3] or int(os.getenv("CHUNK_SIZE", 1000))), label="🔪 Chunk Size")
-                    chunk_overlap_slider = gr.Slider(minimum=0, maximum=2000, step=10, value=lambda: int(load_settings()[4] or int(os.getenv("CHUNK_OVERLAP", 200))), label="🔁 Chunk Overlap")
+                    chunk_size_slider = gr.Slider(minimum=200, maximum=5000, step=50, value=lambda: int(chunk_size_default_val or int(os.getenv("CHUNK_SIZE", 1000))), label="🔪 Chunk Size")
+                    chunk_overlap_slider = gr.Slider(minimum=0, maximum=2000, step=10, value=lambda: int(chunk_overlap_default_val or int(os.getenv("CHUNK_OVERLAP", 200))), label="🔁 Chunk Overlap")
                     upload_btn = gr.Button("⬆️ Upload & Index", variant="primary", size="lg")
                 
                 with gr.Column():
@@ -278,7 +278,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
                             gr.Markdown("### Status")
                             settings_status = gr.Textbox(lines=6, interactive=False, label="Save Status", value=settings_status_msg or "")
 
-                            save_defaults_btn.click(fn=save_general_settings, inputs=[general_llm_dropdown, general_embed_dropdown, general_agent_dropdown, chunk_size_default, chunk_overlap_default], outputs=[settings_status, llm_dropdown, embed_dropdown, agent_dropdown, chat_embed_dropdown])
+                            save_defaults_btn.click(fn=save_general_settings, inputs=[general_llm_dropdown, general_embed_dropdown, general_agent_dropdown, chunk_size_default, chunk_overlap_default], outputs=[llm_dropdown, embed_dropdown, agent_dropdown, chat_embed_dropdown, chunk_size_slider, chunk_overlap_slider, settings_status])
                             load_defaults_btn.click(fn=load_defaults, inputs=[], outputs=[general_llm_dropdown, general_embed_dropdown, general_agent_dropdown, chunk_size_default, chunk_overlap_default, settings_status])
 
                 # LLM

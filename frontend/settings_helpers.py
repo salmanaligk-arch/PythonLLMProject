@@ -37,11 +37,13 @@ def save_general_settings(llm_name, embed_name, agent_name, chunk_size, chunk_ov
         embed_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
         chat_embed_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
         agent_update = gr.update(choices=agent_manager.get_available_agents(), value=agent_name)
+        chunk_size_update = gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000))))  # chunk_size_slider
+        chunk_overlap_update = gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200))))  # chunk_overlap_slider
         # Return embed_update twice so callers can update both the upload
         # embedding dropdown and the chat embedding dropdown.
-        return "\n".join(status_msgs), llm_update, embed_update, agent_update, chat_embed_update
+        return llm_update, embed_update, agent_update, chat_embed_update, chunk_size_update, chunk_overlap_update, "\n".join(status_msgs)
     except Exception as e:
-        return f"Error saving settings: {e}", None, None, None, None
+        return None, None, None, None, None, None, f"Error saving settings: {e}"
 
 def load_settings():
     """Read `data/default_settings.json` and return flat UI values without writing.
@@ -86,54 +88,26 @@ def load_defaults():
         chunk_size = payload.get('chunk_size') or payload.get('file_config', {}).get('max_chunk_size') or int(os.getenv('CHUNK_SIZE', 1000))
         chunk_overlap = payload.get('chunk_overlap') or payload.get('file_config', {}).get('chunk_overlap') or int(os.getenv('CHUNK_OVERLAP', 200))
 
-        return llm, embed, agent, int(chunk_size), int(chunk_overlap), f"Loaded defaults from {default_path}"
+        status_msg = f"Loaded defaults from {default_path}. Click Save to save defaults."
+        # Return gr.update objects so UI components update choices+values properly
+        llm_choices = llm_manager.get_names()
+        embed_choices = embed_manager.get_names()
+        agent_choices = agent_manager.get_available_agents()
+
+        return (
+            gr.update(choices=llm_choices, value=llm or llm_manager.get_selected()),  # general_llm_dropdown
+            gr.update(choices=embed_choices, value=embed or embed_manager.get_selected()),  # general_embed_dropdown
+            gr.update(choices=agent_choices, value=agent or os.getenv("DEFAULT_AGENT", "simple")),  # general_agent_dropdown
+            gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),  # chunk_size_default
+            gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),  # chunk_overlap_default
+            status_msg
+        )
     except Exception as e:
         return None, None, None, None, None, f"Failed to load defaults: {e}"
 
 def update_fields_on_load():
     llm, embed, agent, chunk_size, chunk_overlap, status = load_settings()
-    """
-    # Reload managers from persistent storage and ensure selections follow storage
-    try:
-        # managers provide load() at init but call again to be explicit
-        if hasattr(llm_manager, "load"):
-            try:
-                llm_manager.load()
-            except Exception:
-                pass
-        if hasattr(embed_manager, "load"):
-            try:
-                embed_manager.load()
-            except Exception:
-                pass
 
-        # If a default LLM is saved in settings, make it active (reinitializes AI engine)
-        if llm:
-            try:
-                set_active_llm(llm)
-            except Exception:
-                # fallback to manager-selected
-                try:
-                    if llm_manager.get_selected():
-                        set_active_llm(llm_manager.get_selected())
-                except Exception:
-                    pass
-        else:
-            # ensure active client matches manager selection
-            try:
-                if llm_manager.get_selected():
-                    set_active_llm(llm_manager.get_selected())
-            except Exception:
-                pass
-
-        if embed:
-            try:
-                embed_manager.set_selected(embed)
-            except Exception:
-                pass
-    except Exception:
-        pass
-        """
     # Prepare updated choices and values for all UI components (storage = source of truth)
     llm_choices = llm_manager.get_names()
     embed_choices = embed_manager.get_names()
@@ -143,8 +117,8 @@ def update_fields_on_load():
         gr.update(choices=llm_choices, value=llm_manager.get_selected()),  # llm_dropdown
         gr.update(choices=embed_choices, value=embed_manager.get_selected()),  # chat_embed_dropdown
         gr.update(choices=agent_choices, value=agent or os.getenv("DEFAULT_AGENT", "simple")),  # agent_dropdown
-        gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),  # chunk_size_slider
-        gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),  # chunk_overlap_slider
+        gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),  # chunk_size_default
+        gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),  # chunk_overlap_default
         gr.update(choices=embed_choices, value=embed_manager.get_selected()),  # embed_dropdown
         gr.update(choices=llm_choices, value=llm or llm_manager.get_selected()),  # general_llm_dropdown
         gr.update(choices=embed_choices, value=embed or embed_manager.get_selected()),  # general_embed_dropdown
