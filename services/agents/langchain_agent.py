@@ -4,8 +4,10 @@ LangChain RAG Agent Implementation
 from typing import Optional, List, Any, Mapping
 from langchain.agents import initialize_agent, Tool, AgentType
 from langchain.memory import ConversationBufferMemory
+from langchain_classic.chat_models import init_chat_model
 from services.agent_tools import get_researcher_tool, get_writer_tool
 from services.chatbot import AIEngine
+from services.llm_manager import llm_manager
 # LangChain LLM Wrapper
 from langchain.llms.base import LLM
 
@@ -41,7 +43,17 @@ class LangChainRAGAgent:
         self.verbose = verbose
         
         # Get LLM from chatbot (AI engine)
-        self.llm = LangchainLLM()
+        #self.llm = LangchainLLM()
+        llm_config = llm_manager.get_llm_config()
+        self.llm = init_chat_model(
+            model_provider=llm_config["provider"],
+            model=llm_config["model"],
+            temperature=llm_config.get("temperature", 0),
+            timeout=llm_config.get("timeout"),
+            model_kwargs={
+                "base_url": llm_config["base_url"].replace("/v1", "")
+            }
+        )
         
         # Create tools for the agent
         tools = [
@@ -66,6 +78,7 @@ class LangChainRAGAgent:
             llm=self.llm,
             agent=AgentType.CONVERSATIONAL_REACT_DESCRIPTION,
             memory=self.memory,
+            handle_parsing_errors=True,
             verbose=verbose
         )
     

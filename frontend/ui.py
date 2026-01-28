@@ -11,6 +11,7 @@ from frontend.settings_helpers import (
     save_general_settings,
     load_defaults,
     load_settings,
+    update_fields_on_load,
     get_llms_table,
     add_llm,
     get_llm_for_form,
@@ -27,23 +28,6 @@ from frontend.settings_helpers import (
 # Returns: llm, embed, agent, chunk_size, chunk_overlap, status_msg
 llm_default, embed_default, agent_default, chunk_size_default_val, chunk_overlap_default_val, settings_status_msg = load_settings()
 
-def update_fields_on_load():
-    llm, embed, agent, chunk_size, chunk_overlap, status = load_settings()
-    
-    return (
-        gr.update(value=llm or llm_manager.get_selected()),  # llm_dropdown
-        gr.update(value=embed or embed_manager.get_selected()),  # chat_embed_dropdown
-        gr.update(value=agent or os.getenv("DEFAULT_AGENT", "simple")),  # agent_dropdown
-        gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),  # chunk_size_slider
-        gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),  # chunk_overlap_slider
-        gr.update(value=embed or embed_manager.get_selected()),  # embed_dropdown
-        gr.update(value=llm),  # general_llm_dropdown
-        gr.update(value=embed),  # general_embed_dropdown
-        gr.update(value=agent),  # general_agent_dropdown
-        gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),  # chunk_size_default
-        gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),  # chunk_overlap_default
-        status or ""  # settings_status
-    )
 
 def search_documents_chat(message, history, agent_type, embed_model, temp_document_file, format_prompt):
     # Handle temporary document file
@@ -294,7 +278,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
                             gr.Markdown("### Status")
                             settings_status = gr.Textbox(lines=6, interactive=False, label="Save Status", value=settings_status_msg or "")
 
-                            save_defaults_btn.click(fn=save_general_settings, inputs=[general_llm_dropdown, general_embed_dropdown, general_agent_dropdown, chunk_size_default, chunk_overlap_default], outputs=[settings_status, llm_dropdown, embed_dropdown, agent_dropdown])
+                            save_defaults_btn.click(fn=save_general_settings, inputs=[general_llm_dropdown, general_embed_dropdown, general_agent_dropdown, chunk_size_default, chunk_overlap_default], outputs=[settings_status, llm_dropdown, embed_dropdown, agent_dropdown, chat_embed_dropdown])
                             load_defaults_btn.click(fn=load_defaults, inputs=[], outputs=[general_llm_dropdown, general_embed_dropdown, general_agent_dropdown, chunk_size_default, chunk_overlap_default, settings_status])
 
                 # LLM
@@ -332,9 +316,9 @@ with gr.Blocks(title="Smart Assistant") as gui:
 
                     llm_select_dropdown.change(fn=select_llm, inputs=llm_select_dropdown, outputs=[new_llm_name, new_llm_provider, new_llm_model, new_llm_base, new_llm_api_key, new_llm_timeout, new_llm_retries, new_llm_temperature])
 
-                    add_llm_btn.click(fn=add_llm, inputs=[new_llm_name, new_llm_provider, new_llm_model, new_llm_base, new_llm_api_key, new_llm_timeout, new_llm_retries, new_llm_temperature], outputs=[llms_table, llm_dropdown, llm_action_status])
+                    add_llm_btn.click(fn=add_llm, inputs=[new_llm_name, new_llm_provider, new_llm_model, new_llm_base, new_llm_api_key, new_llm_timeout, new_llm_retries, new_llm_temperature], outputs=[llms_table, llm_dropdown, general_llm_dropdown, llm_select_dropdown, llm_action_status])
                     test_current_llm_btn.click(fn=test_llm_with_values, inputs=[new_llm_name, new_llm_provider, new_llm_model, new_llm_base, new_llm_api_key, new_llm_timeout, new_llm_retries, new_llm_temperature], outputs=[llm_action_status])
-                    delete_llm_btn.click(fn=remove_llm, inputs=[llm_select_dropdown], outputs=[llms_table, llm_action_status, llm_select_dropdown, llm_dropdown])
+                    delete_llm_btn.click(fn=remove_llm, inputs=[llm_select_dropdown], outputs=[llms_table, llm_action_status, llm_select_dropdown, llm_dropdown, general_llm_dropdown])
 
                 # Embedding
                 with gr.TabItem("Embedding"):
@@ -358,7 +342,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
 
                     def select_embed(row_or_name):
                         if not row_or_name:
-                            return "", "ollama", "", "", ""
+                            return "", "", "", "", ""
                         if isinstance(row_or_name, list):
                             name = row_or_name[0]
                         else:
@@ -368,9 +352,9 @@ with gr.Blocks(title="Smart Assistant") as gui:
 
                     embed_select_dropdown.change(fn=select_embed, inputs=embed_select_dropdown, outputs=[new_embed_name, new_embed_provider, new_embed_model, new_embed_api_key, new_embed_url])
 
-                    add_embed_btn.click(fn=add_embedding, inputs=[new_embed_name, new_embed_provider, new_embed_model, new_embed_api_key, new_embed_url], outputs=[embeds_table, embed_dropdown, embed_action_status])
+                    add_embed_btn.click(fn=add_embedding, inputs=[new_embed_name, new_embed_provider, new_embed_model, new_embed_api_key, new_embed_url], outputs=[embeds_table, embed_dropdown, general_embed_dropdown, embed_select_dropdown, embed_action_status])
                     test_current_embed_btn.click(fn=run_test_embed, inputs=[new_embed_name, gr.Textbox(value="test", visible=False), new_embed_provider, new_embed_model, new_embed_api_key, new_embed_url, gr.Textbox(value="", visible=False)], outputs=[embed_action_status])
-                    delete_embed_btn.click(fn=remove_embedding, inputs=[embed_select_dropdown], outputs=[embeds_table, embed_action_status, embed_select_dropdown, embed_dropdown])
+                    delete_embed_btn.click(fn=remove_embedding, inputs=[embed_select_dropdown], outputs=[embeds_table, embed_action_status, embed_select_dropdown, embed_dropdown, general_embed_dropdown])
     
     # Instructions
     with gr.Accordion("📚 How to Use", open=False):
@@ -413,7 +397,11 @@ with gr.Blocks(title="Smart Assistant") as gui:
             general_agent_dropdown,
             chunk_size_default,
             chunk_overlap_default,
-            settings_status
+            settings_status,
+            llms_table,
+            llm_select_dropdown,
+            embeds_table,
+            embed_select_dropdown
         ]
     )
 # Launch with custom CSS for better appearance

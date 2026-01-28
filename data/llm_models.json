@@ -9,7 +9,25 @@
       "max_retries": 2,
       "temperature": 0.1
     },
-    "ollama": {
+    "ollama-llama3.2:1b": {
+      "provider": "ollama",
+      "model": "llama3.2:1b",
+      "base_url": "http://localhost:11434/v1",
+      "api_key": "ollama",
+      "timeout": 1800,
+      "max_retries": 1,
+      "temperature": 0.1
+    },
+    "ollama-deepseek-r1:1.5b": {
+      "provider": "ollama",
+      "model": "deepseek-r1:1.5b",
+      "base_url": "http://localhost:11434/v1",
+      "api_key": "ollama",
+      "timeout": 1800,
+      "max_retries": 1,
+      "temperature": 0.1
+    },
+    "ollama-deepseek-r1:8b": {
       "provider": "ollama",
       "model": "deepseek-r1:8b",
       "base_url": "http://localhost:11434/v1",
@@ -19,5 +37,5 @@
       "temperature": 0.1
     }
   },
-  "selected": "ollama"
+  "selected": "ollama-llama3.2:1b"
 }

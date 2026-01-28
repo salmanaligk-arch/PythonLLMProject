@@ -1,7 +1,7 @@
 {
-  "default_llm": "ollama",
+  "default_llm": "ollama-llama3.2:1b",
   "default_embedding": "ollama",
-  "default_agent": "simple",
+  "default_agent": "crewai",
   "chunk_size": 1000,
-  "chunk_overlap": 100
+  "chunk_overlap": 200
 }

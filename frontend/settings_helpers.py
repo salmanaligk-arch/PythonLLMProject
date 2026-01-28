@@ -4,7 +4,7 @@ import gradio as gr
 from services.llm_manager import llm_manager
 from services.embed_manager import embed_manager
 from services.rag_agents import agent_manager
-
+from services.chatbot import set_active_llm
 
 def save_general_settings(llm_name, embed_name, agent_name, chunk_size, chunk_overlap):
     status_msgs = []
@@ -35,10 +35,13 @@ def save_general_settings(llm_name, embed_name, agent_name, chunk_size, chunk_ov
 
         llm_update = gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected())
         embed_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
+        chat_embed_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
         agent_update = gr.update(choices=agent_manager.get_available_agents(), value=agent_name)
-        return "\n".join(status_msgs), llm_update, embed_update, agent_update
+        # Return embed_update twice so callers can update both the upload
+        # embedding dropdown and the chat embedding dropdown.
+        return "\n".join(status_msgs), llm_update, embed_update, agent_update, chat_embed_update
     except Exception as e:
-        return f"Error saving settings: {e}", None, None, None
+        return f"Error saving settings: {e}", None, None, None, None
 
 def load_settings():
     """Read `data/default_settings.json` and return flat UI values without writing.
@@ -87,6 +90,73 @@ def load_defaults():
     except Exception as e:
         return None, None, None, None, None, f"Failed to load defaults: {e}"
 
+def update_fields_on_load():
+    llm, embed, agent, chunk_size, chunk_overlap, status = load_settings()
+    """
+    # Reload managers from persistent storage and ensure selections follow storage
+    try:
+        # managers provide load() at init but call again to be explicit
+        if hasattr(llm_manager, "load"):
+            try:
+                llm_manager.load()
+            except Exception:
+                pass
+        if hasattr(embed_manager, "load"):
+            try:
+                embed_manager.load()
+            except Exception:
+                pass
+
+        # If a default LLM is saved in settings, make it active (reinitializes AI engine)
+        if llm:
+            try:
+                set_active_llm(llm)
+            except Exception:
+                # fallback to manager-selected
+                try:
+                    if llm_manager.get_selected():
+                        set_active_llm(llm_manager.get_selected())
+                except Exception:
+                    pass
+        else:
+            # ensure active client matches manager selection
+            try:
+                if llm_manager.get_selected():
+                    set_active_llm(llm_manager.get_selected())
+            except Exception:
+                pass
+
+        if embed:
+            try:
+                embed_manager.set_selected(embed)
+            except Exception:
+                pass
+    except Exception:
+        pass
+        """
+    # Prepare updated choices and values for all UI components (storage = source of truth)
+    llm_choices = llm_manager.get_names()
+    embed_choices = embed_manager.get_names()
+    agent_choices = agent_manager.get_available_agents()
+
+    return (
+        gr.update(choices=llm_choices, value=llm_manager.get_selected()),  # llm_dropdown
+        gr.update(choices=embed_choices, value=embed_manager.get_selected()),  # chat_embed_dropdown
+        gr.update(choices=agent_choices, value=agent or os.getenv("DEFAULT_AGENT", "simple")),  # agent_dropdown
+        gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),  # chunk_size_slider
+        gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),  # chunk_overlap_slider
+        gr.update(choices=embed_choices, value=embed_manager.get_selected()),  # embed_dropdown
+        gr.update(choices=llm_choices, value=llm or llm_manager.get_selected()),  # general_llm_dropdown
+        gr.update(choices=embed_choices, value=embed or embed_manager.get_selected()),  # general_embed_dropdown
+        gr.update(choices=agent_choices, value=agent),  # general_agent_dropdown
+        gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),  # chunk_size_default
+        gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),  # chunk_overlap_default
+        status or "",  # settings_status
+        gr.update(value=get_llms_table()),  # llms_table
+        gr.update(choices=llm_choices, value=llm_manager.get_selected()),  # llm_select_dropdown
+        gr.update(value=get_embeds_table()),  # embeds_table
+        gr.update(choices=embed_choices, value=embed_manager.get_selected()),  # embed_select_dropdown
+    )
 
 def get_llms_table():
     rows = []
@@ -116,9 +186,9 @@ def add_llm(name, provider, model, base_url, api_key, timeout, max_retries, temp
     }
     try:
         llm_manager.register(name, cfg)
-        return get_llms_table(), gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected()), "LLM added"
+        return get_llms_table(), gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected()), gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected()), gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected()), "LLM added"
     except Exception as e:
-        return get_llms_table(), None, f"Error adding LLM: {e}"
+        return get_llms_table(), None, None, None, f"Error adding LLM: {e}"
 
 
 def get_llm_for_form(name):
@@ -138,9 +208,10 @@ def remove_llm(name):
     # Prepare updates for dropdowns
     select_update = gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected())
     chat_update = gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected())
+    general_update = gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected())
     if ok:
-        return get_llms_table(), "Removed: " + name, select_update, chat_update
-    return get_llms_table(), "Model not found", select_update, chat_update
+        return get_llms_table(), "Removed: " + name, select_update, chat_update, general_update
+    return get_llms_table(), "Model not found", select_update, chat_update, general_update
 
 
 def test_llm_with_values(name, provider, model, base_url, api_key, timeout, max_retries, temperature):
@@ -219,9 +290,9 @@ def add_embedding(name, provider, model, api_key, url=None):
     
     try:
         embed_manager.register(name, cfg)
-        return get_embeds_table(), gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected()), "Embedding added"
+        return get_embeds_table(), gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected()), gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected()), gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected()), "Embedding added"
     except Exception as e:
-        return get_embeds_table(), None, f"Error adding embedding: {e}"
+        return get_embeds_table(), None, None, None, f"Error adding embedding: {e}"
 
 
 def get_embed_for_form(name):
@@ -237,7 +308,8 @@ def remove_embedding(name):
     ok = embed_manager.remove(name)
     select_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
     upload_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
+    general_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
     if ok:
-        return get_embeds_table(), "Removed: " + name, select_update, upload_update
-    return get_embeds_table(), "Model not found", select_update, upload_update
+        return get_embeds_table(), "Removed: " + name, select_update, upload_update, general_update
+    return get_embeds_table(), "Model not found", select_update, upload_update, general_update
 

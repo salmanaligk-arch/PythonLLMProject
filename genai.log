@@ -4432,3 +4432,504 @@ LiteLLM completion() model= deepseek-r1:8b; provider = ollama
 2026-01-22 09:11:22,393 - WARNING - LLM provider raw response: No response from LLM.
 2026-01-22 09:11:24,811 - INFO - Registered LLM: ollama
 2026-01-22 09:11:40,808 - INFO - Registered LLM: ollama
+2026-01-22 12:46:01,422 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-22 12:46:01,430 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-22 12:46:01,430 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-22 12:46:01,622 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-22 12:46:02,463 - INFO - Loading faiss with AVX2 support.
+2026-01-22 12:46:02,910 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-22 12:46:07,080 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-22 12:46:07,151 - INFO - \u2713 Simple agent loaded
+2026-01-22 12:46:08,758 - ERROR - \u2717 Failed to load LangChain agent: cannot import name 'init_chat_model' from 'langchain.chat_models' (e:\PythonLLMProject\env\Lib\site-packages\langchain\chat_models\__init__.py)
+2026-01-22 12:46:24,403 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-22 12:46:25,337 - INFO - \u2713 CrewAI agent loaded
+2026-01-22 12:47:26,923 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-22 12:47:26,925 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-22 12:47:26,925 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-22 12:47:27,102 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-22 12:47:27,262 - INFO - Loading faiss with AVX2 support.
+2026-01-22 12:47:27,273 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-22 12:47:28,407 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-22 12:47:28,467 - INFO - \u2713 Simple agent loaded
+2026-01-22 12:47:29,537 - ERROR - \u2717 Failed to load LangChain agent: cannot import name 'init_chat_model' from 'langchain_community.chat_models' (e:\PythonLLMProject\env\Lib\site-packages\langchain_community\chat_models\__init__.py)
+2026-01-22 12:47:45,437 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-22 12:47:46,328 - INFO - \u2713 CrewAI agent loaded
+2026-01-22 12:56:04,077 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-22 12:56:04,079 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-22 12:56:04,079 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-22 12:56:04,259 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-22 12:56:04,417 - INFO - Loading faiss with AVX2 support.
+2026-01-22 12:56:04,428 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-22 12:56:05,567 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-22 12:56:05,627 - INFO - \u2713 Simple agent loaded
+2026-01-22 12:56:06,730 - INFO - \u2713 LangChain agent loaded
+2026-01-22 12:56:18,795 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-22 12:56:19,687 - INFO - \u2713 CrewAI agent loaded
+2026-01-22 12:56:39,630 - INFO - Selected embedding model: ollama
+2026-01-22 12:57:38,910 - INFO - Research tool called with query: how many candidates are accommodated
+2026-01-22 12:57:39,687 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-22 12:57:39,688 - INFO - Embedding provider response data
+2026-01-22 12:57:39,688 - INFO - Parsed embedding
+2026-01-22 12:57:39,688 - INFO - Calling active LLM: ollama
+2026-01-22 12:59:11,762 - INFO - Research completed using AI engine
+2026-01-22 13:00:37,399 - INFO - Processing page 1 with pdfplumber
+2026-01-22 13:00:37,538 - INFO - Extracting text and tables from text-based page.
+2026-01-22 13:00:37,545 - INFO - Selected embedding model: ollama
+2026-01-22 13:01:57,624 - INFO - Research tool called with query: Query: how many candidates are accommodated
+
+Additional Context Document:
+OFFICE OF THE
+REGIONAL ELECTION COMMISSIONER,
+MARDAN
+No.F.2( 2)/202 5-Adm n (REC -M)
+Mardan
+August 27th, 2025
+To,
+The Vice Chancellor,
+Abdul Wali Khan University
+Mardan.
+Subject: IDENTIFICATION OF PROVISION OF CENTER-WISE
+INVIGILATION PLANS FOR THE ADVERTISED POSTS OF AEC
+(BS-17)
+Dear Sir,
+Kindly referred to the above captioned letter bearing No.F.1(1)/2022-Estt-II
+of Election Commission of Pakistan dated the August 20th, 2025 and to inform that the
+Election Commission of Pakistan intends to conduct MCQs-based test for the advertised
+post of Assistant Election Commissioner (BS-17) scheduled on September 14th (Sunday)
+2025.
+2. In this regard you are requested to provide necessary space for seating
+arrangements for 1839 candidates as well as 6 Mobile Collection Desks with 3 Nos. of
+staff on each desk in the University under your kind control.
+3. A tentative format for seating plan is given below which is required by
+today, please.
+S.No Hall / Room No. Hall / Room Name No. of Candidates
+1 1 Management Science Hall 200
+2 2 Computer Science Hall 200
+3 1 Sociology Room 1 40
+4 2 Botany Room 8 40
+Yours Sincerely,
+Encl: As Above
+(RAHAM ZADA)
+Regional Election Commissioner
+Mardan Division
+Copy forwarded for information to the Provincial Election Commissioner,
+KP, Peshawar.
+(RAHAM ZADA)
+Regional Election Commissioner
+Mardan Division
+S.No	Hall / Room No.	Hall / Room Name	No. of Candidates
+1	1	Management Science Hall	200
+2	2	Computer Science Hall	200
+3	1	Sociology Room 1	40
+4	2	Botany Room 8	40
+2026-01-22 13:01:57,981 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-22 13:01:57,981 - INFO - Embedding provider response data
+2026-01-22 13:01:57,981 - INFO - Parsed embedding
+2026-01-22 13:01:57,982 - INFO - Calling active LLM: ollama
+2026-01-22 13:04:19,046 - INFO - Research completed using AI engine
+2026-01-22 13:04:19,046 - INFO - Writer tool called with format: give me the data in table form
+2026-01-22 13:04:19,046 - INFO - Calling active LLM: ollama
+2026-01-22 13:05:03,790 - INFO - Writing completed using AI engine
+2026-01-22 13:06:32,110 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-22 13:06:32,112 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-22 13:06:32,112 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-22 13:06:32,290 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-22 13:06:32,446 - INFO - Loading faiss with AVX2 support.
+2026-01-22 13:06:32,458 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-22 13:06:33,590 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-22 13:06:33,650 - INFO - \u2713 Simple agent loaded
+2026-01-22 13:06:34,723 - INFO - \u2713 LangChain agent loaded
+2026-01-22 13:06:46,652 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-22 13:06:47,541 - INFO - \u2713 CrewAI agent loaded
+2026-01-22 13:07:10,946 - INFO - Processing page 1 with pdfplumber
+2026-01-22 13:07:11,240 - INFO - Extracting text and tables from text-based page.
+2026-01-22 13:07:11,249 - INFO - Selected embedding model: ollama
+2026-01-22 13:08:24,619 - INFO - Research tool called with query: Calculate the total number of candidates from the provided document
+2026-01-22 13:08:25,061 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-22 13:08:25,061 - INFO - Embedding provider response data
+2026-01-22 13:08:25,061 - INFO - Parsed embedding
+2026-01-22 13:08:25,062 - INFO - Calling active LLM: ollama
+2026-01-22 13:09:39,951 - INFO - Research completed using AI engine
+2026-01-23 11:05:32,509 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 11:05:32,554 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:05:32,554 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-23 11:05:33,021 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-23 11:05:34,270 - INFO - Loading faiss with AVX2 support.
+2026-01-23 11:05:34,649 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 11:05:42,600 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 11:05:42,797 - INFO - \u2713 Simple agent loaded
+2026-01-23 11:05:46,314 - INFO - \u2713 LangChain agent loaded
+2026-01-23 11:06:08,770 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 11:06:09,977 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 11:11:23,160 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 11:11:29,351 - WARNING - LLM provider raw response: Can I help you with something else?
+2026-01-23 11:11:37,110 - INFO - Registered LLM: ollama-llama3.2:1b
+2026-01-23 11:30:45,011 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 11:30:45,019 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:30:45,019 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-23 11:30:45,202 - INFO - AIEngine initialized - Active LLM: ollama
+2026-01-23 11:30:45,749 - INFO - Loading faiss with AVX2 support.
+2026-01-23 11:30:45,914 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 11:30:48,665 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 11:30:48,725 - INFO - \u2713 Simple agent loaded
+2026-01-23 11:30:49,958 - INFO - \u2713 LangChain agent loaded
+2026-01-23 11:31:02,685 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 11:31:03,588 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 11:31:17,753 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 11:31:17,753 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 11:31:17,753 - INFO - Selected active LLM: ollama
+2026-01-23 11:31:17,754 - INFO - Initializing active client for LLM 'ollama': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:31:17,754 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-23 11:31:28,113 - INFO - Selected embedding model: ollama
+2026-01-23 11:31:46,413 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 11:31:46,415 - INFO - Selected embedding model: ollama
+2026-01-23 11:31:46,476 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 11:31:46,478 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:31:46,478 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 11:32:31,117 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 11:32:31,127 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 11:32:31,127 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 11:32:31,127 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:32:31,127 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 11:32:31,209 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 11:32:31,210 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:32:31,211 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 11:32:31,802 - INFO - Selected embedding model: ollama
+2026-01-23 11:32:45,245 - INFO - Removed LLM: ollama-llama3.2:1b
+2026-01-23 11:32:45,361 - INFO - Selected active LLM: huggingface
+2026-01-23 11:32:45,372 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:32:45,374 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-23 11:33:01,894 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 11:33:01,896 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 11:33:01,896 - WARNING - Attempted to select unknown LLM: ollama-llama3.2:1b
+2026-01-23 11:33:01,896 - INFO - Selected embedding model: ollama
+2026-01-23 11:34:16,993 - INFO - Registered LLM: ollama-llama3.2:1b
+2026-01-23 11:34:47,243 - INFO - Selected row index: 5
+2026-01-23 11:34:47,243 - INFO - Selected file: letter 2.docx
+2026-01-23 11:35:06,827 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 11:35:06,828 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:35:06,829 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 11:35:07,511 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 11:35:07,513 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:35:07,513 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 11:35:16,795 - INFO - Removed LLM: ollama
+2026-01-23 11:35:34,050 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 11:35:34,061 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 11:35:34,061 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 11:35:34,062 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:35:34,062 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 11:35:34,075 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 11:35:34,076 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:35:34,076 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 11:35:34,724 - INFO - Selected embedding model: ollama
+2026-01-23 11:36:33,596 - INFO - Registered LLM: deepseek-r1:1.5b
+2026-01-23 11:36:49,236 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 11:36:49,241 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 11:36:49,241 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 11:36:49,243 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:36:49,244 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 11:36:49,260 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 11:36:49,260 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 11:36:49,260 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 11:36:49,932 - INFO - Selected embedding model: ollama
+2026-01-23 12:13:22,867 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 12:13:22,870 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 12:13:22,870 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 12:13:23,051 - INFO - AIEngine initialized - Active LLM: ollama-llama3.2:1b
+2026-01-23 12:13:23,229 - INFO - Loading faiss with AVX2 support.
+2026-01-23 12:13:23,244 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 12:13:24,503 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 12:13:24,582 - INFO - \u2713 Simple agent loaded
+2026-01-23 12:13:25,730 - INFO - \u2713 LangChain agent loaded
+2026-01-23 12:13:39,304 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 12:13:40,203 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 12:13:56,744 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 12:13:56,744 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 12:13:56,744 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 12:13:56,751 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 12:13:56,751 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 12:14:00,071 - INFO - Selected embedding model: ollama
+2026-01-23 12:14:09,180 - INFO - Removed LLM: deepseek-r1:1.5b
+2026-01-23 12:14:53,080 - INFO - Registered LLM: ollama-deepseek-r1:1.5b
+2026-01-23 12:15:09,111 - INFO - Registered LLM: ollama-deepseek-r1:8b
+2026-01-23 12:16:49,360 - INFO - Selected active LLM: ollama-deepseek-r1:1.5b
+2026-01-23 12:16:49,361 - INFO - Selected embedding model: ollama
+2026-01-23 12:16:49,427 - INFO - Selected active LLM: ollama-deepseek-r1:1.5b
+2026-01-23 12:16:49,428 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:1.5b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 12:16:49,428 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:1.5b
+2026-01-23 12:16:53,981 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 12:16:53,989 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 12:16:53,989 - INFO - Selected active LLM: ollama-deepseek-r1:1.5b
+2026-01-23 12:16:53,989 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:1.5b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 12:16:53,989 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:1.5b
+2026-01-23 12:16:54,542 - INFO - Selected embedding model: ollama
+2026-01-23 12:17:22,488 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 12:17:22,491 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 12:17:22,492 - INFO - Selected active LLM: ollama-deepseek-r1:1.5b
+2026-01-23 12:17:22,492 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:1.5b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 12:17:22,492 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:1.5b
+2026-01-23 12:17:23,047 - INFO - Selected embedding model: ollama
+2026-01-23 12:18:18,488 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 12:18:18,490 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:1.5b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 12:18:18,490 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:1.5b
+2026-01-23 12:18:18,671 - INFO - AIEngine initialized - Active LLM: ollama-deepseek-r1:1.5b
+2026-01-23 12:18:18,833 - INFO - Loading faiss with AVX2 support.
+2026-01-23 12:18:18,845 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 12:18:19,972 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 12:18:20,032 - INFO - \u2713 Simple agent loaded
+2026-01-23 12:18:21,086 - INFO - \u2713 LangChain agent loaded
+2026-01-23 12:18:33,339 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 12:18:34,259 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 12:20:12,962 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-01-23 12:20:12,963 - INFO - Selected embedding model: ollama
+2026-01-23 12:20:13,063 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-01-23 12:20:13,066 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 12:20:13,066 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-23 12:20:16,944 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-01-23 12:20:16,946 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 12:20:16,946 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-23 13:55:16,693 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 13:55:16,709 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 13:55:16,709 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-23 13:55:17,035 - INFO - AIEngine initialized - Active LLM: ollama-deepseek-r1:8b
+2026-01-23 13:55:18,113 - INFO - Loading faiss with AVX2 support.
+2026-01-23 13:55:18,547 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 13:55:24,988 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 13:55:25,173 - INFO - \u2713 Simple agent loaded
+2026-01-23 13:55:28,665 - INFO - \u2713 LangChain agent loaded
+2026-01-23 13:55:46,620 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 13:55:47,741 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 13:56:12,819 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 13:56:12,821 - INFO - Selected embedding model: huggingface
+2026-01-23 13:57:00,425 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 13:57:00,427 - INFO - Selected embedding model: huggingface
+2026-01-23 13:57:26,002 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 13:57:26,009 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 13:57:26,009 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 13:58:19,119 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 13:58:19,120 - INFO - Selected embedding model: huggingface
+2026-01-23 13:58:22,653 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 13:58:22,658 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 13:58:22,658 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 14:00:19,468 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 14:00:19,469 - INFO - Selected embedding model: huggingface
+2026-01-23 14:04:45,337 - INFO - Selected active LLM: huggingface
+2026-01-23 14:04:45,338 - INFO - Selected embedding model: huggingface
+2026-01-23 14:08:38,270 - INFO - Selected active LLM: ollama-deepseek-r1:1.5b
+2026-01-23 14:08:38,271 - INFO - Selected embedding model: ollama
+2026-01-23 14:09:24,213 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 14:09:24,216 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:1.5b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:09:24,216 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:1.5b
+2026-01-23 14:09:24,393 - INFO - AIEngine initialized - Active LLM: ollama-deepseek-r1:1.5b
+2026-01-23 14:09:24,552 - INFO - Loading faiss with AVX2 support.
+2026-01-23 14:09:24,563 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 14:09:25,719 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 14:09:25,781 - INFO - \u2713 Simple agent loaded
+2026-01-23 14:09:26,853 - INFO - \u2713 LangChain agent loaded
+2026-01-23 14:09:39,640 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 14:09:40,575 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 14:12:09,268 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 14:12:09,269 - INFO - Selected embedding model: huggingface
+2026-01-23 14:22:39,524 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 14:22:39,589 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:22:39,589 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 14:22:39,953 - INFO - AIEngine initialized - Active LLM: ollama-llama3.2:1b
+2026-01-23 14:22:41,130 - INFO - Loading faiss with AVX2 support.
+2026-01-23 14:22:41,618 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 14:22:49,895 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 14:22:50,081 - INFO - \u2713 Simple agent loaded
+2026-01-23 14:22:53,796 - INFO - \u2713 LangChain agent loaded
+2026-01-23 14:23:17,337 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 14:23:18,568 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 14:24:23,400 - INFO - Selected active LLM: ollama-deepseek-r1:1.5b
+2026-01-23 14:24:23,400 - INFO - Selected embedding model: ollama
+2026-01-23 14:38:45,762 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 14:38:45,773 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:1.5b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:38:45,773 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:1.5b
+2026-01-23 14:38:45,956 - INFO - AIEngine initialized - Active LLM: ollama-deepseek-r1:1.5b
+2026-01-23 14:38:46,550 - INFO - Loading faiss with AVX2 support.
+2026-01-23 14:38:46,674 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 14:38:49,349 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 14:38:49,424 - INFO - \u2713 Simple agent loaded
+2026-01-23 14:38:50,675 - INFO - \u2713 LangChain agent loaded
+2026-01-23 14:39:03,535 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 14:39:04,442 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 14:39:27,834 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-01-23 14:39:27,835 - INFO - Selected embedding model: huggingface
+2026-01-23 14:39:27,948 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-01-23 14:39:27,949 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:39:27,949 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-23 14:39:44,382 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-01-23 14:39:44,383 - INFO - Selected embedding model: huggingface
+2026-01-23 14:39:57,382 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 14:39:57,383 - INFO - Selected embedding model: huggingface
+2026-01-23 14:39:57,448 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 14:39:57,449 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:39:57,450 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 14:42:56,716 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 14:42:56,724 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:42:56,724 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 14:43:05,701 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 14:43:05,703 - INFO - Selected embedding model: ollama
+2026-01-23 14:43:30,916 - INFO - Selected active LLM: huggingface
+2026-01-23 14:43:30,917 - INFO - Selected embedding model: ollama
+2026-01-23 14:43:30,981 - INFO - Selected active LLM: huggingface
+2026-01-23 14:43:30,983 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:43:30,983 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-23 14:49:05,251 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 14:49:05,253 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:49:05,253 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-23 14:49:05,433 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-23 14:49:05,596 - INFO - Loading faiss with AVX2 support.
+2026-01-23 14:49:05,608 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 14:49:06,725 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 14:49:06,784 - INFO - \u2713 Simple agent loaded
+2026-01-23 14:49:07,846 - INFO - \u2713 LangChain agent loaded
+2026-01-23 14:49:20,400 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 14:49:21,298 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 14:49:38,013 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 14:49:38,015 - INFO - Selected embedding model: ollama
+2026-01-23 14:49:38,064 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 14:49:38,065 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:49:38,065 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 14:49:41,816 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 14:49:41,818 - INFO - Selected embedding model: huggingface
+2026-01-23 14:50:07,983 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-01-23 14:50:07,985 - INFO - Selected embedding model: huggingface
+2026-01-23 14:50:08,050 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-01-23 14:50:08,051 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:50:08,051 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-23 14:54:27,890 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 14:54:27,892 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:54:27,892 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-01-23 14:54:28,070 - INFO - AIEngine initialized - Active LLM: ollama-deepseek-r1:8b
+2026-01-23 14:54:28,229 - INFO - Loading faiss with AVX2 support.
+2026-01-23 14:54:28,240 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 14:54:29,367 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 14:54:29,428 - INFO - \u2713 Simple agent loaded
+2026-01-23 14:54:30,483 - INFO - \u2713 LangChain agent loaded
+2026-01-23 14:54:42,991 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 14:54:43,876 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 14:55:13,451 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 14:55:13,453 - INFO - Selected embedding model: ollama
+2026-01-23 14:55:13,500 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 14:55:13,502 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:55:13,502 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-23 14:55:27,566 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 14:55:27,567 - INFO - Selected embedding model: huggingface
+2026-01-23 14:55:45,716 - INFO - Selected active LLM: huggingface
+2026-01-23 14:55:45,717 - INFO - Selected embedding model: ollama
+2026-01-23 14:55:45,782 - INFO - Selected active LLM: huggingface
+2026-01-23 14:55:45,784 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:55:45,784 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-23 14:56:29,431 - INFO - Selected active LLM: huggingface
+2026-01-23 14:56:29,432 - INFO - Selected embedding model: huggingface
+2026-01-23 14:56:35,682 - INFO - Selected active LLM: huggingface
+2026-01-23 14:56:35,683 - INFO - Selected embedding model: ollama
+2026-01-23 14:59:01,829 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 14:59:01,831 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 14:59:01,831 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-23 14:59:02,007 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-23 14:59:02,165 - INFO - Loading faiss with AVX2 support.
+2026-01-23 14:59:02,176 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 14:59:03,421 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 14:59:03,491 - INFO - \u2713 Simple agent loaded
+2026-01-23 14:59:04,664 - INFO - \u2713 LangChain agent loaded
+2026-01-23 14:59:17,041 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 14:59:17,931 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 14:59:44,280 - INFO - Selected active LLM: huggingface
+2026-01-23 14:59:44,281 - INFO - Selected embedding model: huggingface
+2026-01-23 15:08:34,519 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 15:08:34,521 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 15:08:34,521 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-23 15:08:34,702 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-23 15:08:34,865 - INFO - Loading faiss with AVX2 support.
+2026-01-23 15:08:34,876 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 15:08:35,990 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 15:08:36,048 - INFO - \u2713 Simple agent loaded
+2026-01-23 15:08:37,098 - INFO - \u2713 LangChain agent loaded
+2026-01-23 15:08:49,697 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 15:08:50,632 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 15:09:05,546 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-23 15:09:05,548 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 15:09:05,548 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-23 15:09:05,725 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-23 15:09:05,883 - INFO - Loading faiss with AVX2 support.
+2026-01-23 15:09:05,894 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-23 15:09:07,011 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-23 15:09:07,070 - INFO - \u2713 Simple agent loaded
+2026-01-23 15:09:08,118 - INFO - \u2713 LangChain agent loaded
+2026-01-23 15:09:20,222 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-23 15:09:21,106 - INFO - \u2713 CrewAI agent loaded
+2026-01-23 15:09:50,199 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 15:09:50,201 - INFO - Selected embedding model: ollama
+2026-01-23 15:09:50,315 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-23 15:09:50,317 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-23 15:09:50,318 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-28 08:34:42,219 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-28 08:34:42,231 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-28 08:34:42,231 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-28 08:34:42,594 - INFO - AIEngine initialized - Active LLM: ollama-llama3.2:1b
+2026-01-28 08:34:43,486 - INFO - Loading faiss with AVX2 support.
+2026-01-28 08:34:44,270 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-28 08:34:53,288 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-28 08:34:53,526 - INFO - \u2713 Simple agent loaded
+2026-01-28 08:34:57,128 - INFO - \u2713 LangChain agent loaded
+2026-01-28 08:35:16,803 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-28 08:35:18,041 - INFO - \u2713 CrewAI agent loaded
+2026-01-28 08:36:19,240 - INFO - Selected active LLM: huggingface
+2026-01-28 08:36:19,242 - INFO - Selected embedding model: huggingface
+2026-01-28 08:36:19,288 - INFO - Selected active LLM: huggingface
+2026-01-28 08:36:19,288 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-28 08:36:19,288 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-28 08:44:06,637 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-28 08:44:06,649 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-28 08:44:06,649 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-28 08:44:06,839 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-01-28 08:44:07,733 - INFO - Loading faiss with AVX2 support.
+2026-01-28 08:44:08,172 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-28 08:44:12,614 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-28 08:44:12,697 - INFO - \u2713 Simple agent loaded
+2026-01-28 08:44:14,091 - INFO - \u2713 LangChain agent loaded
+2026-01-28 08:44:28,018 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-28 08:44:28,967 - INFO - \u2713 CrewAI agent loaded
+2026-01-28 08:44:51,069 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-28 08:44:51,070 - INFO - Selected embedding model: ollama
+2026-01-28 08:44:51,171 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-28 08:44:51,172 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-28 08:44:51,172 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-28 08:51:24,648 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-28 08:51:24,649 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-28 08:51:24,651 - INFO - Loading faiss with AVX2 support.
+2026-01-28 08:51:24,664 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-28 08:51:25,227 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-28 08:51:25,227 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-28 08:51:25,359 - INFO - AIEngine initialized - Active LLM: ollama-llama3.2:1b
+2026-01-28 08:51:25,359 - INFO - \u2713 Simple agent loaded
+2026-01-28 08:51:25,776 - INFO - \u2713 LangChain agent loaded
+2026-01-28 08:51:28,061 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-28 08:51:28,198 - INFO - \u2713 CrewAI agent loaded
+2026-01-28 08:55:09,781 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-28 08:55:09,783 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-28 08:55:09,783 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-28 08:55:09,961 - INFO - AIEngine initialized - Active LLM: ollama-llama3.2:1b
+2026-01-28 08:55:10,121 - INFO - Loading faiss with AVX2 support.
+2026-01-28 08:55:10,132 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-28 08:55:11,263 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-28 08:55:11,328 - INFO - \u2713 Simple agent loaded
+2026-01-28 08:55:12,395 - INFO - \u2713 LangChain agent loaded
+2026-01-28 08:55:25,140 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-28 08:55:26,037 - INFO - \u2713 CrewAI agent loaded
+2026-01-28 08:56:20,639 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-01-28 08:56:20,641 - INFO - Selected embedding model: ollama
+2026-01-28 08:56:57,908 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-01-28 08:56:57,910 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-28 08:56:57,910 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-01-28 08:56:58,090 - INFO - AIEngine initialized - Active LLM: ollama-llama3.2:1b
+2026-01-28 08:56:58,251 - INFO - Loading faiss with AVX2 support.
+2026-01-28 08:56:58,263 - INFO - Successfully loaded faiss with AVX2 support.
+2026-01-28 08:56:59,405 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-01-28 08:56:59,467 - INFO - \u2713 Simple agent loaded
+2026-01-28 08:57:00,548 - INFO - \u2713 LangChain agent loaded
+2026-01-28 08:57:12,955 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-01-28 08:57:13,891 - INFO - \u2713 CrewAI agent loaded
