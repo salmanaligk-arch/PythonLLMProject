@@ -103,10 +103,14 @@ class FAISSVectorStore:
         return results
     
     def save_index(self, filename: str = "vector_index"):
+        # Save in both formats for compatibility
         index_file = os.path.join(self.index_path, f"{filename}.index")
+        faiss_file = os.path.join(self.index_path, f"{filename}.faiss")
         data_file = os.path.join(self.index_path, f"{filename}.pkl")
         
+        # Save FAISS index in both formats
         faiss.write_index(self.index, index_file)
+        faiss.write_index(self.index, faiss_file)
         
         with open(data_file, 'wb') as f:
             pickle.dump({
@@ -115,11 +119,15 @@ class FAISSVectorStore:
             }, f)
     
     def load_index(self, filename: str = "vector_index"):
+        faiss_file = os.path.join(self.index_path, f"{filename}.faiss")
         index_file = os.path.join(self.index_path, f"{filename}.index")
         data_file = os.path.join(self.index_path, f"{filename}.pkl")
         
-        if os.path.exists(index_file) and os.path.exists(data_file):
-            self.index = faiss.read_index(index_file)
+        # Try loading from .faiss first (LangChain format), then .index (legacy format)
+        index_path = faiss_file if os.path.exists(faiss_file) else index_file
+        
+        if os.path.exists(index_path) and os.path.exists(data_file):
+            self.index = faiss.read_index(index_path)
             
             with open(data_file, 'rb') as f:
                 data = pickle.load(f)

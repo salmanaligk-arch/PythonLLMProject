@@ -5549,3 +5549,568 @@ LiteLLM completion() model= Qwen/Qwen2.5-72B-Instruct; provider = huggingface
 2026-01-28 12:46:39,476 - INFO - \u2713 LangChain agent loaded
 2026-01-28 12:46:52,753 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
 2026-01-28 12:46:53,687 - INFO - \u2713 CrewAI agent loaded
+2026-01-28 12:47:02,648 - INFO - Selected active LLM: huggingface
+2026-01-28 12:47:02,649 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-28 12:47:02,649 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-28 12:47:11,116 - INFO - Selected embedding model: ollama
+2026-01-28 12:47:16,832 - INFO - Research tool called with query: how many candidates are accommodated
+2026-01-28 12:47:17,209 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-01-28 12:47:17,209 - INFO - Embedding provider response data
+2026-01-28 12:47:17,209 - INFO - Parsed embedding
+2026-01-28 12:47:17,209 - INFO - Calling active LLM: huggingface
+2026-01-28 12:47:22,245 - INFO - Research completed using AI engine
+2026-01-28 12:47:34,680 - INFO - Selected active LLM: ollama-deepseek-r1:1.5b
+2026-01-28 12:47:34,681 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:1.5b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-28 12:47:34,681 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:1.5b
+2026-01-28 12:47:37,201 - INFO - Selected embedding model: ollama
+2026-01-28 12:52:06,985 - INFO - Removed LLM: ollama-deepseek-r1:1.5b
+2026-01-28 12:52:07,149 - INFO - Selected active LLM: huggingface
+2026-01-28 12:52:07,155 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-28 12:52:07,156 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-01-28 12:52:12,504 - INFO - Removed LLM: ollama-llama3.2:1b
+2026-01-28 12:52:18,889 - INFO - Retrying request to /chat/completions in 0.375487 seconds
+2026-01-28 13:10:04,246 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-01-28 13:10:04,247 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-01-28 13:10:04,247 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-02-04 11:38:25,971 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 11:38:25,994 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 11:38:25,994 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-02-04 11:38:26,353 - INFO - AIEngine initialized - Active LLM: ollama-deepseek-r1:8b
+2026-02-04 11:38:26,560 - INFO - Loading faiss with AVX2 support.
+2026-02-04 11:38:27,059 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 11:38:30,561 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 11:38:30,701 - INFO - \u2713 Simple agent loaded
+2026-02-04 11:38:35,428 - ERROR - \u2717 Failed to load LangChain agent: cannot import name 'initialize_agent' from 'langchain.agents' (e:\PythonLLMProject\env\Lib\site-packages\langchain\agents\__init__.py)
+2026-02-04 11:38:55,570 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 11:38:56,823 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 11:40:23,081 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 11:40:23,084 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 11:40:23,084 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-02-04 11:40:23,267 - INFO - AIEngine initialized - Active LLM: ollama-deepseek-r1:8b
+2026-02-04 11:40:23,424 - INFO - Loading faiss with AVX2 support.
+2026-02-04 11:40:23,436 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 11:40:24,587 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 11:40:24,650 - INFO - \u2713 Simple agent loaded
+2026-02-04 11:40:32,901 - INFO - \u2713 LangChain agent loaded
+2026-02-04 11:40:47,667 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 11:40:48,559 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 11:41:46,772 - INFO - Selected active LLM: huggingface
+2026-02-04 11:41:46,773 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 11:41:46,773 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 11:41:50,112 - INFO - Selected embedding model: ollama
+2026-02-04 11:45:05,746 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 11:45:05,748 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 11:45:05,748 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 11:45:05,926 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 11:45:06,089 - INFO - Loading faiss with AVX2 support.
+2026-02-04 11:45:06,102 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 11:45:07,233 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 11:45:07,293 - INFO - \u2713 Simple agent loaded
+2026-02-04 11:45:15,457 - INFO - \u2713 LangChain agent loaded
+2026-02-04 11:45:29,740 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 11:45:30,625 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 11:45:50,275 - INFO - Selected active LLM: huggingface
+2026-02-04 11:45:50,278 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 11:45:50,279 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 11:46:09,522 - INFO - Selected embedding model: ollama
+2026-02-04 11:48:20,864 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 11:48:20,866 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 11:48:20,866 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 11:48:21,046 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 11:48:21,206 - INFO - Loading faiss with AVX2 support.
+2026-02-04 11:48:21,218 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 11:48:22,374 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 11:48:22,434 - INFO - \u2713 Simple agent loaded
+2026-02-04 11:48:30,671 - INFO - \u2713 LangChain agent loaded
+2026-02-04 11:48:44,944 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 11:48:45,886 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 11:48:58,357 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 11:48:58,359 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 11:48:58,359 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 11:48:58,540 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 11:48:58,707 - INFO - Loading faiss with AVX2 support.
+2026-02-04 11:48:58,718 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 11:48:59,851 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 11:48:59,911 - INFO - \u2713 Simple agent loaded
+2026-02-04 11:49:08,058 - INFO - \u2713 LangChain agent loaded
+2026-02-04 11:49:22,345 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 11:49:23,228 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 11:49:31,539 - INFO - Selected active LLM: huggingface
+2026-02-04 11:49:31,540 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 11:49:31,540 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 11:49:41,190 - INFO - Selected embedding model: ollama
+2026-02-04 12:00:37,106 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 12:00:37,109 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 12:00:37,109 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 12:00:37,285 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 12:00:37,456 - INFO - Loading faiss with AVX2 support.
+2026-02-04 12:00:37,467 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 12:00:38,619 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 12:00:38,679 - INFO - \u2713 Simple agent loaded
+2026-02-04 12:00:46,830 - INFO - \u2713 LangChain agent loaded
+2026-02-04 12:01:01,729 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 12:01:02,616 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 12:01:15,071 - INFO - Selected active LLM: huggingface
+2026-02-04 12:01:15,072 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 12:01:15,072 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 12:01:17,586 - INFO - Selected row index: 0
+2026-02-04 12:01:17,586 - INFO - Selected file: GCC No.1.pdf
+2026-02-04 12:01:17,653 - INFO - Selected row index: 0
+2026-02-04 12:01:17,653 - INFO - Selected file: GCC No.1.pdf
+2026-02-04 12:01:22,603 - INFO - Selected row index: 0
+2026-02-04 12:01:22,604 - INFO - Selected file: GCC No.1.pdf
+2026-02-04 12:01:24,974 - INFO - Delete requested for filename: 'GCC No.1.pdf'
+2026-02-04 12:01:26,397 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:26,397 - INFO - Embedding provider response data
+2026-02-04 12:01:26,398 - INFO - Parsed embedding
+2026-02-04 12:01:26,500 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:26,500 - INFO - Embedding provider response data
+2026-02-04 12:01:26,500 - INFO - Parsed embedding
+2026-02-04 12:01:26,793 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:26,794 - INFO - Embedding provider response data
+2026-02-04 12:01:26,794 - INFO - Parsed embedding
+2026-02-04 12:01:27,032 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:27,032 - INFO - Embedding provider response data
+2026-02-04 12:01:27,032 - INFO - Parsed embedding
+2026-02-04 12:01:27,260 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:27,260 - INFO - Embedding provider response data
+2026-02-04 12:01:27,261 - INFO - Parsed embedding
+2026-02-04 12:01:27,469 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:27,470 - INFO - Embedding provider response data
+2026-02-04 12:01:27,470 - INFO - Parsed embedding
+2026-02-04 12:01:27,680 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:27,681 - INFO - Embedding provider response data
+2026-02-04 12:01:27,681 - INFO - Parsed embedding
+2026-02-04 12:01:27,916 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:27,917 - INFO - Embedding provider response data
+2026-02-04 12:01:27,917 - INFO - Parsed embedding
+2026-02-04 12:01:28,133 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:28,134 - INFO - Embedding provider response data
+2026-02-04 12:01:28,134 - INFO - Parsed embedding
+2026-02-04 12:01:28,216 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:28,217 - INFO - Embedding provider response data
+2026-02-04 12:01:28,217 - INFO - Parsed embedding
+2026-02-04 12:01:28,492 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:28,492 - INFO - Embedding provider response data
+2026-02-04 12:01:28,492 - INFO - Parsed embedding
+2026-02-04 12:01:28,796 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:28,797 - INFO - Embedding provider response data
+2026-02-04 12:01:28,797 - INFO - Parsed embedding
+2026-02-04 12:01:29,112 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:29,112 - INFO - Embedding provider response data
+2026-02-04 12:01:29,112 - INFO - Parsed embedding
+2026-02-04 12:01:29,394 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:29,394 - INFO - Embedding provider response data
+2026-02-04 12:01:29,394 - INFO - Parsed embedding
+2026-02-04 12:01:29,634 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:29,635 - INFO - Embedding provider response data
+2026-02-04 12:01:29,635 - INFO - Parsed embedding
+2026-02-04 12:01:29,930 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:29,930 - INFO - Embedding provider response data
+2026-02-04 12:01:29,930 - INFO - Parsed embedding
+2026-02-04 12:01:30,180 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:30,180 - INFO - Embedding provider response data
+2026-02-04 12:01:30,180 - INFO - Parsed embedding
+2026-02-04 12:01:30,496 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:30,496 - INFO - Embedding provider response data
+2026-02-04 12:01:30,497 - INFO - Parsed embedding
+2026-02-04 12:01:30,800 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:30,801 - INFO - Embedding provider response data
+2026-02-04 12:01:30,801 - INFO - Parsed embedding
+2026-02-04 12:01:31,102 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:31,103 - INFO - Embedding provider response data
+2026-02-04 12:01:31,104 - INFO - Parsed embedding
+2026-02-04 12:01:31,424 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:31,424 - INFO - Embedding provider response data
+2026-02-04 12:01:31,424 - INFO - Parsed embedding
+2026-02-04 12:01:31,726 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:31,726 - INFO - Embedding provider response data
+2026-02-04 12:01:31,726 - INFO - Parsed embedding
+2026-02-04 12:01:32,003 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:32,004 - INFO - Embedding provider response data
+2026-02-04 12:01:32,004 - INFO - Parsed embedding
+2026-02-04 12:01:32,274 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:32,274 - INFO - Embedding provider response data
+2026-02-04 12:01:32,274 - INFO - Parsed embedding
+2026-02-04 12:01:32,572 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:32,573 - INFO - Embedding provider response data
+2026-02-04 12:01:32,573 - INFO - Parsed embedding
+2026-02-04 12:01:32,855 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:32,855 - INFO - Embedding provider response data
+2026-02-04 12:01:32,855 - INFO - Parsed embedding
+2026-02-04 12:01:33,163 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:33,164 - INFO - Embedding provider response data
+2026-02-04 12:01:33,164 - INFO - Parsed embedding
+2026-02-04 12:01:33,444 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:33,445 - INFO - Embedding provider response data
+2026-02-04 12:01:33,445 - INFO - Parsed embedding
+2026-02-04 12:01:33,743 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:33,744 - INFO - Embedding provider response data
+2026-02-04 12:01:33,744 - INFO - Parsed embedding
+2026-02-04 12:01:34,043 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:34,044 - INFO - Embedding provider response data
+2026-02-04 12:01:34,044 - INFO - Parsed embedding
+2026-02-04 12:01:34,333 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:34,333 - INFO - Embedding provider response data
+2026-02-04 12:01:34,334 - INFO - Parsed embedding
+2026-02-04 12:01:34,598 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:34,598 - INFO - Embedding provider response data
+2026-02-04 12:01:34,598 - INFO - Parsed embedding
+2026-02-04 12:01:34,856 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:34,857 - INFO - Embedding provider response data
+2026-02-04 12:01:34,857 - INFO - Parsed embedding
+2026-02-04 12:01:35,170 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:35,170 - INFO - Embedding provider response data
+2026-02-04 12:01:35,170 - INFO - Parsed embedding
+2026-02-04 12:01:35,318 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:35,318 - INFO - Embedding provider response data
+2026-02-04 12:01:35,318 - INFO - Parsed embedding
+2026-02-04 12:01:35,477 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:35,477 - INFO - Embedding provider response data
+2026-02-04 12:01:35,477 - INFO - Parsed embedding
+2026-02-04 12:01:35,515 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:35,515 - INFO - Embedding provider response data
+2026-02-04 12:01:35,515 - INFO - Parsed embedding
+2026-02-04 12:01:35,634 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:35,634 - INFO - Embedding provider response data
+2026-02-04 12:01:35,634 - INFO - Parsed embedding
+2026-02-04 12:01:35,645 - INFO - Successfully deleted file: GCC No.1.pdf
+2026-02-04 12:01:39,138 - INFO - Selected row index: 0
+2026-02-04 12:01:39,138 - INFO - Selected file: GPGC Mardan.pdf
+2026-02-04 12:01:40,169 - INFO - Delete requested for filename: 'GPGC Mardan.pdf'
+2026-02-04 12:01:40,446 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:40,447 - INFO - Embedding provider response data
+2026-02-04 12:01:40,447 - INFO - Parsed embedding
+2026-02-04 12:01:40,703 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:40,704 - INFO - Embedding provider response data
+2026-02-04 12:01:40,704 - INFO - Parsed embedding
+2026-02-04 12:01:40,898 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:40,898 - INFO - Embedding provider response data
+2026-02-04 12:01:40,899 - INFO - Parsed embedding
+2026-02-04 12:01:41,120 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:41,120 - INFO - Embedding provider response data
+2026-02-04 12:01:41,120 - INFO - Parsed embedding
+2026-02-04 12:01:41,325 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:41,326 - INFO - Embedding provider response data
+2026-02-04 12:01:41,326 - INFO - Parsed embedding
+2026-02-04 12:01:41,570 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:41,570 - INFO - Embedding provider response data
+2026-02-04 12:01:41,570 - INFO - Parsed embedding
+2026-02-04 12:01:41,787 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:41,787 - INFO - Embedding provider response data
+2026-02-04 12:01:41,787 - INFO - Parsed embedding
+2026-02-04 12:01:41,897 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:41,898 - INFO - Embedding provider response data
+2026-02-04 12:01:41,898 - INFO - Parsed embedding
+2026-02-04 12:01:42,165 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:42,165 - INFO - Embedding provider response data
+2026-02-04 12:01:42,165 - INFO - Parsed embedding
+2026-02-04 12:01:42,456 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:42,456 - INFO - Embedding provider response data
+2026-02-04 12:01:42,456 - INFO - Parsed embedding
+2026-02-04 12:01:42,753 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:42,754 - INFO - Embedding provider response data
+2026-02-04 12:01:42,754 - INFO - Parsed embedding
+2026-02-04 12:01:43,042 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:43,043 - INFO - Embedding provider response data
+2026-02-04 12:01:43,043 - INFO - Parsed embedding
+2026-02-04 12:01:43,333 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:43,333 - INFO - Embedding provider response data
+2026-02-04 12:01:43,333 - INFO - Parsed embedding
+2026-02-04 12:01:43,609 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:43,610 - INFO - Embedding provider response data
+2026-02-04 12:01:43,610 - INFO - Parsed embedding
+2026-02-04 12:01:43,914 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:43,915 - INFO - Embedding provider response data
+2026-02-04 12:01:43,915 - INFO - Parsed embedding
+2026-02-04 12:01:44,209 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:44,210 - INFO - Embedding provider response data
+2026-02-04 12:01:44,210 - INFO - Parsed embedding
+2026-02-04 12:01:44,519 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:44,520 - INFO - Embedding provider response data
+2026-02-04 12:01:44,520 - INFO - Parsed embedding
+2026-02-04 12:01:44,826 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:44,827 - INFO - Embedding provider response data
+2026-02-04 12:01:44,827 - INFO - Parsed embedding
+2026-02-04 12:01:45,139 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:45,139 - INFO - Embedding provider response data
+2026-02-04 12:01:45,139 - INFO - Parsed embedding
+2026-02-04 12:01:45,437 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:45,438 - INFO - Embedding provider response data
+2026-02-04 12:01:45,438 - INFO - Parsed embedding
+2026-02-04 12:01:45,709 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:45,710 - INFO - Embedding provider response data
+2026-02-04 12:01:45,710 - INFO - Parsed embedding
+2026-02-04 12:01:46,026 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:46,026 - INFO - Embedding provider response data
+2026-02-04 12:01:46,026 - INFO - Parsed embedding
+2026-02-04 12:01:46,318 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:46,319 - INFO - Embedding provider response data
+2026-02-04 12:01:46,319 - INFO - Parsed embedding
+2026-02-04 12:01:46,616 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:46,617 - INFO - Embedding provider response data
+2026-02-04 12:01:46,618 - INFO - Parsed embedding
+2026-02-04 12:01:46,900 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:46,900 - INFO - Embedding provider response data
+2026-02-04 12:01:46,900 - INFO - Parsed embedding
+2026-02-04 12:01:47,181 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:47,181 - INFO - Embedding provider response data
+2026-02-04 12:01:47,182 - INFO - Parsed embedding
+2026-02-04 12:01:47,498 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:47,499 - INFO - Embedding provider response data
+2026-02-04 12:01:47,499 - INFO - Parsed embedding
+2026-02-04 12:01:47,803 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:47,804 - INFO - Embedding provider response data
+2026-02-04 12:01:47,805 - INFO - Parsed embedding
+2026-02-04 12:01:48,129 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:48,130 - INFO - Embedding provider response data
+2026-02-04 12:01:48,130 - INFO - Parsed embedding
+2026-02-04 12:01:48,400 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:48,401 - INFO - Embedding provider response data
+2026-02-04 12:01:48,401 - INFO - Parsed embedding
+2026-02-04 12:01:48,688 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:48,688 - INFO - Embedding provider response data
+2026-02-04 12:01:48,688 - INFO - Parsed embedding
+2026-02-04 12:01:48,987 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:48,988 - INFO - Embedding provider response data
+2026-02-04 12:01:48,988 - INFO - Parsed embedding
+2026-02-04 12:01:49,145 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:49,145 - INFO - Embedding provider response data
+2026-02-04 12:01:49,145 - INFO - Parsed embedding
+2026-02-04 12:01:49,293 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:49,293 - INFO - Embedding provider response data
+2026-02-04 12:01:49,293 - INFO - Parsed embedding
+2026-02-04 12:01:49,373 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:49,374 - INFO - Embedding provider response data
+2026-02-04 12:01:49,374 - INFO - Parsed embedding
+2026-02-04 12:01:49,476 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:49,477 - INFO - Embedding provider response data
+2026-02-04 12:01:49,477 - INFO - Parsed embedding
+2026-02-04 12:01:49,480 - INFO - Successfully deleted file: GPGC Mardan.pdf
+2026-02-04 12:01:52,303 - INFO - Selected row index: 0
+2026-02-04 12:01:52,303 - INFO - Selected file: Telephone Directry.pdf
+2026-02-04 12:01:52,419 - INFO - Selected row index: 0
+2026-02-04 12:01:52,419 - INFO - Selected file: Telephone Directry.pdf
+2026-02-04 12:01:53,337 - INFO - Delete requested for filename: 'Telephone Directry.pdf'
+2026-02-04 12:01:53,633 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:53,633 - INFO - Embedding provider response data
+2026-02-04 12:01:53,633 - INFO - Parsed embedding
+2026-02-04 12:01:53,944 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:53,945 - INFO - Embedding provider response data
+2026-02-04 12:01:53,945 - INFO - Parsed embedding
+2026-02-04 12:01:54,281 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:54,282 - INFO - Embedding provider response data
+2026-02-04 12:01:54,282 - INFO - Parsed embedding
+2026-02-04 12:01:54,569 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:54,569 - INFO - Embedding provider response data
+2026-02-04 12:01:54,570 - INFO - Parsed embedding
+2026-02-04 12:01:54,846 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:54,846 - INFO - Embedding provider response data
+2026-02-04 12:01:54,846 - INFO - Parsed embedding
+2026-02-04 12:01:55,155 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:55,156 - INFO - Embedding provider response data
+2026-02-04 12:01:55,156 - INFO - Parsed embedding
+2026-02-04 12:01:55,434 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:55,435 - INFO - Embedding provider response data
+2026-02-04 12:01:55,436 - INFO - Parsed embedding
+2026-02-04 12:01:55,726 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:55,727 - INFO - Embedding provider response data
+2026-02-04 12:01:55,728 - INFO - Parsed embedding
+2026-02-04 12:01:56,023 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:56,024 - INFO - Embedding provider response data
+2026-02-04 12:01:56,024 - INFO - Parsed embedding
+2026-02-04 12:01:56,319 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:56,319 - INFO - Embedding provider response data
+2026-02-04 12:01:56,319 - INFO - Parsed embedding
+2026-02-04 12:01:56,603 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:56,603 - INFO - Embedding provider response data
+2026-02-04 12:01:56,603 - INFO - Parsed embedding
+2026-02-04 12:01:56,890 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:56,891 - INFO - Embedding provider response data
+2026-02-04 12:01:56,891 - INFO - Parsed embedding
+2026-02-04 12:01:57,182 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:57,183 - INFO - Embedding provider response data
+2026-02-04 12:01:57,183 - INFO - Parsed embedding
+2026-02-04 12:01:57,497 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:57,497 - INFO - Embedding provider response data
+2026-02-04 12:01:57,497 - INFO - Parsed embedding
+2026-02-04 12:01:57,768 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:57,769 - INFO - Embedding provider response data
+2026-02-04 12:01:57,769 - INFO - Parsed embedding
+2026-02-04 12:01:58,067 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:58,068 - INFO - Embedding provider response data
+2026-02-04 12:01:58,068 - INFO - Parsed embedding
+2026-02-04 12:01:58,365 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:58,366 - INFO - Embedding provider response data
+2026-02-04 12:01:58,366 - INFO - Parsed embedding
+2026-02-04 12:01:58,680 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:58,681 - INFO - Embedding provider response data
+2026-02-04 12:01:58,681 - INFO - Parsed embedding
+2026-02-04 12:01:58,990 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:58,991 - INFO - Embedding provider response data
+2026-02-04 12:01:58,991 - INFO - Parsed embedding
+2026-02-04 12:01:59,279 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:59,280 - INFO - Embedding provider response data
+2026-02-04 12:01:59,280 - INFO - Parsed embedding
+2026-02-04 12:01:59,567 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:59,568 - INFO - Embedding provider response data
+2026-02-04 12:01:59,568 - INFO - Parsed embedding
+2026-02-04 12:01:59,839 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:01:59,840 - INFO - Embedding provider response data
+2026-02-04 12:01:59,841 - INFO - Parsed embedding
+2026-02-04 12:02:00,109 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:00,110 - INFO - Embedding provider response data
+2026-02-04 12:02:00,110 - INFO - Parsed embedding
+2026-02-04 12:02:00,420 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:00,420 - INFO - Embedding provider response data
+2026-02-04 12:02:00,421 - INFO - Parsed embedding
+2026-02-04 12:02:00,580 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:00,582 - INFO - Embedding provider response data
+2026-02-04 12:02:00,582 - INFO - Parsed embedding
+2026-02-04 12:02:00,765 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:00,766 - INFO - Embedding provider response data
+2026-02-04 12:02:00,766 - INFO - Parsed embedding
+2026-02-04 12:02:00,840 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:00,841 - INFO - Embedding provider response data
+2026-02-04 12:02:00,841 - INFO - Parsed embedding
+2026-02-04 12:02:00,976 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:00,977 - INFO - Embedding provider response data
+2026-02-04 12:02:00,977 - INFO - Parsed embedding
+2026-02-04 12:02:00,981 - INFO - Successfully deleted file: Telephone Directry.pdf
+2026-02-04 12:02:02,373 - INFO - Selected row index: 0
+2026-02-04 12:02:02,373 - INFO - Selected file: Attendance Report.pdf
+2026-02-04 12:02:03,369 - INFO - Delete requested for filename: 'Attendance Report.pdf'
+2026-02-04 12:02:03,532 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:03,533 - INFO - Embedding provider response data
+2026-02-04 12:02:03,534 - INFO - Parsed embedding
+2026-02-04 12:02:03,597 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:03,598 - INFO - Embedding provider response data
+2026-02-04 12:02:03,598 - INFO - Parsed embedding
+2026-02-04 12:02:03,707 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:03,707 - INFO - Embedding provider response data
+2026-02-04 12:02:03,707 - INFO - Parsed embedding
+2026-02-04 12:02:03,709 - INFO - Successfully deleted file: Attendance Report.pdf
+2026-02-04 12:02:04,686 - INFO - Selected row index: 0
+2026-02-04 12:02:04,687 - INFO - Selected file: to the DPO Mardan.docx
+2026-02-04 12:02:04,739 - INFO - Selected row index: 0
+2026-02-04 12:02:04,739 - INFO - Selected file: to the DPO Mardan.docx
+2026-02-04 12:02:05,452 - INFO - Delete requested for filename: 'to the DPO Mardan.docx'
+2026-02-04 12:02:05,558 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:05,558 - INFO - Embedding provider response data
+2026-02-04 12:02:05,559 - INFO - Parsed embedding
+2026-02-04 12:02:05,561 - INFO - Successfully deleted file: to the DPO Mardan.docx
+2026-02-04 12:02:06,504 - INFO - Selected row index: 0
+2026-02-04 12:02:06,504 - INFO - Selected file: letter 2.docx
+2026-02-04 12:02:06,555 - INFO - Selected row index: 0
+2026-02-04 12:02:06,555 - INFO - Selected file: letter 2.docx
+2026-02-04 12:02:07,536 - INFO - Delete requested for filename: 'letter 2.docx'
+2026-02-04 12:02:07,538 - INFO - Successfully deleted file: letter 2.docx
+2026-02-04 12:02:26,992 - INFO - Selected embedding model: ollama
+2026-02-04 12:02:27,019 - INFO - Processing page 1 with pdfplumber
+2026-02-04 12:02:27,083 - INFO - Extracting text and tables from text-based page.
+2026-02-04 12:02:27,240 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:27,240 - INFO - Embedding provider response data
+2026-02-04 12:02:27,240 - INFO - Parsed embedding
+2026-02-04 12:02:27,240 - INFO - Generated embedding of shape (768,) for new document
+2026-02-04 12:02:27,241 - INFO - Adding document to FAISS index
+2026-02-04 12:02:27,241 - INFO - Document added. Total documents in index: 1
+2026-02-04 12:02:27,241 - INFO - Enhanced metadata: {'filename': 'GPGC Mardan.pdf', 'file_type': 'pdf', 'file_size': 288592, 'upload_timestamp': '2026-02-04T12:02:27.087002', 'total_pages': 1, 'pdf_title': 'Microsoft Word - to the vc', 'pdf_author': '', 'chunk_id': 0, 'total_chunks': 2, 'chunk_text_length': 1000, 'chunk_word_count': 150, 'content_length': 1000, 'word_count': 150, 'sentence_count': 12, 'added_timestamp': '2026-02-04T12:02:27.241482'}
+2026-02-04 12:02:27,344 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:27,345 - INFO - Embedding provider response data
+2026-02-04 12:02:27,345 - INFO - Parsed embedding
+2026-02-04 12:02:27,345 - INFO - Generated embedding of shape (768,) for new document
+2026-02-04 12:02:27,345 - INFO - Adding document to FAISS index
+2026-02-04 12:02:27,346 - INFO - Document added. Total documents in index: 2
+2026-02-04 12:02:27,346 - INFO - Enhanced metadata: {'filename': 'GPGC Mardan.pdf', 'file_type': 'pdf', 'file_size': 288592, 'upload_timestamp': '2026-02-04T12:02:27.087002', 'total_pages': 1, 'pdf_title': 'Microsoft Word - to the vc', 'pdf_author': '', 'chunk_id': 1, 'total_chunks': 2, 'chunk_text_length': 385, 'chunk_word_count': 52, 'content_length': 385, 'word_count': 52, 'sentence_count': 5, 'added_timestamp': '2026-02-04T12:02:27.346345'}
+2026-02-04 12:02:42,948 - INFO - Selected embedding model: ollama
+2026-02-04 12:02:42,977 - INFO - Processing page 1 with pdfplumber
+2026-02-04 12:02:43,114 - INFO - Extracting text and tables from text-based page.
+2026-02-04 12:02:43,285 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:43,286 - INFO - Embedding provider response data
+2026-02-04 12:02:43,286 - INFO - Parsed embedding
+2026-02-04 12:02:43,286 - INFO - Generated embedding of shape (768,) for new document
+2026-02-04 12:02:43,286 - INFO - Adding document to FAISS index
+2026-02-04 12:02:43,286 - INFO - Document added. Total documents in index: 3
+2026-02-04 12:02:43,286 - INFO - Enhanced metadata: {'filename': 'AWKUM letter.pdf', 'file_type': 'pdf', 'file_size': 16733, 'upload_timestamp': '2026-02-04T12:02:43.122908', 'total_pages': 1, 'pdf_title': '', 'pdf_author': 'AEC SHANGLA', 'chunk_id': 0, 'total_chunks': 2, 'chunk_text_length': 1000, 'chunk_word_count': 159, 'content_length': 1000, 'word_count': 159, 'sentence_count': 15, 'added_timestamp': '2026-02-04T12:02:43.286660'}
+2026-02-04 12:02:43,398 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:43,399 - INFO - Embedding provider response data
+2026-02-04 12:02:43,399 - INFO - Parsed embedding
+2026-02-04 12:02:43,399 - INFO - Generated embedding of shape (768,) for new document
+2026-02-04 12:02:43,400 - INFO - Adding document to FAISS index
+2026-02-04 12:02:43,400 - INFO - Document added. Total documents in index: 4
+2026-02-04 12:02:43,400 - INFO - Enhanced metadata: {'filename': 'AWKUM letter.pdf', 'file_type': 'pdf', 'file_size': 16733, 'upload_timestamp': '2026-02-04T12:02:43.122908', 'total_pages': 1, 'pdf_title': '', 'pdf_author': 'AEC SHANGLA', 'chunk_id': 1, 'total_chunks': 2, 'chunk_text_length': 606, 'chunk_word_count': 109, 'content_length': 606, 'word_count': 109, 'sentence_count': 9, 'added_timestamp': '2026-02-04T12:02:43.400373'}
+2026-02-04 12:02:43,419 - INFO - Processing page 1 with pdfplumber
+2026-02-04 12:02:43,529 - INFO - Extracting text and tables from text-based page.
+2026-02-04 12:02:43,674 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:43,674 - INFO - Embedding provider response data
+2026-02-04 12:02:43,674 - INFO - Parsed embedding
+2026-02-04 12:02:43,674 - INFO - Generated embedding of shape (768,) for new document
+2026-02-04 12:02:43,675 - INFO - Adding document to FAISS index
+2026-02-04 12:02:43,675 - INFO - Document added. Total documents in index: 5
+2026-02-04 12:02:43,675 - INFO - Enhanced metadata: {'filename': 'GCC No.1.pdf', 'file_type': 'pdf', 'file_size': 289119, 'upload_timestamp': '2026-02-04T12:02:43.531277', 'total_pages': 1, 'pdf_title': 'Microsoft Word - to the vc', 'pdf_author': '', 'chunk_id': 0, 'total_chunks': 2, 'chunk_text_length': 1000, 'chunk_word_count': 150, 'content_length': 1000, 'word_count': 150, 'sentence_count': 13, 'added_timestamp': '2026-02-04T12:02:43.675115'}
+2026-02-04 12:02:43,782 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:02:43,782 - INFO - Embedding provider response data
+2026-02-04 12:02:43,782 - INFO - Parsed embedding
+2026-02-04 12:02:43,782 - INFO - Generated embedding of shape (768,) for new document
+2026-02-04 12:02:43,782 - INFO - Adding document to FAISS index
+2026-02-04 12:02:43,782 - INFO - Document added. Total documents in index: 6
+2026-02-04 12:02:43,782 - INFO - Enhanced metadata: {'filename': 'GCC No.1.pdf', 'file_type': 'pdf', 'file_size': 289119, 'upload_timestamp': '2026-02-04T12:02:43.531277', 'total_pages': 1, 'pdf_title': 'Microsoft Word - to the vc', 'pdf_author': '', 'chunk_id': 1, 'total_chunks': 2, 'chunk_text_length': 387, 'chunk_word_count': 53, 'content_length': 387, 'word_count': 53, 'sentence_count': 5, 'added_timestamp': '2026-02-04T12:02:43.782702'}
+2026-02-04 12:03:00,054 - INFO - Selected embedding model: ollama
+2026-02-04 12:03:13,168 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:03:13,169 - INFO - Embedding provider response data
+2026-02-04 12:03:13,169 - INFO - Parsed embedding
+2026-02-04 12:15:42,033 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 12:15:42,035 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 12:15:42,035 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 12:15:42,212 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 12:15:42,370 - INFO - Loading faiss with AVX2 support.
+2026-02-04 12:15:42,381 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 12:15:43,607 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 12:15:43,609 - INFO - \u2713 Simple agent loaded
+2026-02-04 12:15:51,921 - INFO - \u2713 LangChain agent loaded
+2026-02-04 12:16:05,043 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 12:16:05,922 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 12:16:14,216 - INFO - Selected active LLM: huggingface
+2026-02-04 12:16:14,217 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 12:16:14,217 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 12:16:20,599 - INFO - Selected embedding model: ollama
+2026-02-04 12:16:26,136 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:16:26,136 - INFO - Embedding provider response data
+2026-02-04 12:16:26,136 - INFO - Parsed embedding
+2026-02-04 12:17:26,289 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 12:17:26,294 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 12:17:26,294 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 12:17:26,661 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 12:17:26,954 - INFO - Loading faiss with AVX2 support.
+2026-02-04 12:17:26,985 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 12:17:28,725 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 12:17:28,726 - INFO - \u2713 Simple agent loaded
+2026-02-04 12:17:39,801 - INFO - \u2713 LangChain agent loaded
+2026-02-04 12:17:58,495 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 12:17:59,442 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 12:18:21,197 - INFO - Selected active LLM: huggingface
+2026-02-04 12:18:21,198 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 12:18:21,198 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 12:18:29,583 - INFO - Selected embedding model: ollama
+2026-02-04 12:18:36,143 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:18:36,143 - INFO - Embedding provider response data
+2026-02-04 12:18:36,144 - INFO - Parsed embedding
+2026-02-04 12:20:49,018 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 12:20:49,021 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 12:20:49,021 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 12:20:49,206 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 12:20:49,363 - INFO - Loading faiss with AVX2 support.
+2026-02-04 12:20:49,374 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 12:20:50,505 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 12:20:50,506 - INFO - \u2713 Simple agent loaded
+2026-02-04 12:20:58,679 - INFO - \u2713 LangChain agent loaded
+2026-02-04 12:21:10,848 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 12:21:11,728 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 12:21:33,442 - INFO - Selected active LLM: huggingface
+2026-02-04 12:21:33,443 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 12:21:33,443 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 12:21:44,699 - INFO - Selected embedding model: ollama
+2026-02-04 12:22:05,447 - INFO - Selected embedding model: ollama
+2026-02-04 12:22:07,192 - INFO - Embedding call to http://localhost:11434/api/embeddings
+2026-02-04 12:22:07,192 - INFO - Embedding provider response data
+2026-02-04 12:22:07,192 - INFO - Parsed embedding
