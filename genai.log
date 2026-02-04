@@ -6114,3 +6114,14 @@ LiteLLM completion() model= Qwen/Qwen2.5-72B-Instruct; provider = huggingface
 2026-02-04 12:22:07,192 - INFO - Embedding call to http://localhost:11434/api/embeddings
 2026-02-04 12:22:07,192 - INFO - Embedding provider response data
 2026-02-04 12:22:07,192 - INFO - Parsed embedding
+2026-02-04 12:54:26,503 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 12:54:26,514 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 12:54:26,514 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 12:54:26,697 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 12:54:26,863 - INFO - Loading faiss with AVX2 support.
+2026-02-04 12:54:26,875 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 12:54:28,081 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 12:54:28,083 - INFO - \u2713 Simple agent loaded
+2026-02-04 12:54:36,569 - INFO - \u2713 LangChain agent loaded
+2026-02-04 12:54:49,187 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 12:54:50,102 - INFO - \u2713 CrewAI agent loaded

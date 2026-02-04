@@ -4,7 +4,7 @@ This module provides the core AI functionality that agents use
 """
 
 import os
-from typing import Optional, List, Any, Mapping
+from typing import Optional
 from openai import OpenAI
 from services.logger import logger
 from dotenv import load_dotenv
