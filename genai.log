@@ -6293,3 +6293,11 @@ LiteLLM completion() model= Qwen/Qwen2.5-72B-Instruct; provider = huggingface
 2026-02-06 10:03:03,035 - INFO - \u2713 LangChain agent loaded
 2026-02-06 10:03:16,689 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
 2026-02-06 10:03:17,589 - INFO - \u2713 CrewAI agent loaded
+2026-02-06 10:04:39,134 - INFO - Selected embedding model: ollama
+2026-02-06 10:04:39,136 - INFO - Research tool called with query: how many candidates are accommodated
+2026-02-06 10:04:39,830 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-06 10:04:39,831 - INFO - Calling active LLM: huggingface
+2026-02-06 10:04:56,093 - INFO - Research completed using AI engine
+2026-02-06 10:04:56,094 - INFO - Writer tool called with format: table
+2026-02-06 10:04:56,094 - INFO - Calling active LLM: huggingface
+2026-02-06 10:05:00,413 - INFO - Writing completed using AI engine
