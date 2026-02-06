@@ -6125,3 +6125,171 @@ LiteLLM completion() model= Qwen/Qwen2.5-72B-Instruct; provider = huggingface
 2026-02-04 12:54:36,569 - INFO - \u2713 LangChain agent loaded
 2026-02-04 12:54:49,187 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
 2026-02-04 12:54:50,102 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 12:55:10,207 - INFO - Selected active LLM: huggingface
+2026-02-04 12:55:10,208 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 12:55:10,208 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 12:55:24,874 - INFO - Selected embedding model: ollama
+2026-02-04 12:55:24,878 - INFO - Research tool called with query: how many candidates are accommodated
+2026-02-04 12:55:25,263 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-04 12:55:25,263 - INFO - Calling active LLM: huggingface
+2026-02-04 12:55:32,146 - INFO - Research completed using AI engine
+2026-02-04 12:55:42,619 - INFO - Embedding call to https://router.huggingface.co/hf-inference/models/sentence-transformers/all-mpnet-base-v2/pipeline/feature-extraction successful.
+2026-02-04 12:56:45,732 - INFO - Selected embedding model: ollama
+2026-02-04 12:56:45,923 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-04 12:56:45,923 - INFO - Generated embedding of shape (768,) for new document
+2026-02-04 12:56:45,923 - INFO - Adding document to FAISS index
+2026-02-04 12:56:45,923 - INFO - Document added. Total documents in index: 7
+2026-02-04 12:56:45,923 - INFO - Enhanced metadata: {'filename': 'to the DPO Mardan.docx', 'file_type': 'docx', 'file_size': 36606, 'upload_timestamp': '2026-02-04T12:56:45.771283', 'author': 'AEC SHANGLA', 'created': datetime.datetime(2025, 8, 25, 6, 22, tzinfo=datetime.timezone.utc), 'modified': datetime.datetime(2025, 8, 25, 6, 22, tzinfo=datetime.timezone.utc), 'title': '', 'chunk_id': 0, 'total_chunks': 2, 'chunk_text_length': 1000, 'chunk_word_count': 138, 'content_length': 1000, 'word_count': 138, 'sentence_count': 8, 'added_timestamp': '2026-02-04T12:56:45.923941'}
+2026-02-04 12:56:46,006 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-04 12:56:46,007 - INFO - Generated embedding of shape (768,) for new document
+2026-02-04 12:56:46,007 - INFO - Adding document to FAISS index
+2026-02-04 12:56:46,007 - INFO - Document added. Total documents in index: 8
+2026-02-04 12:56:46,007 - INFO - Enhanced metadata: {'filename': 'to the DPO Mardan.docx', 'file_type': 'docx', 'file_size': 36606, 'upload_timestamp': '2026-02-04T12:56:45.771283', 'author': 'AEC SHANGLA', 'created': datetime.datetime(2025, 8, 25, 6, 22, tzinfo=datetime.timezone.utc), 'modified': datetime.datetime(2025, 8, 25, 6, 22, tzinfo=datetime.timezone.utc), 'title': '', 'chunk_id': 1, 'total_chunks': 2, 'chunk_text_length': 192, 'chunk_word_count': 23, 'content_length': 192, 'word_count': 23, 'sentence_count': 2, 'added_timestamp': '2026-02-04T12:56:46.007325'}
+2026-02-04 13:13:08,722 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 13:13:08,725 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 13:13:08,725 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 13:13:08,912 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 13:13:09,076 - INFO - Loading faiss with AVX2 support.
+2026-02-04 13:13:09,087 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 13:13:10,427 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 13:13:10,449 - INFO - \u2713 Simple agent loaded
+2026-02-04 13:13:18,991 - INFO - \u2713 LangChain agent loaded
+2026-02-04 13:13:31,378 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 13:13:32,263 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 14:18:11,119 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 14:18:11,122 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 14:18:11,122 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 14:18:11,300 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 14:18:11,459 - INFO - Loading faiss with AVX2 support.
+2026-02-04 14:18:11,471 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 14:18:12,690 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 14:18:12,691 - INFO - \u2713 Simple agent loaded
+2026-02-04 14:18:21,282 - INFO - \u2713 LangChain agent loaded
+2026-02-04 14:18:33,628 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 14:18:34,685 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 14:24:09,109 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 14:24:09,112 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 14:24:09,112 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 14:24:09,303 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 14:24:09,467 - INFO - Loading faiss with AVX2 support.
+2026-02-04 14:24:09,479 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 14:24:10,639 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 14:24:10,641 - INFO - \u2713 Simple agent loaded
+2026-02-04 14:24:18,872 - INFO - \u2713 LangChain agent loaded
+2026-02-04 14:24:32,491 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 14:24:33,363 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 15:21:22,335 - INFO - Selected active LLM: huggingface
+2026-02-04 15:21:22,337 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 15:21:22,337 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 15:21:52,021 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 15:21:52,023 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 15:21:52,023 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 15:21:52,205 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 15:21:52,364 - INFO - Loading faiss with AVX2 support.
+2026-02-04 15:21:52,375 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 15:21:53,628 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 15:21:53,630 - INFO - \u2713 Simple agent loaded
+2026-02-04 15:22:02,026 - INFO - \u2713 LangChain agent loaded
+2026-02-04 15:22:14,463 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 15:22:15,383 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 15:23:15,032 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 15:23:15,035 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 15:23:15,035 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 15:23:15,214 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 15:23:15,381 - INFO - Loading faiss with AVX2 support.
+2026-02-04 15:23:15,393 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 15:23:16,530 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 15:23:16,532 - INFO - \u2713 Simple agent loaded
+2026-02-04 15:23:25,114 - INFO - \u2713 LangChain agent loaded
+2026-02-04 15:23:37,465 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 15:23:38,343 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 15:24:14,060 - INFO - Selected embedding model: ollama
+2026-02-04 15:43:44,493 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-04 15:43:44,495 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 15:43:44,495 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-04 15:43:44,676 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-04 15:43:44,836 - INFO - Loading faiss with AVX2 support.
+2026-02-04 15:43:44,848 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-04 15:43:45,998 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-04 15:43:46,006 - INFO - \u2713 Simple agent loaded
+2026-02-04 15:43:54,550 - INFO - \u2713 LangChain agent loaded
+2026-02-04 15:44:06,949 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-04 15:44:07,857 - INFO - \u2713 CrewAI agent loaded
+2026-02-04 15:44:30,580 - INFO - Selected active LLM: huggingface
+2026-02-04 15:44:30,581 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-04 15:44:30,582 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-06 09:45:43,661 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-06 09:45:43,676 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-06 09:45:43,676 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-06 09:45:44,031 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-06 09:45:45,418 - INFO - Loading faiss with AVX2 support.
+2026-02-06 09:45:45,910 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-06 09:45:53,904 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-06 09:45:53,921 - INFO - \u2713 Simple agent loaded
+2026-02-06 09:46:39,006 - INFO - \u2713 LangChain agent loaded
+2026-02-06 09:46:59,035 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-06 09:47:00,248 - INFO - \u2713 CrewAI agent loaded
+2026-02-06 09:48:04,138 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-06 09:48:04,141 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-06 09:48:04,141 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-06 09:48:04,328 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-06 09:48:04,493 - INFO - Loading faiss with AVX2 support.
+2026-02-06 09:48:04,506 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-06 09:48:05,659 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-06 09:48:05,661 - INFO - \u2713 Simple agent loaded
+2026-02-06 09:48:13,822 - INFO - \u2713 LangChain agent loaded
+2026-02-06 09:48:28,862 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-06 09:48:29,757 - INFO - \u2713 CrewAI agent loaded
+2026-02-06 09:48:53,357 - INFO - Selected active LLM: huggingface
+2026-02-06 09:48:53,359 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-06 09:48:53,360 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-06 09:49:34,174 - INFO - Registered LLM: ollama-llama3.2:1b
+2026-02-06 09:49:50,909 - INFO - UI selected file: 'GCC No.1.pdf' at index 2
+2026-02-06 09:49:54,188 - INFO - UI selected file: 'GPGC Mardan.pdf' at index 0
+2026-02-06 09:49:55,375 - INFO - Delete operation initiated for filename: 'GPGC Mardan.pdf'
+2026-02-06 09:49:56,725 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-06 09:49:56,860 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-06 09:49:57,038 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-06 09:49:57,153 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-06 09:49:57,302 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-06 09:49:57,383 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-06 09:49:57,386 - INFO - Successfully deleted file: GPGC Mardan.pdf and saved index.
+2026-02-06 09:50:11,879 - INFO - Selected embedding model: ollama
+2026-02-06 09:50:11,894 - INFO - Processing page 1 with pdfplumber
+2026-02-06 09:50:12,005 - INFO - Extracting text and tables from text-based page.
+2026-02-06 09:50:12,154 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-06 09:50:12,154 - INFO - Generated embedding of shape (768,) for new document
+2026-02-06 09:50:12,154 - INFO - Adding document to FAISS index
+2026-02-06 09:50:12,155 - INFO - Document added. Total documents in index: 7
+2026-02-06 09:50:12,155 - INFO - Enhanced metadata: {'filename': 'GPGC Mardan.pdf', 'file_type': 'pdf', 'file_size': 288592, 'upload_timestamp': '2026-02-06T09:50:12.008070', 'total_pages': 1, 'pdf_title': 'Microsoft Word - to the vc', 'pdf_author': '', 'chunk_id': 0, 'total_chunks': 2, 'chunk_text_length': 1000, 'chunk_word_count': 150, 'content_length': 1000, 'word_count': 150, 'sentence_count': 12, 'added_timestamp': '2026-02-06T09:50:12.155132'}
+2026-02-06 09:50:12,229 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-06 09:50:12,229 - INFO - Generated embedding of shape (768,) for new document
+2026-02-06 09:50:12,229 - INFO - Adding document to FAISS index
+2026-02-06 09:50:12,229 - INFO - Document added. Total documents in index: 8
+2026-02-06 09:50:12,230 - INFO - Enhanced metadata: {'filename': 'GPGC Mardan.pdf', 'file_type': 'pdf', 'file_size': 288592, 'upload_timestamp': '2026-02-06T09:50:12.008070', 'total_pages': 1, 'pdf_title': 'Microsoft Word - to the vc', 'pdf_author': '', 'chunk_id': 1, 'total_chunks': 2, 'chunk_text_length': 385, 'chunk_word_count': 52, 'content_length': 385, 'word_count': 52, 'sentence_count': 5, 'added_timestamp': '2026-02-06T09:50:12.230018'}
+2026-02-06 09:50:12,230 - INFO - Successfully indexed 'GPGC Mardan.pdf' with chunk_size=1000, overlap=100
+2026-02-06 09:50:12,232 - INFO - FAISS index saved successfully after document upload.
+2026-02-06 09:50:18,255 - INFO - UI selected file: 'GPGC Mardan.pdf' at index 3
+2026-02-06 09:50:18,307 - INFO - UI selected file: 'GPGC Mardan.pdf' at index 3
+2026-02-06 09:51:15,140 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-02-06 09:51:15,141 - INFO - Selected embedding model: huggingface
+2026-02-06 09:51:15,254 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-02-06 09:51:15,255 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-06 09:51:15,255 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-02-06 09:51:25,502 - INFO - Retrying request to /chat/completions in 0.421316 seconds
+2026-02-06 09:51:41,910 - INFO - Selected active LLM: huggingface
+2026-02-06 09:51:41,911 - INFO - Selected embedding model: ollama
+2026-02-06 09:51:42,022 - INFO - Selected active LLM: huggingface
+2026-02-06 09:51:42,023 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-06 09:51:42,024 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-06 10:02:32,152 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-06 10:02:32,163 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-06 10:02:32,163 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-06 10:02:32,357 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-06 10:02:33,058 - INFO - Loading faiss with AVX2 support.
+2026-02-06 10:02:33,274 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-06 10:02:36,267 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-06 10:02:36,287 - INFO - \u2713 Simple agent loaded
+2026-02-06 10:03:03,035 - INFO - \u2713 LangChain agent loaded
+2026-02-06 10:03:16,689 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-06 10:03:17,589 - INFO - \u2713 CrewAI agent loaded

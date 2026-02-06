@@ -6,6 +6,33 @@ from services.embed_manager import embed_manager
 from services.rag_agents import agent_manager
 from services.chatbot import set_active_llm
 
+def _load_settings_from_file(filepath: str):
+    """
+    Load settings from a JSON file.
+
+    Args:
+        filepath: The path to the settings file.
+
+    Returns:
+        A tuple containing the settings and a status message.
+    """
+    if not os.path.exists(filepath):
+        return None, None, None, None, None, f"No settings file found at {filepath}"
+
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            payload = json.load(f)
+
+        llm = payload.get('default_llm') or payload.get('llm_config', {}).get('hf_model') or payload.get('llm_config', {}).get('ollama_model') or payload.get('llm_config', {}).get('model')
+        embed = payload.get('default_embedding') or payload.get('file_config', {}).get('embedding_model')
+        agent = payload.get('default_agent') or payload.get('agent_config', {}).get('default_agent')
+        chunk_size = payload.get('chunk_size') or payload.get('file_config', {}).get('max_chunk_size') or int(os.getenv('CHUNK_SIZE', 1000))
+        chunk_overlap = payload.get('chunk_overlap') or payload.get('file_config', {}).get('chunk_overlap') or int(os.getenv('CHUNK_OVERLAP', 200))
+
+        return llm, embed, agent, int(chunk_size), int(chunk_overlap), f"Loaded settings from {os.path.basename(filepath)}"
+    except Exception as e:
+        return None, None, None, None, None, f"Failed to load settings from {filepath}: {e}"
+
 def save_general_settings(llm_name, embed_name, agent_name, chunk_size, chunk_overlap):
     status_msgs = []
     try:
@@ -37,99 +64,62 @@ def save_general_settings(llm_name, embed_name, agent_name, chunk_size, chunk_ov
         embed_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
         chat_embed_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
         agent_update = gr.update(choices=agent_manager.get_available_agents(), value=agent_name)
-        chunk_size_update = gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000))))  # chunk_size_slider
-        chunk_overlap_update = gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200))))  # chunk_overlap_slider
-        # Return embed_update twice so callers can update both the upload
-        # embedding dropdown and the chat embedding dropdown.
+        chunk_size_update = gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000))))
+        chunk_overlap_update = gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200))))
         return llm_update, embed_update, agent_update, chat_embed_update, chunk_size_update, chunk_overlap_update, "\n".join(status_msgs)
     except Exception as e:
         return None, None, None, None, None, None, f"Error saving settings: {e}"
 
 def load_settings():
-    """Read `data/default_settings.json` and return flat UI values without writing.
-
-    Returns: llm_name, embed_name, agent_name, chunk_size, chunk_overlap, status_message
-    """
-    default_path = os.path.join(os.getcwd(), "data", "settings.json")
-    if not os.path.exists(default_path):
-        return None, None, None, None, None, "No settings.json found"
-    try:
-        with open(default_path, 'r', encoding='utf-8') as f:
-            payload = json.load(f)
-
-        # Support both flat and nested structures
-        llm = payload.get('default_llm') or payload.get('llm_config', {}).get('hf_model') or payload.get('llm_config', {}).get('ollama_model') or payload.get('llm_config', {}).get('model')
-        embed = payload.get('default_embedding') or payload.get('file_config', {}).get('embedding_model')
-        agent = payload.get('default_agent') or payload.get('agent_config', {}).get('default_agent')
-        chunk_size = payload.get('chunk_size') or payload.get('file_config', {}).get('max_chunk_size') or int(os.getenv('CHUNK_SIZE', 1000))
-        chunk_overlap = payload.get('chunk_overlap') or payload.get('file_config', {}).get('chunk_overlap') or int(os.getenv('CHUNK_OVERLAP', 200))
-
-        return llm, embed, agent, int(chunk_size), int(chunk_overlap), f"Loaded defaults from {default_path}"
-    except Exception as e:
-        return None, None, None, None, None, f"Failed to load defaults: {e}"
-
+    """Read `data/settings.json` and return flat UI values without writing."""
+    settings_path = os.path.join(os.getcwd(), "data", "settings.json")
+    return _load_settings_from_file(settings_path)
 
 def load_defaults():
-    """Read `data/default_settings.json` and return flat UI values without writing.
-
-    Returns: llm_name, embed_name, agent_name, chunk_size, chunk_overlap, status_message
-    """
+    """Read `data/default_settings.json` and return Gradio update objects."""
     default_path = os.path.join(os.getcwd(), "data", "default_settings.json")
-    if not os.path.exists(default_path):
-        return None, None, None, None, None, "No default_settings.json found"
-    try:
-        with open(default_path, 'r', encoding='utf-8') as f:
-            payload = json.load(f)
+    llm, embed, agent, chunk_size, chunk_overlap, status_msg = _load_settings_from_file(default_path)
 
-        # Support both flat and nested structures
-        llm = payload.get('default_llm') or payload.get('llm_config', {}).get('hf_model') or payload.get('llm_config', {}).get('ollama_model') or payload.get('llm_config', {}).get('model')
-        embed = payload.get('default_embedding') or payload.get('file_config', {}).get('embedding_model')
-        agent = payload.get('default_agent') or payload.get('agent_config', {}).get('default_agent')
-        chunk_size = payload.get('chunk_size') or payload.get('file_config', {}).get('max_chunk_size') or int(os.getenv('CHUNK_SIZE', 1000))
-        chunk_overlap = payload.get('chunk_overlap') or payload.get('file_config', {}).get('chunk_overlap') or int(os.getenv('CHUNK_OVERLAP', 200))
+    if llm is None and embed is None: # Loading failed
+        return None, None, None, None, None, status_msg
 
-        status_msg = f"Loaded defaults from {default_path}. Click Save to save defaults."
-        # Return gr.update objects so UI components update choices+values properly
-        llm_choices = llm_manager.get_names()
-        embed_choices = embed_manager.get_names()
-        agent_choices = agent_manager.get_available_agents()
-
-        return (
-            gr.update(choices=llm_choices, value=llm or llm_manager.get_selected()),  # general_llm_dropdown
-            gr.update(choices=embed_choices, value=embed or embed_manager.get_selected()),  # general_embed_dropdown
-            gr.update(choices=agent_choices, value=agent or os.getenv("DEFAULT_AGENT", "simple")),  # general_agent_dropdown
-            gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),  # chunk_size_default
-            gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),  # chunk_overlap_default
-            status_msg
-        )
-    except Exception as e:
-        return None, None, None, None, None, f"Failed to load defaults: {e}"
-
-def update_fields_on_load():
-    llm, embed, agent, chunk_size, chunk_overlap, status = load_settings()
-
-    # Prepare updated choices and values for all UI components (storage = source of truth)
     llm_choices = llm_manager.get_names()
     embed_choices = embed_manager.get_names()
     agent_choices = agent_manager.get_available_agents()
 
     return (
-        gr.update(choices=llm_choices, value=llm_manager.get_selected()),  # llm_dropdown
-        gr.update(choices=embed_choices, value=embed_manager.get_selected()),  # chat_embed_dropdown
-        gr.update(choices=agent_choices, value=agent or os.getenv("DEFAULT_AGENT", "simple")),  # agent_dropdown
-        gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),  # chunk_size_default
-        gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),  # chunk_overlap_default
-        gr.update(choices=embed_choices, value=embed_manager.get_selected()),  # embed_dropdown
-        gr.update(choices=llm_choices, value=llm or llm_manager.get_selected()),  # general_llm_dropdown
-        gr.update(choices=embed_choices, value=embed or embed_manager.get_selected()),  # general_embed_dropdown
-        gr.update(choices=agent_choices, value=agent),  # general_agent_dropdown
-        gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),  # chunk_size_default
-        gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),  # chunk_overlap_default
-        status or "",  # settings_status
-        gr.update(value=get_llms_table()),  # llms_table
-        gr.update(choices=llm_choices, value=llm_manager.get_selected()),  # llm_select_dropdown
-        gr.update(value=get_embeds_table()),  # embeds_table
-        gr.update(choices=embed_choices, value=embed_manager.get_selected()),  # embed_select_dropdown
+        gr.update(choices=llm_choices, value=llm or llm_manager.get_selected()),
+        gr.update(choices=embed_choices, value=embed or embed_manager.get_selected()),
+        gr.update(choices=agent_choices, value=agent or os.getenv("DEFAULT_AGENT", "simple")),
+        gr.update(value=chunk_size),
+        gr.update(value=chunk_overlap),
+        status_msg + " Click Save to apply them."
+    )
+
+def update_fields_on_load():
+    llm, embed, agent, chunk_size, chunk_overlap, status = load_settings()
+
+    llm_choices = llm_manager.get_names()
+    embed_choices = embed_manager.get_names()
+    agent_choices = agent_manager.get_available_agents()
+
+    return (
+        gr.update(choices=llm_choices, value=llm_manager.get_selected()),
+        gr.update(choices=embed_choices, value=embed_manager.get_selected()),
+        gr.update(choices=agent_choices, value=agent or os.getenv("DEFAULT_AGENT", "simple")),
+        gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),
+        gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),
+        gr.update(choices=embed_choices, value=embed_manager.get_selected()),
+        gr.update(choices=llm_choices, value=llm or llm_manager.get_selected()),
+        gr.update(choices=embed_choices, value=embed or embed_manager.get_selected()),
+        gr.update(choices=agent_choices, value=agent),
+        gr.update(value=int(chunk_size or int(os.getenv("CHUNK_SIZE", 1000)))),
+        gr.update(value=int(chunk_overlap or int(os.getenv("CHUNK_OVERLAP", 200)))),
+        status or "",
+        gr.update(value=get_llms_table()),
+        gr.update(choices=llm_choices, value=llm_manager.get_selected()),
+        gr.update(value=get_embeds_table()),
+        gr.update(choices=embed_choices, value=embed_manager.get_selected()),
     )
 
 def get_llms_table():
@@ -141,14 +131,13 @@ def get_llms_table():
         rows.append([name, provider, model])
     return rows
 
-
 def add_llm(name, provider, model, base_url, api_key, timeout, max_retries, temperature):
     if not name:
-        return get_llms_table(), None, f"Name is required"
+        return get_llms_table(), None, None, None, "Name is required"
     if not base_url:
-        return get_llms_table(), None, "Base URL is required"
+        return get_llms_table(), None, None, None, "Base URL is required"
     if not api_key:
-        return get_llms_table(), None, "API Key is required"
+        return get_llms_table(), None, None, None, "API Key is required"
     cfg = {
         "provider": provider,
         "model": model,
@@ -160,10 +149,11 @@ def add_llm(name, provider, model, base_url, api_key, timeout, max_retries, temp
     }
     try:
         llm_manager.register(name, cfg)
-        return get_llms_table(), gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected()), gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected()), gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected()), "LLM added"
+        llm_choices = llm_manager.get_names()
+        selected_llm = llm_manager.get_selected()
+        return get_llms_table(), gr.update(choices=llm_choices, value=selected_llm), gr.update(choices=llm_choices, value=selected_llm), gr.update(choices=llm_choices, value=selected_llm), "LLM added"
     except Exception as e:
         return get_llms_table(), None, None, None, f"Error adding LLM: {e}"
-
 
 def get_llm_for_form(name):
     cfg = llm_manager.get_config(name) or {}
@@ -176,17 +166,16 @@ def get_llm_for_form(name):
     temperature = float(cfg.get("temperature", 0.1))
     return name, provider, model, base_url, api_key, timeout, max_retries, temperature
 
-
 def remove_llm(name):
     ok = llm_manager.remove(name)
-    # Prepare updates for dropdowns
-    select_update = gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected())
-    chat_update = gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected())
-    general_update = gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected())
+    llm_choices = llm_manager.get_names()
+    selected_llm = llm_manager.get_selected()
+    select_update = gr.update(choices=llm_choices, value=selected_llm)
+    chat_update = gr.update(choices=llm_choices, value=selected_llm)
+    general_update = gr.update(choices=llm_choices, value=selected_llm)
     if ok:
         return get_llms_table(), "Removed: " + name, select_update, chat_update, general_update
     return get_llms_table(), "Model not found", select_update, chat_update, general_update
-
 
 def test_llm_with_values(name, provider, model, base_url, api_key, timeout, max_retries, temperature):
     cfg = {
@@ -200,10 +189,9 @@ def test_llm_with_values(name, provider, model, base_url, api_key, timeout, max_
     }
     try:
         ok, msg = llm_manager.test_model(cfg, "test")
-        return ("Success") if ok else ("Failed: " + msg)
+        return "✅ Success" if ok else f"❌ Failed: {msg}"
     except Exception as e:
-        return f"Error testing LLM: {e}"
-
+        return f"❌ Error testing LLM: {e}"
 
 def get_embeds_table():
     rows = []
@@ -214,17 +202,12 @@ def get_embeds_table():
         rows.append([name, provider, model])
     return rows
 
-
 def run_test_embed(name, text="testing embedding model", provider=None, model=None, api_key=None, url=None, timeout=None):
-    ok, msg = test_embed(name, text=text, provider=provider, model=model, api_key=api_key, url=url)
-    return ("Success") if ok else ("Failed: " + msg)
+    ok, msg = test_embed(name, text=text, provider=provider, model=model, api_key=api_key, url=url, timeout=timeout)
+    return "✅ Success" if ok else f"❌ Failed: {msg}"
 
 def test_embed(name, text="testing embedding model", provider=None, model=None, api_key=None, url=None, timeout=None):
-    """Run an embedding test using parameters provided by the UI.
-
-    The UI must pass the connection parameters (provider, model, api_key, url,
-    timeout). These are forwarded as `params` to `embed_manager.test_model`.
-    """
+    """Run an embedding test using parameters provided by the UI."""
     params = {}
     if provider is not None:
         params["provider"] = provider
@@ -234,10 +217,9 @@ def test_embed(name, text="testing embedding model", provider=None, model=None, 
         params["api_key"] = api_key
     if url is not None:
         params["url"] = url
-    # Always ensure timeout is a valid int or float, default to 30
     try:
         timeout_val = int(timeout) if timeout not in (None, "", []) else 30
-    except Exception:
+    except (ValueError, TypeError):
         timeout_val = 30
     params["timeout"] = timeout_val
 
@@ -245,9 +227,9 @@ def test_embed(name, text="testing embedding model", provider=None, model=None, 
 
 def add_embedding(name, provider, model, api_key, url=None):
     if not name:
-        return get_embeds_table(), None, "Name is required"
+        return get_embeds_table(), None, None, None, "Name is required"
     if not url:
-        return get_embeds_table(), None, "URL is required"
+        return get_embeds_table(), None, None, None, "URL is required"
     cfg = {
         "provider": provider,
         "model": model,
@@ -255,19 +237,25 @@ def add_embedding(name, provider, model, api_key, url=None):
         "url": url
     }
 
-    test, dim = test_embed(name, text="testing embedding model", provider=provider, model=model, api_key=api_key, url=url)
-    if test == False:
-        return get_embeds_table(), None, f"Test Failed for adding new embedding model: {dim}"
-    dimensions = dim.strip().lstrip("(").rstrip(")").split(",")[0]
-    if  int(dimensions) != 768:
-        return get_embeds_table(), None, f"Failed: Embedding dimension must be 768. Model {model} has {dimensions} Dimensions."
+    ok, result = test_embed(name, text="testing embedding model", provider=provider, model=model, api_key=api_key, url=url)
+    if not ok:
+        return get_embeds_table(), None, None, None, f"Test Failed for adding new embedding model: {result}"
     
     try:
+        dimensions_str = str(result)
+        dimensions = int(''.join(filter(str.isdigit, dimensions_str)))
+        if dimensions != 768:
+            return get_embeds_table(), None, None, None, f"Failed: Embedding dimension must be 768. Model {model} has {dimensions} Dimensions."
+    except (ValueError, IndexError):
+         return get_embeds_table(), None, None, None, f"Could not determine embedding dimensions from test result: {result}"
+
+    try:
         embed_manager.register(name, cfg)
-        return get_embeds_table(), gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected()), gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected()), gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected()), "Embedding added"
+        embed_choices = embed_manager.get_names()
+        selected_embed = embed_manager.get_selected()
+        return get_embeds_table(), gr.update(choices=embed_choices, value=selected_embed), gr.update(choices=embed_choices, value=selected_embed), gr.update(choices=embed_choices, value=selected_embed), "Embedding added"
     except Exception as e:
         return get_embeds_table(), None, None, None, f"Error adding embedding: {e}"
-
 
 def get_embed_for_form(name):
     cfg = embed_manager.get_config(name) or {}
@@ -277,12 +265,13 @@ def get_embed_for_form(name):
     url = cfg.get("url", "")
     return name, provider, model, api_key, url
 
-
 def remove_embedding(name):
     ok = embed_manager.remove(name)
-    select_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
-    upload_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
-    general_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
+    embed_choices = embed_manager.get_names()
+    selected_embed = embed_manager.get_selected()
+    select_update = gr.update(choices=embed_choices, value=selected_embed)
+    upload_update = gr.update(choices=embed_choices, value=selected_embed)
+    general_update = gr.update(choices=embed_choices, value=selected_embed)
     if ok:
         return get_embeds_table(), "Removed: " + name, select_update, upload_update, general_update
     return get_embeds_table(), "Model not found", select_update, upload_update, general_update

@@ -70,6 +70,10 @@ with gr.Blocks(title="Smart Assistant") as gui:
     gr.Markdown("# 🤖 Smart Assistant")
     gr.Markdown("## Advanced document search with AI agents")
     
+    llm_choices = llm_manager.get_names()
+    embed_choices = embed_manager.get_names()
+    agent_choices = agent_manager.get_available_agents()
+
     with gr.Tabs() as tabs:
         # Chat Tab (Main Search)
         with gr.TabItem("💬 Chat Search", elem_id="chat_tab"):
@@ -77,7 +81,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
                 with gr.Column(scale=2):
                     # Agent selection
                     agent_dropdown = gr.Dropdown(
-                        choices=agent_manager.get_available_agents(),
+                        choices=agent_choices,
                         value=agent_default or os.getenv("DEFAULT_AGENT", "simple"),
                         label="🤖 Select AI Agent"
                     )
@@ -98,7 +102,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
                     
                     # LLM Selection Dropdown (replaces checkbox toggle)
                     llm_dropdown = gr.Dropdown(
-                        choices=llm_manager.get_names(),
+                        choices=llm_choices,
                         value=llm_default or llm_manager.get_selected(),
                         label="🔧 Select LLM",
                         elem_classes=["mode-toggle"]
@@ -106,17 +110,13 @@ with gr.Blocks(title="Smart Assistant") as gui:
 
                     # Embedding model selection for chat searches
                     chat_embed_dropdown = gr.Dropdown(
-                        choices=embed_manager.get_names(),
+                        choices=embed_choices,
                         value=embed_default or embed_manager.get_selected(),
                         label="🧩 Select Embedding Model"
                     )
 
-                    def change_llm(name: str):
-                        # Set active LLM and return status message
-                        return set_active_llm(name)
-
                     llm_dropdown.change(
-                        fn=change_llm,
+                        fn=set_active_llm,
                         inputs=llm_dropdown,
                         outputs=[],
                     )
@@ -157,8 +157,8 @@ with gr.Blocks(title="Smart Assistant") as gui:
             )
             
             clear_btn.click(
-                lambda: [],
-                outputs=chatbot
+                lambda: ([], None, ""),
+                outputs=[chatbot, temp_doc_input, format_prompt_input]
             )
         
         # Upload Tab
@@ -172,7 +172,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
                         label="📄 Select Documents (PDF, TXT, DOCX, XLSX)"
                     )
                     embed_dropdown = gr.Dropdown(
-                        choices=embed_manager.get_names(),
+                        choices=embed_choices,
                         value=embed_default or embed_manager.get_selected(),
                         label="🧩 Select Embedding Model"
                     )
@@ -267,9 +267,9 @@ with gr.Blocks(title="Smart Assistant") as gui:
                     with gr.Row():
                         with gr.Column(scale=2):
                             gr.Markdown("### ⚙️ General Defaults")
-                            general_llm_dropdown = gr.Dropdown(choices=llm_manager.get_names(), value=llm_default, label="Default LLM Model")
-                            general_embed_dropdown = gr.Dropdown(choices=embed_manager.get_names(), value=embed_default, label="Default Embedding Model")
-                            general_agent_dropdown = gr.Dropdown(choices=agent_manager.get_available_agents(), value=agent_default, label="Default Agent")
+                            general_llm_dropdown = gr.Dropdown(choices=llm_choices, value=llm_default, label="Default LLM Model")
+                            general_embed_dropdown = gr.Dropdown(choices=embed_choices, value=embed_default, label="Default Embedding Model")
+                            general_agent_dropdown = gr.Dropdown(choices=agent_choices, value=agent_default, label="Default Agent")
                             chunk_size_default = gr.Slider(minimum=200, maximum=5000, step=50, value=int(chunk_size_default_val or int(os.getenv("CHUNK_SIZE", 1000))), label="Default Chunk Size")
                             chunk_overlap_default = gr.Slider(minimum=0, maximum=2000, step=10, value=int(chunk_overlap_default_val or int(os.getenv("CHUNK_OVERLAP", 200))), label="Default Chunk Overlap")
                             save_defaults_btn = gr.Button("💾 Save Defaults", variant="primary")
@@ -287,7 +287,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
                         with gr.Column(scale=2):
                             gr.Markdown("### 🔧 Registered LLMs")
                             llms_table = gr.Dataframe(headers=["Name", "Provider", "Model"], value=get_llms_table(), interactive=False)
-                            llm_select_dropdown = gr.Dropdown(choices=llm_manager.get_names(), value=llm_manager.get_selected(), label="Select LLM")
+                            llm_select_dropdown = gr.Dropdown(choices=llm_choices, value=llm_manager.get_selected(), label="Select LLM")
                             llm_action_status = gr.Textbox(lines=3, interactive=False, label="Status")
                         with gr.Column(scale=3):
                             gr.Markdown("### ➕ Add / Edit LLM")
@@ -304,17 +304,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
                                 test_current_llm_btn = gr.Button("▶️ Test Current")
                                 delete_llm_btn = gr.Button("🗑️ Delete Selected", variant="stop")
 
-                    def select_llm(row_or_name):
-                        if not row_or_name:
-                            return "", "openai", "", "", "", 30, 2, 0.1, ""
-                        if isinstance(row_or_name, list):
-                            name = row_or_name[0]
-                        else:
-                            name = row_or_name
-                        form = get_llm_for_form(name)
-                        return (*form, name)
-
-                    llm_select_dropdown.change(fn=select_llm, inputs=llm_select_dropdown, outputs=[new_llm_name, new_llm_provider, new_llm_model, new_llm_base, new_llm_api_key, new_llm_timeout, new_llm_retries, new_llm_temperature])
+                    llm_select_dropdown.change(fn=get_llm_for_form, inputs=llm_select_dropdown, outputs=[new_llm_name, new_llm_provider, new_llm_model, new_llm_base, new_llm_api_key, new_llm_timeout, new_llm_retries, new_llm_temperature])
 
                     add_llm_btn.click(fn=add_llm, inputs=[new_llm_name, new_llm_provider, new_llm_model, new_llm_base, new_llm_api_key, new_llm_timeout, new_llm_retries, new_llm_temperature], outputs=[llms_table, llm_dropdown, general_llm_dropdown, llm_select_dropdown, llm_action_status])
                     test_current_llm_btn.click(fn=test_llm_with_values, inputs=[new_llm_name, new_llm_provider, new_llm_model, new_llm_base, new_llm_api_key, new_llm_timeout, new_llm_retries, new_llm_temperature], outputs=[llm_action_status])
@@ -326,7 +316,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
                         with gr.Column(scale=2):
                             gr.Markdown("### 🧩 Registered Embedding Models")
                             embeds_table = gr.Dataframe(headers=["Name", "Provider", "Model"], value=get_embeds_table(), interactive=False)
-                            embed_select_dropdown = gr.Dropdown(choices=embed_manager.get_names(), value=embed_manager.get_selected(), label="Select Embedding")
+                            embed_select_dropdown = gr.Dropdown(choices=embed_choices, value=embed_manager.get_selected(), label="Select Embedding")
                             embed_action_status = gr.Textbox(lines=3, interactive=False, label="Status")
                         with gr.Column(scale=3):
                             gr.Markdown("### ➕ Add / Edit Embedding Model")
@@ -340,17 +330,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
                                 test_current_embed_btn = gr.Button("▶️ Test Current")
                                 delete_embed_btn = gr.Button("🗑️ Delete Selected", variant="stop")
 
-                    def select_embed(row_or_name):
-                        if not row_or_name:
-                            return "", "", "", "", ""
-                        if isinstance(row_or_name, list):
-                            name = row_or_name[0]
-                        else:
-                            name = row_or_name
-                        name, provider, model, api_key, url = get_embed_for_form(name)
-                        return name, provider, model, api_key, url, name
-
-                    embed_select_dropdown.change(fn=select_embed, inputs=embed_select_dropdown, outputs=[new_embed_name, new_embed_provider, new_embed_model, new_embed_api_key, new_embed_url])
+                    embed_select_dropdown.change(fn=get_embed_for_form, inputs=embed_select_dropdown, outputs=[new_embed_name, new_embed_provider, new_embed_model, new_embed_api_key, new_embed_url])
 
                     add_embed_btn.click(fn=add_embedding, inputs=[new_embed_name, new_embed_provider, new_embed_model, new_embed_api_key, new_embed_url], outputs=[embeds_table, embed_dropdown, general_embed_dropdown, embed_select_dropdown, embed_action_status])
                     test_current_embed_btn.click(fn=run_test_embed, inputs=[new_embed_name, gr.Textbox(value="test", visible=False), new_embed_provider, new_embed_model, new_embed_api_key, new_embed_url, gr.Textbox(value="", visible=False)], outputs=[embed_action_status])

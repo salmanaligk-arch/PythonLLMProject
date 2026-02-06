@@ -2,7 +2,7 @@ import os
 import warnings
 from dotenv import load_dotenv
 from api.routes import app
-from frontend.ui import gui
+from frontend.ui import create_interface
 import os
 import threading
 import uvicorn
@@ -27,6 +27,7 @@ if __name__=="__main__":
         # Always use soft theme
         selected_theme = gr.themes.Soft()
 
+        gui = create_interface()
         gui.launch(
             server_name=os.getenv("UI_HOST", "0.0.0.0"),
             server_port=int(os.getenv("UI_PORT", 7860)),
