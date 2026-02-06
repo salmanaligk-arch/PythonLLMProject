@@ -6301,3 +6301,14 @@ LiteLLM completion() model= Qwen/Qwen2.5-72B-Instruct; provider = huggingface
 2026-02-06 10:04:56,094 - INFO - Writer tool called with format: table
 2026-02-06 10:04:56,094 - INFO - Calling active LLM: huggingface
 2026-02-06 10:05:00,413 - INFO - Writing completed using AI engine
+2026-02-06 10:22:41,916 - INFO - Removed LLM: ollama-llama3.2:1b
+2026-02-06 10:23:23,796 - INFO - Registered LLM: ollama-llama3.2:1b
+2026-02-06 10:23:39,598 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-02-06 10:23:39,599 - INFO - Selected embedding model: ollama
+2026-02-06 10:23:39,713 - INFO - Selected active LLM: ollama-llama3.2:1b
+2026-02-06 10:23:39,715 - INFO - Initializing active client for LLM 'ollama-llama3.2:1b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-06 10:23:39,715 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=llama3.2:1b
+2026-02-06 10:23:51,597 - INFO - Removed LLM: ollama-llama3.2:1b
+2026-02-06 10:23:51,650 - INFO - Selected active LLM: huggingface
+2026-02-06 10:23:51,655 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-06 10:23:51,656 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct

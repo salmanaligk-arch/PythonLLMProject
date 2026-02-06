@@ -1,5 +1,5 @@
 {
-  "default_llm": "huggingface",
+  "default_llm": "ollama-llama3.2:1b",
   "default_embedding": "ollama",
   "default_agent": "simple",
   "chunk_size": 1000,
