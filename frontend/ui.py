@@ -25,6 +25,9 @@ from frontend.settings_helpers import (
     remove_embedding,
 )
 
+# Path to RAG pipeline image (project root)
+RAG_IMAGE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'RAG Pipeline.png'))
+
 # ============================================================================
 # CACHING UTILITIES
 # ============================================================================
@@ -363,7 +366,7 @@ with gr.Blocks(title="Smart Assistant") as gui:
     
     # Instructions
     with gr.Accordion("📚 How to Use", open=False):
-           gr.Markdown("""
+        gr.Markdown("""
            ### About Smart Assistant
             This app is a Retrieval-Augmented Generation (RAG) application that enables users to upload, manage, and interact with documents through an AI-powered interface. Users can upload files (PDF, TXT, DOCX, XLSX), which are processed, chunked, and embedded into a vector store for semantic search and retrieval. The app allows browsing, selecting, and deleting documents, and leverages language models to answer questions or generate responses based on the uploaded content. By combining document retrieval with generative AI, the app provides intelligent, context-aware responses, making it ideal for knowledge management, document Q&A, and interactive information discovery.
 
@@ -385,8 +388,10 @@ with gr.Blocks(title="Smart Assistant") as gui:
            - If LLM requests time out, increase the timeout in Settings → LLM or check the base URL and API key.
            - Check the Upload Status box for indexing errors.
 
-           If you'd like this section shortened or expanded, tell me what to include.
-           """)
+            If you'd like this section shortened or expanded, tell me what to include.
+            """)
+            # Insert RAG pipeline image (do not modify the Markdown above)
+        gr.Image(value=RAG_IMAGE_PATH, label="RAG Pipeline", interactive=False)
     gui.load(
         fn=update_fields_on_load,
         inputs=[],

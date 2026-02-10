@@ -6323,3 +6323,68 @@ LiteLLM completion() model= Qwen/Qwen2.5-72B-Instruct; provider = huggingface
 2026-02-10 09:22:18,588 - INFO - \u2713 LangChain agent loaded
 2026-02-10 09:22:34,872 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
 2026-02-10 09:22:35,971 - INFO - \u2713 CrewAI agent loaded
+2026-02-10 09:23:53,640 - INFO - Selected active LLM: huggingface
+2026-02-10 09:23:53,641 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-10 09:23:53,642 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-10 09:24:39,001 - INFO - Selected active LLM: huggingface
+2026-02-10 09:24:39,002 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-10 09:24:39,002 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-10 09:24:51,257 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-02-10 09:24:51,259 - INFO - Selected embedding model: ollama
+2026-02-10 09:24:51,383 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-02-10 09:24:51,384 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-10 09:24:51,384 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-02-10 09:25:20,285 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-02-10 09:25:20,292 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-10 09:25:20,293 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-02-10 09:25:32,671 - INFO - Selected active LLM: ollama-deepseek-r1:8b
+2026-02-10 09:25:32,678 - INFO - Initializing active client for LLM 'ollama-deepseek-r1:8b': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-10 09:25:32,678 - INFO - AIEngine creating OpenAI client: base_url=http://localhost:11434/v1, model=deepseek-r1:8b
+2026-02-10 09:40:05,481 - INFO - Selected active LLM: huggingface
+2026-02-10 09:40:05,483 - INFO - Selected embedding model: ollama
+2026-02-10 09:40:06,845 - INFO - Selected active LLM: huggingface
+2026-02-10 09:40:06,846 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-10 09:40:06,846 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-10 09:48:56,343 - INFO - Selected active LLM: huggingface
+2026-02-10 09:48:56,344 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-10 09:48:56,344 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-10 09:49:13,693 - INFO - Selected embedding model: ollama
+2026-02-10 09:49:13,695 - INFO - Research tool called with query: how many candidates are accommodated
+2026-02-10 09:49:14,628 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 09:49:14,629 - INFO - Calling active LLM: huggingface
+2026-02-10 09:49:24,933 - INFO - Research completed using AI engine
+2026-02-10 10:05:20,661 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-10 10:05:20,667 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-10 10:05:20,667 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-10 10:05:21,011 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-10 10:05:21,521 - INFO - Loading faiss with AVX2 support.
+2026-02-10 10:05:21,547 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-10 10:05:25,046 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-10 10:05:25,050 - INFO - \u2713 Simple agent loaded
+2026-02-10 10:05:39,804 - INFO - \u2713 LangChain agent loaded
+2026-02-10 10:06:02,540 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-10 10:06:04,241 - INFO - \u2713 CrewAI agent loaded
+2026-02-10 10:11:12,419 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-10 10:11:12,423 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-10 10:11:12,423 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-10 10:11:12,768 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-10 10:11:13,023 - INFO - Loading faiss with AVX2 support.
+2026-02-10 10:11:13,042 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-10 10:11:14,988 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-10 10:11:14,992 - INFO - \u2713 Simple agent loaded
+2026-02-10 10:11:30,346 - INFO - \u2713 LangChain agent loaded
+2026-02-10 10:11:54,970 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-10 10:11:56,451 - INFO - \u2713 CrewAI agent loaded
+2026-02-10 10:32:55,565 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-10 10:32:55,567 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-10 10:32:55,567 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-10 10:32:55,751 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-10 10:32:55,908 - INFO - Loading faiss with AVX2 support.
+2026-02-10 10:32:55,919 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-10 10:32:57,067 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-10 10:32:57,069 - INFO - \u2713 Simple agent loaded
+2026-02-10 10:33:05,326 - INFO - \u2713 LangChain agent loaded
+2026-02-10 10:33:22,693 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-10 10:33:23,583 - INFO - \u2713 CrewAI agent loaded
+2026-02-10 10:35:52,785 - INFO - Registered LLM: ollama-deepseek-r1:1.5b
+2026-02-10 10:36:00,103 - INFO - Removed LLM: ollama-deepseek-r1:1.5b
