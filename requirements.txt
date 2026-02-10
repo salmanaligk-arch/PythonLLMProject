@@ -48,3 +48,4 @@ sqlite3
 requests==2.32.5
 beautifulsoup4==4.13.5
 ipython==8.18.1
+diskcache

@@ -19,5 +19,5 @@
       "temperature": 0.1
     }
   },
-  "selected": "huggingface"
+  "selected": "ollama-deepseek-r1:8b"
 }

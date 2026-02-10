@@ -3,6 +3,7 @@ File Operations for the UI
 Handles document upload, file management, and file browser functionality
 """
 
+from functools import lru_cache
 import gradio as gr
 from services.vector_store import vector_store
 from services.logger import logger
@@ -10,6 +11,8 @@ from services.embed_manager import embed_manager
 import os
 import datetime
 import io
+
+CACHE_MAXSIZE = int(os.getenv("CACHE_MAXSIZE", 1))
 
 def _read_uploaded_file(file):
     """
@@ -99,10 +102,14 @@ def upload_documents(files, embed_model=None, chunk_size: int = 1000, overlap: i
         results.append(save_error)
         logger.critical(f"{save_error} Error: {e}", exc_info=True)
     
+    # Clear file list cache after upload
+    get_files_list.cache_clear()
+    
     return "\n".join(results)
 
+@lru_cache(maxsize=CACHE_MAXSIZE)
 def get_files_list():
-    """Get list of all uploaded files for the file browser"""
+    """Get list of all uploaded files for the file browser (cached)"""
     files = vector_store.get_all_files()
     if not files:
         return []
@@ -136,6 +143,7 @@ def get_files_list():
 
 def refresh_files():
     """Refresh the files list in the UI"""
+    get_files_list.cache_clear()
     return get_files_list()
 
 def select_file(evt: gr.SelectData):
@@ -181,9 +189,11 @@ def delete_selected_file(filename):
         if vector_store.delete_file(filename):
             vector_store.save_index()
             logger.info(f"Successfully deleted file: {filename} and saved index.")
+            get_files_list.cache_clear()
             return f"✅ Successfully deleted: {filename}", get_files_list(), "File deleted. Select another file to view."
         else:
             logger.warning(f"File '{filename}' not found for deletion. It may have been already deleted.")
+            get_files_list.cache_clear()
             return f"❌ File not found: '{filename}'. It may have been deleted already. Refreshing list.", get_files_list(), ""
     except Exception as e:
         logger.error(f"Error during file deletion for '{filename}': {e}", exc_info=True)

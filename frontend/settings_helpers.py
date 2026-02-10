@@ -1,10 +1,13 @@
 import os
 import json
+from functools import lru_cache
 import gradio as gr
 from services.llm_manager import llm_manager
 from services.embed_manager import embed_manager
 from services.rag_agents import agent_manager
 from services.chatbot import set_active_llm
+
+CACHE_MAXSIZE = int(os.getenv("CACHE_MAXSIZE", 1))
 
 def _load_settings_from_file(filepath: str):
     """
@@ -60,6 +63,7 @@ def save_general_settings(llm_name, embed_name, agent_name, chunk_size, chunk_ov
         except Exception as e:
             status_msgs.append(f"Failed to write settings file: {e}")
 
+        load_settings.cache_clear()
         llm_update = gr.update(choices=llm_manager.get_names(), value=llm_manager.get_selected())
         embed_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
         chat_embed_update = gr.update(choices=embed_manager.get_names(), value=embed_manager.get_selected())
@@ -70,8 +74,9 @@ def save_general_settings(llm_name, embed_name, agent_name, chunk_size, chunk_ov
     except Exception as e:
         return None, None, None, None, None, None, f"Error saving settings: {e}"
 
+@lru_cache(maxsize=CACHE_MAXSIZE)
 def load_settings():
-    """Read `data/settings.json` and return flat UI values without writing."""
+    """Read `data/settings.json` and return flat UI values without writing (cached)."""
     settings_path = os.path.join(os.getcwd(), "data", "settings.json")
     return _load_settings_from_file(settings_path)
 
@@ -122,7 +127,9 @@ def update_fields_on_load():
         gr.update(choices=embed_choices, value=embed_manager.get_selected()),
     )
 
+@lru_cache(maxsize=CACHE_MAXSIZE)
 def get_llms_table():
+    """Get LLMs table (cached)."""
     rows = []
     for name in llm_manager.get_names():
         cfg = llm_manager.get_config(name) or {}
@@ -149,6 +156,7 @@ def add_llm(name, provider, model, base_url, api_key, timeout, max_retries, temp
     }
     try:
         llm_manager.register(name, cfg)
+        get_llms_table.cache_clear()
         llm_choices = llm_manager.get_names()
         selected_llm = llm_manager.get_selected()
         return get_llms_table(), gr.update(choices=llm_choices, value=selected_llm), gr.update(choices=llm_choices, value=selected_llm), gr.update(choices=llm_choices, value=selected_llm), "LLM added"
@@ -168,6 +176,7 @@ def get_llm_for_form(name):
 
 def remove_llm(name):
     ok = llm_manager.remove(name)
+    get_llms_table.cache_clear()
     llm_choices = llm_manager.get_names()
     selected_llm = llm_manager.get_selected()
     select_update = gr.update(choices=llm_choices, value=selected_llm)
@@ -193,7 +202,9 @@ def test_llm_with_values(name, provider, model, base_url, api_key, timeout, max_
     except Exception as e:
         return f"❌ Error testing LLM: {e}"
 
+@lru_cache(maxsize=CACHE_MAXSIZE)
 def get_embeds_table():
+    """Get embeds table (cached)."""
     rows = []
     for name in embed_manager.get_names():
         cfg = embed_manager.get_config(name) or {}
@@ -251,6 +262,7 @@ def add_embedding(name, provider, model, api_key, url=None):
 
     try:
         embed_manager.register(name, cfg)
+        get_embeds_table.cache_clear()
         embed_choices = embed_manager.get_names()
         selected_embed = embed_manager.get_selected()
         return get_embeds_table(), gr.update(choices=embed_choices, value=selected_embed), gr.update(choices=embed_choices, value=selected_embed), gr.update(choices=embed_choices, value=selected_embed), "Embedding added"
@@ -267,6 +279,7 @@ def get_embed_for_form(name):
 
 def remove_embedding(name):
     ok = embed_manager.remove(name)
+    get_embeds_table.cache_clear()
     embed_choices = embed_manager.get_names()
     selected_embed = embed_manager.get_selected()
     select_update = gr.update(choices=embed_choices, value=selected_embed)

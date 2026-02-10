@@ -1,5 +1,6 @@
 import gradio as gr
 import os
+from functools import lru_cache
 from services.chatbot import set_active_llm
 from services.llm_manager import llm_manager
 from services.file_handlers.temp_doc_handler import process_temp_document
@@ -23,6 +24,29 @@ from frontend.settings_helpers import (
     get_embed_for_form,
     remove_embedding,
 )
+
+# ============================================================================
+# CACHING UTILITIES
+# ============================================================================
+
+CACHE_MAXSIZE = int(os.getenv("CACHE_MAXSIZE", 1))
+
+@lru_cache(maxsize=CACHE_MAXSIZE)
+def get_llm_choices():
+    """Get LLM choices with caching."""
+    return llm_manager.get_names()
+
+
+@lru_cache(maxsize=CACHE_MAXSIZE)
+def get_embed_choices():
+    """Get embedding choices with caching."""
+    return embed_manager.get_names()
+
+
+@lru_cache(maxsize=CACHE_MAXSIZE)
+def get_agent_choices():
+    """Get agent choices with caching."""
+    return agent_manager.get_available_agents()
 
 # Load current settings (prefer `settings.json`, fallback to `default_settings.json`)
 # Returns: llm, embed, agent, chunk_size, chunk_overlap, status_msg
@@ -70,9 +94,10 @@ with gr.Blocks(title="Smart Assistant") as gui:
     gr.Markdown("# 🤖 Smart Assistant")
     gr.Markdown("## Advanced document search with AI agents")
     
-    llm_choices = llm_manager.get_names()
-    embed_choices = embed_manager.get_names()
-    agent_choices = agent_manager.get_available_agents()
+    # Use cached choices for better performance
+    llm_choices = get_llm_choices()
+    embed_choices = get_embed_choices()
+    agent_choices = get_agent_choices()
 
     with gr.Tabs() as tabs:
         # Chat Tab (Main Search)
