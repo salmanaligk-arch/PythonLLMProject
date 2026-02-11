@@ -48,6 +48,8 @@ class FileInfo(BaseModel):
     filename: str
     size: Optional[int] = None
     type: Optional[str] = None
+    word_count: Optional[int] = None
+    upload_timestamp: Optional[str] = None
 
 class UploadResponse(BaseModel):
     message: List[str]
@@ -64,3 +66,21 @@ class RAGResponse(BaseModel):
 class ErrorResponse(BaseModel):
     error: str
     detail: Optional[str] = None
+
+class MessageResponse(BaseModel):
+    message: str
+
+class TestResponse(BaseModel):
+    success: bool
+    message: str
+
+class LLMListResponse(BaseModel):
+    llms: List[str]
+    selected: str
+
+class EmbedListResponse(BaseModel):
+    embeddings: List[str]
+    selected: str
+
+class AgentListResponse(BaseModel):
+    agents: List[str]

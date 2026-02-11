@@ -1,9 +1,9 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from typing import List
 from models.schema import (
-    ChatRequest, RAGRequest, Settings, LLMConfig, EmbedConfig,
+    ChatRequest, RAGRequest, Settings, LLMListResponse, EmbedListResponse, AgentListResponse, TestResponse,
     AddLLMRequest, AddEmbedRequest, TestModelRequest, FileInfo,
-    UploadResponse, ChatResponse, RAGResponse, ErrorResponse
+    UploadResponse, ChatResponse, RAGResponse, MessageResponse
 )
 from services.chatbot import call_ai
 from services.rag_agents import agent_manager
@@ -102,7 +102,7 @@ def get_settings():
         logger.error(f"Failed to get settings: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to get settings: {str(e)}")
 
-@app.post("/settings")
+@app.post("/settings", response_model=MessageResponse)
 def update_settings(settings: Settings):
     try:
         # Use the existing save function
@@ -119,7 +119,7 @@ def update_settings(settings: Settings):
         raise HTTPException(status_code=500, detail=f"Failed to update settings: {str(e)}")
 
 # LLM Management endpoints
-@app.get("/llms")
+@app.get("/llms", response_model=LLMListResponse)
 def list_llms():
     try:
         return {"llms": llm_manager.get_names(), "selected": llm_manager.get_selected()}
@@ -127,7 +127,7 @@ def list_llms():
         logger.error(f"Failed to list LLMs: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to list LLMs: {str(e)}")
 
-@app.post("/llms")
+@app.post("/llms", response_model=MessageResponse)
 def add_llm(request: AddLLMRequest):
     try:
         llm_manager.add_config(request.name, request.config.dict())
@@ -136,7 +136,7 @@ def add_llm(request: AddLLMRequest):
         logger.error(f"Failed to add LLM: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to add LLM: {str(e)}")
 
-@app.delete("/llms/{name}")
+@app.delete("/llms/{name}", response_model=MessageResponse)
 def remove_llm(name: str):
     try:
         llm_manager.remove_config(name)
@@ -145,7 +145,7 @@ def remove_llm(name: str):
         logger.error(f"Failed to remove LLM: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to remove LLM: {str(e)}")
 
-@app.post("/llms/test")
+@app.post("/llms/test", response_model=TestResponse)
 def test_llm(request: TestModelRequest):
     try:
         config = llm_manager.get_config(request.name)
@@ -158,7 +158,7 @@ def test_llm(request: TestModelRequest):
         raise HTTPException(status_code=500, detail=f"Failed to test LLM: {str(e)}")
 
 # Embedding Management endpoints
-@app.get("/embeddings")
+@app.get("/embeddings", response_model=EmbedListResponse)
 def list_embeddings():
     try:
         return {"embeddings": embed_manager.get_names(), "selected": embed_manager.get_selected()}
@@ -166,7 +166,7 @@ def list_embeddings():
         logger.error(f"Failed to list embeddings: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to list embeddings: {str(e)}")
 
-@app.post("/embeddings")
+@app.post("/embeddings", response_model=MessageResponse)
 def add_embedding(request: AddEmbedRequest):
     try:
         embed_manager.add_config(request.name, request.config.dict())
@@ -175,7 +175,7 @@ def add_embedding(request: AddEmbedRequest):
         logger.error(f"Failed to add embedding: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to add embedding: {str(e)}")
 
-@app.delete("/embeddings/{name}")
+@app.delete("/embeddings/{name}", response_model=MessageResponse)
 def remove_embedding(name: str):
     try:
         embed_manager.remove_config(name)
@@ -184,7 +184,7 @@ def remove_embedding(name: str):
         logger.error(f"Failed to remove embedding: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to remove embedding: {str(e)}")
 
-@app.post("/embeddings/test")
+@app.post("/embeddings/test", response_model=TestResponse)
 def test_embedding(request: TestModelRequest):
     try:
         config = embed_manager.get_config(request.name)
@@ -197,7 +197,7 @@ def test_embedding(request: TestModelRequest):
         raise HTTPException(status_code=500, detail=f"Failed to test embedding: {str(e)}")
 
 # Agent endpoints
-@app.get("/agents")
+@app.get("/agents", response_model=AgentListResponse)
 def list_agents():
     try:
         return {"agents": agent_manager.get_available_agents()}
@@ -209,15 +209,21 @@ def list_agents():
 @app.get("/files", response_model=List[FileInfo])
 def list_files():
     try:
-        files = get_files_list()
-        # files is a list of lists, first element is filename
-        filenames = [f[0] for f in files if f]
-        return [FileInfo(filename=f) for f in filenames]
+        files = vector_store.get_all_files()
+        return [
+            FileInfo(
+                filename=f['filename'],
+                size=f.get('file_size'),
+                type=f.get('file_type'),
+                word_count=f.get('total_word_count'),
+                upload_timestamp=f.get('upload_timestamp')
+            ) for f in files
+        ]
     except Exception as e:
         logger.error(f"Failed to list files: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to list files: {str(e)}")
 
-@app.delete("/files/{filename}")
+@app.delete("/files/{filename}", response_model=MessageResponse)
 def delete_file(filename: str):
     try:
         result = delete_selected_file(filename)
