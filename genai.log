@@ -6388,3 +6388,177 @@ LiteLLM completion() model= Qwen/Qwen2.5-72B-Instruct; provider = huggingface
 2026-02-10 10:33:23,583 - INFO - \u2713 CrewAI agent loaded
 2026-02-10 10:35:52,785 - INFO - Registered LLM: ollama-deepseek-r1:1.5b
 2026-02-10 10:36:00,103 - INFO - Removed LLM: ollama-deepseek-r1:1.5b
+2026-02-10 11:09:00,962 - INFO - Loaded LLM configs from E:\PythonLLMProject\data\llm_models.json
+2026-02-10 11:09:00,966 - INFO - Initializing active client for LLM 'huggingface': cfg_keys=['provider', 'model', 'base_url', 'api_key', 'timeout', 'max_retries', 'temperature']
+2026-02-10 11:09:00,966 - INFO - AIEngine creating OpenAI client: base_url=https://router.huggingface.co/v1, model=Qwen/Qwen2.5-72B-Instruct
+2026-02-10 11:09:01,166 - INFO - AIEngine initialized - Active LLM: huggingface
+2026-02-10 11:09:01,991 - INFO - Loading faiss with AVX2 support.
+2026-02-10 11:09:02,221 - INFO - Successfully loaded faiss with AVX2 support.
+2026-02-10 11:09:05,297 - INFO - Loaded embed configs from E:\PythonLLMProject\data\embed_models.json
+2026-02-10 11:09:05,306 - INFO - \u2713 Simple agent loaded
+2026-02-10 11:09:42,909 - INFO - \u2713 LangChain agent loaded
+2026-02-10 11:10:05,912 - INFO - Using config path: C:\Users\Hp\.config\crewai\settings.json
+2026-02-10 11:10:07,559 - INFO - \u2713 CrewAI agent loaded
+2026-02-10 11:16:03,660 - INFO - UI selected file: 'AWKUM letter.pdf' at index 0
+2026-02-10 11:20:28,885 - INFO - UI selected file: 'GPGC Mardan.pdf' at index 3
+2026-02-10 11:45:43,926 - INFO - Selected embedding model: ollama
+2026-02-10 11:45:45,339 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:45,339 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:45,339 - INFO - Adding document to FAISS index
+2026-02-10 11:45:45,339 - INFO - Document added. Total documents in index: 9
+2026-02-10 11:45:45,339 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 0, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 53, 'content_length': 1000, 'word_count': 53, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:45.339704'}
+2026-02-10 11:45:45,476 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:45,476 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:45,476 - INFO - Adding document to FAISS index
+2026-02-10 11:45:45,477 - INFO - Document added. Total documents in index: 10
+2026-02-10 11:45:45,477 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 1, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 51, 'content_length': 1000, 'word_count': 51, 'sentence_count': 2, 'added_timestamp': '2026-02-10T11:45:45.477137'}
+2026-02-10 11:45:45,593 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:45,593 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:45,593 - INFO - Adding document to FAISS index
+2026-02-10 11:45:45,593 - INFO - Document added. Total documents in index: 11
+2026-02-10 11:45:45,593 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 2, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 35, 'content_length': 1000, 'word_count': 35, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:45.593585'}
+2026-02-10 11:45:45,667 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:45,667 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:45,667 - INFO - Adding document to FAISS index
+2026-02-10 11:45:45,667 - INFO - Document added. Total documents in index: 12
+2026-02-10 11:45:45,668 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 3, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 33, 'content_length': 1000, 'word_count': 33, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:45.667966'}
+2026-02-10 11:45:45,745 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:45,745 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:45,745 - INFO - Adding document to FAISS index
+2026-02-10 11:45:45,745 - INFO - Document added. Total documents in index: 13
+2026-02-10 11:45:45,746 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 4, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 37, 'content_length': 1000, 'word_count': 37, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:45.746024'}
+2026-02-10 11:45:45,850 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:45,850 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:45,851 - INFO - Adding document to FAISS index
+2026-02-10 11:45:45,851 - INFO - Document added. Total documents in index: 14
+2026-02-10 11:45:45,851 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 5, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 38, 'content_length': 1000, 'word_count': 38, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:45.851260'}
+2026-02-10 11:45:45,962 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:45,962 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:45,963 - INFO - Adding document to FAISS index
+2026-02-10 11:45:45,963 - INFO - Document added. Total documents in index: 15
+2026-02-10 11:45:45,963 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 6, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 35, 'content_length': 1000, 'word_count': 35, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:45.963214'}
+2026-02-10 11:45:46,046 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:46,046 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:46,046 - INFO - Adding document to FAISS index
+2026-02-10 11:45:46,046 - INFO - Document added. Total documents in index: 16
+2026-02-10 11:45:46,047 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 7, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 31, 'content_length': 1000, 'word_count': 31, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:46.046900'}
+2026-02-10 11:45:46,120 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:46,120 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:46,120 - INFO - Adding document to FAISS index
+2026-02-10 11:45:46,121 - INFO - Document added. Total documents in index: 17
+2026-02-10 11:45:46,121 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 8, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 41, 'content_length': 1000, 'word_count': 41, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:46.121217'}
+2026-02-10 11:45:46,227 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:46,227 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:46,227 - INFO - Adding document to FAISS index
+2026-02-10 11:45:46,227 - INFO - Document added. Total documents in index: 18
+2026-02-10 11:45:46,227 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 9, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 36, 'content_length': 1000, 'word_count': 36, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:46.227946'}
+2026-02-10 11:45:46,337 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:46,338 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:46,338 - INFO - Adding document to FAISS index
+2026-02-10 11:45:46,338 - INFO - Document added. Total documents in index: 19
+2026-02-10 11:45:46,338 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 10, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 51, 'content_length': 1000, 'word_count': 51, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:46.338631'}
+2026-02-10 11:45:46,454 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:46,454 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:46,454 - INFO - Adding document to FAISS index
+2026-02-10 11:45:46,454 - INFO - Document added. Total documents in index: 20
+2026-02-10 11:45:46,454 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 11, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 66, 'content_length': 1000, 'word_count': 66, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:46.454622'}
+2026-02-10 11:45:46,583 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:46,584 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:46,584 - INFO - Adding document to FAISS index
+2026-02-10 11:45:46,584 - INFO - Document added. Total documents in index: 21
+2026-02-10 11:45:46,584 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 12, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 55, 'content_length': 1000, 'word_count': 55, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:46.584520'}
+2026-02-10 11:45:46,702 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:46,702 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:46,703 - INFO - Adding document to FAISS index
+2026-02-10 11:45:46,703 - INFO - Document added. Total documents in index: 22
+2026-02-10 11:45:46,703 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 13, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 50, 'content_length': 1000, 'word_count': 50, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:46.703429'}
+2026-02-10 11:45:46,802 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:46,802 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:46,802 - INFO - Adding document to FAISS index
+2026-02-10 11:45:46,803 - INFO - Document added. Total documents in index: 23
+2026-02-10 11:45:46,803 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 14, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 61, 'content_length': 1000, 'word_count': 61, 'sentence_count': 3, 'added_timestamp': '2026-02-10T11:45:46.803252'}
+2026-02-10 11:45:46,927 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:46,927 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:46,928 - INFO - Adding document to FAISS index
+2026-02-10 11:45:46,928 - INFO - Document added. Total documents in index: 24
+2026-02-10 11:45:46,928 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 15, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 55, 'content_length': 1000, 'word_count': 55, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:46.928366'}
+2026-02-10 11:45:47,073 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:47,073 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:47,073 - INFO - Adding document to FAISS index
+2026-02-10 11:45:47,073 - INFO - Document added. Total documents in index: 25
+2026-02-10 11:45:47,073 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 16, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 71, 'content_length': 1000, 'word_count': 71, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:47.073479'}
+2026-02-10 11:45:47,194 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:47,194 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:47,194 - INFO - Adding document to FAISS index
+2026-02-10 11:45:47,195 - INFO - Document added. Total documents in index: 26
+2026-02-10 11:45:47,195 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 17, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 62, 'content_length': 1000, 'word_count': 62, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:47.195274'}
+2026-02-10 11:45:47,311 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:47,311 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:47,311 - INFO - Adding document to FAISS index
+2026-02-10 11:45:47,311 - INFO - Document added. Total documents in index: 27
+2026-02-10 11:45:47,311 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 18, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 54, 'content_length': 1000, 'word_count': 54, 'sentence_count': 2, 'added_timestamp': '2026-02-10T11:45:47.311604'}
+2026-02-10 11:45:47,417 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:47,417 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:47,417 - INFO - Adding document to FAISS index
+2026-02-10 11:45:47,418 - INFO - Document added. Total documents in index: 28
+2026-02-10 11:45:47,418 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 19, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 45, 'content_length': 1000, 'word_count': 45, 'sentence_count': 2, 'added_timestamp': '2026-02-10T11:45:47.418267'}
+2026-02-10 11:45:47,503 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:47,503 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:47,503 - INFO - Adding document to FAISS index
+2026-02-10 11:45:47,504 - INFO - Document added. Total documents in index: 29
+2026-02-10 11:45:47,504 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 20, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 49, 'content_length': 1000, 'word_count': 49, 'sentence_count': 5, 'added_timestamp': '2026-02-10T11:45:47.504291'}
+2026-02-10 11:45:47,631 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:47,631 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:47,631 - INFO - Adding document to FAISS index
+2026-02-10 11:45:47,631 - INFO - Document added. Total documents in index: 30
+2026-02-10 11:45:47,632 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 21, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 62, 'content_length': 1000, 'word_count': 62, 'sentence_count': 5, 'added_timestamp': '2026-02-10T11:45:47.632045'}
+2026-02-10 11:45:47,724 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:47,724 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:47,724 - INFO - Adding document to FAISS index
+2026-02-10 11:45:47,724 - INFO - Document added. Total documents in index: 31
+2026-02-10 11:45:47,724 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 22, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 55, 'content_length': 1000, 'word_count': 55, 'sentence_count': 2, 'added_timestamp': '2026-02-10T11:45:47.724625'}
+2026-02-10 11:45:47,849 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:47,849 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:47,849 - INFO - Adding document to FAISS index
+2026-02-10 11:45:47,849 - INFO - Document added. Total documents in index: 32
+2026-02-10 11:45:47,849 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 23, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 71, 'content_length': 1000, 'word_count': 71, 'sentence_count': 3, 'added_timestamp': '2026-02-10T11:45:47.849806'}
+2026-02-10 11:45:47,966 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:47,966 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:47,966 - INFO - Adding document to FAISS index
+2026-02-10 11:45:47,966 - INFO - Document added. Total documents in index: 33
+2026-02-10 11:45:47,967 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 24, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 54, 'content_length': 1000, 'word_count': 54, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:47.967190'}
+2026-02-10 11:45:48,072 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:48,072 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:48,072 - INFO - Adding document to FAISS index
+2026-02-10 11:45:48,072 - INFO - Document added. Total documents in index: 34
+2026-02-10 11:45:48,073 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 25, 'total_chunks': 27, 'chunk_text_length': 1000, 'chunk_word_count': 59, 'content_length': 1000, 'word_count': 59, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:48.073012'}
+2026-02-10 11:45:48,170 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:45:48,170 - INFO - Generated embedding of shape (768,) for new document
+2026-02-10 11:45:48,170 - INFO - Adding document to FAISS index
+2026-02-10 11:45:48,170 - INFO - Document added. Total documents in index: 35
+2026-02-10 11:45:48,170 - INFO - Enhanced metadata: {'filename': 'Telephone Directry.xlsx', 'file_type': 'excel', 'file_size': 28783, 'upload_timestamp': '2026-02-10T11:45:44.610450', 'rows': 84, 'columns': 7, 'chunk_id': 26, 'total_chunks': 27, 'chunk_text_length': 229, 'chunk_word_count': 14, 'content_length': 229, 'word_count': 14, 'sentence_count': 1, 'added_timestamp': '2026-02-10T11:45:48.170859'}
+2026-02-10 11:45:48,171 - INFO - Successfully indexed 'Telephone Directry.xlsx' with chunk_size=1000, overlap=100
+2026-02-10 11:45:48,175 - INFO - FAISS index saved successfully after document upload.
+2026-02-10 11:45:54,648 - INFO - UI selected file: 'Telephone Directry.xlsx' at index 4
+2026-02-10 11:45:54,767 - INFO - UI selected file: 'Telephone Directry.xlsx' at index 4
+2026-02-10 11:47:23,713 - INFO - Selected embedding model: ollama
+2026-02-10 11:47:23,714 - INFO - Research tool called with query: name of employees of Mardan division
+2026-02-10 11:47:23,744 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:47:23,744 - INFO - Calling active LLM: huggingface
+2026-02-10 11:47:55,620 - INFO - Retrying request to /chat/completions in 0.469453 seconds
+2026-02-10 11:48:11,143 - INFO - Research completed using AI engine
+2026-02-10 11:48:11,143 - INFO - Writer tool called with format: Table format
+2026-02-10 11:48:11,143 - INFO - Calling active LLM: huggingface
+2026-02-10 11:48:21,572 - INFO - Writing completed using AI engine
+2026-02-10 11:51:57,796 - INFO - Selected embedding model: ollama
+2026-02-10 11:51:57,797 - INFO - Research tool called with query: names and contacts of all RECs
+2026-02-10 11:51:57,832 - INFO - Embedding call to http://localhost:11434/api/embeddings successful.
+2026-02-10 11:51:57,833 - INFO - Calling active LLM: huggingface
+2026-02-10 11:52:29,362 - INFO - Retrying request to /chat/completions in 0.498750 seconds
+2026-02-10 11:53:00,059 - INFO - Retrying request to /chat/completions in 0.797815 seconds
+2026-02-10 11:53:26,265 - INFO - Research completed using AI engine
+2026-02-10 11:53:26,266 - INFO - Writer tool called with format: Table format
+2026-02-10 11:53:26,266 - INFO - Calling active LLM: huggingface
+2026-02-10 11:53:40,570 - INFO - Writing completed using AI engine
+2026-02-10 11:54:21,778 - INFO - UI selected file: 'Telephone Directry.xlsx' at index 4
+2026-02-10 11:54:21,881 - INFO - UI selected file: 'Telephone Directry.xlsx' at index 4

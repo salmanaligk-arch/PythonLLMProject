@@ -1,0 +1,68 @@
+%% Module diagram for the project (Mermaid)
+flowchart LR
+  subgraph App
+    Main["Main.py"]
+    API["api/routes.py"]
+    Frontend["frontend/ui.py & frontend/file_operations.py"]
+  end
+
+  subgraph Services
+    LLM["services/llm_manager.py"]
+    EMB["services/embed_manager.py"]
+    VEC["services/vector_store.py"]
+    RAG["services/rag_agents.py"]
+    CHAT["services/chatbot.py"]
+    MEM["services/memory.py"]
+    AGT["services/agent_tools.py"]
+    VS["services/vector_store.py"]
+  end
+
+  subgraph FileHandlers
+    FH_PDF["file_handlers/pdf_handler.py"]
+    FH_DOCX["file_handlers/docx_handler.py"]
+    FH_XLS["file_handlers/excel_handler.py"]
+    FH_TXT["file_handlers/txt_handler.py"]
+  end
+
+  subgraph Agents
+    Simple["agents/simple_agent.py"]
+    Langchain["agents/lanchain_agent.py"]
+    CrewAI["agents/crewai_agent.py"]
+    FH_DOCX["file_handlers/docx_handler.py"]
+    FH_XLS["file_handlers/excel_handler.py"]
+    FH_TXT["file_handlers/txt_handler.py"]
+  end
+
+  subgraph ModelsAndDB
+    SCHEMA["models/schema.py"]
+    DB["db/database.py"]
+    DATA["data/ (settings, model manifests)"]
+    FAISS["faiss_indexes/ (vector indexes)"]
+  end
+
+  %% High-level interactions
+  Main --> API
+  Main --> Frontend
+  Frontend --> API
+  API --> Services
+  Services --> SCHEMA
+  Services --> DB
+  Services --> DATA
+  Services --> FAISS
+  Services --> FileHandlers
+  FileHandlers --> Services
+
+  %% Specific relations
+  API --> CHAT
+  CHAT --> MEM
+  LLM --> EMB
+  EMB --> FAISS
+  VEC --> FAISS
+  RAG --> VEC
+  AGT --> LLM
+
+  %% Group edges for readability
+  classDef group fill:#f9f,stroke:#333,stroke-width:1px;
+  class App,Services,FileHandlers,Agents,ModelsAndDB group;
+
+%% End

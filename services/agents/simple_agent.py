@@ -10,11 +10,18 @@ class SimpleRAGAgent:
     def __init__(self, verbose=True):
         self.verbose = verbose
         
-    def process(self, query: str, temp_document: str = None, format_prompt: str = None) -> str:
+    def process(self, query: str, history: list = None, temp_document: str = None, format_prompt: str = None) -> str:
         if self.verbose:
             print(f"⚙️ Simple Agent: Processing query: {query}")
         
-        research_result = get_researcher_tool().research(query, temp_document)
+        # Combine query with history for context
+        contextual_query = query
+        if history:
+            # simplistic history concatenation
+            past_conversation = "\\n".join([f"{msg['role']}: {msg['content']}" for msg in history])
+            contextual_query = f"Previous conversation:\\n{past_conversation}\\n\\nCurrent query: {query}"
+
+        research_result = get_researcher_tool().research(contextual_query, temp_document)
         
         if format_prompt:
             if self.verbose:

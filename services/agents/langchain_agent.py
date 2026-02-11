@@ -107,21 +107,29 @@ class LangChainRAGAgent:
             verbose=verbose
         )
     
-    def process(self, query: str, temp_document: str = None, format_prompt: str = None) -> str:
+    def process(self, query: str, history: list = None, temp_document: str = None, format_prompt: str = None) -> str:
         if self.verbose:
             print(f"🔗 LangChain Agent: Starting agent execution for: {query}")
         
+        # Update memory with the provided history
+        if history:
+            for msg in history:
+                if msg['role'] == 'user':
+                    self.memory.chat_memory.add_user_message(msg['content'])
+                else:
+                    self.memory.chat_memory.add_ai_message(msg['content'])
+
         try:
             # Handle temporary document by including it in the query
             enhanced_query = query
             if temp_document:
-                enhanced_query = f"Query: {query}\n\nAdditional Context Document:\n{temp_document}"
+                enhanced_query = f"Query: {query}\\n\\nAdditional Context Document:\\n{temp_document}"
                 if self.verbose:
                     print("🔗 LangChain Agent: Enhanced query with temporary document")
             
             # Execute agent
             if format_prompt:
-                full_query = f"Please research: {enhanced_query}\n\nThen format the results as: {format_prompt}"
+                full_query = f"Please research: {enhanced_query}\\n\\nThen format the results as: {format_prompt}"
             else:
                 full_query = f"Please research: {enhanced_query}"
             

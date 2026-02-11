@@ -61,6 +61,8 @@ def search_documents_chat(message, history, agent_type, embed_model, temp_docume
     try:
         temp_document_content = process_temp_document(temp_document_file)
     except Exception as e:
+        if not history:
+            history = []
         history.append({"role": "user", "content": "ERROR"})
         history.append({"role": "assistant", "content": str(e)})
         return history
@@ -75,18 +77,23 @@ def search_documents_chat(message, history, agent_type, embed_model, temp_docume
         # Create agent using AgentManager
         agent = agent_manager.create_agent(agent_type)
         
-        result = agent.process(message, temp_document_content, format_prompt)
+        if not history:
+            history = []
+
+        result = agent.process(message, history, temp_document_content, format_prompt)
         
         # Format the response
         response = result
         if format_prompt:
             response = f"**Formatted as {format_prompt}:**\\n\\n{result}"
-            
+        
         history.append({"role": "user", "content": message})
         history.append({"role": "assistant", "content": response})
         return history
     except Exception as e:
         error_message = str(e)
+        if not history:
+            history = []
         history.append({"role": "user", "content": message})
         history.append({"role": "assistant", "content": f"Error: {error_message}"})
         return history

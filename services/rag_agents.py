@@ -48,7 +48,7 @@ class AgentManager:
         
         return self.agents[agent_type](verbose=verbose)
     
-    def process_query(self, query: str, agent_type: str = 'simple', temp_document: str = None, 
+    def process_query(self, query: str, agent_type: str = 'simple', history: list = None, temp_document: str = None, 
                      format_prompt: str = None, verbose: bool = True) -> str:
         """
         Process a query using the specified agent
@@ -56,6 +56,7 @@ class AgentManager:
         Args:
             query: User's question or request
             agent_type: Type of agent to use (simple, langchain, llamaindex, crewai)
+            history: The chat history.
             temp_document: Optional temporary document content
             format_prompt: Optional formatting instructions
             verbose: Whether to show verbose output
@@ -65,7 +66,7 @@ class AgentManager:
         """
         try:
             agent = self.create_agent(agent_type, verbose=verbose)
-            return agent.process(query, temp_document, format_prompt)
+            return agent.process(query, history, temp_document, format_prompt)
         except Exception as e:
             error_msg = f"Error with {agent_type} agent: {str(e)}"
             logger.error(error_msg)
@@ -75,7 +76,7 @@ class AgentManager:
                 logger.info("Falling back to simple agent...")
                 try:
                     fallback_agent = self.create_agent('simple', verbose=verbose)
-                    return fallback_agent.process(query, temp_document, format_prompt)
+                    return fallback_agent.process(query, history, temp_document, format_prompt)
                 except Exception as fallback_error:
                     return f"All agents failed. Last error: {str(fallback_error)}"
             
@@ -101,6 +102,6 @@ def get_available_agents():
 def create_agent(agent_type: str, verbose: bool = True):
     return agent_manager.create_agent(agent_type, verbose)
 
-def process_query(query: str, agent_type: str = 'simple', temp_document: str = None, 
+def process_query(query: str, agent_type: str = 'simple', history: list = None, temp_document: str = None, 
                  format_prompt: str = None, verbose: bool = True) -> str:
-    return agent_manager.process_query(query, agent_type, temp_document, format_prompt, verbose)
+    return agent_manager.process_query(query, agent_type, history, temp_document, format_prompt, verbose)

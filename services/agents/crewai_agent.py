@@ -63,14 +63,20 @@ class CrewAIRAGAgent:
             allow_delegation=False
         )
 
-    def process(self, query: str, temp_document: str = None, format_prompt: str = None) -> str:
+    def process(self, query: str, history: list = None, temp_document: str = None, format_prompt: str = None) -> str:
         if self.verbose:
             logger.info(f"🚢 CrewAI Agent: Processing query: {query}")
         
+        # Combine query with history for context
+        contextual_query = query
+        if history:
+            past_conversation = "\\n".join([f"{msg['role']}: {msg['content']}" for msg in history])
+            contextual_query = f"Previous conversation:\\n{past_conversation}\\n\\nCurrent query: {query}"
+
         # Enhance query if temp document provided
-        enhanced_query = query
+        enhanced_query = contextual_query
         if temp_document:
-            enhanced_query = f"{query}\n\nContext: {temp_document}"
+            enhanced_query = f"{contextual_query}\\n\\nContext: {temp_document}"
         
         # Create research task
         research_task = Task(
