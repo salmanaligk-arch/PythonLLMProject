@@ -21,7 +21,7 @@ class FAISSVectorStore:
     def __init__(self, dimension: int = None, index_path: str = None):
         # Use environment variables for configuration
         self.dimension = dimension or int(os.getenv("VECTOR_DIMENSION", 768))
-        self.index_path = index_path or os.getenv("VECTOR_INDEX_PATH", "faiss_indexes")
+        self.index_path = index_path or os.getenv("VECTOR_INDEX_PATH", "E:/PythonLLMProject/faiss_indexes")
         os.makedirs(self.index_path, exist_ok=True)
         self.index = faiss.IndexFlatIP(self.dimension)
         self.documents = []
